@@ -1,2 +1,8 @@
 # info5100
-cornell info sci data vis course
+cornell INFO5100 Data Visualization
+
+Uploaded Files 
+- Homework
+- Assignment
+- Final Project
+- Course Note
