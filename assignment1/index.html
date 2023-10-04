@@ -41,7 +41,7 @@
 
 
     // let data = await d3.json('mapjs/counties_10m.json');
-    let data = await d3.json('mapjs/countries_10m_dump.json');
+    let data = await d3.json('countries_10m_dump.json');
     data.objects.countries['geometries'].forEach(element => 
     {element.id = parseInt(element.id)
       
