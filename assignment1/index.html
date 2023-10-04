@@ -3,20 +3,105 @@
 
 <head>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- <script src="https://cdnjs.com/libraries/d3-legend"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
 </head>
-
+<style>
+  .country{
+    fill: rgb(219, 171, 149);
+  }
+  .outline{
+    fill: none;
+    stroke: black;
+    stroke-width: 0.1px;
+  }
+</style>
 <body>
 
 <p>
-  test
-  <svg id="map">
+  <svg id="map" style="background: #ffffff">
 
 
   </svg>
 <script>
-  map = d3.select('#map')
-          .attr('width',800)
-          .attr('height',600)
+  let svg  = d3.select('#map')
+          .attr('width',1000)
+          .attr('height',800)
+  const width = svg.attr('width') 
+  const height = svg.attr('height') 
+  const margin = {top:20, right:20, bottom:20, left:20}
+  const map_inside_width = width-margin.right-margin.left
+  const map_inside_height = height-margin.top-margin.bottom
+
+  const map = svg.append('g')
+                  .attr("transformation",`translate(${margin.left},${margin.top})`)
+
+  const requestData = async function(){
+
+
+    // let data = await d3.json('mapjs/counties_10m.json');
+    let data = await d3.json('mapjs/countries_10m_dump.json');
+    data.objects.countries['geometries'].forEach(element => 
+    {element.id = parseInt(element.id)
+      
+    });
+  
+    var matrix_ranger = data.objects.countries['geometries'].map(function(item){
+      
+      // return d3.extent(item.properties.matrics));
+      // return item.properties.matrics;
+      return item.properties.matrics;
+
+    });
+    // let colorext = d3.extent(matrix_ranger)
+                    
+    let colorScaler = d3.scaleThreshold()
+                        .domain([-10,0,10,30,40,50,80,100])
+                        // .range(["white",'orange', "yellow",'red']);  
+                        .range(['#bdc3c7',"#cce6f4",'#a0d3e8', "#5d9cec",'#3498db']);  
+
+    var legend = d3.legendColor()
+                  .labelFormat(d3.format(".2f"))
+                  // .labels(d3.legendHelpers.thresholdLabels)
+                  .title("Color Legend")
+                  .scale(colorScaler)
+    map.append('g')
+        .call(legend);
+
+    console.log(colorScaler(0))
+    // colorScaler.interpolator();
+    // console.log(colorScaler(-1))
+                        // var countries = topojson.feature(data,data.objects.counties)
+    var countries = topojson.feature(data,data.objects.countries);
+    // console.log(data.objects.countries)
+    var countries_mesh = topojson.mesh(data,data.objects.countries);
+
+    var projection = d3.geoEqualEarth().fitSize([map_inside_width,map_inside_height],countries);
+    var path = d3.geoPath().projection(projection);
+
+    map.selectAll('country').data(countries.features)
+        .join("path")
+        .attr('class','country')
+        .attr('note',d => d['id'])
+        .attr('d',path)
+        .style('fill',d=> {if (d.properties['matrics']===0){
+                           return 'grey';
+                          }else{
+                            return colorScaler(d.properties['matrics']);}
+                          });
+
+
+
+    map.append('path').datum(countries_mesh)
+    .attr('class','outline')
+    .attr('d',path);
+    
+  };
+  requestData()
+
+  
+
 </script>
 </p>
 </body>
