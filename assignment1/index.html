@@ -14,12 +14,13 @@
   .outline{
     fill: none;
     stroke: black;
-    stroke-width: 0.1px;
+    stroke-width: 0.5px;
   }
 </style>
 <body>
 
 <p>
+  
   <svg id="map" style="background: #ffffff">
 
 
@@ -27,52 +28,89 @@
 <script>
   let svg  = d3.select('#map')
           .attr('width',1000)
-          .attr('height',800)
+          .attr('height',1000)
+
   const width = svg.attr('width') 
   const height = svg.attr('height') 
-  const margin = {top:20, right:20, bottom:20, left:20}
+  const margin = {top:20, right:20, bottom:30, left:20}
+  
   const map_inside_width = width-margin.right-margin.left
   const map_inside_height = height-margin.top-margin.bottom
+  const title_coord = (map_inside_height)/5
+
+  const title_name = 'Being a top YouTuber in WHICH country is an ideal career?'
 
   const map = svg.append('g')
                   .attr("transformation",`translate(${margin.left},${margin.top})`)
 
+  let title =  svg.append('text')
+                  .text(title_name)
+                  .attr('x', margin.left) //set x coord
+                  .attr('y', title_coord+10) //set x coord
+                  .style('text-align','left')
+                  .style('font-size','2em')
+                  .style('font-family','sans-serif')
+                  .style('stroke', 'black');
   const requestData = async function(){
 
 
+        
     // let data = await d3.json('mapjs/counties_10m.json');
-    let data = await d3.json('countries_10m_dump.json');
+    let data = await d3.json('mapjs/countries_10m_dump.json');
     data.objects.countries['geometries'].forEach(element => 
     {element.id = parseInt(element.id)
       
     });
   
     var matrix_ranger = data.objects.countries['geometries'].map(function(item){
-      
-      // return d3.extent(item.properties.matrics));
-      // return item.properties.matrics;
+ 
       return item.properties.matrics;
 
     });
-    // let colorext = d3.extent(matrix_ranger)
-                    
+    let color_scale_plan =  [-1,-0.5,0,0.5,1,10,30]                 
     let colorScaler = d3.scaleThreshold()
-                        .domain([-50,-30,-10,0,10,30,40,50])
-                        // .range(["white",'orange', "yellow",'red']);  
-                        .range(['#bdc3c7',"#cce6f4",'#a0d3e8', "#5d9cec",'#3498db']);  
+                        .domain(color_scale_plan)
+                        .range(d3.schemeRdBu[color_scale_plan.length]);  
 
     var legend = d3.legendColor()
                   .labelFormat(d3.format(".2f"))
-                  // .labels(d3.legendHelpers.thresholdLabels)
                   .title("Color Legend")
                   .scale(colorScaler)
+
+      
     map.append('g')
         .call(legend);
 
-    console.log(colorScaler(0))
-    // colorScaler.interpolator();
-    // console.log(colorScaler(-1))
-                        // var countries = topojson.feature(data,data.objects.counties)
+    d3.select('.legendCells')
+    .attr('transform',`translate(${map_inside_width-80},100)`)
+    .style('font-family','sans-serif')
+
+    let label_names = d3.selectAll('.label')
+                  .style('font-size','0.8em')          
+                  .text(function(element,i){
+                    if (i==0){
+                      return 'Miss Data'
+                    }else{
+                      return element}
+                  });
+
+    let label_color = d3.select('.swatch')
+                        .style('fill',function(element,i){
+                                        if (i==0){
+                                            return 'gray'
+                                        }
+                                      })      
+    d3.selectAll('.legendTitle')              
+    .attr('transform',`translate(${map_inside_width-80},80)`)
+    .style('font-size','1em')
+    .style('font-weight','bold')
+    .style('font-family','sans-serif')
+
+    console.log(label_names.width)
+
+
+
+
     var countries = topojson.feature(data,data.objects.countries);
     // console.log(data.objects.countries)
     var countries_mesh = topojson.mesh(data,data.objects.countries);
