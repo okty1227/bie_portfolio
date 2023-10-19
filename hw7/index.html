@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/topojson.v3.min.js"></script>
+    </head>
+
+    <body>
+        <p id="p1">
+            <ul id="tag">
+
+            </ul>
+            <svg id="choropleth" height="770" width="990" style="margin:20px"></svg>
+        
+<style>
+      .mesh {
+      stroke: rgb(255, 255, 255);
+      stroke-width: 0.5px;
+      fill: none;
+  } 
+    .stateMesh{
+     stroke: #5A5A5A;
+      stroke-width: 3px;
+      fill: none;
+    }
+  #tag{
+    color: black;
+  }
+</style>
+
+
+<script>
+    let tag = d3.select('ul#tag')
+    let svg = d3.select('svg#choropleth');
+    let width = svg.attr('width');
+    let height = svg.attr('height');
+
+    const margin = { top: 10, right: 10, bottom: 50, left:50 };
+    let plotWidth = width - margin.top - margin.bottom
+    let plotHeight = height- margin.left - margin.right
+
+
+    let plot = svg.append('g').attr('transform',`translate(${ margin.left },${ margin.top })`)
+    //read json file
+
+    let draw_pic = async () => {
+
+    let nyincome = await d3.json('ny_income.topo.json');
+
+    let zips = topojson.feature(nyincome,nyincome.objects.zip_codes);
+
+    let zipsMesh = topojson.mesh(nyincome,nyincome.objects.zip_codes);
+
+    let stateMesh = topojson.mesh(nyincome,nyincome.objects.state);
+
+    var projection = d3.geoMercator().fitSize([plotWidth, plotHeight], zips);
+
+    var zipcode_path = d3.geoPath().projection(projection);
+        console.log(zipsMesh)
+
+
+      
+    let properties = zips.features.map(d=>d['properties']['median_income'])
+    let incomeExt = d3.extent(properties)
+    // color is generated and selected from https://coolors.co/
+    let colorPlatte = ['#3A606E','#607B7D','#828E82','#AAAE8E','#E0E0E0']
+
+    //create colorScale
+
+    // let colorSeqScale = d3.scaleSequential()
+    //                    .domain(incomeExt)
+    //                 //    .range(['#66CC99','#1E3D73','#0099CC','#8A79A5','#FF6699'])
+    //                 //    .range(['#020887','#1E3D73','#647AA3','#95B2B0','#C6EBBE'])
+    //                    .range(['#3A606E','#607B7D','#828E82','#AAAE8E','#E0E0E0'])
+
+
+    let colorQuanScale = d3.scaleQuantile()
+                          .domain(incomeExt)
+                        //   .range(['#020887','#1E3D73','#647AA3','#95B2B0','#C6EBBE'])
+                          .range(colorPlatte)
+    
+    let getThreshold = colorPlatte.map(d=>colorQuanScale.invertExtent(d).toString().replace(',',' ~ '))
+    console.log(getThreshold)
+
+    let colormap = plot.append('g')
+    
+
+    // colormap.selectAll('path.zips').data(zips.features)
+    //         .join('path')
+    //         .attr('class',)
+
+
+    plot.selectAll("path.zips").data(zips.features)
+      .join("path")
+      .attr("class", "zips")
+      .style('fill',d => {return colorQuanScale(d.properties['median_income'])})
+      .attr("d", zipcode_path)
+
+    plot.append('path').datum(zipsMesh)
+        .join('path')
+        .attr('class','mesh')
+        .attr("d", zipcode_path)
+    
+    plot.append('path').datum(stateMesh)
+        .join('path')
+        .attr('class','stateMesh')
+        .attr("d", zipcode_path)
+
+    let bell_tower = {
+         "type": "Point",
+         "coordinates": [42.4476, -76.4850]
+                 }
+    let locate = projection([ -76.4850,42.4476])
+    
+    console.log(zipcode_path(bell_tower));
+
+    plot.append('circle')
+        .attr('class','belltower_locate')
+        .attr('cx',locate[0])
+        .attr('cy',locate[1])
+        .attr('r',6)
+
+    getThreshold.forEach(d=>{ tag.append('li').text(d) })
+}
+draw_pic()
+</script>
+
+        </p>
+
+    </body>
+
+</html>
