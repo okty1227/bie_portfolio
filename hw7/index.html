@@ -61,7 +61,7 @@
       
     let properties = zips.features.map(d=>d['properties']['median_income'])
     let incomeExt = d3.extent(properties)
-    
+    // color is generated and selected from https://coolors.co/
     let colorPlatte = ['#3A606E','#607B7D','#828E82','#AAAE8E','#E0E0E0']
 
     //create colorScale
@@ -100,7 +100,7 @@
         .attr('class','mesh')
         .attr("d", zipcode_path)
     
-        plot.append('path').datum(stateMesh)
+    plot.append('path').datum(stateMesh)
         .join('path')
         .attr('class','stateMesh')
         .attr("d", zipcode_path)
@@ -119,7 +119,7 @@
         .attr('cy',locate[1])
         .attr('r',6)
 
-    getThreshold.forEach(d=>{ tag.append('li').text(d)})
+    getThreshold.forEach(d=>{ tag.append('li').text(d) })
 }
 draw_pic()
 </script>
