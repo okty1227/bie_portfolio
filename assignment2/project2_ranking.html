@@ -12,7 +12,11 @@
 
     </p>
 </body>
-
+<style>
+    text{font-family
+        : Arial
+    }
+</style>
 <script>
 
     let rk_plt = d3.select('svg#ranking_state_case');
@@ -30,7 +34,6 @@
                       .text('Top States with most accident cases')
                       .attr('font-size', '12px')
                       .attr('transform',`translate(30,${margin.top})`)
-                      .attr('font-family', 'Arial, sans-serif')
                       .attr('transform',`translate(${margin.left*2},${margin.top-5})`)
 
     get_rk_data = async function(){
@@ -71,9 +74,15 @@
 
         // console.log(yaxis_category)
 
-        rk_plt.append('g')
+        yaxis = rk_plt.append('g')
               .attr("transform", `translate(${margin.left+10}, 25)`)
               .call(yAxis)
+              
+        yaxis.selectAll('line')
+         .attr('stroke','white')
+
+        yaxis.selectAll("path.domain")
+         .attr('stroke','white')             
 
         rk_barplt.selectAll('rect.case-ranker')
                  .data(rankers)
@@ -86,6 +95,16 @@
                  .attr('transform',`translate(0,33)`)
                  .attr('fill','	#ff9a00');
 
+        rk_barplt.selectAll('text.rkbar')
+                 .data(rankers)
+                 .join('text')
+                 .attr('class','rkbar')
+                 .attr('x',20)            
+                 .attr('y',(d,i)=>i*30)
+                 .text(d => d.count)        
+                 .attr('transform',`translate(${Xscaler(maxValue)+5},43)`)
+                 .attr('font-size', '8px')
+                 .attr('fill','	black');
     }
     get_rk_data()
 
