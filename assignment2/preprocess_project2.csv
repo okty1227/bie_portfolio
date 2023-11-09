@@ -1,4 +1,4 @@
-,County,State,Year,Severity,count(Severity)
+id,County,State,Year,Severity,count(Severity)
 0,Arlington,VA,2020,2,754
 1,Colleton,SC,2020,3,104
 2,Georgetown,SC,2020,2,388

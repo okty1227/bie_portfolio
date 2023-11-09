@@ -8,7 +8,7 @@
 <body>
 
     <p >
-        <svg id="ranking_state_case" width="400" height="800"></svg>
+        <svg id="ranking_state_case" width="400" height="600"></svg>
 
     </p>
 </body>
@@ -94,6 +94,17 @@
                  .attr('width',(d,i)=>Xscaler(d.count))         
                  .attr('transform',`translate(0,33)`)
                  .attr('fill','	#ff9a00');
+
+        // rk_barplt.selectAll('text.rkbar')
+        //          .data(rankers)
+        //          .join('text')
+        //          .attr('class','rkbar')
+        //          .attr('x',(d,i)=>Xscaler(d.count)-120)            
+        //          .attr('y',(d,i)=>i*30)
+        //          .text(d => d.count)        
+        //          .attr('transform',`translate(${Xscaler(maxValue)+5},43)`)
+        //          .attr('font-size', '8px')
+        //          .attr('fill','	black');
 
         rk_barplt.selectAll('text.rkbar')
                  .data(rankers)

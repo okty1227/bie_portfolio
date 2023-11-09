@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    
+    </head>
+    <style>
+        .county {
+            stroke: none;
+        }
+
+        .state {
+            fill: none;
+            stroke: black;
+        }
+
+        .county-outline {
+            stroke: white;
+            stroke-width: 3px;
+            fill: none;
+        }
+
+        .state-outline {
+            stroke: gray;
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        .gridlines line {
+            color: #aaa;
+        }
+
+        .gridlines .domain {
+            stroke: none;
+        }
+
+        text {
+            font-family: garamond;
+            font-size: 12;
+        }
+
+        g {
+            font-family: garamond;
+        }
+    </style>
+    <body>
+<p>
+    <div id="buttonbar">
+
+    </div>
+    <svg id="pic1" width="600" height="600">
+    </svg>
+</p>
+    </body>
+
+<script>
+
+    var state_accident = {};
+    
+    var acc_data
+    var acc_data_2020 = []
+    var acc_data_2019 = []
+
+    // let topodata
+    // let state
+    // let stateMesh
+    // let projection
+    // let project_path
+
+    const margin = { top: 20, right: 20, bottom: 20, left:20};
+
+
+    let stateMap = d3.select('svg#pic1');
+    let stateWidth = stateMap.attr('width');
+    let stateHeight = stateMap.attr('height');
+
+    let inner_plot_width = stateWidth - margin.left - margin.right
+    let inner_plot_height = stateHeight - margin.bottom - margin.top
+    let colorScale
+
+    const stateColorWidth = 50;
+    const stateColorHeight = 20;
+    const stateColors = ['#FFD1DC', '#FC8EAC', '#DE3163', '#C32148', '#800020'];
+    
+    
+    // d3.map(acc_data,d=>console.log(d['count(Severity)']))
+    // legend
+    let stateMapLegend = stateMap.append('g')
+
+    let stateColorLegend = stateMap.append('g').attr('transform', `translate(0, ${stateHeight-50})`);
+    
+    let stateView = stateMap.append('g')
+                            .attr("transform","translate("+margin.left+","+margin.top+")");
+
+    stateColors.forEach((color,i) => {
+        stateColorLegend.append('rect')
+                        .attr('x',stateColorWidth + i*stateColorWidth)
+                        .attr('y',0)
+                        .attr('width',stateColorWidth)
+                        .attr('height',stateColorHeight)
+                        .attr('fill',color)
+        
+    })
+
+    // for (var i=0; i<6; i++){
+
+    //     stateColorLegend.append('text')
+    //                     .attr('x',stateColorWidth + i*stateColorWidth)
+    //                     .attr('y',30)
+    //                     .attr('text-anchor', 'middle')
+    //                     .attr('alignment-baseline', 'middle')
+    //                     .attr('visibility', 'hidden')
+    //                     .style('font-size', 12)
+    //                     .text()//waite for scale
+
+    // }
+    let slpit_accdata = async function(){
+
+        acc_data = await d3.csv('state_data.csv');
+        
+        acc_data.forEach(d => {
+            d['count(Severity)'] = Number(d['count(Severity)'])
+            if (d['Year'] === '2019'){
+                acc_data_2019.push(d)
+            }
+            if (d['Year'] === '2020'){
+                acc_data_2020.push(d)
+            }
+        });
+        // console.log(acc_data)
+                } 
+
+    
+    
+    let request_data  = async function(){
+
+    let topodata = await d3.json('us-smaller.json');
+
+    
+    //states
+    let state = topojson.feature(topodata,topodata.objects.states)    
+    console.log(state);
+
+    //outline
+    let stateMesh = topojson.mesh(topodata, topodata.objects.states)
+
+    let projection = d3.geoAlbersUsa().fitSize([inner_plot_width,inner_plot_height],state)
+    // console.log(stateMesh);
+    let project_path = d3.geoPath().projection(projection)
+    
+     
+    //state map outline
+    stateView.selectAll('path.state').data(state.features)
+             .join('path')
+             .attr('class','state')
+             .attr('d',project_path)
+
+    stateView.append('path').datum(stateMesh)
+            .join('path')
+            .attr('class', 'state-outline')
+            .attr('d', project_path);
+    
+
+
+    let ext = d3.extent(acc_data.map(d=>d['count(Severity)']))
+    
+    // scaler
+    colorScale = d3.scaleLinear()
+                .domain(ext)
+                .range(stateColors);
+                
+    stateView.selectAll('path.state').data(acc_data_2019)
+             .join('path')
+             .attr('class','state')
+
+            .style('fill',d=>{
+                return colorScale(d['count(Severity)'])
+            })
+    //state accidents data
+         
+}
+
+    const state_year = ['2019','2020']
+    let yearScale = d3.scalePoint().domain(state_year)
+                                .range([0,inner_plot_width])
+                                .padding(0.1);
+                
+    let yearBotton = d3.axisBottom(yearScale)
+
+    stateMap.append('g')
+            .attr('class','')
+    
+    state_year.forEach(d=>{
+        d3.select('div#buttonbar')
+          .append('button')
+          .text(d)
+          .on('click', function(){
+
+            //call map
+          })
+
+    });
+
+
+    let draw_state_plot = async function(){
+
+
+
+    }
+
+slpit_accdata()
+
+request_data()
+draw_state_plot()
+
+</script>
+
+
+</html>

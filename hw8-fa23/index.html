@@ -7,7 +7,7 @@
     <body>
          <p>
             <svg id="network" width="600" height="600"></svg>
-
+            <h3 id="character-name"></h3>
            
 <style>
 
@@ -15,6 +15,7 @@
 
 
 <script>
+    let character = d3.select('h3#character-name')
     let svg = d3.select('svg#network');
     let network_layer = svg.append('g');
     let width = svg.attr('width');
@@ -103,6 +104,10 @@
             
             sim.alphaTarget(0.1).restart();
         }
+        // character.text(d.)
+        console.log(d.Name)
+
+        character.text(d.Name)
         label.text(d.index);
  
         d.fx = event.x;
