@@ -54,7 +54,7 @@
 
             display: inline-block;
 
-            background-color: rgb(250, 195, 195);
+            background-color: #ffb703;
             width: 250px;
             border: 5px solid rgb(107, 83, 102);
             padding:15;
@@ -109,7 +109,7 @@
     let stateLegends = []
     const stateColorWidth = 60;
     const stateColorHeight = 20;
-    const stateColors = ['#FFD1DC', '#FC8EAC', '#DE3163', '#C32148', '#800020'];
+    const stateColors = ['#FFC971', '#FFB627', '#FF9505', '#E2711D', '#CC5803'];
     
     const state_year = ['2019','2020']
 
@@ -344,7 +344,7 @@
                  .attr('width',(d,i)=>Xscaler(d['count']))         
                 //  .attr('width',(d,i)=>Xscaler(d.count))         
                  .attr('transform',`translate(0,33)`)
-                 .attr('fill','pink');
+                 .attr('fill','orange');
     }
     let write_rk_txt = function(ans){
 
