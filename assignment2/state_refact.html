@@ -46,9 +46,10 @@
             font-family: garamond;
         }
         .txt-box{
-            text-anchor:middle;
-            fill:black
-
+            text-anchor:left;
+            fill:black;
+            font-size: 20px;
+            line-height: 1.5px;
         }
         .button-bar {
 
@@ -95,9 +96,10 @@
     let projection
     let project_path
 
+
     const margin = { top: 20, right: 20, bottom: 20, left:20};
-    const tooltip_width = 30;
-    const tooltip_height = 30;
+    // const tooltip_width = 30;
+    // const tooltip_height = 30;
 
     let stateMap = d3.select('svg#state_case');
     let stateWidth = stateMap.attr('width');
@@ -107,6 +109,11 @@
     let inner_plot_height = stateHeight - margin.bottom - margin.top
     let colorScale
     let stateLegends = []
+
+    let xloc = inner_plot_width -inner_plot_width/10
+    let yloc = inner_plot_height
+    let yloc_case = yloc + inner_plot_height/20
+
     const stateColorWidth = 60;
     const stateColorHeight = 20;
     const stateColors = ['#FFC971', '#FFB627', '#FF9505', '#E2711D', '#CC5803'];
@@ -117,7 +124,7 @@
     var maxValue 
     
     let stateColorLegend = stateMap.append('g')
-                                    .attr('transform', `translate(0, ${stateHeight-30}) scale(1.5) `)
+                                    .attr('transform', `translate(0, ${stateHeight-30}) scale(1.3) `)
     
     let stateView = stateMap.append('g')
                             .attr("transform",`translate(${margin.left+40},${margin.top})`);
@@ -170,10 +177,10 @@
             
             stateColorLegend.append('text')
                             .attr('x',stateColorWidth + i*(stateColorWidth))
-                            .attr('y',20)
+                            .attr('y',23)
                             .attr('text-anchor', 'middle')
                             .attr('alignment-baseline', 'left')
-                            .style('font-size', 10)
+                            .style('font-size', 12)
                             .attr('color','black')
                             .text(txt)//waite for scale
 
@@ -200,10 +207,8 @@
 
         let selected_state = d3.select(this);
 
-        xloc = event.clientX
-        yloc = event.clientY
-        yloc_case = event.clientY + 15
-        txt_state.text(selected_state.datum()['State'])
+
+        txt_state.text(`State: ${selected_state.datum()['State']}`)
                  .attr('x',xloc)
                  .attr('y',yloc)
         txt_case.text(`Case: ${selected_state.datum()['count(Severity)']}`)
