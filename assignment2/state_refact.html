@@ -281,6 +281,7 @@
           .on('click', function(event){
            let year = d3.select(this).text()
             draw_state_plot(year)
+            yaxis.style('visibility','hidden')            
             load_rk_plt(year)
           })
     })
@@ -334,6 +335,24 @@
         
         }
     let draw_rk_plt = function(ans){
+
+        let yaxis_category = ans.map(d=>d.state)
+        let Yscaler =  d3.scaleBand()
+                        .domain(yaxis_category)  
+                        .range([0, 150])     
+
+        const yAxis = d3.axisLeft(Yscaler);
+
+        yaxis = rk_barplt.append('g')
+                        .attr("transform", `translate(${margin.left+10}, 25)`)
+                        .call(yAxis)
+                        .style('visibility','hidden')
+
+        yaxis.selectAll('line')
+            .attr('stroke','white')
+
+        yaxis.selectAll("path.domain")
+            .attr('stroke','white')
         rk_barplt.selectAll('rect.case-ranker')
                  .data(ans)
                  .join('rect')
@@ -345,6 +364,7 @@
                 //  .attr('width',(d,i)=>Xscaler(d.count))         
                  .attr('transform',`translate(0,33)`)
                  .attr('fill','orange');
+        yaxis.style('visibility','visible')
     }
     let write_rk_txt = function(ans){
 
@@ -360,24 +380,7 @@
                  .attr('fill','	black');
     }
     let load_rk_plt = async function (year){
-        
-        let yaxis_category = rankers.map(d=>d.state)
 
-        let Yscaler =  d3.scaleBand()
-                        .domain(yaxis_category)  
-                        .range([0, 150])     
-
-        const yAxis = d3.axisLeft(Yscaler);
-
-        yaxis = rk_barplt.append('g')
-                        .attr("transform", `translate(${margin.left+10}, 25)`)
-                        .call(yAxis)
-              
-        yaxis.selectAll('line')
-             .attr('stroke','white')
-
-        yaxis.selectAll("path.domain")
-             .attr('stroke','white')
 
         // title_txt_2020 = rk_plt.select('text.txt2020')
         //                     .attr('class','txt2020')
@@ -394,24 +397,34 @@
         //                     .style('visibility','hidden')             
 
             if (year ==='2019'){
+
+
                 const ans = rankers.filter(d=> d.Year ==='2019')
+                // yaxis.style('visibility','visible')
 
                 draw_rk_plt(ans)
                 write_rk_txt(ans)
+                // yaxis.style('visibility','hidden')
 
                 }
                 
         if (year ==='2020'){
  
             const ans = rankers.filter(d=> d.Year ==='2020')
+            // yaxis.style('visibility','visible')
+
             draw_rk_plt(ans)
             write_rk_txt(ans)
+            // yaxis.style('visibility','hidden')
+
                 }
     }
     let prerender = async function(Xscaler){
 
         draw_state_plot('2019')
         load_rk_plt('2019')
+        // yaxis.style('visibility','hidden')
+
     }
     
 
