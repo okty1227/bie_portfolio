@@ -54,7 +54,6 @@
         .button-bar {
 
             display: inline-block;
-
             background-color: #ffb703;
             width: 250px;
             border: 5px solid rgb(107, 83, 102);
@@ -170,8 +169,7 @@
 
                 if (i===0){
                     txt = 0
-                }
-                else{
+                }else{
                     txt = d
                 }
             
@@ -188,21 +186,15 @@
                 } 
 
     let request_data  = async function(){
-
     topodata = await d3.json('us-smaller.json');
-
-    filteredStates = [2,15,72,78]
     //states
     state = topojson.feature(topodata,topodata.objects.states)    
 
     //outline
     stateMesh = topojson.mesh(topodata, topodata.objects.states)
-
     projection = d3.geoAlbersUsa().fitSize([inner_plot_width,inner_plot_height],state)
-
     project_path = d3.geoPath().projection(projection)
   
-    
     function mouseEntersState(event){
 
         let selected_state = d3.select(this);
@@ -283,7 +275,7 @@
           .append('button')
           .attr('class','button-bar')
           .text(d)
-          .on('click', function(event){
+        .on('click', function(event){
            let year = d3.select(this).text()
             draw_state_plot(year)
             yaxis.style('visibility','hidden')            
@@ -296,7 +288,6 @@
 
     let rk_width = rk_plt.attr('width');
     let rk_height = rk_plt.attr('height');
-    // const margin = {top:20, right:20, bottom:30, left:20}
     const map_inside_width = rk_width-margin.right-margin.left
     const map_inside_height = rk_height-margin.top-margin.bottom
     rk_plt.attr('transform',`scale(2)`)
@@ -310,13 +301,11 @@
         let rkdata = await d3.json('rank_case_by_year.json');
         let rk_2019 = rkdata['2019']
         let rk_2020 = rkdata['2020']
-        // console.log(rkdata.keys)
 
         let case_rank = rkdata['count(Severity)']
         let rank_amt=0
-        
-        // console.log(rkdata)
         let max_val = 0
+
         for (const yr in rkdata){
         for (const e in rkdata[yr]){
             rank_amt += 1;
@@ -324,10 +313,8 @@
             var  ranker = {
                 'Year': yr,
                 'state':e,
-                'count':rkdata[yr][e]}
-                
+                'count':rkdata[yr][e]}                
                 rankers.push(ranker)
-
             }        
         }
 
@@ -366,7 +353,6 @@
                  .attr('y',(d,i)=>i*30)
                  .attr('height',10)            
                  .attr('width',(d,i)=>Xscaler(d['count']))         
-                //  .attr('width',(d,i)=>Xscaler(d.count))         
                  .attr('transform',`translate(0,33)`)
                  .attr('fill','orange');
         yaxis.style('visibility','visible')
@@ -403,24 +389,19 @@
 
             if (year ==='2019'){
 
-
                 const ans = rankers.filter(d=> d.Year ==='2019')
-                // yaxis.style('visibility','visible')
 
                 draw_rk_plt(ans)
                 write_rk_txt(ans)
-                // yaxis.style('visibility','hidden')
 
                 }
                 
         if (year ==='2020'){
  
             const ans = rankers.filter(d=> d.Year ==='2020')
-            // yaxis.style('visibility','visible')
 
             draw_rk_plt(ans)
             write_rk_txt(ans)
-            // yaxis.style('visibility','hidden')
 
                 }
     }
@@ -428,10 +409,8 @@
 
         draw_state_plot('2019')
         load_rk_plt('2019')
-        // yaxis.style('visibility','hidden')
 
-    }
-    
+    }    
 
 request_data()
 slpit_accdata()
