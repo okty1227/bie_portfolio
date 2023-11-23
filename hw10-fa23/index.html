@@ -4,11 +4,149 @@
     </head>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <body>
-
-
-
-
-
+            <p>
+                hw10
+                <br>
+                Dataset: Adoptable Pet in 2019 Aug, and dataset is processed through the notebook called preprocess.ipynb.
+                <br>
+                Insight: The number of extra pet are the smallest compared to the other categories.
+                <br>
+                graph design:
+                <br>
+                y: the grouped amount by gender,sex,size
+                <br>
+                x: size
+            </p>
+            <svg id="plot1" height="800" width="700">
+                
+            </svg>
         
-    </body>
+
+        </body>
+
+        <style>
+            .grids line{
+                stroke: #bbb;
+        
+            }
+            .grids .domain {
+                  stroke: none;
+                }
+        </style>
+    <script>
+            const margin = {left:10, top:20, buttom:20, right:10}
+            const colorRange = ['red', 'blue']
+            let svg = d3.select('svg#plot1');
+            let inner_width = svg.attr('width') - margin.left - margin.right;
+            let inner_height = svg.attr('height') - margin.top - margin.buttom;
+
+            let plot = svg.append('g');
+            
+
+            let getpetdataset = async function(){
+                const df = await d3.csv('new_adoptablepet.csv')
+                console.log(df)
+            
+                // create axis
+                ext = d3.extent(df.map(d=>parseInt(d.index)))
+                
+                const sizecategories = [...new Set(df.map(d=>d.size))];
+                const agecategories = [...new Set(df.map(d=>d.age))];
+                const sexcategories = [...new Set(df.map(d=>d.sex))];
+               
+                console.log(agecategories)
+                // console.log(sizecategories)
+
+                // y axis
+                let linearscaler = d3.scaleLinear()
+                                        .domain(ext)
+                                        .range([inner_height-margin.top,10])
+                // x axis
+                let categoriescaler = d3.scalePoint()
+                            .domain(sizecategories)
+                            .range([0,inner_width])
+                            .padding(0.2);
+
+                // factors
+                let agescaler = d3.scalePoint()
+                                  .domain(agecategories)
+                                  .range([5,10])
+                
+                let sexscaler = d3.scaleOrdinal()
+                                        .domain(sexcategories)
+                                        .range(colorRange)
+                
+
+
+                const yAxis = d3.axisLeft(linearscaler);
+                const xAxis = d3.axisBottom(categoriescaler).ticks(sizecategories.length);
+
+                // gridlines
+                // x gridline
+                let xgrid = d3.axisBottom(categoriescaler)
+                              .tickFormat('')
+                              .tickSize(inner_height)
+
+                let ygrid = d3.axisLeft(linearscaler)
+                              .tickFormat('')
+                              .tickSize(-inner_width)
+
+
+                // start rendering
+
+                plot.append('g')
+                    .attr('class','y-axis')
+                    .attr('transform',`translate(${margin.left},${margin.top})`)
+                    .call(yAxis);
+
+                plot.append('g')
+                    .attr('class','x-axis')
+                    .attr('transform',`translate(${margin.left-10},${inner_height})`)
+                    .call(xAxis);
+
+                plot.append('g')
+                    .attr('class','grids')
+                    .attr('transform',`translate(${margin.left-10},${margin.top})`)
+                    .call(xgrid)
+
+                plot.append('g')
+                    .attr('class','grids')
+                    .attr('transform',`translate(${margin.left-10},${margin.top})`)     
+                    .call(ygrid)
+
+            // start populating data
+
+
+
+            let points = plot.selectAll('circle.indexes')
+                            .data(df)
+                            .join('circle')
+                            .attr('class','indexes')
+
+
+            points.each( function(d){
+
+                d3.select(this)
+                .attr('cx',categoriescaler(d.size)-10)
+                .attr('cy',linearscaler(d.index))
+                .attr('r',agescaler(d.age))
+                .attr('fill',sexscaler(d.sex))
+                .attr('stroke', 'black')
+                .attr('stroke-width', 1)
+                .style('opacity',0.5)
+
+            }
+
+
+
+
+            )
+
+            }
+            getpetdataset()
+
+
+    </script>
+  
+
 </html>
