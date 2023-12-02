@@ -1,0 +1,760 @@
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>INFO 5100 - Project 2</title>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src='https://d3js.org/topojson.v3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js'></script>
+    <style>
+        .state {
+            fill: white;
+            stroke: none;
+        }
+
+        .state-outline {
+            stroke: white;
+            fill: none;
+            stroke-width: 1px;
+        }
+
+        .county {
+            stroke: none;
+        }
+
+        .county-outline {
+            stroke: white;
+            stroke-width: 3px;
+            fill: none;
+        }
+
+        .gridlines line {
+            color: #aaa;
+        }
+
+        .gridlines .domain {
+            stroke: none;
+        }
+
+        text {
+            font-family: garamond;
+            font-size: 14;
+        }
+
+        g {
+            font-family: garamond;
+            font-size: 14;
+        }
+
+        .txt-box{
+            text-anchor: left;
+            fill:black
+        }
+
+        .button-bar {
+            width: 100px;
+            height: 30px;
+            stroke-width: 2px;
+            stroke: #ffb703;
+            top: -100px;
+            left: 850px;
+            font-family: garamond;
+            font-size: 20;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1 style='margin-left: 50px;'>US Car Accidents Analysis</h1>
+    </p>
+    <p style='font-family: garamont; font-size: 18px; margin-left: 50px;'>
+        We explored car accidents reports in the US from 2019 to 2020. <br>
+        First, we offer a country overview. <b>Hover over a state</b> to check out its total accidents in a <b>selected year</b>. <br>
+        The bottom map is a zoomed-in, county-level view for the selected state. <b>Hover over a county</b> to learn more about accidents severity trends.
+    </p>
+    <p>
+        <svg id='state_case' width='800' height='600'></svg>
+        <svg id='ranking_state_case' width='400' height='600'></svg>
+    </p>
+    <p>
+        <svg id='county' width='800' height='600'></svg>
+        <svg id='severity' width='400' height='600'></svg>
+    </p>
+    <script id='plot1'>
+        // state level accidents data
+        var dataIsLoaded1 = false;
+        var stateAccidents = {};
+        var accData;
+        var accData2020 = [];
+        var accData2019 = [];
+        var rankers = [];
+
+        // state map data
+        let topodata;
+        let state;
+        let stateMesh;
+        let projection1;
+        let projectPath1;
+
+        // state map constants
+        const margin = {top: 20, right: 20, bottom: 20, left:20};
+        const stateColorWidth = 50;
+        const stateColorHeight = 20;
+        const stateColors = ['#FCCB79', '#FFB627', '#FF9505', '#E2711D', '#CC5803'];
+        const stateYear = ['2019','2020'];
+
+        // variables for state map
+        let stateMap = d3.select('svg#state_case');
+        let stateWidth = stateMap.attr('width');
+        let stateHeight = stateMap.attr('height');
+        let innerPlotWidth = stateWidth - margin.left - margin.right;
+        let innerPlotHeight = stateHeight - margin.bottom - margin.top;
+        var colorScale;
+        let stateLegends = [];
+        var Xscaler;
+        var maxValue; 
+
+        // state map elements
+        let stateView = stateMap.append('g')
+                                .attr('transform',`translate(${margin.left+20}, ${margin.top})`);
+        let stateDetails = stateMap.append('g').attr('transform', `translate(${innerPlotWidth-150}, ${innerPlotHeight-30})`).attr('visibility', 'hidden');
+        let stateBox = stateDetails.append('rect')
+                                .attr('x', 0)
+                                .attr('y', 0)
+                                .attr('rx', 5)
+                                .attr('width', 150)
+                                .attr('height', 60)
+                                .attr('opacity', 0.2)
+                                .style('fill', stateColors[4]);
+        let txtState = stateDetails.append('text')
+                                .attr('x', 10)
+                                .attr('y', 18)
+                                .style('fill', 'black')
+                                .style('font-size', 12);
+        let txtCase = stateDetails.append('text')
+                                .attr('x', 10)
+                                .attr('y', 35)
+                                .style('fill', 'black')
+                                .style('font-size', 12);
+        let txtClick = stateDetails.append('text').text('(Click for more details)').attr('x', 10).attr('y', 50).style('font-size', 12);
+        
+        // state map color legends
+        let stateColorLegend = stateMap.append('g')
+                                        .attr('transform', `translate(0, ${stateHeight-30})`);
+        stateColors.forEach((color, i) => {
+            stateColorLegend.append('rect')
+                            .attr('x', stateColorWidth + i*(stateColorWidth))
+                            .attr('y',-10)
+                            .attr('width', stateColorWidth)
+                            .attr('height', stateColorHeight)
+                            .attr('fill', color);
+        });
+        stateColorLegend.append('text').text('State annual accidents').attr('class', 'title').attr('x', stateColorWidth).attr('y', -15);
+
+        async function loadAccidentsData () {
+            accData = await d3.csv('data/state_data.csv');
+            accData.forEach(d => {
+                d['count(Severity)'] = Number(d['count(Severity)']);
+                d['fipscode'] = Number(d['fipscode']);
+                if (d['Year'] === '2019') {
+                    accData2019.push(d);             
+                }
+                else if (d['Year'] === '2020'){
+                    accData2020.push(d);
+                }
+            });
+            accData2019 = accData2019.sort((a, b) => a.fipscode - b.fipscode);
+            accData2020 = accData2020.sort((a, b) => a.fipscode - b.fipscode);
+        }
+
+        async function loadStateTopoJson() {
+            topodata = await d3.json('data/us-smaller.json');
+            //states
+            state = topojson.feature(topodata, topodata.objects.states); 
+            //outline
+            stateMesh = topojson.mesh(topodata, topodata.objects.states);
+            projection1 = d3.geoAlbersUsa().fitSize([innerPlotWidth,innerPlotHeight],state);
+            projectPath1 = d3.geoPath().projection(projection1);
+        }
+
+        // draw top 5 states
+        let rankPlot = d3.select('svg#ranking_state_case');
+        let rankWidth = rankPlot.attr('width');
+        let rankHeight = rankPlot.attr('height');
+        let rankPlotTitle = rankPlot.append('text').text('US States With Most Accidents')
+                                    .attr('x', 50)
+                                    .attr('y', 150)
+                                    .attr('text-anchor', 'start')
+                                    .style('font-size', 24)
+                                    .style('fill', 'black');
+        let rankBars = rankPlot.append('g')
+                                .attr('transform',`translate(${margin.left+margin.right}, 150) scale(1.5)`);
+        var rankers = [];
+        var Yscaler;
+        var yAxis;
+        let yaxis = rankBars.append('g').attr('transform', `translate(${margin.left+10}, 25)`);
+
+        async function loadRankData() {
+            let rankdata = await d3.json('data/rank_case_by_year.json');
+            for (const yr in rankdata) {
+                for (const e in rankdata[yr]){
+                    var ranker = {
+                        'Year': yr,
+                        'state':e,
+                        'count':rankdata[yr][e]
+                    };    
+                    rankers.push(ranker);
+                }
+            }
+        }
+
+        async function drawStatePlot(year) {
+            if (!dataIsLoaded1) {
+                await loadStateTopoJson();
+                await loadAccidentsData();
+                await loadRankData();
+                dataIsLoaded1 = true;
+            }
+
+            /* state map */
+            // scales
+            let ext = d3.extent((year === 2019) ? accData2019 : accData2020, d => d['count(Severity)']);
+            colorScale = d3.scaleQuantile().domain(ext).range(stateColors);
+            quantile_edge = colorScale.quantiles().map(d=>parseInt(d));
+            quantile_range = [ext[0],...quantile_edge,ext[1]];
+
+            // color legend text
+            stateColorLegend.selectAll('text.number').data(quantile_range)
+                                .join('text')
+                                .attr('class', 'number')
+                                .attr('x', (d, i) => stateColorWidth + i*(stateColorWidth))
+                                .attr('y', 20)
+                                .attr('text-anchor', 'middle')
+                                .attr('alignment-baseline','left')
+                                .style('font-size', 12)
+                                .attr('color','black')
+                                .text((d, i) => (i === 0) ? 0 : d);
+
+            //state map outline
+            stateView.selectAll('path.state').data(state.features)
+                    .join('path')
+                    .attr('class','state')
+                    .attr('d', projectPath1)
+                    .on('mouseover',  mouseEntersState)
+                    .on('mouseout', mouseLeavesState)
+                    .on('click', stateClicked);
+
+            stateView.append('path').datum(stateMesh)
+                    .join('path')
+                    .attr('class', 'state-outline')
+                    .attr('d', projectPath1);
+
+            function stateClicked(event) {
+                let selected = d3.select(this).datum();
+                if (selected.fipscode !== 2 && selected.fipscode != 15) {
+                    drawCountyPlot(selected.fipscode, year);
+                }
+            }
+
+            function mouseEntersState(event) {
+                let selected = d3.select(this).datum();
+                stateDetails.attr('visibility', '');
+                txtState.text(selected['ln_name'] + ' State');
+                if (selected['count(Severity)'] === 0) {
+                    txtCase.text('No records');
+                    txtClick.text('');
+                }
+                else {
+                    txtCase.text(`Total cases: ${selected['count(Severity)']}`);
+                    txtClick.text('(Click for more details)');
+                }
+            }
+
+            function mouseLeavesState(event) {
+                txtState.text('');
+                txtCase.text('');
+                stateDetails.attr('visibility', 'hidden');
+            }
+
+            if (year === 2019) {
+                stateView.selectAll('path.state').data(accData2019)
+                        .join('path')
+                        .attr('class','state')
+                        .style('fill', (d,i) => {
+                            if (d['count(Severity)'] === 0) {
+                                return 'darkgray';
+                            }
+                            return colorScale(d['count(Severity)']);
+                        }); 
+            }
+            else if (year === 2020) {
+                stateView.selectAll('path.state').data(accData2020)
+                        .join('path')
+                        .attr('class','state')
+                        .style('fill', (d, i) => {
+                            if (d['count(Severity)'] === 0) {
+                                return 'darkgray';
+                            }
+                            return colorScale(d['count(Severity)']);
+                        });
+            }
+
+            /* top 5 states */
+            // scales
+            let maxValue = Math.max(...rankers.map(d=>d.count));
+            Xscaler = d3.scaleLinear().domain([0, maxValue]).range([0, 150]);
+
+            // draw rank bars with numbers
+            let selectedRanks;
+            if (year === 2019) {
+                selectedRanks = rankers.filter(d=> d.Year !== '2019');
+            }   
+            else if (year === 2020) {
+                selectedRanks = rankers.filter(d=> d.Year !== '2020');
+            }
+            rankBars.selectAll('rect.case-ranker')
+                    .data(selectedRanks)
+                    .join('rect')
+                    .attr('class','case-ranker')
+                    .attr('x', 30)            
+                    .attr('y',(d,i) => i*30)
+                    .attr('height', 15)            
+                    .attr('width',(d,i) => Xscaler(d['count']))        
+                    .attr('transform',`translate(0,33)`)
+                    .attr('fill','orange');
+            rankBars.selectAll('text.ranktxt')
+                    .data(selectedRanks)
+                    .join('text')
+                    .attr('class','ranktxt')
+                    .attr('x',d=>Xscaler(d.count)-70)            
+                    .attr('y',(d,i)=>i*30)
+                    .text(d => d.count)        
+                    .attr('transform',`translate(${Xscaler(maxValue)-40},43)`)
+                    .style('font-size', 12)
+                    .attr('fill','	black');
+        
+            // state names
+            let yaxis_category = selectedRanks.map(d=>d.state);
+            Yscaler = d3.scaleBand().domain(yaxis_category).range([0, 150]);
+            yaxis.call(d3.axisLeft(Yscaler));
+            yaxis.selectAll('line').attr('stroke','white');
+            yaxis.selectAll('path.domain').attr('stroke','white');
+        }
+
+        // default year is 2019, default state is NY
+        drawStatePlot(2019);
+
+        let drawBarButton = function() {
+            let yearScale = d3.scalePoint().domain(stateYear)
+                                        .range([0,innerPlotWidth])
+                                        .padding(0.5);
+                        
+            let yearBotton = d3.axisBottom(yearScale);
+            stateYear.forEach((d, i) => {
+                let yearButton = rankPlot.append('g').attr('transform', `translate(${80+140*i}, 500)`)
+                                .on('click', function(event) {
+                                    let year = Number(d3.select(this).text());
+                                    if (selectedYear !== year) {
+                                        drawStatePlot(year);
+                                        drawCountyPlot(selectedState, year);
+                                    }
+                                    d3.selectAll('rect.button-bar').style('fill', 'white');
+                                    d3.select(this).select('rect').style('fill', '#ffb703');
+                                });;
+                yearButton.append('rect')
+                        .attr('class','button-bar')
+                        .attr('x', 0)
+                        .attr('y', 0)
+                        .attr('rx', 15)
+                        .style('fill', i === 0 ? '#ffb703' : 'white');        
+                yearButton.append('text').text(d).attr('x', 50).attr('y', 18).attr('text-anchor', 'middle')
+                            .attr('alignment-baseline', 'middle').style('font-size', 18);
+            })
+        };
+        drawBarButton();
+    </script>
+    
+    <script id='plot2'>
+        var dataIsLoaded2 = false;
+        // accidents count by county and severity
+        var accidents;
+        var countyAccidents = {};
+        // variables needed for county map
+        var us;
+        let states;
+        let statesMesh;
+        let counties;
+        let countiesMesh;
+        let projection2;
+        let path;
+        var countyOutlines;
+        // variables needed for severity quarterly chart
+        var selectedYear;
+        var selectedState;
+        var quarter2019 = {};
+        var quarter2020 = {};
+        var quarterCounts = [0, 0, 0, 0];
+        var countStateScale;
+        var countCountyScale;
+        // link states and counties to FIPs (as ids) in topojson
+        let stateFips = {};
+        let countyFips = {};
+
+        // county map dimensions
+        const countyMap = d3.select('svg#county');
+        const countyWidth = countyMap.attr('width');
+        const countyHeight = countyMap.attr('height');
+        const countyMapWidth = countyWidth;
+        const countyMapHeight = countyHeight-50;
+        const countyColorWidth = 50;
+        const countyColorHeight = 20;
+        const countyColors = ['#FFD1DC', '#FC8EAC', '#DE3163', '#C32148', '#800020'];
+        let countyView = countyMap.append('g');
+        countyView.select('path.county-outline').datum(countiesMesh)
+                .join('path')
+                .attr('class', 'county-outline')
+                .attr('d', path);
+        
+        // county map color legends
+        let countyColorLegend = countyMap.append('g').attr('transform', `translate(0, ${countyHeight-50})`);
+        let countyLegends = [];
+        countyColors.forEach((color, i) => {
+            countyColorLegend.append('rect')
+                            .attr('x', countyColorWidth + i*countyColorWidth)
+                            .attr('y', 0)
+                            .attr('width', countyColorWidth)
+                            .attr('height', countyColorHeight)
+                            .attr('fill', color);
+        })
+        for (var i = 0; i < 6; i++) {
+            countyLegends.push(countyColorLegend.append('text')
+                            .attr('x', countyColorWidth + i*countyColorWidth)
+                            .attr('y', 30)
+                            .attr('text-anchor', 'middle')
+                            .attr('alignment-baseline', 'middle')
+                            .style('font-size', 12));
+        }
+        countyColorLegend.append('text').text('County annual accidents')
+                        .attr('x', countyColorWidth)
+                        .attr('y', -5);
+
+        // county map interactive texts
+        let boxWidth = 140;
+        let boxHeight = 90;
+        let box = countyMap.append('g').attr('class', 'box').attr('transform', `translate(${countyWidth-boxWidth}, 20)`).attr('visibility', 'hidden');
+        box.append('rect')
+            .attr('fill', countyColors[4])
+            .attr('opacity', 0.2)
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('rx', 5)
+            .attr('width', boxWidth)
+            .attr('height', boxHeight);
+        let countyName = box.append('text').text('No Data Available')
+                            .style('fill', 'black')
+                            .attr('alignment-baseline','hanging')
+                            .attr('x', 10)
+                            .attr('y', 10)
+                            .style('font-size', 12);
+        let countyDetails = [];
+        for (var i = 0; i < 4; i++) {
+            countyDetails.push(box.append('text').text('Severity ' + (i+1) + ' : No records')
+                            .style('fill', 'black')
+                            .attr('alignment-baseline','hanging')
+                            .attr('x', 10)
+                            .attr('y', 30 + i*14)
+                            .style('font-size', 12));
+        }
+        var zoom = d3.zoom()
+                    .scaleExtent([1, 20])
+                    .translateExtent([[0, 0],[countyMapWidth, countyMapHeight]])  // to lock to edges
+                    .on('zoom', ({transform}) => {
+                        countyView.attr('transform', transform.toString());
+                        countyView.select('.county-outline')
+                                .style('stroke-width', 1 / transform.k);
+                    });
+
+        // severity chart dimensions
+        const severity = d3.select('svg#severity');
+        const severityWidth = severity.attr('width');
+        const severityHeight = severity.attr('height');
+        const textHeight = 80;
+        const sevMargins = {top: 10, right: 0, left: 60, bottom: 50};
+        const sevChartWidth = severityWidth - sevMargins.left - sevMargins.right;
+        const sevChartHeight = sevChartWidth;
+
+        // severity chart legends
+        let stateText = severity.append('text').text('')
+                                .attr('x', severityWidth / 2)
+                                .attr('y', textHeight / 2)
+                                .attr('text-anchor', 'middle')
+                                .attr('alignment-baseline', 'middle')
+                                .style('font-size', 24);
+        let severityChart = severity.append('g').attr('transform', `translate(0, ${textHeight})`);
+        const quarters = ['1st Quarter', '2nd Quarter', '3rd Quarter', '4th Quarter'];
+        let quarterScale = d3.scalePoint().domain(quarters)
+                                        .range([0, sevChartWidth])
+                                        .padding(0.5);
+        let bottomAxis = d3.axisBottom(quarterScale);
+        severityChart.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', `translate(${sevMargins.left}, ${sevChartHeight+sevMargins.top})`)
+                .call(bottomAxis);
+        var leftAxisLabels = severityChart.append('g')
+                                        .attr('class', 'y axis')
+                                        .attr('transform',`translate(${sevMargins.left-10}, ${sevMargins.top})`);
+        var gridlines = severityChart.append('g')
+                                    .attr('class', 'y gridlines')
+                                    .attr('transform',`translate(${sevMargins.left-10}, ${sevMargins.top})`)
+                                    .style('stroke-dasharray', ('2, 2'));
+
+        // severity chart buttons
+        const buttonTexts = ['All severity levels',
+                             'Severity 1: minimal impact, less than 1 hour delay',
+                             'Severity 2: mild impact, less than 3 hour delay',
+                             'Severity 3: moderate impact, less than 10 hour delay',
+                             'Severity 4: significant impact, more than 10 hour delay'];
+        let severityButtons = severity.append('g').attr('transform', `translate(0, ${textHeight+sevChartHeight+sevMargins.bottom})`);    
+        buttonTexts.forEach((t, i) => {
+            severityButtons.append('circle')
+                            .attr('id', i)
+                            .attr('cx', sevMargins.left - 12)
+                            .attr('cy', sevMargins.top + i*24)
+                            .attr('r', 6)
+                            .style('fill', 'white')
+                            .style('stroke-width', 2)
+                            .style('stroke', countyColors[2])
+                            .on('click', e => sevButtonClicked(i));
+            severityButtons.append('text').text(t)
+                            .attr('x', sevMargins.left)
+                            .attr('y', sevMargins.top + i*24 + 1)
+                            .attr('alignment-baseline', 'middle')
+                            .style('font-size', 14);
+        });
+        const barWidth = 40;
+        var quarterBars = severityChart.append('g').attr('transform',`translate(${sevMargins.left-barWidth/2}, ${sevMargins.top})`);
+
+        // look up county accidents data by fip code
+        function fipToCounty(fip) {
+            let county = countyFips[fip];
+            return countyAccidents[county.state + '-' + county.name];
+        }
+
+        function mouseEntersCounty(event, data) {
+            box.style('visibility', 'visible');
+            let countyData = d3.select(this).datum();
+            let county = fipToCounty(countyData.id);
+            // update text
+            countyName.text((countyData.id === 11001) ? 'D.C' : (countyFips[countyData.id].name + ' County'));
+            if (county != null) {
+                countyDetails.forEach((t, i) => {
+                    t.text('Severity ' + (i+1) + ': ' + county.counts[selectedYear-2019][i]);
+                })
+            }
+
+            // mute unselected counties
+            countyView.selectAll('.county').filter(d => d.id !== countyData.id).attr('fill-opacity', 0.2);
+        }
+
+        function mouseLeavesCounty(event, data) {
+            box.style('visibility', 'hidden');
+            countyName.text('No Data Available');
+            if (county != null) {
+                countyDetails.forEach((t, i) => {
+                    t.text('Severity ' + (i+1) + ' : No records');
+                })
+            }
+            // restore unselected counties
+            let countyData = d3.select(this).datum();
+            countyView.selectAll('.county').filter(d => d.id !== countyData.id).attr('fill-opacity', 1);
+        }
+
+        function sevButtonClicked(id) {
+            // update button colors
+            severityButtons.selectAll('circle').filter((d, i) => i !== id).style('fill', 'white');
+            severityButtons.selectAll('circle').filter((d, i) => i === id).style('fill', countyColors[2]);
+            // update bar charts
+            let state = stateFips[selectedState];
+            let stateData = (selectedYear === 2019) ? quarter2019[state.code] : quarter2020[state.code];
+            quarterCounts = (id === 0) ? stateData.total : stateData.counts[id-1];
+            quarterBars.selectAll('rect.bar').data(quarterCounts).join('rect')
+                        .attr('class', 'bar')
+                        .attr('fill', countyColors[2])
+                        .attr('x', (d, i) => quarterScale(quarters[i]))
+                        .attr('y', (d, i) => {
+                            if (countStateScale(0) - countStateScale(quarterCounts[i]) < 3) {
+                                return sevChartHeight-3;
+                            }
+                            else {
+                                return countStateScale(quarterCounts[i]);
+                            }
+                        })
+                        .attr('height', (d, i) => Math.max(3, countStateScale(0) - countStateScale(quarterCounts[i])))
+                        .attr('width', barWidth);
+            quarterBars.selectAll('text.bar').data(quarterCounts).join('text')
+                        .attr('class', 'bar')
+                        .text(d => d)
+                        .attr('x', (d, i) => quarterScale(quarters[i]) + barWidth/2)
+                        .attr('y', (d, i) => {
+                            if (countStateScale(0) - countStateScale(quarterCounts[i]) < 3) {
+                                return sevChartHeight-6;
+                            }
+                            else {
+                                return countStateScale(quarterCounts[i])-3;
+                            }
+                        })
+                        .attr('text-anchor', 'middle');
+        }
+
+        async function loadAccidents() {
+            accidents = await d3.csv('data/accidents.csv');
+            accidents.forEach(d => {
+                let county = d['State'] + '-' + d['County'];
+                let severity = Number(d['Severity']) - 1;
+                let year = Number(d['Year']) - 2019;
+                if (!(county in countyAccidents)) {
+                    countyAccidents[county] = {
+                        'name': d['County'],
+                        'state': d['State'],
+                        'counts': [[0, 0, 0, 0], [0, 0, 0, 0]], // by year, then by severity
+                        'total': [0, 0] // by year
+                    }
+                }
+                countyAccidents[county].counts[year][severity] = Number(d['count(Severity)']);
+                countyAccidents[county].total[year] += Number(d['count(Severity)']);
+            });
+        }
+
+        async function loadCountyTopoJson() {
+            us = await d3.json('data/us.json');
+            let filteredStates = ['02','2','15','60','66','69','72','74','78'];
+            us.objects.states.geometries = us.objects.states.geometries.filter(d => filteredStates.indexOf(d.id.toString().padStart(2,'0')) === -1);
+            states = topojson.feature(us, us.objects.states);
+            statesMesh = topojson.mesh(us, us.objects.states);
+            counties = topojson.feature(us, us.objects.counties);
+            countiesMesh = topojson.mesh(us, us.objects.counties);
+            projection1 = d3.geoAlbers().fitSize([countyMapWidth, countyMapHeight], states);
+            path = d3.geoPath().projection(projection1);
+            countyOutlines = countyView.append('path').datum(countiesMesh).attr('class', 'county-outline').attr('d', path);
+        }
+        
+        async function loadFips() {
+            let data = await d3.csv('data/state_fips.csv');
+            data.forEach(d => {
+                stateFips[d.id] = d;
+            });
+            data = await d3.csv('data/counties_fips.csv');
+            data.forEach(d => {
+                countyFips[d.fips] = d;
+            });
+        }
+
+        async function loadQuarters() {
+            let data = await d3.csv('data/quarter2019.csv');
+            data.forEach(d => {
+                let state = d['State'];
+                let severity = Number(d['Severity']) - 1;
+                let quarter = Number(d['Quarter']) - 1;
+                let count = Number(d['Count']);
+                if (!(state in quarter2019)) {
+                    quarter2019[state] = {
+                        'name': state,
+                        'counts': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], // by severity, then by quarter
+                        'total': [0, 0, 0, 0] // by quarter
+                    }
+                }
+                quarter2019[state].counts[severity][quarter] = count;
+                quarter2019[state].total[quarter] += count;
+            });
+            data = await d3.csv('data/quarter2020.csv');
+            data.forEach(d => {
+                let state = d['State'];
+                let severity = Number(d['Severity']) - 1;
+                let quarter = Number(d['Quarter']) - 1;
+                let count = Number(d['Count']);
+                if (!(state in quarter2020)) {
+                    quarter2020[state] = {
+                        'name': state,
+                        'counts': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], // by severity, then by quarter
+                        'total': [0, 0, 0, 0] // by quarter
+                    }
+                }
+                quarter2020[state].counts[severity][quarter] = count;
+                quarter2020[state].total[quarter] += count;
+            });
+        }
+
+        async function drawCountyPlot(stateFip, year) {
+            // only load data files once
+            if (!dataIsLoaded2) {
+                await loadAccidents();
+                await loadCountyTopoJson();
+                await loadFips();
+                await loadQuarters();
+                dataIsLoaded2 = true;
+            }
+
+            // select year, state, and counties
+            selectedYear = year;
+            let selectedStates = states.features.filter(d => d.id === stateFip);
+            selectedState = selectedStates[0].id;
+            let state = stateFips[selectedState];
+            let selectedCounties = counties.features.filter(d => d.id >= selectedState*1000 && d.id < selectedState*1000+1000);
+            let countyData = selectedCounties.map(d => fipToCounty(d.id));
+
+            // scales
+            const countExtent = d3.extent(countyData, d => (d == null) ? 0 : d.total[year-2019]);
+            const colorScale = d3.scaleQuantize().domain(countExtent).range(countyColors);
+
+            /* LEGENDS */
+            stateText.text(year + ' ' + ((selectedState === 11) ? 'D.C Accidents' : (state.name + ' State Accidents')));
+            let thresholds = colorScale.thresholds();
+            countyLegends.forEach((text, i) => {
+                if (i === 0) { text.text(countExtent[0]); }
+                else if (i < 5) { text.text(thresholds[i-1] | 0); }
+                else { text.text(countExtent[1]); }
+                text.attr('visibility', '');
+            });
+
+            /* COUNTY MAP */
+            countyView.selectAll('path.county').data(selectedCounties)
+                .join('path')
+                .attr('class', 'county')
+                .attr('id', d => 'county' + d.id)
+                .attr('d', path)
+                .attr('fill', d => {
+                    let county = fipToCounty(d.id);
+                    return (county == null) ? 'darkgray' : colorScale(county.total[year-2019]);
+                })
+                .lower()
+                .on('mouseover', mouseEntersCounty)
+                .on('mouseout', mouseLeavesCounty);
+
+            // center and zoom onto the selected state
+            countyView.call(zoom.transform, d3.zoomIdentity);
+            let bounds = path.bounds(selectedStates[0].geometry);
+            let dx = bounds[1][0] - bounds[0][0];
+            let dy = bounds[1][1] - bounds[0][1];
+            let x = (bounds[0][0] + bounds[1][0]) / 2;
+            let y = (bounds[0][1] + bounds[1][1]) / 2;   
+            let scale = Math.max(1, Math.min(10, 0.9 / Math.max(dx / countyMapWidth, dy / countyMapHeight)));  
+            let translate = [countyMapWidth / 2 - x * scale, countyMapHeight / 2 - y * scale];
+            let newTransform = d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale);
+            countyView.transition().duration(1000).call(zoom.transform, newTransform);
+
+            /* SEVERITY CHART */
+            // scales
+            let stateData = (selectedYear === 2019) ? quarter2019[state.code] : quarter2020[state.code];
+            countStateScale = d3.scaleLinear().domain([0, Math.max(...stateData.total)]).range([sevChartHeight, 0]);
+            countCountyScale = d3.scaleLinear().domain(countExtent).range([sevChartHeight, 0]);
+            sevButtonClicked(0);
+
+            // axis and gridlines
+            leftAxis = d3.axisLeft(countStateScale);
+            leftAxisLabels.call(leftAxis);
+            gridlines.call(leftAxis.tickSize(-sevChartWidth-10).tickFormat(''));            
+        }
+        // default state is NY
+        drawCountyPlot(36, 2019);
+    </script>
+</body>
+</html>
