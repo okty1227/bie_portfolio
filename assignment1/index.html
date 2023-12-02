@@ -1,146 +1,399 @@
-<!DOCTYPE html>
 <html>
-
+<!DOCTYPE html>
 <head>
+    <title>INFO 5100 - Project 1</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <!-- <script src="https://cdnjs.com/libraries/d3-legend"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <style>
+        .country{
+            fill: rgb(219, 171, 149);
+        }
+        .outline{
+            fill: none;
+            stroke: black;
+            stroke-width: 0.5px;
+        }
+        .gridlines line {
+            color: #bbb;
+        }
+        .gridlines .domain {
+            stroke: none;
+        }
+        .text {
+            font-size: 12;
+            font-family: georgia;
+        }
+        g {
+            font-size: 12;
+            font-family: georgia;
+        }
+    </style>
 </head>
-<style>
-  .country{
-    fill: rgb(219, 171, 149);
-  }
-  .outline{
-    fill: none;
-    stroke: black;
-    stroke-width: 0.5px;
-  }
-</style>
 <body>
-
-<p>
-  
-  <svg id="map" style="background: #ffffff">
-
-
-  </svg>
-<script>
-  let svg  = d3.select('#map')
-          .attr('width',1000)
-          .attr('height',1000)
-
-  const width = svg.attr('width') 
-  const height = svg.attr('height') 
-  const margin = {top:20, right:20, bottom:30, left:20}
-  
-  const map_inside_width = width-margin.right-margin.left
-  const map_inside_height = height-margin.top-margin.bottom
-  const title_coord = (map_inside_height)/5
-
-  const title_name = 'Being a top YouTuber in WHICH country is an ideal career?'
-
-  const map = svg.append('g')
-                  .attr("transformation",`translate(${margin.left},${margin.top})`)
-
-  let title =  svg.append('text')
-                  .text(title_name)
-                  .attr('x', margin.left) //set x coord
-                  .attr('y', title_coord+10) //set x coord
-                  .style('text-align','left')
-                  .style('font-size','2em')
-                  .style('font-family','sans-serif')
-                  .style('stroke', 'black');
-  const requestData = async function(){
-
-
-        
-    // let data = await d3.json('mapjs/counties_10m.json');
-    let data = await d3.json('mapjs/countries_10m_dump.json');
-    data.objects.countries['geometries'].forEach(element => 
-    {element.id = parseInt(element.id)
-      
-    });
-  
-    var matrix_ranger = data.objects.countries['geometries'].map(function(item){
- 
-      return item.properties.matrics;
-
-    });
-    let color_scale_plan =  [-1,-0.5,0,0.5,1,10,30]                 
-    let colorScaler = d3.scaleThreshold()
-                        .domain(color_scale_plan)
-                        .range(d3.schemeRdBu[color_scale_plan.length]);  
-
-    var legend = d3.legendColor()
-                  .labelFormat(d3.format(".2f"))
-                  .title("Color Legend")
-                  .scale(colorScaler)
-
-      
-    map.append('g')
-        .call(legend);
-
-    d3.select('.legendCells')
-    .attr('transform',`translate(${map_inside_width-80},100)`)
-    .style('font-family','sans-serif')
-
-    let label_names = d3.selectAll('.label')
-                  .style('font-size','0.8em')          
-                  .text(function(element,i){
-                    if (i==0){
-                      return 'Miss Data'
-                    }else{
-                      return element}
-                  });
-
-    let label_color = d3.select('.swatch')
-                        .style('fill',function(element,i){
-                                        if (i==0){
-                                            return 'gray'
-                                        }
-                                      })      
-    d3.selectAll('.legendTitle')              
-    .attr('transform',`translate(${map_inside_width-80},80)`)
-    .style('font-size','1em')
-    .style('font-weight','bold')
-    .style('font-family','sans-serif')
-
-    console.log(label_names.width)
-
-
-
-
-    var countries = topojson.feature(data,data.objects.countries);
-    // console.log(data.objects.countries)
-    var countries_mesh = topojson.mesh(data,data.objects.countries);
-
-    var projection = d3.geoEqualEarth().fitSize([map_inside_width,map_inside_height],countries);
-    var path = d3.geoPath().projection(projection);
-
-    map.selectAll('country').data(countries.features)
-        .join("path")
-        .attr('class','country')
-        .attr('note',d => d['id'])
-        .attr('d',path)
-        .style('fill',d=> {if (d.properties['matrics']===0){
-                           return 'grey';
-                          }else{
-                            return colorScaler(d.properties['matrics']);}
-                          });
-
-
-
-    map.append('path').datum(countries_mesh)
-    .attr('class','outline')
-    .attr('d',path);
-    
-  };
-  requestrankData()
-
-  
-
-</script>
+<p style="font-size: 30px; font-family: georgia; margin-left: 10px;">
+    INFO 5100 Project 1
 </p>
+<p>
+    <span style="font-size: 28px; font-family: georgia; margin-left: 10px;">Being a top YouTuber in WHICH country is an ideal career?</span>
+    <p style="font-size: 16px; font-family: georgia; margin-left: 10px;">
+        Becoming Youtuber is one of the most popular dream jobs in these days. However, is it a financially ideal carreer?<br>
+        We take country's economic development into consideration, to see whether the average income made by youtubers can beat the living standard in their country.<br>
+        The higher the number is, the more ideal being youtuber in their country.</p>
+    <svg id="map" style="background: #ffffff;"></svg>
+</p>
+<p>
+    <span style="font-size: 28px; font-family: georgia; margin-left: 10px;">WHICH YouTube channel type is the most profitable in the U.S?</span>
+    <p style="font-size: 16px; font-family: georgia; margin-left: 10px;">
+        Focusing on top US YouTubers, we dive deeper into earnings by channel type.<br>
+        We take the average lowest yearly earning as the baseline for each channel type, and plot the average highest earning and the maximum highest earning.<br>
+        The larger the circle is, the more profit a channel type could earn. The more saturated the color is, the more common to achieve the earning.
+    </p>
+    <svg id="plot" width="1200" height="600"></svg>
+</p>
+<script>
+    let svg = d3.select('#map')
+            .attr('width',1200)
+            .attr('height',800);
+  
+    const width = svg.attr('width');
+    const height = svg.attr('height');
+    const margin = {top:20, right:80, bottom:30, left:20};
+    
+    const map_inside_width = width-margin.right-margin.left;
+    const map_inside_height = height-margin.top-margin.bottom;
+    const title_coord = (map_inside_height)/8;
+  
+    const title_name = "Top YouTubers' Income compared to Country GDP";
+  
+    const map = svg.append('g')
+                    .attr("transformation",`translate(${margin.left},${margin.top})`);
+  
+    let title =  svg.append('text')
+                    .text(title_name)
+                    .attr('x', map_inside_width/2) //set x coord
+                    .attr('y', title_coord) //set x coord
+                    .attr('text-anchor','middle')
+                    .style('font-size', 24)
+                    .style('font-family','georgia');
+
+    const requestData = async function(){        
+      // let data = await d3.json('mapjs/counties_10m.json');
+      let data = await d3.json('data/countries_10m_dump.json');
+      data.objects.countries['geometries'].forEach(element => {
+        element.id = parseInt(element.id)
+      });
+    
+      var matrix_ranger = data.objects.countries['geometries'].map(function(item) {
+        return item.properties.matrics;
+      });
+      let color_scale_plan =  [-1,-0.5,0,0.5,1,10,30];                
+      let colorScaler = d3.scaleThreshold()
+                          .domain(color_scale_plan)
+                          .range(d3.schemeRdBu[color_scale_plan.length]);  
+  
+      var legend = d3.legendColor()
+                    .labelFormat(d3.format(".2f"))
+                    .title("Color Legend")
+                    .scale(colorScaler);
+       
+      map.append('g')
+          .call(legend);
+  
+      d3.select('.legendCells')
+        .attr('transform',`translate(${map_inside_width-80},${margin.top+10})`)
+        .style('font-family','georgia')
+        .style('font-size', 14);
+  
+      let label_names = d3.selectAll('.label')
+                    .style('font-size','0.8em')          
+                    .text(function(element,i){
+                      if (i==0) {
+                        return 'Missing Data'
+                      } else {
+                        return element}
+                    });
+  
+      let label_color = d3.select('.swatch')
+                          .style('fill',function(element,i){
+                                          if (i==0){
+                                              return 'gray'
+                                          }
+                                        })      
+      d3.selectAll('.legendTitle')              
+      .attr('transform',`translate(${map_inside_width-80},${margin.top})`)
+      .style('font-size',14)
+      .style('font-family','georgia');
+  
+    //   console.log(label_names.width);
+  
+      var countries = topojson.feature(data,data.objects.countries);
+      // console.log(data.objects.countries)
+      var countries_mesh = topojson.mesh(data,data.objects.countries);
+  
+      var projection = d3.geoEqualEarth().fitSize([map_inside_width,map_inside_height],countries);
+      var path = d3.geoPath().projection(projection);
+  
+      map.selectAll('country').data(countries.features)
+          .join("path")
+          .attr('class','country')
+          .attr('note',d => d['id'])
+          .attr('d',path)
+          .style('fill',d=> {if (d.properties['matrics']===0){
+                             return '#d9d9d9';
+                            }else{
+                              return colorScaler(d.properties['matrics']);}
+                            });
+  
+      map.append('path').datum(countries_mesh)
+      .attr('class','outline')
+      .attr('d',path);
+      
+    };
+    requestData();  
+</script>
+
+<script>
+    // the svg
+    const canvas = d3.select("svg#plot");
+    const width2 = canvas.attr("width");
+    const height2 = canvas.attr("height");
+    // the title
+    const titleHeight = 30;
+    const titleText = "Top U.S YouTube Channels' Earnings By Channel Type";
+    // the mark annotation: circles with texts at the bottom
+    const markRadius = {inner: 10, mid: 20, outer: 40};
+    const markOpacity = {inner: 1, mid: 0.5, outer: 0.3};
+    const markWidth = width2;
+    const markHeight = 2*markRadius.outer;
+    const markTextHeight = {inner: markRadius.outer+markRadius.inner/2, mid: markRadius.mid+markRadius.inner/2, outer: markRadius.inner/2};
+    const markText = {inner: 'Average lowest yearly earning among top U.S. channels',
+                    mid: 'Average highest yearly earning w.r.t. Average lowest yearly earning',
+                    outer: 'Max highest yearly earning w.r.t. Average lowest yearly earning'};
+    // the chart area: axis labels + plot + color annotations
+    const chartMargins = {top: 10, right: 10, bottom: 10, left: 10};
+    const chartWidth = width2;
+    const chartHeight = height2 - titleHeight - markHeight - chartMargins.top - chartMargins.bottom;
+    const viewsLabelText = 'Total Views';
+    const colorWidth = 150;
+    const subsLabelWidth = width2 - colorWidth;
+    const subsLabelText = 'Total Subscribers';
+    const containerWidth = subsLabelWidth;
+    const containerHeight = chartHeight;
+    // the plot: inside the container
+    const plotMargins = {top: 10, right: 10, bottom: 50, left: 50};
+    const plotWidth = containerWidth - plotMargins.left - plotMargins.right;
+    const plotHeight = containerHeight - plotMargins.top - plotMargins.bottom;
+    
+    const slope = 497.336; // channel_type
+    const colors = ['#d9434f', '#f28801', '#ffd41e', '#2464c1', '#0094ff', '#1f9ec7', '#00d8b1', '#93cba6', '#14653c', '#e62a84', '#e698fe', '#9c5dc8', '#630202'];
+
+    // create visualizatino title
+    drawTitle();
+
+    // create chart and axis labels
+    let chart = canvas.append('g').attr('transform', `translate(${chartMargins.left}, ${chartMargins.top+titleHeight})`);
+    drawLabels(chart);
+
+    // create mark annotations
+    let mark = canvas.append('g').attr('transform', `translate(${plotMargins.left},${height2-markHeight})`);
+    drawMarkAnnotation(mark);
+
+    // create plot and color annotations
+    let plot = chart.append('g').attr('transform',`translate(${plotMargins.left},${plotMargins.top})`);
+    let colorAnnotation = chart.append('g').attr('transform',`translate(${chartWidth-colorWidth},${plotMargins.top})`);
+    d3.csv('data/youtube_us_type.csv', d3.autoType).then((data) => {
+        console.log(data);
+
+        // scales
+        // subscribers -> x position
+        const subsExtent = d3.extent(data, d => d['subscribers']);
+        subsExtent[0] *= 0.9;
+        subsExtent[1] *= 1.05;
+        let subsScale = d3.scaleLinear().domain(subsExtent).range([0, plotWidth]);
+        // total views -> y position
+        const viewsExtent = d3.extent(data, d => d['views']);
+        viewsExtent[0] *= 0.8;
+        viewsExtent[1] *= 1.1;
+        let viewsScale = d3.scaleLinear().domain(viewsExtent).range([plotHeight, 0]);
+        // earnings -> radius
+        const lowEarningExtent = d3.extent(data, d => d['lowest_yearly_earnings']);
+        let earningScale = d3.scaleLinear().domain(lowEarningExtent).range([4, 10]);
+
+        // start drawing
+        let axes = drawAxes(plot, viewsScale, subsScale);
+        drawGridLines(plot, axes);
+        drawAvgRatioLine(plot, subsExtent, subsScale, viewsExtent, viewsScale);
+
+        // circles and color annotations
+        data.forEach((d, i) => {
+            drawCircles(plot, subsScale, viewsScale, earningScale, d, i, data.length);
+            drawColorAnnotation(colorAnnotation, d, i, data.length);
+        });
+    },
+        (error) => { console.log(error) }
+    );
+
+    function drawTitle() {
+        canvas.append('g')
+            .append('text')
+            .text(titleText)
+            .attr('x', width2 / 2)
+            .attr('y', titleHeight / 2)
+            .style('font-size', 24)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'middle');
+    }
+
+    function drawLabels(chart) {
+        chart.append('text')
+            .text(viewsLabelText)
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('font-size', 18)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'middle')
+            .attr('transform', `translate(0,${chartHeight/2}) rotate(270)`);
+        
+        chart.append('text')
+            .text(subsLabelText)
+            .attr('x', chartWidth / 2)
+            .attr('y', chartHeight)
+            .attr('font-size', 18)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'middle');
+    }
+
+    function drawMarkAnnotation(mark) {
+        for (var m in markRadius) {
+            mark.append('circle')
+                .attr('cx', markRadius.outer)
+                .attr('cy', markRadius.outer)
+                .attr('r', markRadius[m])
+                .style('opacity', markOpacity[m]);
+
+            mark.append('line')
+                .attr('x1', markRadius.outer)
+                .attr('y1', markTextHeight[m])
+                .attr('x2', markRadius.outer + 100)
+                .attr('y2', markTextHeight[m])
+                .attr('stroke', 'black');
+            
+            mark.append('text')
+                .text(markText[m])
+                .attr('x', markRadius.outer + 110)
+                .attr('y', markTextHeight[m])
+                .attr('font-size', 14)
+                .attr('alignment-baseline', 'middle');
+        }
+    }
+
+    function drawAxes(plot, viewsScale, subsScale) {
+        let leftAxis = d3.axisLeft(viewsScale).tickValues(viewsScale.ticks(20)).tickFormat(d => d / 1000000000 + 'B');
+        plot.append('g')
+            .call(leftAxis);
+            
+        let bottomAxis = d3.axisBottom(subsScale).tickValues(subsScale.ticks(20)).tickFormat(d => d / 1000000 + 'M');
+        plot.append('g')
+            .attr('transform', `translate(0,${plotHeight+10})`)
+            .call(bottomAxis);
+
+        return [leftAxis, bottomAxis];
+    }
+
+    function drawGridLines(plot, axes) {
+        const leftAxis = axes[0];
+        const bottomAxis = axes[1];
+
+        plot.append('g')
+            .attr('class', 'x gridlines')
+            .style('stroke-dasharray', ('2, 2'))
+            .lower()
+            .call(leftAxis.tickFormat('').tickSize(-plotWidth));
+            
+        plot.append('g')
+            .attr('class', 'y gridlines')
+            .attr('transform', `translate(0,${plotHeight+10})`)
+            .style('stroke-dasharray', ('2, 2'))
+            .lower()
+            .call(bottomAxis.tickFormat('').tickSize(-plotHeight-10));
+    }
+  
+    function drawAvgRatioLine(plot, subsExtent, subsScale, viewsExtent, viewsScale) {
+        let x1 = subsExtent[0];
+        let y1 = subsExtent[0] * slope;
+        let x2 = subsExtent[1];
+        let y2 = subsExtent[1] * slope;
+
+        let start = 'M ' + subsScale(x1) + ' ' + viewsScale(y1);
+        let end = 'L ' + subsScale(x2) + ' ' + viewsScale(y2);
+        let ratioLine = plot.append('path')
+                            .attr('id', 'avgRatio')
+                            .attr('d', start + end)
+                            .attr('stroke', 'black')
+                            .lower();
+
+        const ratioText = 'Average Number of Views per Subscriber  =  ' + slope;
+        plot.append('text')
+            .attr('dy', -5)
+            .append('textPath')
+            .attr('xlink:href', '#avgRatio')
+            .text(ratioText)
+            .attr('font-size', 14)
+            .attr('text-anchor', 'middle')
+            .attr('startOffset', '60%')
+            .lower();
+    }
+
+    function drawCircles(plot, subsScale, viewsScale, earningScale, d, i, len) {
+        let x = subsScale(d['subscribers']);
+        let y = viewsScale(d['views']);
+
+        let lowestEarning = d['lowest_yearly_earnings'];
+        let highToLow = Math.log2(d['highest_yearly_earnings'] / lowestEarning);
+        let maxToLow = Math.log2(d['max_yearly_earnings'] / lowestEarning);
+
+        // max highest earnings -> outer circle
+        plot.append('circle')
+            .attr('cx', x)
+            .attr('cy', y)
+            .attr('r', earningScale(lowestEarning) * maxToLow)
+            .attr('opacity', 0.4)
+            .style('fill', colors[i]);
+
+        // avg highest earnings -> mid circle
+        plot.append('circle')
+            .attr('cx', x)
+            .attr('cy', y)
+            .attr('r', earningScale(lowestEarning) * highToLow)
+            .attr('opacity', 0.6)
+            .style('fill', colors[i]);
+
+        // avg lowest earnings -> inner circle
+        plot.append('circle')
+            .attr('cx', x)
+            .attr('cy', y)
+            .attr('r', earningScale(d['lowest_yearly_earnings']))
+            .attr('opacity', 1)
+            .style('fill', colors[i]);
+    }
+
+    function drawColorAnnotation(colorAnnotation, d, i, len) {
+        let colorHeight = (containerHeight - plotMargins.bottom) / len;
+
+        colorAnnotation.append('circle')
+            .attr('cx', 0)
+            .attr('cy', i*colorHeight+colorHeight/2)
+            .attr('r', colorHeight/8)
+            .attr('fill', colors[i]);
+
+        colorAnnotation.append('text')
+            .attr('x', colorHeight/8 + 5)
+            .attr('y', i*colorHeight+colorHeight/2)
+            .text(d['channel_type'])
+            .attr('font-size', 12)
+            .attr('alignment-baseline', 'middle');
+    }
+</script>
 </body>
 </html>
