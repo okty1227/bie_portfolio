@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+  <!-- <script src="main.js" defer></script> -->
+  <link rel="stylesheet" type="text/css" href=".\testhw7\style.css" />
+  <script src=".\testhw7\main.js" defer></script>
+  <title>Data Visualizations Hub</title>
+  <!-- Add any necessary CSS styles here -->
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #visualization-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .visualization {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  </style> -->
+</head>
+<body>
+
+  <h1>Data Visualizations Hub</h1>
+
+  <div class="subfolder">
+    <h2>Some Small Projects...</h2>
+    <button class="btn" onclick="showVisualization(1)">New York State Median Income</button>
+    <button class="btn" onclick="showVisualization(2)">Pending...</button>
+</div>
+
+  <!-- Container for displaying visualizations -->
+  
+
+  <!-- Script to handle visualization display -->
+  <script>
+
+    function showVisualization(projectNumber) {
+      // Replace the following line with code to display the visualization for the selected project
+      // var visualizationHtml = `<div class="visualization">Visualization for Project ${projectNumber}</div>`;
+      show_plot()
+      // Append the visualization to the container
+      // document.getElementById('visualization-container').innerHTML = visualizationHtml;
+      // // document.getElementById('visualization-container').innerHTML = plt;
+
+    }
+  </script>
+
+</body>
+</html>

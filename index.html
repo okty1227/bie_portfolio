@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="./hw7/main.js" defer></script>
+    <script src="./hw8-fa23/main.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="./hw7/style.css" />
+
+
     <title>Course Project Repo</title>
     <style>
         body {
@@ -30,11 +38,24 @@
             color: #ffffff;
             border-radius: 5px;
         }
+        footer {
+
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .urls{
+        color: #0366d6;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
 
-    <h1>GitHub Repository</h1>
+    <h1>Business Intelligence Project Repo</h1>
     <p>Welcome to the repository for the Cornell Data Driven Web Application Course! This repository contains course project done when taking the course 'Data Driven Web App'. Explore the different subfolders below:</p>
 
     <div class="subfolder">
@@ -50,21 +71,46 @@
         <a href="./assignment2/" class="btn">Take a look of project 2!</a>
     </div>
 
-    <!-- <div class="subfolder">
-        <h2>Project 3</h2>
-        <p>Description of Subfolder 3 goes here.</p>
-        <a href="./assignment3" class="btn">Open Project 3</a>
-    </div> -->
 
-    <p>If you have any questions or issues, please open an <a href="https://github.com/okty1227">issue</a>.</p>
+    <div class="subproject">
+        <h2>Some Small Projects...</h2>
+        <button class="btn" onclick="showVisualization(1)">New York State Median Income</button>
+        <button class="btn" onclick="showVisualization(2)">Network Throughout Game of Throne</button>
+    </div>
+    <!-- <p>If you want to explore more project please visit <a href="https://github.com/okty1227">My Github</a>.</p>
 
-    <p>I hope you enjoy!</p>
+    <p>I hope you enjoy!</p> -->
 
 </body>
 
+
 <footer>
-    For further contact information
-    <br>
-    <a href="https://www.linkedin.com/in/ting-lai/">LinkedIn</a>
+    For further contact information, please visit
+    
+    <a class="urls" href="https://www.linkedin.com/in/ting-lai/">LinkedIn</a>
 </footer>
+
+<script>
+
+    function showVisualization(projectNumber) {
+          // Replace the following line with code to display the visualization for the selected project
+        //   var visualizationHtml = `<div class="visualization">Visualization for Project ${projectNumber}</div>`;
+        // let divPosition = document.getElementById('visualization-container').getBoundingClientRect();
+        
+        if (projectNumber===1){
+            // console.log(divPosition.left,divPosition.top)
+            show_map_plot()
+
+        };
+        if (projectNumber===2){
+            show_network_plot()
+
+        };
+          // Append the visualization to the container
+        //   document.getElementById('visualization-container').innerHTML = plt;
+    
+        }
+    
+        
+    </script>
 </html>
