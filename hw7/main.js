@@ -1,16 +1,17 @@
 
-let width = 600
-let height = 800
 
-const margin = { top: 10, right: 10, bottom: 50, left:50 };
-let plotWidth = width - margin.top - margin.bottom;
-let plotHeight = height- margin.left - margin.right;
-
-let svg = d3.select('div.subproject')  // or select an appropriate container element
+let svg = d3.select('div.horizontal-container')  // or select an appropriate container element
     .append('svg')
-    .attr('height', height)
-    .attr('width', width)
-    .style('margin', '20px');
+    .attr('height', '100%')
+    .attr('width', '100%')
+    .attr('class','horizontal-container')
+    .style('margin', '10px');
+
+const margin = { top: 10, right: 0, bottom: 0, left:0 };
+let plotWidth = svg.node().clientWidth/2
+
+
+let plotHeight = svg.node().clientHeight 
 
 let plot = svg.append('g')
 
@@ -58,7 +59,15 @@ async function draw_map(ph) {
         .attr('cx',locate[0])
         .attr('cy',locate[1])
         .attr('r',6)
-    
+
+        plot.append('text')
+        .attr('class', 'belltower_locate')
+        .attr('x', locate[0])
+        .attr('y', locate[1])
+        .style('fill', 'black')
+        .style('font-weight', 'bold')  
+        .text('Cornell University, Ithaca');
+
     plot.style('visibility', 'hidden');
     // let svgElement = plot.node()
     // let svgString = new XMLSerializer().serializeToString(svgElement);

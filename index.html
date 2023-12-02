@@ -51,6 +51,14 @@
         color: #0366d6;
         font-weight: bold;
     }
+    .horizontal-container  {
+      display: flex;
+      width: 1000px;
+      height: 400px
+    }
+    .horizontal-container:hover {
+        height: 800px; /* Expanded width on hover, adjust as needed */
+    }
     </style>
 </head>
 <body>
@@ -73,9 +81,11 @@
 
 
     <div class="subproject">
-        <h2>Some Small Projects...</h2>
+        <h2>Some Plots...</h2>
+        
         <button class="btn" onclick="showVisualization(1)">New York State Median Income</button>
         <button class="btn" onclick="showVisualization(2)">Network Throughout Game of Throne</button>
+        <div class="horizontal-container"></div>
     </div>
     <!-- <p>If you want to explore more project please visit <a href="https://github.com/okty1227">My Github</a>.</p>
 
