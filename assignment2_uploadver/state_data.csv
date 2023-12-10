@@ -1,0 +1,103 @@
+State,Year,count(Severity),ln_name,fipscode
+AL,2019,19238,Alabama,1
+AL,2020,20185,Alabama,1
+AK,2019,0,ALASKA,2
+AK,2020,0,ALASKA,2
+AR,2019,991,Arkansas,5
+AR,2020,3090,Arkansas,5
+AZ,2019,24529,Arizona,4
+AZ,2020,29535,Arizona,4
+CA,2019,213455,California,6
+CA,2020,285532,California,6
+CO,2019,17620,Colorado,8
+CO,2020,13889,Colorado,8
+CT,2019,5457,Connecticut,9
+CT,2020,9341,Connecticut,9
+DC,2019,1487,District of Columbia,11
+DC,2020,2632,District of Columbia,11
+DE,2019,1620,Delaware,10
+DE,2020,2478,Delaware,10
+FL,2019,60313,Florida,12
+FL,2020,130362,Florida,12
+GA,2019,23718,Georgia,13
+GA,2020,23427,Georgia,13
+HI,2019,0,HAWAII,15
+HI,2020,0,HAWAII,15
+IA,2019,2842,Iowa,19
+IA,2020,3649,Iowa,19
+ID,2019,554,Idaho,16
+ID,2020,2319,Idaho,16
+IL,2019,19969,Illinois,17
+IL,2020,25007,Illinois,17
+IN,2019,7772,Indiana,18
+IN,2020,7806,Indiana,18
+KS,2019,1995,Kansas,20
+KS,2020,2644,Kansas,20
+KY,2019,6832,Kentucky,21
+KY,2020,5568,Kentucky,21
+LA,2019,18980,Louisiana,22
+LA,2020,26342,Louisiana,22
+MA,2019,9349,Massachusetts,25
+MA,2020,11101,Massachusetts,25
+MD,2019,12462,Maryland,24
+MD,2020,24351,Maryland,24
+ME,2019,636,Maine,23
+ME,2020,281,Maine,23
+MI,2019,20360,Michigan,26
+MI,2020,15763,Michigan,26
+MN,2019,29607,Minnesota,27
+MN,2020,39193,Minnesota,27
+MO,2019,9133,Missouri,29
+MO,2020,10372,Missouri,29
+MS,2019,1984,Mississippi,28
+MS,2020,2019,Mississippi,28
+MT,2019,157,Montana,30
+MT,2020,2450,Montana,30
+NC,2019,45999,North Carolina,37
+NC,2020,48633,North Carolina,37
+ND,2019,17,North Dakota,38
+ND,2020,399,North Dakota,38
+NE,2019,4645,Nebraska,31
+NE,2020,2493,Nebraska,31
+NH,2019,2219,New Hampshire,33
+NH,2020,1496,New Hampshire,33
+NJ,2019,13018,New Jersey,34
+NJ,2020,18590,New Jersey,34
+NM,2019,1616,New Mexico,35
+NM,2020,1436,New Mexico,35
+NV,2019,3001,Nevada,32
+NV,2020,2442,Nevada,32
+NY,2019,42967,New York,36
+NY,2020,48805,New York,36
+OH,2019,13235,Ohio,39
+OH,2020,17240,Ohio,39
+OK,2019,20483,Oklahoma,40
+OK,2020,13590,Oklahoma,40
+OR,2019,41198,Oregon,41
+OR,2020,34452,Oregon,41
+PA,2019,20100,Pennsylvania,42
+PA,2020,43189,Pennsylvania,42
+RI,2019,2976,Rhode Island,44
+RI,2020,2387,Rhode Island,44
+SC,2019,58997,South Carolina,45
+SC,2020,62789,South Carolina,45
+SD,2019,27,South Dakota,46
+SD,2020,160,South Dakota,46
+TN,2019,21135,Tennessee,47
+TN,2020,28463,Tennessee,47
+TX,2019,78718,Texas,48
+TX,2020,73488,Texas,48
+UT,2019,24761,Utah,49
+UT,2020,16192,Utah,49
+VA,2019,25714,Virginia,51
+VA,2020,44803,Virginia,51
+VT,2019,225,Vermont,50
+VT,2020,186,Vermont,50
+WA,2019,14718,Washington,53
+WA,2020,13211,Washington,53
+WI,2019,6889,Wisconsin,55
+WI,2020,3933,Wisconsin,55
+WV,2019,473,West Virginia,54
+WV,2020,1171,West Virginia,54
+WY,2019,112,Wyoming,56
+WY,2020,29,Wyoming,56
