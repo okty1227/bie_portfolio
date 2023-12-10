@@ -1,4 +1,4 @@
-# INFO5100 Data Visualization(Cornell)
+# INFO5100 Data Visualization
 
 ## Directory
 

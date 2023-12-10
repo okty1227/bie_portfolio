@@ -1,0 +1,124 @@
+<html>
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+
+</head>
+<body>
+
+    <p >
+        <svg id="ranking_state_case" width="400" height="600"></svg>
+
+    </p>
+</body>
+<style>
+    text{font-family
+        : Arial
+    }
+</style>
+<script>
+
+    let rk_plt = d3.select('svg#ranking_state_case');
+    let width = rk_plt.attr('width');
+    let height = rk_plt.attr('height');
+
+    const margin = {top:20, right:20, bottom:30, left:20}
+    const map_inside_width = width-margin.right-margin.left
+    const map_inside_height = height-margin.top-margin.bottom
+
+    let rk_barplt = rk_plt.append('g')
+                          .attr('transform',`translate(${margin.left})`);
+    var rankers = []
+    let title = rk_plt.append('text')
+                      .text('Top States with most accident cases')
+                      .attr('font-size', '12px')
+                      .attr('transform',`translate(30,${margin.top})`)
+                      .attr('transform',`translate(${margin.left*2},${margin.top-5})`)
+
+    get_rk_data = async function(){
+
+        let rkdata = await d3.json('ranking_case_state.json');
+        let case_rank = rkdata['count(Severity)']
+        let rank_amt=0
+        
+        let ranker = {}
+
+        let max_val = 0
+        for (const e in case_rank){
+            rank_amt += 1;
+            if (case_rank.hasOwnProperty(e) && rank_amt <=5 ) {
+                let ranker = {
+                    'state':e,
+                    'count':case_rank[e]
+                }
+
+                rankers.push(ranker)
+            }
+            
+        }
+
+        const maxValue = Math.max(...rankers.map(d=>d.count))
+
+        let Xscaler = d3.scaleLinear()
+                    .domain([0,maxValue])
+                    .range([0,150])
+
+        let yaxis_category = rankers.map(d=>d.state)
+
+        let Yscaler =  d3.scaleBand()
+                        .domain(yaxis_category)  
+                        .range([0, 150])     
+
+        const yAxis = d3.axisLeft(Yscaler);
+
+        // console.log(yaxis_category)
+
+        yaxis = rk_plt.append('g')
+              .attr("transform", `translate(${margin.left+10}, 25)`)
+              .call(yAxis)
+              
+        yaxis.selectAll('line')
+         .attr('stroke','white')
+
+        yaxis.selectAll("path.domain")
+         .attr('stroke','white')             
+
+        rk_barplt.selectAll('rect.case-ranker')
+                 .data(rankers)
+                 .join('rect')
+                 .attr('class','case-ranker')
+                 .attr('x',20)            
+                 .attr('y',(d,i)=>i*30)
+                 .attr('height',15)            
+                 .attr('width',(d,i)=>Xscaler(d.count))         
+                 .attr('transform',`translate(0,33)`)
+                 .attr('fill','	#ff9a00');
+
+        // rk_barplt.selectAll('text.rkbar')
+        //          .data(rankers)
+        //          .join('text')
+        //          .attr('class','rkbar')
+        //          .attr('x',(d,i)=>Xscaler(d.count)-120)            
+        //          .attr('y',(d,i)=>i*30)
+        //          .text(d => d.count)        
+        //          .attr('transform',`translate(${Xscaler(maxValue)+5},43)`)
+        //          .attr('font-size', '8px')
+        //          .attr('fill','	black');
+
+        rk_barplt.selectAll('text.rkbar')
+                 .data(rankers)
+                 .join('text')
+                 .attr('class','rkbar')
+                 .attr('x',20)            
+                 .attr('y',(d,i)=>i*30)
+                 .text(d => d.count)        
+                 .attr('transform',`translate(${Xscaler(maxValue)+5},43)`)
+                 .attr('font-size', '8px')
+                 .attr('fill','	black');
+    }
+    get_rk_data()
+
+</script>
+
+</html>
