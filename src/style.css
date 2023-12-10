@@ -1,6 +1,9 @@
 *{
     font-family: 'Arial', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin-left: 0;
     padding-top: max(30px,6%);
