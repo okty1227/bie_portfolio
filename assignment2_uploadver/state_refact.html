@@ -1,0 +1,427 @@
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    
+    </head>
+    <style>
+        .county {
+            stroke: none;
+        }
+
+        .state {
+            fill: none;
+            stroke: gray;
+        }
+
+        .county-outline {
+            stroke: white;
+            stroke-width: 3px;
+            fill: none;
+        }
+
+        .state-outline {
+            stroke: gray;
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        .gridlines line {
+            color: #aaa;
+        }
+
+        .gridlines .domain {
+            stroke: none;
+        }
+
+        text {
+            font-family: sans-serif;
+            font-size: 12;
+            color: rgb(197, 15, 15);
+
+        }
+
+        g {
+            font-family: garamond;
+        }
+        .txt-box{
+            text-anchor:middle;
+            fill:black
+
+        }
+        .button-bar {
+
+            display: inline-block;
+
+            background-color: #ffb703;
+            width: 250px;
+            border: 5px solid rgb(107, 83, 102);
+            padding:15;
+            border-radius: 5px;
+            scale: .999;
+            font-size: 20px;
+            position: relative;
+            top: -80px;
+            left: 800px;
+        }
+
+    </style>
+    <body>
+        <p>
+
+            <svg id="state_case" width="700" height="600"> 
+            </svg>
+            <svg id="ranking_state_case" width="600" height="400">
+                <!-- <g transform="scale(10)"> -->
+            </svg>
+            <div id="button-bar"></div> 
+
+        </p>
+    </body>
+
+<script>
+
+    var state_accident = {};
+    
+    var acc_data
+    var acc_data_2020 = []
+    var acc_data_2019 = []
+    var rankers = []
+
+    let topodata
+    let state
+    let stateMesh
+    let projection
+    let project_path
+
+    const margin = { top: 20, right: 20, bottom: 20, left:20};
+    const tooltip_width = 30;
+    const tooltip_height = 30;
+
+    let stateMap = d3.select('svg#state_case');
+    let stateWidth = stateMap.attr('width');
+    let stateHeight = stateMap.attr('height');
+
+    let inner_plot_width = stateWidth - margin.left - margin.right
+    let inner_plot_height = stateHeight - margin.bottom - margin.top
+    let colorScale
+    let stateLegends = []
+    const stateColorWidth = 60;
+    const stateColorHeight = 20;
+    const stateColors = ['#FFC971', '#FFB627', '#FF9505', '#E2711D', '#CC5803'];
+    
+    const state_year = ['2019','2020']
+
+    var Xscaler
+    var maxValue 
+    
+    let stateColorLegend = stateMap.append('g')
+                                    .attr('transform', `translate(0, ${stateHeight-30}) scale(1.5) `)
+    
+    let stateView = stateMap.append('g')
+                            .attr("transform",`translate(${margin.left+40},${margin.top})`);
+
+
+    stateColors.forEach((color,i) => {
+        stateColorLegend.append('rect')
+                        .attr('x',stateColorWidth  + i*(stateColorWidth))
+                        .attr('y',-10)
+                        .attr('width',stateColorWidth)
+                        .attr('height',stateColorHeight)
+                        .attr('fill',color)
+        
+    })
+
+    let slpit_accdata = async function(){
+    
+        acc_data = await d3.csv('state_data.csv');
+        acc_data.forEach(d => {
+            d['count(Severity)'] = Number(d['count(Severity)'])
+            d['fipscode'] = Number(d['fipscode'])
+            if (d['Year'] === '2019'){
+                acc_data_2019.push(d)                
+            }
+            if (d['Year'] === '2020'){
+                acc_data_2020.push(d)
+            }
+
+        });
+
+        // scaler
+
+        let ext = d3.extent(acc_data.map(d=>d['count(Severity)']))
+        colorScale = d3.scaleQuantile()
+                        .domain(ext)
+                        .range(stateColors);
+
+        quantile_edge = colorScale.quantiles().map(d=>parseInt(d))
+        quantile_range = [ext[0],...quantile_edge,ext[1]];
+
+        // legend
+        quantile_range.forEach((d,i)=>{
+
+                if (i===0){
+                    txt = 0
+                }
+                else{
+                    txt = d
+                }
+            
+            stateColorLegend.append('text')
+                            .attr('x',stateColorWidth + i*(stateColorWidth))
+                            .attr('y',20)
+                            .attr('text-anchor', 'middle')
+                            .attr('alignment-baseline', 'left')
+                            .style('font-size', 10)
+                            .attr('color','black')
+                            .text(txt)//waite for scale
+
+        })
+                } 
+
+    let request_data  = async function(){
+
+    topodata = await d3.json('us-smaller.json');
+
+    filteredStates = [2,15,72,78]
+    //states
+    state = topojson.feature(topodata,topodata.objects.states)    
+
+    //outline
+    stateMesh = topojson.mesh(topodata, topodata.objects.states)
+
+    projection = d3.geoAlbersUsa().fitSize([inner_plot_width,inner_plot_height],state)
+
+    project_path = d3.geoPath().projection(projection)
+  
+    
+    function mouseEntersState(event){
+
+        let selected_state = d3.select(this);
+
+        xloc = event.clientX
+        yloc = event.clientY
+        yloc_case = event.clientY + 15
+        txt_state.text(selected_state.datum()['State'])
+                 .attr('x',xloc)
+                 .attr('y',yloc)
+        txt_case.text(`Case: ${selected_state.datum()['count(Severity)']}`)
+                .attr('x',xloc)
+                 .attr('y',yloc_case)
+            }
+
+    let txt_state = stateMap.append("text")
+                    .attr("class", "txt-box")
+
+    let txt_case = stateMap.append("text")
+                            .attr("class", "txt-box")
+
+    //state map outline
+    stateView.selectAll('path.state').data(state.features)
+            .join('path')
+            .attr('class','state')
+            .attr('d',project_path)
+            .on('mouseover',  mouseEntersState)
+
+
+    stateView.append('path').datum(stateMesh)
+            .join('path')
+            .attr('class', 'state-outline')
+            .attr('d', project_path);
+    }
+
+    let draw_state_plot = async function(year){
+        
+        await Xscaler
+
+        acc_data_2019 = acc_data_2019.sort((a, b) =>{
+            return a.fipscode - b.fipscode
+            })
+        
+        acc_data_2020 = acc_data_2020.sort((a, b) =>{
+            return a.fipscode - b.fipscode
+            })            
+        
+            if (year ==='2019'){
+        
+            stateView.selectAll('path.state').data(acc_data_2019)
+                    .join('path')
+                    .attr('class','state')
+                    .style('fill',(d,i)=>{
+
+            return  colorScale(d['count(Severity)'])
+        })
+    }
+
+        if (year ==='2020'){
+            stateView.selectAll('path.state').data(acc_data_2020)
+                    .join('path')
+                    .attr('class','state')
+                    .style('fill',d=>{
+                        return colorScale(d['count(Severity)'])
+                    })
+        }     
+        }
+
+    let draw_barbutton = function(){
+
+    let yearScale = d3.scalePoint().domain(state_year)
+                                .range([0,inner_plot_width])
+                                .padding(0.5);
+                
+    let yearBotton = d3.axisBottom(yearScale)
+    d3.selectAll('div#button-bar')
+
+    state_year.forEach(d=>{
+        d3.select('div#button-bar')
+          .append('button')
+          .attr('class','button-bar')
+          .text(d)
+          .on('click', function(event){
+           let year = d3.select(this).text()
+            draw_state_plot(year)
+            load_rk_plt(year)
+          })
+    })
+    };
+
+    let rk_plt = d3.select('svg#ranking_state_case');
+
+    let rk_width = rk_plt.attr('width');
+    let rk_height = rk_plt.attr('height');
+    // const margin = {top:20, right:20, bottom:30, left:20}
+    const map_inside_width = rk_width-margin.right-margin.left
+    const map_inside_height = rk_height-margin.top-margin.bottom
+    rk_plt.attr('transform',`scale(2)`)
+    let rk_barplt = rk_plt.append('g')
+                            .attr('transform',`translate(${200},${50})`);                                  
+                            
+    var rankers = []
+
+    get_rk_data = async function(){
+        
+        let rkdata = await d3.json('rank_case_by_year.json');
+        let rk_2019 = rkdata['2019']
+        let rk_2020 = rkdata['2020']
+        // console.log(rkdata.keys)
+
+        let case_rank = rkdata['count(Severity)']
+        let rank_amt=0
+        
+        // console.log(rkdata)
+        let max_val = 0
+        for (const yr in rkdata){
+        for (const e in rkdata[yr]){
+            rank_amt += 1;
+
+            var  ranker = {
+                'Year': yr,
+                'state':e,
+                'count':rkdata[yr][e]}
+                
+                rankers.push(ranker)
+
+            }        
+        }
+
+        maxValue = Math.max(...rankers.map(d=>d.count))
+        Xscaler = d3.scaleLinear()
+                    .domain([0,maxValue])
+                    .range([0,150])
+
+        await prerender(Xscaler);
+        
+        }
+    let draw_rk_plt = function(ans){
+        rk_barplt.selectAll('rect.case-ranker')
+                 .data(ans)
+                 .join('rect')
+                 .attr('class','case-ranker')
+                 .attr('x',30)            
+                 .attr('y',(d,i)=>i*30)
+                 .attr('height',10)            
+                 .attr('width',(d,i)=>Xscaler(d['count']))         
+                //  .attr('width',(d,i)=>Xscaler(d.count))         
+                 .attr('transform',`translate(0,33)`)
+                 .attr('fill','orange');
+    }
+    let write_rk_txt = function(ans){
+
+        rk_barplt.selectAll('text.rktxt')
+                 .data(ans)
+                 .join('text')
+                 .attr('class','rktxt')
+                 .attr('x',d=>Xscaler(d.count)-70)            
+                 .attr('y',(d,i)=>i*30)
+                 .text(d => d.count)        
+                 .attr('transform',`translate(${Xscaler(maxValue)},43)`)
+                 .attr('font-size', '8px')
+                 .attr('fill','	black');
+    }
+    let load_rk_plt = async function (year){
+        
+        let yaxis_category = rankers.map(d=>d.state)
+
+        let Yscaler =  d3.scaleBand()
+                        .domain(yaxis_category)  
+                        .range([0, 150])     
+
+        const yAxis = d3.axisLeft(Yscaler);
+
+        yaxis = rk_barplt.append('g')
+                        .attr("transform", `translate(${margin.left+10}, 25)`)
+                        .call(yAxis)
+              
+        yaxis.selectAll('line')
+             .attr('stroke','white')
+
+        yaxis.selectAll("path.domain")
+             .attr('stroke','white')
+
+        // title_txt_2020 = rk_plt.select('text.txt2020')
+        //                     .attr('class','txt2020')
+        //                     .text(`Top States with most accident cases in 2020`)
+        //                     .attr('color','white')
+        //                     .attr('transform',`translate(0,50)`)   
+        //                     .style('visibility','hidden')
+
+        // title_txt_2019 = rk_plt.select('text.txt2019')
+        //                     .text(`Top States with most accident cases in 2019`)
+        //                     .attr('class','txt2019')
+        //                     .attr('color','black')
+        //                     .attr('transform',`translate(0,50)`)
+        //                     .style('visibility','hidden')             
+
+            if (year ==='2019'){
+                const ans = rankers.filter(d=> d.Year ==='2019')
+
+                draw_rk_plt(ans)
+                write_rk_txt(ans)
+
+                }
+                
+        if (year ==='2020'){
+ 
+            const ans = rankers.filter(d=> d.Year ==='2020')
+            draw_rk_plt(ans)
+            write_rk_txt(ans)
+                }
+    }
+    let prerender = async function(Xscaler){
+
+        draw_state_plot('2019')
+        load_rk_plt('2019')
+    }
+    
+
+request_data()
+slpit_accdata()
+get_rk_data()
+load_rk_plt()
+draw_barbutton()
+
+</script>
+
+
+</html>
