@@ -1,0 +1,93 @@
+*{
+    font-family: 'Arial', sans-serif;
+}
+body {
+    margin-left: 0;
+    padding-top: max(30px,6%);
+}
+p{
+    font-size: 20px;    
+}
+a {
+    color: inherit;  
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    font-size: 105%; 
+    text-decoration: underline;
+}
+
+h1, h2 {
+    color: #0366d6;
+}
+
+.subfolder {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+.btn:hover{
+    opacity: 70%;
+    text-decoration: underline;
+    
+}
+
+.footer {
+    background-color: #333;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease;;
+}
+
+.urls{
+color: #0366d6;
+font-weight: bold;
+}
+.horizontal-container  {
+display: flex;
+width: 1000px;
+height: 400px
+}
+.horizontal-container:hover {
+height: 800px; /* Expanded width on hover, adjust as needed */
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    background-color: #0366d6;
+    display: flex;
+    width: 100%;
+    font-weight: bolder;
+}
+
+.header .selection{
+    color: #fff;
+    stroke-width: 5px;
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 100%;
+    text-align: center;
+}
+
+.content{
+    margin-left:5% ;
+}
