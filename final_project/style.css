@@ -1,0 +1,35 @@
+#jobSelect {
+    display: flex; 
+    justify-content: left;
+}
+
+.grid {
+    display: grid;
+    grid-template: 
+        'q1 q4'
+        'q2 q5'
+        'q3 q5';
+}
+
+#pointsScale {
+    width: 500px;
+    margin-left: 10px;
+}
+
+#filter {
+    width: 600px;
+    margin-left: 50px;
+}
+
+.submit {
+    padding: 10px 20px; 
+    color: white; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+    border: none;
+}
+
+input, label {
+    margin-top: 5;
+}

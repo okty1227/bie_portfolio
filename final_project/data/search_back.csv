@@ -1,0 +1,732 @@
+,Job Title,Rating,Company Name,Location,Size,Sector,avg_salary,python,r,spark,aws,excel,Salary_category,Size_category,State_category,State_Acro
+0,Data Scientist,3.8,Tecolote Research,"Albuquerque, NM",501 to 1000 employees,Aerospace & Defense,72.0,1,0,0,0,1,lowSalary,500 to 1000,NM,New Mexico
+1,Healthcare Data Scientist,3.4,University of Maryland Medical System,"Linthicum, MD",10000+ employees,Health Care,87.5,1,0,0,0,0,lowSalary,More than 5000,MD,Maryland
+2,Data Scientist,4.8,KnowBe4,"Clearwater, FL",501 to 1000 employees,Business Services,85.0,1,0,1,0,1,lowSalary,500 to 1000,FL,Florida
+3,Data Scientist,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",76.5,1,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+4,Data Scientist,2.9,Affinity Solutions,"New York, NY",51 to 200 employees,Business Services,114.5,1,0,0,0,1,middleSalary,Under 500,NY,New York
+5,Data Scientist,3.4,CyrusOne,"Dallas, TX",201 to 500 employees,Real Estate,95.0,1,0,0,1,1,middleSalary,Under 500,TX,Texas
+6,Data Scientist,4.1,ClearOne Advantage,"Baltimore, MD",501 to 1000 employees,Finance,73.5,0,0,0,0,1,lowSalary,500 to 1000,MD,Maryland
+7,Data Scientist,3.8,Logic20/20,"San Jose, CA",201 to 500 employees,Business Services,114.0,1,0,1,1,1,middleSalary,Under 500,CA,California
+8,Research Scientist,3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,61.0,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+9,Data Scientist,4.6,<intent>,"New York, NY",51 to 200 employees,Information Technology,140.0,1,0,1,0,0,middleSalary,Under 500,NY,New York
+10,Data Scientist,3.5,Wish,"San Jose, CA",501 to 1000 employees,Retail,163.5,1,0,0,0,0,highSalary,500 to 1000,CA,California
+11,Data Scientist,4.1,ManTech,"Chantilly, VA",5001 to 10000 employees,Business Services,85.0,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+12,Staff Data Scientist - Technology,3.2,Walmart,"Plano, TX",10000+ employees,Retail,139.0,0,0,0,0,0,middleSalary,More than 5000,TX,Texas
+13,Data Analyst,4.1,Yesler,"Seattle, WA",201 to 500 employees,Business Services,65.5,1,0,1,1,1,lowSalary,Under 500,WA,Washington
+14,Data Scientist,3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,113.5,1,0,1,0,0,middleSalary,More than 5000,MA,Massachusetts
+15,Data Engineer I,3.6,Audible,"Newark, NJ",1001 to 5000 employees,Media,146.0,0,0,0,0,1,middleSalary,1000 to 5000,NJ,New Jersey
+16,"Scientist I/II, Biology",3.9,Blueprint Medicines,"Cambridge, MA",51 to 200 employees,Biotech & Pharmaceuticals,102.0,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+17,Customer Data Scientist,4.3,h2o.ai,"Mountain View, CA",201 to 500 employees,Information Technology,153.5,1,0,1,1,1,highSalary,Under 500,CA,California
+18,Data Scientist - Health Data Analytics,4.2,Nuna,"San Francisco, CA",51 to 200 employees,Information Technology,142.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+19,Data Scientist,4.0,Pinnacol Assurance,"Denver, CO",501 to 1000 employees,Insurance,87.5,1,0,0,0,1,lowSalary,500 to 1000,CO,Colorado
+20,Data Scientist,3.2,Porch,"Seattle, WA",201 to 500 employees,Information Technology,105.5,1,0,1,0,0,middleSalary,Under 500,WA,Washington
+21,Senior Data Scientist / Machine Learning,3.9,Health IQ,"Dallas, TX",201 to 500 employees,Insurance,96.0,0,0,0,0,1,middleSalary,Under 500,TX,Texas
+22,Data Scientist - Quantitative,3.8,Truckstop.com,"Chicago, IL",501 to 1000 employees,Transportation & Logistics,112.5,1,0,0,1,1,middleSalary,500 to 1000,IL,Illinois
+23,Data Scientist,4.3,SMC 3,"Louisville, KY",51 to 200 employees,Transportation & Logistics,84.0,1,0,0,0,1,lowSalary,Under 500,KY,Kentucky
+24,Data Scientist,4.0,Novetta,"Herndon, VA",501 to 1000 employees,Information Technology,143.0,1,0,0,1,0,middleSalary,500 to 1000,VA,Virginia
+25,Digital Health Data Scientist,4.0,Pfizer,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,86.5,1,0,0,1,1,lowSalary,More than 5000,MA,Massachusetts
+26,Data Scientist,3.5,First Tech Federal Credit Union,"Hillsboro, OR",1001 to 5000 employees,Finance,99.5,1,0,1,1,1,middleSalary,1000 to 5000,OR,Oregon
+27,Associate Data Analyst,3.7,The Hanover Insurance Group,"Worcester, MA",5001 to 10000 employees,Insurance,47.5,0,0,0,0,1,lowestSalary,More than 5000,MA,Massachusetts
+28,Clinical Data Scientist,4.0,Pfizer,"Groton, CT",10000+ employees,Biotech & Pharmaceuticals,84.0,0,0,0,1,1,lowSalary,More than 5000,CT,Connecticut
+29,Data Scientist,4.8,KnowBe4,"Clearwater, FL",501 to 1000 employees,Business Services,85.0,1,0,1,0,1,lowSalary,500 to 1000,FL,Florida
+30,Data Scientist,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",76.5,1,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+31,Data Scientist,3.6,Amrock,"Detroit, MI",1001 to 5000 employees,Real Estate,96.0,1,0,0,0,0,middleSalary,1000 to 5000,MI,Michigan
+32,Data Scientist / Machine Learning Expert,3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,114.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+33,Data Scientist,3.8,Juniper Networks,"Sunnyvale, CA",5001 to 10000 employees,Telecommunications,121.0,1,0,1,0,1,middleSalary,More than 5000,CA,California
+34,Data Scientist,4.7,New England Biolabs,"Ipswich, MA",201 to 500 employees,Biotech & Pharmaceuticals,112.5,1,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+35,Web Data Analyst,4.2,Clarity Insights,"San Jose, CA",201 to 500 employees,Information Technology,106.0,1,0,0,0,1,middleSalary,Under 500,CA,California
+36,Data Scientist,3.5,Esri,"Redlands, CA",1001 to 5000 employees,Information Technology,107.0,1,0,1,1,0,middleSalary,1000 to 5000,CA,California
+37,Data Scientist,4.7,Systems & Technology Research,"Woburn, MA",201 to 500 employees,Aerospace & Defense,110.0,1,0,1,0,1,middleSalary,Under 500,MA,Massachusetts
+38,Senior Data Scientist,3.5,Sartorius,"Fremont, CA",5001 to 10000 employees,Biotech & Pharmaceuticals,147.5,1,0,0,0,1,middleSalary,More than 5000,CA,California
+39,Data Engineer,3.5,Lancer Insurance,"Long Beach, NY",201 to 500 employees,Insurance,106.0,1,0,0,0,1,middleSalary,Under 500,NY,New York
+40,Data Analyst,4.2,Sauce Labs,"San Francisco, CA",201 to 500 employees,Information Technology,88.0,1,0,0,1,1,lowSalary,Under 500,CA,California
+41,Data Engineer,3.6,Persivia,"Marlborough, MA",1 to 50 employees,-1,98.5,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+42,Data Scientist - Algorithms & Inference,4.2,Nuna,"San Francisco, CA",51 to 200 employees,Information Technology,142.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+43,Scientist,3.4,Edgewell Personal Care,"Allendale, NJ",5001 to 10000 employees,Manufacturing,82.5,0,0,0,1,0,lowSalary,More than 5000,NJ,New Jersey
+44,Senior Data Scientist,4.3,Equity Residential,"Chicago, IL",1001 to 5000 employees,Real Estate,130.0,1,0,1,0,1,middleSalary,1000 to 5000,IL,Illinois
+45,Data Scientist,5.0,BPA Services,"Washington, DC",Unknown,Information Technology,155.0,0,0,0,1,1,highSalary,,DC,DC
+46,Lead Data Scientist,3.7,Visa Inc.,"Bellevue, WA",10000+ employees,Information Technology,184.5,1,0,0,0,1,highSalary,More than 5000,WA,Washington
+47,Associate Data Analyst,3.1,Intrado,"Longmont, CO",5001 to 10000 employees,Information Technology,29.5,0,0,0,0,1,lowestSalary,More than 5000,CO,Colorado
+48,Spectral Scientist/Engineer,4.7,Centauri,"Beavercreek, OH",501 to 1000 employees,Aerospace & Defense,86.5,0,0,0,0,0,lowSalary,500 to 1000,OH,Ohio
+49,College Hire - Data Scientist - Open to December 2019 Graduates,3.7,Caterpillar,"Peoria, IL",10000+ employees,Manufacturing,81.0,0,0,0,0,0,lowSalary,More than 5000,IL,Illinois
+50,Data Scientist,3.8,Zimmerman Advertising,"Fort Lauderdale, FL",501 to 1000 employees,Business Services,91.0,1,0,0,0,1,middleSalary,500 to 1000,FL,Florida
+51,"Data Scientist, Office of Data Science",3.3,Liberty Mutual Insurance,"Boston, MA",10000+ employees,Insurance,114.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+52,Data Science Analyst,4.6,"Torch Technologies, Inc.","Huntsville, AL",1001 to 5000 employees,Aerospace & Defense,68.0,1,0,0,0,1,lowSalary,1000 to 5000,AL,Alabama
+53,Data Scientist,3.7,Swiss Re,"Armonk, NY",10000+ employees,Insurance,115.0,1,0,0,0,1,middleSalary,More than 5000,NY,New York
+54,Data Scientist,3.7,Northrop Grumman,"San Diego, CA",10000+ employees,Aerospace & Defense,109.5,0,0,0,0,1,middleSalary,More than 5000,CA,California
+55,Data Scientist,3.5,Sartorius,"Albuquerque, NM",5001 to 10000 employees,Biotech & Pharmaceuticals,75.5,1,0,0,0,1,lowSalary,More than 5000,NM,New Mexico
+56,Data Scientist,4.1,Netskope,"San Francisco, CA",501 to 1000 employees,Information Technology,154.5,1,0,1,0,1,highSalary,500 to 1000,CA,California
+57,Data Scientist,4.7,1904labs,"Saint Louis, MO",51 to 200 employees,Information Technology,143.5,1,0,1,0,0,middleSalary,Under 500,MO,Missouri
+58,Data Scientist,4.1,ClearOne Advantage,"Baltimore, MD",501 to 1000 employees,Finance,73.5,0,0,0,0,1,lowSalary,500 to 1000,MD,Maryland
+59,Data Scientist,3.4,CyrusOne,"Dallas, TX",201 to 500 employees,Real Estate,95.0,1,0,0,1,1,middleSalary,Under 500,TX,Texas
+60,Senior Data Scientist,4.4,The David J. Joseph Company,"Cincinnati, OH",201 to 500 employees,Mining & Metals,107.0,1,0,0,1,0,middleSalary,Under 500,OH,Ohio
+61,Data Scientist,4.3,USEReady,"New York, NY",201 to 500 employees,Business Services,115.0,1,0,1,1,0,middleSalary,Under 500,NY,New York
+62,Senior Risk Data Scientist,3.8,Bill.com,"Palo Alto, CA",501 to 1000 employees,Finance,139.5,0,0,0,0,0,middleSalary,500 to 1000,CA,California
+63,Data Scientist in Artificial Intelligence Early Career,3.8,Pacific Northwest National Laboratory,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",67.0,0,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+64,Data Scientist,3.8,DICK'S Sporting Goods - Corporate,"Coraopolis, PA",10000+ employees,Retail,85.0,1,0,0,0,0,lowSalary,More than 5000,PA,Pennsylvania
+65,Data Scientist,2.8,Berg Health,"Framingham, MA",51 to 200 employees,Biotech & Pharmaceuticals,118.0,1,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+66,Data Scientist,4.7,Oversight Systems,"Atlanta, GA",51 to 200 employees,Information Technology,79.5,1,0,0,0,1,lowSalary,Under 500,GA,Georgia
+67,Data Scientist - Research,3.1,C Space,"Boston, MA",201 to 500 employees,Business Services,56.5,1,0,0,0,0,lowSalary,Under 500,MA,Massachusetts
+68,Data Scientist,3.2,"Numeric, LLC","Philadelphia, PA",1 to 50 employees,Business Services,128.5,1,0,1,1,0,middleSalary,Under 500,PA,Pennsylvania
+69,R&D Data Analysis Scientist,4.0,HP Inc.,"Vancouver, WA",10000+ employees,Information Technology,97.5,0,0,0,0,0,middleSalary,More than 5000,WA,Washington
+70,Analytics Consultant,4.4,SpringML,"Indianapolis, IN",1 to 50 employees,Information Technology,66.5,1,0,0,0,0,lowSalary,Under 500,IN,Indiana
+71,"Director, Data Science",3.6,Grainger,"Lake Forest, IL",10000+ employees,Business Services,179.5,1,0,0,0,1,highSalary,More than 5000,IL,Illinois
+72,Scientist,2.7,EAG Laboratories,"Maryland Heights, MO",501 to 1000 employees,Business Services,76.0,0,0,0,0,1,lowSalary,500 to 1000,MO,Missouri
+73,Data Scientist SR,3.9,The Buffalo Group,"Charlottesville, VA",501 to 1000 employees,Information Technology,112.0,1,0,1,0,0,middleSalary,500 to 1000,VA,Virginia
+74,Data Scientist,3.1,Carmeuse,"Pittsburgh, PA",1001 to 5000 employees,Mining & Metals,98.0,1,0,0,0,0,middleSalary,1000 to 5000,PA,Pennsylvania
+75,R&D Sr Data Scientist,4.0,HP Inc.,"Vancouver, WA",10000+ employees,Information Technology,128.0,0,0,1,1,0,middleSalary,More than 5000,WA,Washington
+76,Customer Data Scientist/Sales Engineer (Bay,4.3,h2o.ai,"Mountain View, CA",201 to 500 employees,Information Technology,150.5,1,0,1,1,1,highSalary,Under 500,CA,California
+77,Research Scientist,1.9,GNS Healthcare,"Cambridge, MA",51 to 200 employees,Biotech & Pharmaceuticals,87.5,0,0,0,1,0,lowSalary,Under 500,MA,Massachusetts
+78,Data Scientist,3.3,Peraton,"Chantilly, VA",1001 to 5000 employees,Aerospace & Defense,110.0,1,0,0,0,1,middleSalary,1000 to 5000,VA,Virginia
+79,Data Scientist,4.4,Pactera,"San Jose, CA",10000+ employees,Information Technology,113.5,1,0,0,0,1,middleSalary,More than 5000,CA,California
+80,Data Scientist,3.9,Nurx,"San Francisco, CA",51 to 200 employees,Health Care,124.0,1,0,0,0,0,middleSalary,Under 500,CA,California
+81,Jr. Business Data Analyst,4.7,webfx.com,"Harrisburg, PA",201 to 500 employees,Business Services,56.5,0,0,0,0,1,lowSalary,Under 500,PA,Pennsylvania
+82,Data Scientist,4.5,Johns Hopkins University Applied Physics Laboratory,"Laurel, MD",5001 to 10000 employees,Aerospace & Defense,130.0,1,0,0,0,1,middleSalary,More than 5000,MD,Maryland
+83,Data Analyst,4.3,Productive Edge,"Chicago, IL",51 to 200 employees,Information Technology,77.5,0,0,0,0,1,lowSalary,Under 500,IL,Illinois
+84,Data Engineer,4.0,Excella Consulting,"Arlington, VA",201 to 500 employees,Business Services,87.0,1,0,0,1,1,lowSalary,Under 500,VA,Virginia
+85,Data Analyst,4.4,Gensco,"Tacoma, WA",501 to 1000 employees,Business Services,53.5,0,0,0,0,1,lowSalary,500 to 1000,WA,Washington
+86,Staff Data Scientist - Technology,3.2,Walmart,"Plano, TX",10000+ employees,Retail,139.0,0,0,0,0,0,middleSalary,More than 5000,TX,Texas
+87,Data Scientist,3.8,Logic20/20,"San Jose, CA",201 to 500 employees,Business Services,114.0,1,0,1,1,1,middleSalary,Under 500,CA,California
+88,Data Scientist,4.2,goTRG,"Miami, FL",501 to 1000 employees,Information Technology,85.5,1,0,1,0,1,lowSalary,500 to 1000,FL,Florida
+89,Data Management Specialist,4.5,NMR Consulting,"Huntsville, AL",51 to 200 employees,Information Technology,48.0,0,0,0,0,1,lowestSalary,Under 500,AL,Alabama
+90,E-Commerce Data Analyst,3.5,iSeatz,"New Orleans, LA",51 to 200 employees,Information Technology,48.0,0,0,0,0,1,lowestSalary,Under 500,LA,Louisiana
+91,Sr. Scientist II,3.5,Nektar Therapeutics,"San Francisco, CA",201 to 500 employees,Biotech & Pharmaceuticals,174.0,0,0,0,0,1,highSalary,Under 500,CA,California
+92,Insurance Data Scientist,3.9,TransUnion,"Atlanta, GA",5001 to 10000 employees,Finance,85.0,1,0,1,0,0,lowSalary,More than 5000,GA,Georgia
+93,Data Modeler,4.7,IT Concepts,"Landover, MD",51 to 200 employees,Information Technology,106.5,0,0,0,0,0,middleSalary,Under 500,MD,Maryland
+94,Data Analyst / Scientist,4.2,Scientific Research Corporation,"Patuxent River, MD",1001 to 5000 employees,Information Technology,72.5,0,0,0,0,1,lowSalary,1000 to 5000,MD,Maryland
+95,Scientist,3.4,General Dynamics Information Technology,"Suitland, MD",10000+ employees,Information Technology,85.5,0,0,0,0,0,lowSalary,More than 5000,MD,Maryland
+96,Data Scientist,3.2,MITRE,"McLean, VA",5001 to 10000 employees,Government,97.5,1,0,0,0,1,middleSalary,More than 5000,VA,Virginia
+97,Data Scientist,3.9,The Buffalo Group,"Fort Belvoir, VA",501 to 1000 employees,Information Technology,99.0,1,0,0,0,1,middleSalary,500 to 1000,VA,Virginia
+98,Data Analyst,3.1,DentaQuest,"Milwaukee, WI",1001 to 5000 employees,Insurance,56.5,0,0,0,0,1,lowSalary,1000 to 5000,WI,Wisconsin
+99,Lead Data Scientist,4.1,Redjack,"Silver Spring, MD",1 to 50 employees,Information Technology,133.0,1,0,0,0,0,middleSalary,Under 500,MD,Maryland
+100,Data Scientist,3.8,7Park Data,"New York, NY",51 to 200 employees,Business Services,121.0,1,0,1,0,0,middleSalary,Under 500,NY,New York
+101,Data Scientist,4.7,Rapid Response Monitoring,"Syracuse, NY",501 to 1000 employees,Business Services,85.5,1,0,0,0,0,lowSalary,500 to 1000,NY,New York
+102,"Data Scientist, Rice University",4.3,Trilogy Ed,"Houston, TX",1001 to 5000 employees,Education,87.5,1,0,0,0,0,lowSalary,1000 to 5000,TX,Texas
+103,Senior Data Scientist,4.2,Gallup,"Washington, DC",1001 to 5000 employees,Business Services,237.5,1,0,0,0,1,highSalary,1000 to 5000,DC,DC
+104,Data Engineer,3.9,CapTech,"Charlotte, NC",1001 to 5000 employees,Information Technology,95.5,1,0,1,0,0,middleSalary,1000 to 5000,NC,North Carolina
+105,Senior Data Scientist,3.3,American Axle & Manufacturing,"Southfield, MI",10000+ employees,Manufacturing,104.5,1,0,1,1,1,middleSalary,More than 5000,MI,Michigan
+106,Financial Data Analyst,4.7,CentralReach,"Matawan, NJ",201 to 500 employees,Information Technology,56.5,0,0,0,0,1,lowSalary,Under 500,NJ,New Jersey
+107,Senior Data Analyst,4.3,Integrate,"Phoenix, AZ",201 to 500 employees,Information Technology,55.0,0,0,0,0,1,lowSalary,Under 500,AZ,Arizona
+108,Research Scientist,2.9,Boys Town Hospital,"Omaha, NE",1001 to 5000 employees,Health Care,61.5,0,0,0,0,1,lowSalary,1000 to 5000,NE,Nebraska
+109,Data Scientist,4.5,Demandbase,"San Francisco, CA",201 to 500 employees,Information Technology,157.0,0,0,1,1,0,highSalary,Under 500,CA,California
+110,Data Engineer,3.4,Sapphire Digital,"Lyndhurst, NJ",201 to 500 employees,Information Technology,78.0,1,0,0,0,0,lowSalary,Under 500,NJ,New Jersey
+111,Data Scientist,3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,113.5,1,0,1,0,0,middleSalary,More than 5000,MA,Massachusetts
+112,Data Scientist,4.6,<intent>,"New York, NY",51 to 200 employees,Information Technology,140.0,1,0,1,0,0,middleSalary,Under 500,NY,New York
+113,Data Scientist,3.2,Formation,"San Francisco, CA",51 to 200 employees,Information Technology,132.5,0,0,1,0,1,middleSalary,Under 500,CA,California
+114,Data Engineer,4.0,Autodesk,"San Francisco, CA",5001 to 10000 employees,Information Technology,108.0,1,0,1,0,0,middleSalary,More than 5000,CA,California
+115,Ag Data Scientist,4.6,Beck's Hybrids,"Atlanta, IN",501 to 1000 employees,Agriculture & Forestry,80.5,0,0,0,0,0,lowSalary,500 to 1000,IN,Indiana
+116,Data Scientist,2.8,DrFirst,"Rockville, MD",201 to 500 employees,Health Care,107.5,1,0,0,0,0,middleSalary,Under 500,MD,Maryland
+117,Data Engineer,4.7,Object Partners,"Minneapolis, MN",51 to 200 employees,Business Services,95.0,0,0,1,1,0,middleSalary,Under 500,MN,Minnesota
+118,Data Scientist II,3.0,L.A. Care Health Plan,"Los Angeles, CA",1001 to 5000 employees,Health Care,119.5,1,0,1,0,0,middleSalary,1000 to 5000,CA,California
+119,Senior Data Engineer,3.2,Red Ventures,"Charlotte, NC",1001 to 5000 employees,Business Services,134.0,0,0,1,1,0,middleSalary,1000 to 5000,NC,North Carolina
+120,Data Scientist,4.4,Quick Base,"Cambridge, MA",201 to 500 employees,Information Technology,100.5,1,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+121,Data Scientist,3.5,The E.W. Scripps Company,"Cincinnati, OH",1001 to 5000 employees,Media,107.5,1,0,0,0,0,middleSalary,1000 to 5000,OH,Ohio
+122,Data Engineer,4.0,Upside Business Travel,"Washington, DC",51 to 200 employees,Information Technology,122.0,1,0,1,1,0,middleSalary,Under 500,DC,DC
+123,Data Engineer,4.3,Equity Residential,"Chicago, IL",1001 to 5000 employees,Real Estate,92.5,1,0,1,0,1,middleSalary,1000 to 5000,IL,Illinois
+124,Data Analyst,2.3,Synagro,"Baltimore, MD",501 to 1000 employees,Business Services,62.0,0,0,0,0,1,lowSalary,500 to 1000,MD,Maryland
+125,Project Scientist,4.0,Alliance Source Testing,"Alabaster, AL",51 to 200 employees,Business Services,39.5,0,0,0,0,0,lowestSalary,Under 500,AL,Alabama
+126,Data Scientist,3.6,Accuride International,"Santa Fe Springs, Los Angeles, CA",1001 to 5000 employees,Manufacturing,107.5,0,0,0,0,1,middleSalary,1000 to 5000,CA,California
+127,Data Analytics Manager,3.8,Full Potential Solutions,"Kansas City, MO",501 to 1000 employees,Business Services,40.5,1,0,0,1,1,lowestSalary,500 to 1000,MO,Missouri
+128,Senior Machine Learning (ML) Engineer / Data Scientist - Cyber Security Analytics,3.7,Visa Inc.,"Ashburn, VA",10000+ employees,Information Technology,89.5,1,0,1,0,0,lowSalary,More than 5000,VA,Virginia
+129,Data Scientist,4.4,Maven Wave Partners,"Chicago, IL",201 to 500 employees,Business Services,81.0,1,0,0,1,1,lowSalary,Under 500,IL,Illinois
+130,Senior Data Scientist,4.0,Novetta,"Herndon, VA",501 to 1000 employees,Information Technology,147.0,1,0,0,1,0,middleSalary,500 to 1000,VA,Virginia
+131,Data Scientist,3.2,"First Command Financial Services, Inc.","Fort Worth, TX",1001 to 5000 employees,Finance,85.0,1,0,0,0,1,lowSalary,1000 to 5000,TX,Texas
+132,Associate Scientist,2.9,Pharmavite,"Valencia, CA",1001 to 5000 employees,Manufacturing,81.5,0,0,0,0,1,lowSalary,1000 to 5000,CA,California
+133,"Scientist 2, QC Viral Vector",3.8,BioMarin Pharmaceutical,"Novato, CA",1001 to 5000 employees,Biotech & Pharmaceuticals,168.0,0,0,0,0,1,highSalary,1000 to 5000,CA,California
+134,Machine Learning Engineer,4.3,Stratagem Group,"Aurora, CO",1 to 50 employees,Aerospace & Defense,100.5,1,0,1,1,1,middleSalary,Under 500,CO,Colorado
+135,Data Scientist/ML Engineer,3.4,PA Consulting,"New York, NY",1001 to 5000 employees,Business Services,97.0,1,0,1,0,1,middleSalary,1000 to 5000,NY,New York
+136,Data Scientist,4.1,ManTech,"Chantilly, VA",5001 to 10000 employees,Business Services,85.0,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+137,Customer Data Scientist,4.3,h2o.ai,"Mountain View, CA",201 to 500 employees,Information Technology,153.5,1,0,1,1,1,highSalary,Under 500,CA,California
+138,Data Engineer,5.0,Gridiron IT,"Tampa, FL",51 to 200 employees,Information Technology,132.5,0,0,0,0,0,middleSalary,Under 500,FL,Florida
+139,Data Engineer,4.3,Productive Edge,"Chicago, IL",51 to 200 employees,Information Technology,100.0,0,0,1,0,1,middleSalary,Under 500,IL,Illinois
+140,Sr. Data Scientist,3.7,Evolve Vacation Rental,"Denver, CO",201 to 500 employees,Travel & Tourism,105.0,1,0,0,0,0,middleSalary,Under 500,CO,Colorado
+141,Data Engineer 4 - Contract,4.2,The Church of Jesus Christ of Latter-day Saints,"Riverton, UT",10000+ employees,Non-Profit,87.0,0,0,0,1,1,lowSalary,More than 5000,UT,Utah
+142,Data Analyst - Asset Management,4.3,Maximus Real Estate Partners,"San Francisco, CA",51 to 200 employees,Real Estate,103.5,0,0,0,0,1,middleSalary,Under 500,CA,California
+143,Senior Research Scientist - Embedded System Development for DevOps,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,124.0,1,0,0,0,1,middleSalary,500 to 1000,PA,Pennsylvania
+144,Data Scientist - Bioinformatics,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",67.0,1,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+145,Data Engineer,3.9,AVANADE,"Washington, DC",10000+ employees,Information Technology,87.0,0,0,0,0,0,lowSalary,More than 5000,DC,DC
+146,Customer Data Scientist/Sales Engineer,4.3,h2o.ai,"Chicago, IL",201 to 500 employees,Information Technology,137.5,1,0,1,1,1,middleSalary,Under 500,IL,Illinois
+147,Lead Data Scientist,3.8,PatientPoint,"Cincinnati, OH",201 to 500 employees,Business Services,100.0,1,0,0,0,1,middleSalary,Under 500,OH,Ohio
+148,MongoDB Data Engineer II,3.8,BlueCross BlueShield of Tennessee,"Chattanooga, TN",5001 to 10000 employees,Insurance,106.5,0,0,0,0,1,middleSalary,More than 5000,TN,Tennessee
+149,Senior Data Scientist Statistics,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",98.5,0,0,0,0,0,middleSalary,1000 to 5000,WA,Washington
+150,Senior Data Analyst,4.8,KnowBe4,"Clearwater, FL",501 to 1000 employees,Business Services,61.0,1,0,0,0,1,lowSalary,500 to 1000,FL,Florida
+151,Senior Spark Engineer (Data Science),4.4,KSM Consulting,"Indianapolis, IN",51 to 200 employees,Business Services,106.5,1,0,1,1,0,middleSalary,Under 500,IN,Indiana
+152,Data Engineer,3.9,Cogo Labs,"Cambridge, MA",51 to 200 employees,Information Technology,84.5,1,0,1,0,0,lowSalary,Under 500,MA,Massachusetts
+153,BI & Platform Analytics Manager,3.4,Church & Dwight,"Ewing, NJ",1001 to 5000 employees,Manufacturing,109.5,1,0,0,0,1,middleSalary,1000 to 5000,NJ,New Jersey
+154,Lead Data Scientist,3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,164.0,1,0,1,1,0,highSalary,More than 5000,MA,Massachusetts
+155,"Sr. Data Scientist - Analytics, Personalized Healthcare (PHC)",3.9,Genentech,"South San Francisco, CA",10000+ employees,Biotech & Pharmaceuticals,169.0,1,0,1,0,1,highSalary,More than 5000,CA,California
+156,Senior Data Scientist,3.8,Juniper Networks,"Cupertino, CA",5001 to 10000 employees,Telecommunications,142.0,1,0,1,1,1,middleSalary,More than 5000,CA,California
+157,Pricipal Scientist Molecular and cellular biologist,3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,76.5,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+158,"Data Scientist (Actuary, FSA or ASA)",3.8,Legal & General America,"Frederick, MD",501 to 1000 employees,Insurance,107.0,1,0,0,0,1,middleSalary,500 to 1000,MD,Maryland
+159,Staff Data Scientist,3.5,Western Digital,"San Jose, CA",10000+ employees,Information Technology,171.5,1,0,0,1,0,highSalary,More than 5000,CA,California
+160,Senior Data Scientist / Machine Learning,3.9,Health IQ,"Dallas, TX",201 to 500 employees,Insurance,96.0,0,0,0,0,1,middleSalary,Under 500,TX,Texas
+161,Data Scientist - Health Data Analytics,4.2,Nuna,"San Francisco, CA",51 to 200 employees,Information Technology,142.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+162,Data Engineer 5 - Contract (Remote),4.2,The Church of Jesus Christ of Latter-day Saints,"Riverton, UT",10000+ employees,Non-Profit,107.0,0,0,0,0,1,middleSalary,More than 5000,UT,Utah
+163,Senior Scientist - Neuroscience,3.5,Sunovion,"Marlborough, MA",1001 to 5000 employees,Biotech & Pharmaceuticals,145.0,1,0,0,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+164,Senior Data Analyst,2.9,National Student Clearinghouse,"Herndon, VA",201 to 500 employees,Education,61.5,1,0,0,0,1,lowSalary,Under 500,VA,Virginia
+165,Medical Lab Scientist,3.6,Tower Health,"West Reading, PA",5001 to 10000 employees,Health Care,20.5,0,0,0,0,0,lowestSalary,More than 5000,PA,Pennsylvania
+166,"Risk and Analytics IT, Data Scientist",2.7,State of Wisconsin Investment Board,"Madison, WI",51 to 200 employees,Finance,120.0,1,0,0,0,0,middleSalary,Under 500,WI,Wisconsin
+167,"Scientist, Analytical Development",4.4,Rubius Therapeutics,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,62.0,0,0,0,0,0,lowSalary,Under 500,MA,Massachusetts
+168,Senior Data Scientist,4.0,Autodesk,"San Francisco, CA",5001 to 10000 employees,Information Technology,150.5,1,0,1,0,0,highSalary,More than 5000,CA,California
+169,Analytics Manager,4.3,OneMagnify,"Dearborn, MI",201 to 500 employees,Business Services,87.5,0,0,0,0,1,lowSalary,Under 500,MI,Michigan
+170,Data Engineer,4.2,IZEA,"Winter Park, FL",51 to 200 employees,Business Services,71.5,1,0,1,1,1,lowSalary,Under 500,FL,Florida
+171,Digital Marketing & ECommerce Data Analyst,3.6,Vionic Group,"San Rafael, CA",51 to 200 employees,Retail,51.5,0,0,0,0,1,lowSalary,Under 500,CA,California
+172,Sr. Scientist - Digital & Image Analysis/Computational Pathology,3.7,Takeda Pharmaceuticals,"San Diego, CA",10000+ employees,Biotech & Pharmaceuticals,151.5,0,0,0,0,1,highSalary,More than 5000,CA,California
+173,Senior Data Analyst,2.8,Dodge Data & Analytics,"Hamilton, NJ",201 to 500 employees,Information Technology,77.5,1,0,0,0,1,lowSalary,Under 500,NJ,New Jersey
+174,Principal Scientist - Immunologist,3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,140.0,0,0,0,0,1,middleSalary,More than 5000,MA,Massachusetts
+175,Senior Data Scientist,3.3,Plymouth Rock Assurance,"Woodbridge, NJ",1001 to 5000 employees,Insurance,98.5,0,0,0,0,1,middleSalary,1000 to 5000,NJ,New Jersey
+177,MED TECH/LAB SCIENTIST - LABORATORY,3.6,Beebe Healthcare,"Lewes, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+178,"Sr. Scientist, Quantitative Translational Sciences",3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,161.5,0,0,0,0,0,highSalary,More than 5000,MA,Massachusetts
+179,Sr. Data Scientist II,3.4,Argo Group US,"New York, NY",1001 to 5000 employees,Insurance,147.0,1,0,1,1,0,middleSalary,1000 to 5000,NY,New York
+180,Excel / VBA / SQL Data Analyst,4.1,Associated Electric Cooperative,"Springfield, MO",501 to 1000 employees,"Oil, Gas, Energy & Utilities",61.0,0,0,0,0,1,lowSalary,500 to 1000,MO,Missouri
+181,Machine Learning Research Scientist,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,120.0,1,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+182,"VP, Data Science",3.2,PennyMac,"Phoenix, AZ",1001 to 5000 employees,Finance,124.5,1,0,0,0,1,middleSalary,1000 to 5000,AZ,Arizona
+183,Senior Data Scientist,3.9,Zest AI,"Burbank, CA",51 to 200 employees,Finance,148.0,1,0,0,0,0,middleSalary,Under 500,CA,California
+184,Radar Data Analyst,4.7,DECISIVE ANALYTICS Corporation,"Huntsville, AL",51 to 200 employees,Aerospace & Defense,59.0,1,0,0,0,1,lowSalary,Under 500,AL,Alabama
+185,PL Actuarial-Lead Data Scientist,3.7,The Hanover Insurance Group,"Worcester, MA",5001 to 10000 employees,Insurance,146.5,1,0,0,0,1,middleSalary,More than 5000,MA,Massachusetts
+186,PV Scientist,2.9,Karyopharm Therapeutics Inc.,"Newton, MA",201 to 500 employees,Biotech & Pharmaceuticals,91.5,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+187,Senior Data & Machine Learning Scientist,3.0,Tempus Labs,"Chicago, IL",501 to 1000 employees,Biotech & Pharmaceuticals,133.0,1,0,0,1,0,middleSalary,500 to 1000,IL,Illinois
+188,Principal Data Scientist (Computational Chemistry),4.7,Recursion Pharmaceuticals,"Salt Lake City, UT",51 to 200 employees,Biotech & Pharmaceuticals,140.5,1,0,0,1,0,middleSalary,Under 500,UT,Utah
+189,Data Engineer,3.7,P2 Energy Solutions,"Lafayette, LA",501 to 1000 employees,Information Technology,70.5,0,0,0,0,1,lowSalary,500 to 1000,LA,Louisiana
+190,"Principal Scientist, Chemistry & Immunology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+191,Software Engineer - Data Visualization,4.0,ClearEdge,"Annapolis Junction, MD",51 to 200 employees,Information Technology,93.5,0,0,0,0,1,middleSalary,Under 500,MD,Maryland
+192,"Scientist/Senior Scientist, Autoimmune",4.4,Rubius Therapeutics,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,134.5,0,0,0,0,0,middleSalary,Under 500,MA,Massachusetts
+193,Staff Machine Learning Engineer,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,181.0,1,0,1,0,0,highSalary,Under 500,CA,California
+194,"Principal Scientist, Hematology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+195,Lead Data Engineer,4.1,Credit Sesame,"Mountain View, CA",51 to 200 employees,Information Technology,205.0,1,0,1,1,0,highSalary,Under 500,CA,California
+196,Marketing Data Analyst,3.6,San Manuel Casino,"Highland, CA",1001 to 5000 employees,"Arts, Entertainment & Recreation",48.5,0,0,0,0,1,lowestSalary,1000 to 5000,CA,California
+197,Medical Laboratory Scientist,4.0,Texas Health Huguley Hospital,"Burleson, TX",1001 to 5000 employees,Health Care,21.5,0,0,0,1,0,lowestSalary,1000 to 5000,TX,Texas
+198,R&D Specialist/ Food Scientist,2.4,Teasdale Latin Foods,"Hoopeston, IL",501 to 1000 employees,Manufacturing,52.5,0,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+199,Senior Research Scientist-Machine Learning,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,124.0,0,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+200,Analytics Manager - Data Mart,3.5,Central California Alliance for Health,"Scotts Valley, CA",501 to 1000 employees,Health Care,64.0,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+201,Sr. Data Engineer - Contract-to-Hire (Java),3.0,Pilot Flying J Travel Centers LLC,"Knoxville, TN",10000+ employees,Retail,98.0,1,0,0,0,0,middleSalary,More than 5000,TN,Tennessee
+202,MED TECH/LAB SCIENTIST- SOUTH COASTAL LAB,3.6,Beebe Healthcare,"Millville, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+203,Food Scientist - Developer,3.3,Palermo's Pizza,"Milwaukee, WI",501 to 1000 employees,Manufacturing,54.0,0,0,0,0,0,lowSalary,500 to 1000,WI,Wisconsin
+204,Staff Scientist-Downstream Process Development,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,1,lowSalary,Under 500,MD,Maryland
+205,Sr. Data Engineer,3.4,Echo Global Logistics,"Chicago, IL",1001 to 5000 employees,Transportation & Logistics,107.5,0,0,0,0,0,middleSalary,1000 to 5000,IL,Illinois
+206,Data Scientist - Quantitative,3.8,Truckstop.com,"Chicago, IL",501 to 1000 employees,Transportation & Logistics,112.5,1,0,0,1,1,middleSalary,500 to 1000,IL,Illinois
+207,Data Scientist,3.7,Lockheed Martin,"Herndon, VA",10000+ employees,Aerospace & Defense,89.0,1,0,1,0,1,lowSalary,More than 5000,VA,Virginia
+208,Senior Research Statistician- Data Scientist,4.8,Acuity Insurance,"Sheboygan, WI",1001 to 5000 employees,Insurance,100.5,0,0,0,0,0,middleSalary,1000 to 5000,WI,Wisconsin
+209,"Business Data Analyst, SQL",3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,65.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+210,Medical Technologist / Clinical Laboratory Scientist,3.4,"Veterans Affairs, Veterans Health Administration","New Orleans, LA",10000+ employees,Government,20.0,0,0,0,0,0,lowestSalary,More than 5000,LA,Louisiana
+211,Data Scientist,4.3,Credera,"Dallas, TX",201 to 500 employees,Business Services,72.5,1,0,1,1,1,lowSalary,Under 500,TX,Texas
+212,Senior Data Analyst,4.8,KnowBe4,"Clearwater, FL",501 to 1000 employees,Business Services,61.0,1,0,0,0,1,lowSalary,500 to 1000,FL,Florida
+213,BI & Platform Analytics Manager,3.4,Church & Dwight,"Ewing, NJ",1001 to 5000 employees,Manufacturing,109.5,1,0,0,0,1,middleSalary,1000 to 5000,NJ,New Jersey
+214,Data Engineer,3.9,Cogo Labs,"Cambridge, MA",51 to 200 employees,Information Technology,84.5,1,0,1,0,0,lowSalary,Under 500,MA,Massachusetts
+215,Data Scientist,3.4,Spectrum Communications and Consulting,"Chicago, IL",51 to 200 employees,Business Services,87.5,0,0,0,0,0,lowSalary,Under 500,IL,Illinois
+216,Data Analyst,3.1,NCSOFT,"San Mateo, CA",1001 to 5000 employees,Media,92.5,1,1,0,0,1,middleSalary,1000 to 5000,CA,California
+217,Associate Data Scientist/Computer Scientist,3.2,MITRE,"McLean, VA",5001 to 10000 employees,Government,81.5,1,0,1,0,0,lowSalary,More than 5000,VA,Virginia
+218,Business Intelligence Analyst / Developer,4.3,"Dayton Freight Lines, Inc.","Dayton, OH",1001 to 5000 employees,Transportation & Logistics,79.0,0,0,0,0,0,lowSalary,1000 to 5000,OH,Ohio
+219,Lead Data Scientist,3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,164.0,1,0,1,1,0,highSalary,More than 5000,MA,Massachusetts
+220,"Sr. Data Scientist - Analytics, Personalized Healthcare (PHC)",3.9,Genentech,"South San Francisco, CA",10000+ employees,Biotech & Pharmaceuticals,169.0,1,0,1,0,1,highSalary,More than 5000,CA,California
+221,Senior Data Scientist,3.8,Juniper Networks,"Cupertino, CA",5001 to 10000 employees,Telecommunications,142.0,1,0,1,1,1,middleSalary,More than 5000,CA,California
+222,Data Analyst,2.8,Community Action Partnership of San Luis Obispo,"Parlier, CA",501 to 1000 employees,Non-Profit,47.5,0,0,0,0,1,lowestSalary,500 to 1000,CA,California
+223,Pricipal Scientist Molecular and cellular biologist,3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,76.5,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+224,Data Analyst,3.4,TrueAccord,"San Francisco, CA",51 to 200 employees,Information Technology,69.0,1,0,0,0,1,lowSalary,Under 500,CA,California
+225,Data Analyst,4.0,DRB Systems,"Meridian, ID",201 to 500 employees,Information Technology,49.0,1,1,0,0,1,lowestSalary,Under 500,ID,Idaho
+226,Staff Data Scientist,3.5,Western Digital,"San Jose, CA",10000+ employees,Information Technology,171.5,1,0,0,1,0,highSalary,More than 5000,CA,California
+227,"Data Scientist (Actuary, FSA or ASA)",3.8,Legal & General America,"Frederick, MD",501 to 1000 employees,Insurance,107.0,1,0,0,0,1,middleSalary,500 to 1000,MD,Maryland
+228,System and Data Analyst,3.7,Corcentric,"Cherry Hill, NJ",201 to 500 employees,Information Technology,59.0,0,0,0,0,1,lowSalary,Under 500,NJ,New Jersey
+229,Data Scientist,3.5,U.Group,"Indianapolis, IN",201 to 500 employees,Information Technology,88.5,0,0,0,1,0,lowSalary,Under 500,IN,Indiana
+230,Data Engineer 5 - Contract (Remote),4.2,The Church of Jesus Christ of Latter-day Saints,"Riverton, UT",10000+ employees,Non-Profit,107.0,0,0,0,0,1,middleSalary,More than 5000,UT,Utah
+231,Digital Health Data Scientist,4.0,Pfizer,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,86.5,1,0,0,1,1,lowSalary,More than 5000,MA,Massachusetts
+232,Data Scientist,4.3,SMC 3,"Louisville, KY",51 to 200 employees,Transportation & Logistics,84.0,1,0,0,0,1,lowSalary,Under 500,KY,Kentucky
+233,Data & Analytics Consultant (NYC),4.7,Systems Evolution Inc.,"New York, NY",201 to 500 employees,Business Services,114.5,1,0,0,0,1,middleSalary,Under 500,NY,New York
+234,Senior Scientist - Neuroscience,3.5,Sunovion,"Marlborough, MA",1001 to 5000 employees,Biotech & Pharmaceuticals,145.0,1,0,0,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+235,Data Engineer,4.4,Eventbrite,"Nashville, TN",1001 to 5000 employees,Information Technology,88.0,1,0,1,1,1,lowSalary,1000 to 5000,TN,Tennessee
+236,Big Data Engineer - Chicago - Future Opportunity,4.1,Centro,"Chicago, IL",501 to 1000 employees,Information Technology,100.0,1,0,1,1,0,middleSalary,500 to 1000,IL,Illinois
+237,Senior Data Analyst,2.9,National Student Clearinghouse,"Herndon, VA",201 to 500 employees,Education,61.5,1,0,0,0,1,lowSalary,Under 500,VA,Virginia
+238,Data Scientist,2.5,comScore,"Portland, OR",1001 to 5000 employees,Business Services,96.5,1,0,1,0,0,middleSalary,1000 to 5000,OR,Oregon
+239,Survey Data Analyst,4.2,SullivanCotter,"Minneapolis, MN",201 to 500 employees,Business Services,76.0,1,0,0,0,1,lowSalary,Under 500,MN,Minnesota
+240,Data Scientist,3.9,NPD,"Port Washington, NY",1001 to 5000 employees,Business Services,15.5,0,0,0,0,1,lowestSalary,1000 to 5000,NY,New York
+241,Data Scientist,4.3,Bakery Agency,"Austin, TX",1 to 50 employees,Business Services,83.5,1,0,0,0,1,lowSalary,Under 500,TX,Texas
+242,"Risk and Analytics IT, Data Scientist",2.7,State of Wisconsin Investment Board,"Madison, WI",51 to 200 employees,Finance,120.0,1,0,0,0,0,middleSalary,Under 500,WI,Wisconsin
+243,Data Scientist,3.9,Genentech,"South San Francisco, CA",10000+ employees,Biotech & Pharmaceuticals,163.0,0,0,0,0,1,highSalary,More than 5000,CA,California
+244,Lead Health Data Analyst - Front End,3.4,Blue Cross & Blue Shield of Rhode Island,"Providence, RI",501 to 1000 employees,Insurance,100.0,0,0,0,1,0,middleSalary,500 to 1000,RI,Rhode Island
+245,Research Scientist,3.8,Boys Town,"Omaha, NE",1001 to 5000 employees,Non-Profit,52.5,0,0,0,0,1,lowSalary,1000 to 5000,NE,Nebraska
+246,Medical Lab Scientist,3.6,Tower Health,"West Reading, PA",5001 to 10000 employees,Health Care,20.5,0,0,0,0,0,lowestSalary,More than 5000,PA,Pennsylvania
+247,Junior Data Analyst,3.3,The HSC Health Care System,"Washington, DC",501 to 1000 employees,Health Care,50.0,0,0,0,0,1,lowSalary,500 to 1000,DC,DC
+248,SQL Data Engineer,3.4,Pro-Sphere Tek,"Austin, TX",201 to 500 employees,Business Services,93.0,1,0,0,1,0,middleSalary,Under 500,TX,Texas
+249,Data Scientist,3.0,Ameritas Life Insurance Corp,"Cincinnati, OH",1001 to 5000 employees,Insurance,94.5,1,0,0,0,0,middleSalary,1000 to 5000,OH,Ohio
+250,Senior Data Scientist,4.0,Autodesk,"San Francisco, CA",5001 to 10000 employees,Information Technology,150.5,1,0,1,0,0,highSalary,More than 5000,CA,California
+251,Data Scientist,3.7,Genworth,"Raleigh, NC",1001 to 5000 employees,Insurance,102.0,1,0,1,1,1,middleSalary,1000 to 5000,NC,North Carolina
+252,"Scientist, Analytical Development",4.4,Rubius Therapeutics,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,62.0,0,0,0,0,0,lowSalary,Under 500,MA,Massachusetts
+253,Analytics Manager,4.3,OneMagnify,"Dearborn, MI",201 to 500 employees,Business Services,87.5,0,0,0,0,1,lowSalary,Under 500,MI,Michigan
+254,Clinical Data Scientist,4.0,Pfizer,"Groton, CT",10000+ employees,Biotech & Pharmaceuticals,84.0,0,0,0,1,1,lowSalary,More than 5000,CT,Connecticut
+255,Data Scientist,4.0,Novetta,"Herndon, VA",501 to 1000 employees,Information Technology,143.0,1,0,0,1,0,middleSalary,500 to 1000,VA,Virginia
+256,"Sr. Data Scientist, Cyber-Security LT Contract",3.2,"Numeric, LLC","Phila, PA",1 to 50 employees,Business Services,155.0,1,0,1,1,1,highSalary,Under 500,PA,Pennsylvania
+257,Data Engineer,4.2,IZEA,"Winter Park, FL",51 to 200 employees,Business Services,71.5,1,0,1,1,1,lowSalary,Under 500,FL,Florida
+258,Data Scientist,3.9,Trace Data,"Oakland, CA",51 to 200 employees,Insurance,108.0,1,0,1,0,0,middleSalary,Under 500,CA,California
+259,Sr. Scientist - Digital & Image Analysis/Computational Pathology,3.7,Takeda Pharmaceuticals,"San Diego, CA",10000+ employees,Biotech & Pharmaceuticals,151.5,0,0,0,0,1,highSalary,More than 5000,CA,California
+260,Digital Marketing & ECommerce Data Analyst,3.6,Vionic Group,"San Rafael, CA",51 to 200 employees,Retail,51.5,0,0,0,0,1,lowSalary,Under 500,CA,California
+261,Principal Scientist - Immunologist,3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,140.0,0,0,0,0,1,middleSalary,More than 5000,MA,Massachusetts
+262,Senior Data Analyst,2.8,Dodge Data & Analytics,"Hamilton, NJ",201 to 500 employees,Information Technology,77.5,1,0,0,0,1,lowSalary,Under 500,NJ,New Jersey
+263,Insurance Financial Data Analyst,4.2,Clearwater Analytics,"Boise, ID",501 to 1000 employees,Finance,63.5,0,0,0,0,1,lowSalary,500 to 1000,ID,Idaho
+264,Data Scientist,4.0,"Tekvalley, Corp.","San Francisco, CA",1 to 50 employees,Information Technology,109.0,1,0,0,0,0,middleSalary,Under 500,CA,California
+265,Data Scientist,3.5,BWX Technologies,"Oak Ridge, TN",5001 to 10000 employees,Aerospace & Defense,96.0,1,0,0,0,0,middleSalary,More than 5000,TN,Tennessee
+267,Data Engineer,3.2,PennyMac,"Agoura Hills, CA",1001 to 5000 employees,Finance,101.0,1,0,0,1,1,middleSalary,1000 to 5000,CA,California
+268,Senior Data Scientist,3.3,Plymouth Rock Assurance,"Woodbridge, NJ",1001 to 5000 employees,Insurance,98.5,0,0,0,0,1,middleSalary,1000 to 5000,NJ,New Jersey
+269,Data Engineer I - Azure,3.9,Vermeer,"Pella, IA",1001 to 5000 employees,Manufacturing,77.5,0,0,0,0,1,lowSalary,1000 to 5000,IA,Iowa
+270,"Sr. Scientist, Quantitative Translational Sciences",3.7,Takeda Pharmaceuticals,"Boston, MA",10000+ employees,Biotech & Pharmaceuticals,161.5,0,0,0,0,0,highSalary,More than 5000,MA,Massachusetts
+271,MED TECH/LAB SCIENTIST - LABORATORY,3.6,Beebe Healthcare,"Lewes, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+272,Sr. Data Scientist II,3.4,Argo Group US,"New York, NY",1001 to 5000 employees,Insurance,147.0,1,0,1,1,0,middleSalary,1000 to 5000,NY,New York
+273,Data Scientist,3.5,L&T Infotech,"San Ramon, CA",10000+ employees,Information Technology,90.0,1,0,0,0,1,middleSalary,More than 5000,CA,California
+274,Information Security Data Analyst,4.3,OceanFirst Financial,"Red Bank, NJ",501 to 1000 employees,Finance,58.0,0,0,0,1,0,lowSalary,500 to 1000,NJ,New Jersey
+275,Excel / VBA / SQL Data Analyst,4.1,Associated Electric Cooperative,"Springfield, MO",501 to 1000 employees,"Oil, Gas, Energy & Utilities",61.0,0,0,0,0,1,lowSalary,500 to 1000,MO,Missouri
+276,Machine Learning Research Scientist,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,120.0,1,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+277,Data Scientist,3.6,Sotheby's,"New York, NY",1001 to 5000 employees,Retail,128.0,1,0,0,0,0,middleSalary,1000 to 5000,NY,New York
+278,Data Scientist,3.5,First Tech Federal Credit Union,"Hillsboro, OR",1001 to 5000 employees,Finance,99.5,1,0,1,1,1,middleSalary,1000 to 5000,OR,Oregon
+279,Data Scientist,3.6,Amrock,"Detroit, MI",1001 to 5000 employees,Real Estate,96.0,1,0,0,0,0,middleSalary,1000 to 5000,MI,Michigan
+280,Data Scientist,2.3,Vanda Pharmaceuticals,"Washington, DC",201 to 500 employees,Biotech & Pharmaceuticals,101.0,1,0,0,0,1,middleSalary,Under 500,DC,DC
+281,Senior Data Scientist,3.9,Zest AI,"Burbank, CA",51 to 200 employees,Finance,148.0,1,0,0,0,0,middleSalary,Under 500,CA,California
+282,"Data Scientist, Senior",4.0,Novetta,"Fort Belvoir, VA",501 to 1000 employees,Information Technology,142.0,1,0,0,1,0,middleSalary,500 to 1000,VA,Virginia
+283,Senior Data Scientist,4.1,CK-12 Foundation,"Palo Alto, CA",1 to 50 employees,Education,169.0,0,0,0,1,1,highSalary,Under 500,CA,California
+284,"VP, Data Science",3.2,PennyMac,"Phoenix, AZ",1001 to 5000 employees,Finance,124.5,1,0,0,0,1,middleSalary,1000 to 5000,AZ,Arizona
+285,Radar Data Analyst,4.7,DECISIVE ANALYTICS Corporation,"Huntsville, AL",51 to 200 employees,Aerospace & Defense,59.0,1,0,0,0,1,lowSalary,Under 500,AL,Alabama
+286,CONSULTANT– DATA ANALYTICS GROUP,4.2,Opinion Dynamics,"San Diego, CA",51 to 200 employees,Business Services,52.5,1,0,0,0,0,lowSalary,Under 500,CA,California
+287,Data Engineer,4.6,Applied Information Sciences,"Houston, TX",501 to 1000 employees,Information Technology,75.5,0,0,1,0,0,lowSalary,500 to 1000,TX,Texas
+288,Senior Data Scientist,3.7,Swiss Re,"Armonk, NY",10000+ employees,Insurance,139.0,1,0,0,0,1,middleSalary,More than 5000,NY,New York
+289,"Data Engineer, Data Engineering and Artifical Intelligence",3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,102.5,1,0,1,1,1,middleSalary,More than 5000,MA,Massachusetts
+290,Staff Scientist,4.4,WK Dickson,"Columbia, SC",201 to 500 employees,Business Services,60.5,0,0,0,0,0,lowSalary,Under 500,SC,South Carolina
+291,PL Actuarial-Lead Data Scientist,3.7,The Hanover Insurance Group,"Worcester, MA",5001 to 10000 employees,Insurance,146.5,1,0,0,0,1,middleSalary,More than 5000,MA,Massachusetts
+292,"Associate Scientist/Scientist, Process Analytical Technology - Small Molecule Analytical Chemistry",3.9,Genentech,"South San Francisco, CA",10000+ employees,Biotech & Pharmaceuticals,125.0,0,0,0,0,1,middleSalary,More than 5000,CA,California
+293,Sr. Data Analyst,3.6,MassMutual,"Springfield, MA",5001 to 10000 employees,Insurance,81.0,1,0,0,0,0,lowSalary,More than 5000,MA,Massachusetts
+294,Senior Data & Machine Learning Scientist,3.0,Tempus Labs,"Chicago, IL",501 to 1000 employees,Biotech & Pharmaceuticals,133.0,1,0,0,1,0,middleSalary,500 to 1000,IL,Illinois
+295,Program/Data Analyst,3.4,General Dynamics Information Technology,"Washington, DC",10000+ employees,Information Technology,77.0,0,0,0,0,1,lowSalary,More than 5000,DC,DC
+296,Data Engineer,4.1,ManTech,"Herndon, VA",5001 to 10000 employees,Business Services,92.0,0,0,0,0,0,middleSalary,More than 5000,VA,Virginia
+297,Senior Data Scientist: Causal & Predictive analytics AI Innovation Lab,3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,121.0,0,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+298,"Principal Data Engineer, Data Platform & Insights",4.0,Autodesk,"San Francisco, CA",5001 to 10000 employees,Information Technology,162.5,1,0,1,0,1,highSalary,More than 5000,CA,California
+299,RESEARCH SCIENTIST - BIOLOGICAL SAFETY,3.9,Southwest Research Institute,"San Antonio, TX",1001 to 5000 employees,Business Services,60.0,0,0,0,0,0,lowSalary,1000 to 5000,TX,Texas
+301,Big Data Engineer,4.4,SpringML,"Indianapolis, IN",1 to 50 employees,Information Technology,90.5,1,0,1,0,0,middleSalary,Under 500,IN,Indiana
+302,Data Scientist / Machine Learning Expert,3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,114.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+303,Data Scientist,3.8,Juniper Networks,"Sunnyvale, CA",5001 to 10000 employees,Telecommunications,121.0,1,0,1,0,1,middleSalary,More than 5000,CA,California
+304,Senior Data Scientist,2.2,The Integer Group,"Dallas, TX",501 to 1000 employees,Business Services,110.0,0,0,0,0,0,middleSalary,500 to 1000,TX,Texas
+305,PV Scientist,2.9,Karyopharm Therapeutics Inc.,"Newton, MA",201 to 500 employees,Biotech & Pharmaceuticals,91.5,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+306,Clinical Data Analyst,4.1,ManTech,"Portsmouth, VA",5001 to 10000 employees,Business Services,70.5,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+307,Data Engineer,3.7,P2 Energy Solutions,"Lafayette, LA",501 to 1000 employees,Information Technology,70.5,0,0,0,0,1,lowSalary,500 to 1000,LA,Louisiana
+308,Computational Chemist/Data Scientist,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",76.5,1,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+309,Data Engineer,3.6,MassMutual,"Springfield, MA",5001 to 10000 employees,Insurance,92.0,1,0,1,0,1,middleSalary,More than 5000,MA,Massachusetts
+310,Principal Data Scientist (Computational Chemistry),4.7,Recursion Pharmaceuticals,"Salt Lake City, UT",51 to 200 employees,Biotech & Pharmaceuticals,140.5,1,0,0,1,0,middleSalary,Under 500,UT,Utah
+311,Product Engineer – Data Science,3.5,Esri,"Arlington, VA",1001 to 5000 employees,Information Technology,82.0,1,0,0,0,0,lowSalary,1000 to 5000,VA,Virginia
+312,"Principal Scientist, Chemistry & Immunology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+313,"Scientist/Senior Scientist, Autoimmune",4.4,Rubius Therapeutics,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,134.5,0,0,0,0,0,middleSalary,Under 500,MA,Massachusetts
+314,Data Scientist,3.3,Samba TV,"San Francisco, CA",201 to 500 employees,Business Services,164.5,0,0,0,0,0,highSalary,Under 500,CA,California
+315,Market Data Analyst,3.4,SV Microwave,"West Palm Beach, FL",201 to 500 employees,Telecommunications,44.0,0,0,0,0,0,lowestSalary,Under 500,FL,Florida
+316,Software Engineer - Data Visualization,4.0,ClearEdge,"Annapolis Junction, MD",51 to 200 employees,Information Technology,93.5,0,0,0,0,1,middleSalary,Under 500,MD,Maryland
+317,Data Engineer,4.4,SpringML,"Herndon, VA",1 to 50 employees,Information Technology,109.0,1,0,1,0,0,middleSalary,Under 500,VA,Virginia
+318,Staff Data Engineer,3.8,Sumo Logic,"Austin, TX",501 to 1000 employees,Information Technology,149.5,0,0,1,1,0,middleSalary,500 to 1000,TX,Texas
+319,Associate Data Engineer,3.5,EAB,"Washington, DC",1001 to 5000 employees,Business Services,65.5,0,0,1,1,1,lowSalary,1000 to 5000,DC,DC
+320,Senior Data Scientist,3.5,Brighthouse Financial,"Charlotte, NC",1001 to 5000 employees,Insurance,124.5,1,0,1,0,1,middleSalary,1000 to 5000,NC,North Carolina
+321,Staff BI and Data Engineer,2.9,Affinity Solutions,"San Jose, CA",51 to 200 employees,Business Services,114.0,1,0,1,0,0,middleSalary,Under 500,CA,California
+322,Marketing Data Analyst,3.9,Citadel Federal Credit Union,"Exton, PA",501 to 1000 employees,Finance,49.0,1,0,0,0,0,lowestSalary,500 to 1000,PA,Pennsylvania
+323,"Principal Scientist, Hematology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+324,Data Analyst,3.7,CALIBRE Systems,"Alexandria, VA",501 to 1000 employees,Information Technology,71.0,0,0,0,0,1,lowSalary,500 to 1000,VA,Virginia
+325,"Director - Data, Privacy and AI Governance",3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,101.0,0,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+326,Data Scientist,3.5,Esri,"Redlands, CA",1001 to 5000 employees,Information Technology,107.0,1,0,1,1,0,middleSalary,1000 to 5000,CA,California
+327,Data Scientist,4.7,New England Biolabs,"Ipswich, MA",201 to 500 employees,Biotech & Pharmaceuticals,112.5,1,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+328,Staff Machine Learning Engineer,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,181.0,1,0,1,0,0,highSalary,Under 500,CA,California
+329,Information Security Data Analyst,3.7,Motorola Solutions,"Chicago, IL",10000+ employees,Information Technology,61.0,1,0,1,0,0,lowSalary,More than 5000,IL,Illinois
+330,Lead Data Engineer,4.1,Credit Sesame,"Mountain View, CA",51 to 200 employees,Information Technology,205.0,1,0,1,1,0,highSalary,Under 500,CA,California
+331,Scientist Manufacturing - Kentucky BioProcessing,3.1,Reynolds American,"Owensboro, KY",5001 to 10000 employees,Manufacturing,103.5,0,0,0,0,0,middleSalary,More than 5000,KY,Kentucky
+332,Data Analytics Project Manager,3.6,MassMutual,"Springfield, MA",5001 to 10000 employees,Insurance,63.0,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+333,Consultant - Analytics Consulting,3.0,Infosys,"Hartford, CT",10000+ employees,Information Technology,62.5,0,0,0,0,1,lowSalary,More than 5000,CT,Connecticut
+334,Data Engineer,3.5,Alignment Healthcare,"Orange, CA",501 to 1000 employees,Health Care,94.5,1,0,1,1,1,middleSalary,500 to 1000,CA,California
+335,Marketing Data Analyst,3.6,San Manuel Casino,"Highland, CA",1001 to 5000 employees,"Arts, Entertainment & Recreation",48.5,0,0,0,0,1,lowestSalary,1000 to 5000,CA,California
+336,Senior Scientist (Neuroscience),3.5,Sunovion,"Marlborough, MA",1001 to 5000 employees,Biotech & Pharmaceuticals,154.5,1,0,0,0,1,highSalary,1000 to 5000,MA,Massachusetts
+337,Medical Laboratory Scientist,4.0,Texas Health Huguley Hospital,"Burleson, TX",1001 to 5000 employees,Health Care,21.5,0,0,0,1,0,lowestSalary,1000 to 5000,TX,Texas
+338,Machine Learning Engineer - Regulatory,3.7,Cboe Global Markets,"Lenexa, KS",501 to 1000 employees,Finance,87.0,1,0,0,0,1,lowSalary,500 to 1000,KS,Kansas
+339,R&D Specialist/ Food Scientist,2.4,Teasdale Latin Foods,"Hoopeston, IL",501 to 1000 employees,Manufacturing,52.5,0,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+340,Data Engineer,3.2,Guidepoint,"New York, NY",501 to 1000 employees,Business Services,64.5,1,0,0,1,1,lowSalary,500 to 1000,NY,New York
+341,"Scientist, Bacteriology",2.1,Cerus Corporation,"Concord, CA",201 to 500 employees,Biotech & Pharmaceuticals,111.5,0,0,0,0,1,middleSalary,Under 500,CA,California
+342,"Associate Director, Platform and DevOps- Data Engineering and Aritifical Intelligence",3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,154.5,0,0,1,1,1,highSalary,More than 5000,MA,Massachusetts
+343,Senior Research Scientist-Machine Learning,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,124.0,0,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+344,Senior Data Scientist,4.4,Maven Wave Partners,"Chicago, IL",201 to 500 employees,Business Services,128.5,1,0,0,1,1,middleSalary,Under 500,IL,Illinois
+345,Clinical Laboratory Scientist,3.7,Vail Health,"Vail, CO",501 to 1000 employees,Health Care,31.5,0,0,0,0,0,lowestSalary,500 to 1000,CO,Colorado
+346,Analytics Manager - Data Mart,3.5,Central California Alliance for Health,"Scotts Valley, CA",501 to 1000 employees,Health Care,64.0,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+347,Sr. Data Engineer - Contract-to-Hire (Java),3.0,Pilot Flying J Travel Centers LLC,"Knoxville, TN",10000+ employees,Retail,98.0,1,0,0,0,0,middleSalary,More than 5000,TN,Tennessee
+348,Data Scientist - Algorithms & Inference,4.2,Nuna,"San Francisco, CA",51 to 200 employees,Information Technology,142.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+349,Senior Data Scientist - R&D Oncology,3.9,AstraZeneca,"New York, NY",10000+ employees,Biotech & Pharmaceuticals,137.0,1,0,0,0,0,middleSalary,More than 5000,NY,New York
+350,Data Engineer,4.0,Pinnacol Assurance,"Denver, CO",501 to 1000 employees,Insurance,99.0,1,0,0,1,0,middleSalary,500 to 1000,CO,Colorado
+351,Food Scientist - Developer,3.3,Palermo's Pizza,"Milwaukee, WI",501 to 1000 employees,Manufacturing,54.0,0,0,0,0,0,lowSalary,500 to 1000,WI,Wisconsin
+352,Senior Data Scientist,4.4,MathWorks,"Natick, MA",1001 to 5000 employees,Information Technology,139.5,1,0,0,0,0,middleSalary,1000 to 5000,MA,Massachusetts
+353,Data Engineer,3.4,MetroStar Systems,"Rockville, MD",201 to 500 employees,Information Technology,109.0,0,0,0,1,0,middleSalary,Under 500,MD,Maryland
+354,"Director II, Data Science - GRM Actuarial",3.3,Liberty Mutual Insurance,"Chicago, IL",10000+ employees,Insurance,254.0,1,0,0,0,0,highestSalary,More than 5000,IL,Illinois
+355,"Scientist, Molecular/Cellular Biologist",2.9,Audentes Therapeutics,"South San Francisco, CA",201 to 500 employees,Biotech & Pharmaceuticals,73.0,0,0,0,0,0,lowSalary,Under 500,CA,California
+356,Staff Scientist-Downstream Process Development,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,1,lowSalary,Under 500,MD,Maryland
+357,MED TECH/LAB SCIENTIST- SOUTH COASTAL LAB,3.6,Beebe Healthcare,"Millville, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+358,Scientist - Analytical Services,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,99.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+359,Associate Data Analyst- Graduate Development Program,3.3,National Interstate,"Richfield, OH",501 to 1000 employees,Insurance,45.5,0,0,0,0,0,lowestSalary,500 to 1000,OH,Ohio
+360,Sr. Data Engineer,4.5,Moser Consulting,"Indianapolis, IN",51 to 200 employees,Business Services,122.5,1,0,1,1,0,middleSalary,Under 500,IN,Indiana
+361,Senior Insurance Data Scientist,3.9,TransUnion,"Chicago, IL",5001 to 10000 employees,Finance,140.0,1,0,0,0,1,middleSalary,More than 5000,IL,Illinois
+362,Senior Data Science Systems Engineer,3.2,MITRE,"Hampton, VA",5001 to 10000 employees,Government,77.5,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+363,ENVIRONMENTAL ENGINEER/SCIENTIST,3.3,Mcphail Associates,"Cambridge, MA",1 to 50 employees,"Construction, Repair & Maintenance",26.5,0,0,0,0,1,lowestSalary,Under 500,MA,Massachusetts
+364,Senior Scientist - Regulatory Submissions,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,117.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+365,Scientist - Biomarker and Flow Cytometry,2.4,Crown Bioscience,"San Diego, CA",501 to 1000 employees,Biotech & Pharmaceuticals,70.5,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+366,Revenue Analytics Manager,4.8,HOVER,"San Francisco, CA",51 to 200 employees,Information Technology,61.5,0,0,0,0,1,lowSalary,Under 500,CA,California
+367,"Associate Scientist, LC/MS Biologics",2.9,Q2 Solutions,"Ithaca, NY",1001 to 5000 employees,Biotech & Pharmaceuticals,70.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+368,Sr. Scientist Method Development,2.9,Q2 Solutions,"Marietta, GA",1001 to 5000 employees,Biotech & Pharmaceuticals,80.0,0,0,0,0,1,lowSalary,1000 to 5000,GA,Georgia
+369,IT - Data Engineer II,3.4,Arbella Insurance,"Quincy, MA",1001 to 5000 employees,Insurance,90.0,0,0,1,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+371,"Project Scientist - Auton Lab, Robotics Institute",2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,73.5,0,0,0,0,1,lowSalary,500 to 1000,PA,Pennsylvania
+372,Data Scientist,3.8,Zimmerman Advertising,"Fort Lauderdale, FL",501 to 1000 employees,Business Services,91.0,1,0,0,0,1,middleSalary,500 to 1000,FL,Florida
+373,Data Scientist,5.0,BPA Services,"Washington, DC",Unknown,Information Technology,155.0,0,0,0,1,1,highSalary,,DC,DC
+374,"Enterprise Architect, Data",3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,129.5,1,0,1,1,1,middleSalary,More than 5000,MA,Massachusetts
+375,"Senior Manager, Epidemiologic Data Scientist",4.0,Pfizer,"New York, NY",10000+ employees,Biotech & Pharmaceuticals,167.5,0,0,0,1,1,highSalary,More than 5000,NY,New York
+376,Corporate Risk Data Analyst (SQL Based) - Milwaukee or,3.8,Associated Banc-Corp,"Green Bay, WI",1001 to 5000 employees,Finance,60.0,0,0,0,1,1,lowSalary,1000 to 5000,WI,Wisconsin
+377,Lead Data Scientist,3.9,Zest AI,"Burbank, CA",51 to 200 employees,Finance,180.0,1,0,0,0,1,highSalary,Under 500,CA,California
+378,"Marketing Data Analyst, May 2020 Undergrad",3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,65.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+379,Senior Data Engineer,4.3,Genesys,"Durham, NC",5001 to 10000 employees,Information Technology,112.5,1,0,1,1,0,middleSalary,More than 5000,NC,North Carolina
+380,Senior Data Analyst,1.9,Moda Operandi,"New York, NY",201 to 500 employees,Retail,87.5,1,0,0,0,1,lowSalary,Under 500,NY,New York
+381,Data Modeler - Data Solutions Engineer,3.3,Liberty Mutual Insurance,"Indianapolis, IN",10000+ employees,Insurance,51.5,1,0,0,0,1,lowSalary,More than 5000,IN,Indiana
+382,Associate Environmental Scientist - Wildlife Biologist,4.7,QK,"Clovis, CA",51 to 200 employees,Business Services,51.0,0,0,0,0,1,lowSalary,Under 500,CA,California
+383,"Associate, Data Science, Internal Audit",3.1,Santander,"Boston, MA",10000+ employees,Finance,62.5,1,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+384,Sr Data Engineer (Sr BI Developer),3.4,Tivity Health,"Chandler, AZ",501 to 1000 employees,Health Care,100.0,0,0,0,0,0,middleSalary,500 to 1000,AZ,Arizona
+385,Data Engineer,4.4,BRMi,"Chantilly, VA",51 to 200 employees,Information Technology,85.0,1,0,1,1,0,lowSalary,Under 500,VA,Virginia
+386,Senior LiDAR Data Scientist,3.9,Luminar Technologies,"Orlando, FL",201 to 500 employees,Information Technology,122.0,1,0,0,1,0,middleSalary,Under 500,FL,Florida
+387,Salesforce Analytics Consultant,3.9,"Emtec, Inc.","Chicago, IL",501 to 1000 employees,Information Technology,66.5,1,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+388,"Technology-Minded, Data Professional Opportunities",4.7,Veterans United Home Loans,"Columbia, MO",1001 to 5000 employees,Finance,70.5,0,0,1,0,1,lowSalary,1000 to 5000,MO,Missouri
+389,Senior Data Engineer,4.7,Praetorian,"Austin, TX",51 to 200 employees,Business Services,138.5,1,0,1,0,0,middleSalary,Under 500,TX,Texas
+390,Managing Data Scientist/ML Engineer,3.4,PA Consulting,"Boston, MA",1001 to 5000 employees,Business Services,107.5,0,0,1,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+391,"Scientist, Pharmacometrics",3.8,Agios Pharmaceuticals,"Cambridge, MA",501 to 1000 employees,Biotech & Pharmaceuticals,120.5,0,0,0,0,0,middleSalary,500 to 1000,MA,Massachusetts
+392,Staff Scientist- Upstream PD,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,0,lowSalary,Under 500,MD,Maryland
+393,Scientist Manufacturing Pharma - Kentucky BioProcessing,3.1,Reynolds American,"Owensboro, KY",5001 to 10000 employees,Manufacturing,103.5,0,0,0,0,0,middleSalary,More than 5000,KY,Kentucky
+394,Sr. Data Engineer,3.4,Echo Global Logistics,"Chicago, IL",1001 to 5000 employees,Transportation & Logistics,107.5,0,0,0,0,0,middleSalary,1000 to 5000,IL,Illinois
+395,Lead Big Data Engineer,4.0,Glassdoor,"San Francisco, CA",1001 to 5000 employees,Information Technology,162.0,1,0,1,1,1,highSalary,1000 to 5000,CA,California
+396,Product Engineer – Spatial Data Science and Statistical Analysis,3.5,Esri,"Redlands, CA",1001 to 5000 employees,Information Technology,68.5,1,0,1,0,1,lowSalary,1000 to 5000,CA,California
+397,Sr Software Engineer (Data Scientist),3.4,Assurant,"Westlake, OH",10000+ employees,Insurance,110.5,0,0,0,0,1,middleSalary,More than 5000,OH,Ohio
+398,College Hire - Data Scientist - Open to December 2019 Graduates,3.7,Caterpillar,"Peoria, IL",10000+ employees,Manufacturing,81.0,0,0,0,0,0,lowSalary,More than 5000,IL,Illinois
+399,Senior Data Scientist,4.3,Equity Residential,"Chicago, IL",1001 to 5000 employees,Real Estate,130.0,1,0,1,0,1,middleSalary,1000 to 5000,IL,Illinois
+400,Sr. Data Engineer (ETL Developer),3.7,F&G,"Des Moines, IA",201 to 500 employees,Insurance,115.5,1,0,0,0,1,middleSalary,Under 500,IA,Iowa
+401,Senior Data Scientist Artificial Intelligence,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",80.5,0,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+402,Analytics - Business Assurance Data Analyst,4.6,GreatAmerica Financial Services,"Cedar Rapids, IA",501 to 1000 employees,Finance,43.0,0,0,0,0,1,lowestSalary,500 to 1000,IA,Iowa
+403,"Associate Director/Director, Safety Scientist",4.4,Acceleron Pharma,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,140.0,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+405,Data Analyst Senior,3.0,AmeriHealth Caritas,"Philadelphia, PA",5001 to 10000 employees,Insurance,66.5,0,0,0,0,1,lowSalary,More than 5000,PA,Pennsylvania
+406,Lead Data Engineer (Python),4.7,Strategic Employment Partners,"San Francisco, CA",51 to 200 employees,Business Services,94.5,1,0,0,1,0,middleSalary,Under 500,CA,California
+407,Senior Data Scientist 4 Artificial Intelligence,3.8,PNNL,"Seattle, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",119.0,0,0,0,0,0,middleSalary,1000 to 5000,WA,Washington
+408,Medical Lab Scientist - MLT,3.2,Catholic Health Initiatives,"Omaha, NE",10000+ employees,Health Care,25.0,0,0,0,0,0,lowestSalary,More than 5000,NE,Nebraska
+409,"Senior Operations Data Analyst, Call Center Operations",2.7,FLEETCOR,"Nashville, TN",5001 to 10000 employees,Finance,13.5,0,0,0,0,1,lowestSalary,More than 5000,TN,Tennessee
+410,"Director II, Data Science - GRS Predictive Analytics",3.3,Liberty Mutual Insurance,"Chicago, IL",10000+ employees,Insurance,194.5,1,0,0,0,0,highSalary,More than 5000,IL,Illinois
+411,RESEARCH COMPUTER SCIENTIST - RESEARCH ENGINEER - SR. COMPUTER SCIENTIST - SOFTWARE DEVELOPMENT,3.9,Southwest Research Institute,"San Antonio, TX",1001 to 5000 employees,Business Services,71.5,1,0,0,1,1,lowSalary,1000 to 5000,TX,Texas
+412,Geospatial Software Developer and Data Scientist,3.7,Applied Research Laboratories,"Austin, TX",501 to 1000 employees,Education,105.5,1,0,0,1,0,middleSalary,500 to 1000,TX,Texas
+413,Senior Scientist - Toxicologist - Product Integrity (Stewardship),3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,74.0,0,0,0,0,1,lowSalary,More than 5000,NC,North Carolina
+414,Systems Engineer II - Data Analyst,3.7,Raytheon,"Huntsville, AL",10000+ employees,Aerospace & Defense,62.5,0,0,0,0,1,lowSalary,More than 5000,AL,Alabama
+415,Senior Research Analytical Scientist-Non-Targeted Analysis,4.3,RTI International,"Durham, NC",1001 to 5000 employees,Business Services,65.5,0,0,0,0,0,lowSalary,1000 to 5000,NC,North Carolina
+416,Director Data Science,3.6,TRANZACT,"Fort Lee, NJ",1001 to 5000 employees,Business Services,161.5,1,0,0,1,1,highSalary,1000 to 5000,NJ,New Jersey
+417,Sr Data Analyst - IT,2.1,United BioSource,"Blue Bell, PA",1001 to 5000 employees,Biotech & Pharmaceuticals,72.5,0,0,0,0,1,lowSalary,1000 to 5000,PA,Pennsylvania
+418,Senior Data Engineer,3.9,Figure Eight,"San Francisco, CA",51 to 200 employees,Information Technology,139.0,1,0,0,1,1,middleSalary,Under 500,CA,California
+419,Senior Data Engineer,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,136.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+420,Associate Machine Learning Engineer / Data Scientist May 2020 Undergrad,3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,74.5,1,0,1,0,0,lowSalary,1000 to 5000,NY,New York
+421,Senior Scientist - Biostatistician,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,80.5,0,0,0,0,1,lowSalary,More than 5000,NC,North Carolina
+422,Data Scientist,3.5,Sartorius,"Albuquerque, NM",5001 to 10000 employees,Biotech & Pharmaceuticals,75.5,1,0,0,0,1,lowSalary,More than 5000,NM,New Mexico
+423,Data Scientist,4.7,1904labs,"Saint Louis, MO",51 to 200 employees,Information Technology,143.5,1,0,1,0,0,middleSalary,Under 500,MO,Missouri
+424,Data Scientist,5.0,Royce Geospatial,"Springfield, VA",51 to 200 employees,Aerospace & Defense,101.0,1,0,0,0,0,middleSalary,Under 500,VA,Virginia
+425,Data Engineer,3.6,MassMutual,"Springfield, MA",5001 to 10000 employees,Insurance,92.0,1,0,1,0,1,middleSalary,More than 5000,MA,Massachusetts
+426,Computational Chemist/Data Scientist,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",76.5,1,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+427,Principal Data Scientist (Computational Chemistry),4.7,Recursion Pharmaceuticals,"Salt Lake City, UT",51 to 200 employees,Biotech & Pharmaceuticals,140.5,1,0,0,1,0,middleSalary,Under 500,UT,Utah
+428,Data Scientist,3.6,Citi,"Jersey City, NJ",10000+ employees,Finance,116.5,0,0,0,0,1,middleSalary,More than 5000,NJ,New Jersey
+429,Principal Machine Learning Scientist,4.7,Sage Intacct,"San Francisco, CA",501 to 1000 employees,Information Technology,232.5,1,0,0,0,0,highSalary,500 to 1000,CA,California
+430,Data Scientist,3.5,Scale AI,"San Francisco, CA",51 to 200 employees,Information Technology,120.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+431,Product Engineer – Data Science,3.5,Esri,"Arlington, VA",1001 to 5000 employees,Information Technology,82.0,1,0,0,0,0,lowSalary,1000 to 5000,VA,Virginia
+432,"Principal Scientist, Chemistry & Immunology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+433,Data Scientist,2.7,Change Healthcare,"Emeryville, CA",10000+ employees,Information Technology,153.0,1,0,1,1,0,highSalary,More than 5000,CA,California
+434,Data Scientist,3.4,MZ,"Palo Alto, CA",501 to 1000 employees,Information Technology,127.0,1,0,1,0,0,middleSalary,500 to 1000,CA,California
+435,Data Scientist,4.7,HG Insights,"Santa Barbara, CA",51 to 200 employees,Information Technology,85.5,1,0,1,0,1,lowSalary,Under 500,CA,California
+436,Data Scientist,2.8,"1-800-FLOWERS.COM, Inc.","Carle Place, NY",1001 to 5000 employees,Business Services,76.5,1,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+437,Data Scientist,3.5,CBS Interactive,"New York, NY",1001 to 5000 employees,Media,128.0,1,0,1,0,0,middleSalary,1000 to 5000,NY,New York
+438,Data Engineer,3.2,"Numeric, LLC","King of Prussia, PA",1 to 50 employees,Business Services,91.5,1,0,1,1,1,middleSalary,Under 500,PA,Pennsylvania
+439,"Scientist/Senior Scientist, Autoimmune",4.4,Rubius Therapeutics,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,134.5,0,0,0,0,0,middleSalary,Under 500,MA,Massachusetts
+440,Data Scientist,3.3,Samba TV,"San Francisco, CA",201 to 500 employees,Business Services,164.5,0,0,0,0,0,highSalary,Under 500,CA,California
+441,Software Engineer - Data Visualization,4.0,ClearEdge,"Annapolis Junction, MD",51 to 200 employees,Information Technology,93.5,0,0,0,0,1,middleSalary,Under 500,MD,Maryland
+442,Market Data Analyst,3.4,SV Microwave,"West Palm Beach, FL",201 to 500 employees,Telecommunications,44.0,0,0,0,0,0,lowestSalary,Under 500,FL,Florida
+443,Staff Data Engineer,3.8,Sumo Logic,"Austin, TX",501 to 1000 employees,Information Technology,149.5,0,0,1,1,0,middleSalary,500 to 1000,TX,Texas
+444,Associate Data Engineer,3.5,EAB,"Washington, DC",1001 to 5000 employees,Business Services,65.5,0,0,1,1,1,lowSalary,1000 to 5000,DC,DC
+445,Data Engineer,4.4,SpringML,"Herndon, VA",1 to 50 employees,Information Technology,109.0,1,0,1,0,0,middleSalary,Under 500,VA,Virginia
+446,Staff Data Engineer,3.7,Samsung Research America,"Mountain View, CA",1001 to 5000 employees,Information Technology,177.0,1,0,1,1,0,highSalary,1000 to 5000,CA,California
+447,Data Scientist,4.7,Systems & Technology Research,"Arlington, VA",201 to 500 employees,Aerospace & Defense,107.0,1,0,1,0,1,middleSalary,Under 500,VA,Virginia
+448,Data Scientist,4.1,Netskope,"Santa Clara, CA",501 to 1000 employees,Information Technology,154.5,1,0,1,0,1,highSalary,500 to 1000,CA,California
+449,Data Scientist,4.0,Lorven Technologies Inc,"Santa Clara, CA",1 to 50 employees,Accounting & Legal,113.5,1,0,1,0,0,middleSalary,Under 500,CA,California
+450,Senior Data Scientist,3.5,Brighthouse Financial,"Charlotte, NC",1001 to 5000 employees,Insurance,124.5,1,0,1,0,1,middleSalary,1000 to 5000,NC,North Carolina
+451,Data Scientist,2.5,CareDx,"Brisbane, CA",1 to 50 employees,Biotech & Pharmaceuticals,143.5,1,0,0,0,1,middleSalary,Under 500,CA,California
+452,Data Scientist,3.9,Serigor Inc.,"San Francisco, CA",1 to 50 employees,Information Technology,113.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+453,Data Scientist,3.4,Leidos,"Springfield, VA",10000+ employees,Aerospace & Defense,101.5,1,0,0,1,0,middleSalary,More than 5000,VA,Virginia
+454,"Data Analyst, Performance Partnership",3.6,Beckman Coulter Diagnostics,"New York, NY",10000+ employees,Manufacturing,73.0,0,0,0,1,1,lowSalary,More than 5000,NY,New York
+455,Data Scientist,3.5,IHS Markit,"New York, NY",10000+ employees,Business Services,80.5,1,0,0,1,0,lowSalary,More than 5000,NY,New York
+457,Staff BI and Data Engineer,2.9,Affinity Solutions,"San Jose, CA",51 to 200 employees,Business Services,114.0,1,0,1,0,0,middleSalary,Under 500,CA,California
+458,Data Scientist,3.5,e-IT Professionals Corp.,"Foster City, CA",51 to 200 employees,Consumer Services,139.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+459,Data Scientist,4.8,TechProjects,"New York, NY",1 to 50 employees,Information Technology,145.5,1,0,0,0,1,middleSalary,Under 500,NY,New York
+460,Data Scientist,4.0,Biz2Credit Inc,"New York, NY",201 to 500 employees,Finance,87.0,0,0,0,0,1,lowSalary,Under 500,NY,New York
+461,Data Scientist,4.2,PeoplesBank,"Holyoke, MA",201 to 500 employees,Finance,100.5,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+462,Data Scientist Manager,3.8,Capgemini,"New York, NY",10000+ employees,Information Technology,147.0,1,0,1,0,1,middleSalary,More than 5000,NY,New York
+463,Data Engineer,3.7,GNY Insurance Companies,"New York, NY",201 to 500 employees,Insurance,110.5,1,0,0,0,1,middleSalary,Under 500,NY,New York
+464,Marketing Data Analyst,3.9,Citadel Federal Credit Union,"Exton, PA",501 to 1000 employees,Finance,49.0,1,0,0,0,0,lowestSalary,500 to 1000,PA,Pennsylvania
+465,Data Scientist,4.6,"Conch Technologies, Inc","Waltham, MA",51 to 200 employees,Business Services,94.0,1,0,1,1,0,middleSalary,Under 500,MA,Massachusetts
+466,Senior Data Scientist,4.3,Medidata Solutions,"New York, NY",1001 to 5000 employees,Information Technology,123.5,1,0,0,1,0,middleSalary,1000 to 5000,NY,New York
+467,"Principal Scientist, Hematology",3.3,Rochester Regional Health,"Rochester, NY",10000+ employees,Health Care,84.5,0,0,0,0,0,lowSalary,More than 5000,NY,New York
+468,Data Analyst,3.7,CALIBRE Systems,"Alexandria, VA",501 to 1000 employees,Information Technology,71.0,0,0,0,0,1,lowSalary,500 to 1000,VA,Virginia
+469,Software Data Engineer - College,4.0,HP Inc.,"Corvallis, OR",10000+ employees,Information Technology,73.0,0,0,0,0,0,lowSalary,More than 5000,OR,Oregon
+470,"Director - Data, Privacy and AI Governance",3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,101.0,0,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+471,Staff Machine Learning Engineer,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,181.0,1,0,1,0,0,highSalary,Under 500,CA,California
+472,Data Scientist,3.7,Northrop Grumman,"San Diego, CA",10000+ employees,Aerospace & Defense,109.5,0,0,0,0,1,middleSalary,More than 5000,CA,California
+473,Lead Data Scientist,3.7,Visa Inc.,"Bellevue, WA",10000+ employees,Information Technology,184.5,1,0,0,0,1,highSalary,More than 5000,WA,Washington
+474,Senior Data Scientist - Algorithms,3.9,Quartet Health,"New York, NY",201 to 500 employees,Information Technology,165.0,1,0,0,0,0,highSalary,Under 500,NY,New York
+475,Information Security Data Analyst,3.7,Motorola Solutions,"Chicago, IL",10000+ employees,Information Technology,61.0,1,0,1,0,0,lowSalary,More than 5000,IL,Illinois
+476,Lead Data Engineer,4.1,Credit Sesame,"Mountain View, CA",51 to 200 employees,Information Technology,205.0,1,0,1,1,0,highSalary,Under 500,CA,California
+477,Data Analyst,3.1,Success Academy Charter Schools,"New York, NY",1001 to 5000 employees,Education,59.5,1,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+478,Scientist Manufacturing - Kentucky BioProcessing,3.1,Reynolds American,"Owensboro, KY",5001 to 10000 employees,Manufacturing,103.5,0,0,0,0,0,middleSalary,More than 5000,KY,Kentucky
+479,Consultant - Analytics Consulting,3.0,Infosys,"Hartford, CT",10000+ employees,Information Technology,62.5,0,0,0,0,1,lowSalary,More than 5000,CT,Connecticut
+480,Data Analytics Project Manager,3.6,MassMutual,"Springfield, MA",5001 to 10000 employees,Insurance,63.0,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+481,Data Analyst,3.6,AXION Healthcare Solutions,"New York, NY",1 to 50 employees,Health Care,66.0,0,0,0,0,1,lowSalary,Under 500,NY,New York
+482,Data Engineer,3.5,Alignment Healthcare,"Orange, CA",501 to 1000 employees,Health Care,94.5,1,0,1,1,1,middleSalary,500 to 1000,CA,California
+483,Data Scientist,4.2,ExecOnline,"New York, NY",51 to 200 employees,Education,75.5,1,0,0,1,0,lowSalary,Under 500,NY,New York
+484,Machine Learning Engineer,4.0,Mteq,"Fort Belvoir, VA",501 to 1000 employees,Aerospace & Defense,87.0,1,0,0,0,0,lowSalary,500 to 1000,VA,Virginia
+485,Senior Data Scientist Oncology,3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,140.0,1,0,0,0,1,middleSalary,More than 5000,MD,Maryland
+486,Data Scientist,3.7,Brillient,"Silver Spring, MD",201 to 500 employees,Information Technology,86.0,1,0,0,0,1,lowSalary,Under 500,MD,Maryland
+487,Senior Data Scientist,4.4,Entefy,"Palo Alto, CA",1 to 50 employees,Information Technology,116.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+488,Senior Scientist (Neuroscience),3.5,Sunovion,"Marlborough, MA",1001 to 5000 employees,Biotech & Pharmaceuticals,154.5,1,0,0,0,1,highSalary,1000 to 5000,MA,Massachusetts
+489,Machine Learning Engineer - Regulatory,3.7,Cboe Global Markets,"Lenexa, KS",501 to 1000 employees,Finance,87.0,1,0,0,0,1,lowSalary,500 to 1000,KS,Kansas
+490,Marketing Data Analyst,3.6,San Manuel Casino,"Highland, CA",1001 to 5000 employees,"Arts, Entertainment & Recreation",48.5,0,0,0,0,1,lowestSalary,1000 to 5000,CA,California
+491,Data Engineer,3.4,Trace3,"Houston, TX",501 to 1000 employees,Information Technology,80.0,1,0,1,0,1,lowSalary,500 to 1000,TX,Texas
+492,Medical Laboratory Scientist,4.0,Texas Health Huguley Hospital,"Burleson, TX",1001 to 5000 employees,Health Care,21.5,0,0,0,1,0,lowestSalary,1000 to 5000,TX,Texas
+493,R&D Specialist/ Food Scientist,2.4,Teasdale Latin Foods,"Hoopeston, IL",501 to 1000 employees,Manufacturing,52.5,0,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+494,Principal Data Scientist,3.7,Northrop Grumman,"San Jose, CA",10000+ employees,Aerospace & Defense,173.0,1,0,0,0,0,highSalary,More than 5000,CA,California
+495,Data Engineer,3.5,Saama Technologies Inc,"Phoenix, AZ",501 to 1000 employees,Biotech & Pharmaceuticals,68.5,1,0,1,0,0,lowSalary,500 to 1000,AZ,Arizona
+496,Data Scientist - Alpha Insights,4.4,Two Sigma,"New York, NY",1001 to 5000 employees,Finance,172.0,0,0,0,0,0,highSalary,1000 to 5000,NY,New York
+497,"Data Scientist, Office of Data Science",3.3,Liberty Mutual Insurance,"Boston, MA",10000+ employees,Insurance,114.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+498,"Associate Principal Scientist, Pharmacogenomics",3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,95.0,0,0,0,0,0,middleSalary,More than 5000,MD,Maryland
+499,Data Scientist - Systems Engineering,3.2,MITRE,"Bedford, MA",5001 to 10000 employees,Government,69.5,1,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+500,Data Engineer,3.2,Guidepoint,"New York, NY",501 to 1000 employees,Business Services,64.5,1,0,0,1,1,lowSalary,500 to 1000,NY,New York
+501,"Scientist, Bacteriology",2.1,Cerus Corporation,"Concord, CA",201 to 500 employees,Biotech & Pharmaceuticals,111.5,0,0,0,0,1,middleSalary,Under 500,CA,California
+502,Data Scientist,4.0,Strategic Financial Solutions,"New York, NY",501 to 1000 employees,Consumer Services,97.5,1,0,0,0,1,middleSalary,500 to 1000,NY,New York
+503,"Associate Director, Platform and DevOps- Data Engineering and Aritifical Intelligence",3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,154.5,0,0,1,1,1,highSalary,More than 5000,MA,Massachusetts
+504,Senior Research Scientist-Machine Learning,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,124.0,0,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+505,Data Scientist,3.4,"Remedy BPCI Partners, LLC.","New York, NY",201 to 500 employees,Health Care,95.0,1,0,1,1,0,middleSalary,Under 500,NY,New York
+506,Senior Data Scientist,4.4,Maven Wave Partners,"Chicago, IL",201 to 500 employees,Business Services,128.5,1,0,0,1,1,middleSalary,Under 500,IL,Illinois
+507,Principal Data Scientist,3.2,The Climate Corporation,"San Francisco, CA",501 to 1000 employees,Information Technology,194.0,0,0,0,1,1,highSalary,500 to 1000,CA,California
+508,Data Scientist,3.5,Crossix Solutions,"New York, NY",201 to 500 employees,Business Services,104.5,1,0,1,1,1,middleSalary,Under 500,NY,New York
+509,Clinical Laboratory Scientist,3.7,Vail Health,"Vail, CO",501 to 1000 employees,Health Care,31.5,0,0,0,0,0,lowestSalary,500 to 1000,CO,Colorado
+510,Data Engineer - Consultant (Charlotte Based),4.2,Clarity Insights,"Charlotte, NC",201 to 500 employees,Information Technology,85.5,1,0,0,0,1,lowSalary,Under 500,NC,North Carolina
+511,"Data Analyst 1, full-time contract worker for up to 12 months",4.2,The Church of Jesus Christ of Latter-day Saints,"Salt Lake City, UT",10000+ employees,Non-Profit,50.0,0,0,0,1,1,lowSalary,More than 5000,UT,Utah
+512,Data Engineer,3.1,NCSOFT,"Aliso Viejo, CA",1001 to 5000 employees,Media,113.0,1,0,1,1,1,middleSalary,1000 to 5000,CA,California
+513,"Scientist, Immuno-Oncology",3.9,GSK,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,90.5,0,0,0,1,0,middleSalary,More than 5000,MA,Massachusetts
+514,Senior Data Scientist,4.3,Factual,"Los Angeles, CA",51 to 200 employees,Information Technology,153.0,1,0,1,0,1,highSalary,Under 500,CA,California
+515,Products Data Analyst II,3.3,TriNet,"Dublin, CA",1001 to 5000 employees,Business Services,123.5,0,0,0,0,1,middleSalary,1000 to 5000,CA,California
+516,Lead Data Analyst,3.9,Signpost,"New York, NY",201 to 500 employees,Information Technology,47.0,0,0,1,0,0,lowestSalary,Under 500,NY,New York
+517,Analytics Manager - Data Mart,3.5,Central California Alliance for Health,"Scotts Valley, CA",501 to 1000 employees,Health Care,64.0,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+518,Data Science Engineer - Mobile,4.0,Adobe,"San Jose, CA",10000+ employees,Information Technology,162.0,1,0,0,0,1,highSalary,More than 5000,CA,California
+519,Senior Data Scientist - R&D Oncology,3.9,AstraZeneca,"New York, NY",10000+ employees,Biotech & Pharmaceuticals,137.0,1,0,0,0,0,middleSalary,More than 5000,NY,New York
+520,Sr. Data Engineer - Contract-to-Hire (Java),3.0,Pilot Flying J Travel Centers LLC,"Knoxville, TN",10000+ employees,Retail,98.0,1,0,0,0,0,middleSalary,More than 5000,TN,Tennessee
+521,Data Scientist,3.7,Swiss Re,"Armonk, NY",10000+ employees,Insurance,115.0,1,0,0,0,1,middleSalary,More than 5000,NY,New York
+522,Senior Data Scientist,3.5,Sartorius,"Arvada, CO",5001 to 10000 employees,Biotech & Pharmaceuticals,133.5,1,0,0,0,1,middleSalary,More than 5000,CO,Colorado
+523,Data Engineer,4.0,Pinnacol Assurance,"Denver, CO",501 to 1000 employees,Insurance,99.0,1,0,0,1,0,middleSalary,500 to 1000,CO,Colorado
+524,Food Scientist - Developer,3.3,Palermo's Pizza,"Milwaukee, WI",501 to 1000 employees,Manufacturing,54.0,0,0,0,0,0,lowSalary,500 to 1000,WI,Wisconsin
+525,Senior Data Engineer,3.2,Equian LLC,"Franklin, TN",1001 to 5000 employees,Health Care,109.0,0,0,0,1,1,middleSalary,1000 to 5000,TN,Tennessee
+526,Data Engineer,3.4,MetroStar Systems,"Rockville, MD",201 to 500 employees,Information Technology,109.0,0,0,0,1,0,middleSalary,Under 500,MD,Maryland
+527,Senior Data Scientist,4.4,MathWorks,"Natick, MA",1001 to 5000 employees,Information Technology,139.5,1,0,0,0,0,middleSalary,1000 to 5000,MA,Massachusetts
+528,"Director II, Data Science - GRM Actuarial",3.3,Liberty Mutual Insurance,"Chicago, IL",10000+ employees,Insurance,254.0,1,0,0,0,0,highestSalary,More than 5000,IL,Illinois
+529,Machine Learning Engineer,3.2,Information Builders,"New York, NY",1001 to 5000 employees,Information Technology,125.0,1,0,0,1,1,middleSalary,1000 to 5000,NY,New York
+530,"Sr Expert Data Science, Advanced Visual Analytics (Associate level)",3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,106.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+531,"Scientist, Molecular/Cellular Biologist",2.9,Audentes Therapeutics,"South San Francisco, CA",201 to 500 employees,Biotech & Pharmaceuticals,73.0,0,0,0,0,0,lowSalary,Under 500,CA,California
+532,Staff Scientist-Downstream Process Development,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,1,lowSalary,Under 500,MD,Maryland
+533,MED TECH/LAB SCIENTIST- SOUTH COASTAL LAB,3.6,Beebe Healthcare,"Millville, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+534,Scientist - Analytical Services,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,99.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+535,Associate Data Analyst- Graduate Development Program,3.3,National Interstate,"Richfield, OH",501 to 1000 employees,Insurance,45.5,0,0,0,0,0,lowestSalary,500 to 1000,OH,Ohio
+536,IT Associate Data Analyst,3.7,The Hanover Insurance Group,"Worcester, MA",5001 to 10000 employees,Insurance,54.0,0,0,0,0,0,lowSalary,More than 5000,MA,Massachusetts
+537,Sr. Data Engineer,4.5,Moser Consulting,"Indianapolis, IN",51 to 200 employees,Business Services,122.5,1,0,1,1,0,middleSalary,Under 500,IN,Indiana
+538,Clinical Data Analyst,3.0,Greenway Health,"Tampa, FL",1001 to 5000 employees,Information Technology,37.5,0,0,0,0,1,lowestSalary,1000 to 5000,FL,Florida
+539,Business Data Analyst,3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,53.5,1,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+540,Senior Insurance Data Scientist,3.9,TransUnion,"Chicago, IL",5001 to 10000 employees,Finance,140.0,1,0,0,0,1,middleSalary,More than 5000,IL,Illinois
+541,Senior Data Science Systems Engineer,3.2,MITRE,"Hampton, VA",5001 to 10000 employees,Government,77.5,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+542,ENVIRONMENTAL ENGINEER/SCIENTIST,3.3,Mcphail Associates,"Cambridge, MA",1 to 50 employees,"Construction, Repair & Maintenance",26.5,0,0,0,0,1,lowestSalary,Under 500,MA,Massachusetts
+543,Senior Scientist - Regulatory Submissions,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,117.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+544,Scientist - Biomarker and Flow Cytometry,2.4,Crown Bioscience,"San Diego, CA",501 to 1000 employees,Biotech & Pharmaceuticals,70.5,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+545,"Associate Scientist, LC/MS Biologics",2.9,Q2 Solutions,"Ithaca, NY",1001 to 5000 employees,Biotech & Pharmaceuticals,70.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+546,Revenue Analytics Manager,4.8,HOVER,"San Francisco, CA",51 to 200 employees,Information Technology,61.5,0,0,0,0,1,lowSalary,Under 500,CA,California
+547,Sr. Scientist Method Development,2.9,Q2 Solutions,"Marietta, GA",1001 to 5000 employees,Biotech & Pharmaceuticals,80.0,0,0,0,0,1,lowSalary,1000 to 5000,GA,Georgia
+548,Data Scientist,4.7,Oversight Systems,"Atlanta, GA",51 to 200 employees,Information Technology,79.5,1,0,0,0,1,lowSalary,Under 500,GA,Georgia
+549,Data Scientist - Sales,4.7,Confluent,"Mountain View, CA",501 to 1000 employees,Information Technology,168.0,1,0,0,0,1,highSalary,500 to 1000,CA,California
+550,IT - Data Engineer II,3.4,Arbella Insurance,"Quincy, MA",1001 to 5000 employees,Insurance,90.0,0,0,1,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+552,Senior Data Analyst,3.9,Life360,"San Francisco, CA",51 to 200 employees,Information Technology,138.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+553,"Principal, Data Science - Advanced Analytics",3.6,IQVIA,"Plymouth Meeting, PA",10000+ employees,Biotech & Pharmaceuticals,111.5,0,0,0,0,0,middleSalary,More than 5000,PA,Pennsylvania
+554,Data Science Project Manager,3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,68.5,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+555,"Sr Scientist, Immuno-Oncology - Oncology",3.9,GSK,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,84.5,0,0,0,1,0,lowSalary,More than 5000,MA,Massachusetts
+556,Senior Data Engineer,4.4,Eventbrite,"Nashville, TN",1001 to 5000 employees,Information Technology,102.5,1,0,1,1,0,middleSalary,1000 to 5000,TN,Tennessee
+557,"Project Scientist - Auton Lab, Robotics Institute",2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,73.5,0,0,0,0,1,lowSalary,500 to 1000,PA,Pennsylvania
+558,Research Scientist – Security and Privacy,3.6,Riverside Research Institute,"Beavercreek, OH",501 to 1000 employees,Government,93.5,1,0,0,0,0,middleSalary,500 to 1000,OH,Ohio
+559,Data Science Manager,3.2,"Numeric, LLC","Allentown, PA",1 to 50 employees,Business Services,127.5,0,0,0,0,1,middleSalary,Under 500,PA,Pennsylvania
+560,Data Analyst 2 (Missionary Department),4.2,The Church of Jesus Christ of Latter-day Saints,"Salt Lake City, UT",10000+ employees,Non-Profit,72.0,0,0,0,0,0,lowSalary,More than 5000,UT,Utah
+561,"Enterprise Architect, Data",3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,129.5,1,0,1,1,1,middleSalary,More than 5000,MA,Massachusetts
+562,Supply Chain Data Analyst,3.1,Icon Health and Fitness,"Logan, UT",1001 to 5000 employees,Manufacturing,47.0,1,0,0,0,1,lowestSalary,1000 to 5000,UT,Utah
+563,Data Engineer - ETL,3.8,Shipt,"Birmingham, AL",501 to 1000 employees,Consumer Services,65.0,1,0,1,1,1,lowSalary,500 to 1000,AL,Alabama
+564,Corporate Risk Data Analyst (SQL Based) - Milwaukee or,3.8,Associated Banc-Corp,"Green Bay, WI",1001 to 5000 employees,Finance,60.0,0,0,0,1,1,lowSalary,1000 to 5000,WI,Wisconsin
+565,"Senior Manager, Epidemiologic Data Scientist",4.0,Pfizer,"New York, NY",10000+ employees,Biotech & Pharmaceuticals,167.5,0,0,0,1,1,highSalary,More than 5000,NY,New York
+566,"Marketing Data Analyst, May 2020 Undergrad",3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,65.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+567,Senior Data Analyst,4.0,Novetta,"Herndon, VA",501 to 1000 employees,Information Technology,94.0,1,0,0,0,0,middleSalary,500 to 1000,VA,Virginia
+568,Senior Data Analyst,1.9,Moda Operandi,"New York, NY",201 to 500 employees,Retail,87.5,1,0,0,0,1,lowSalary,Under 500,NY,New York
+569,Senior Data Engineer,4.0,Novetta,"Reston, VA",501 to 1000 employees,Information Technology,97.0,1,0,1,1,0,middleSalary,500 to 1000,VA,Virginia
+570,Senior Data Engineer,4.3,Genesys,"Durham, NC",5001 to 10000 employees,Information Technology,112.5,1,0,1,1,0,middleSalary,More than 5000,NC,North Carolina
+571,Data Modeler (Analytical Systems),3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,91.5,0,0,1,1,1,middleSalary,More than 5000,MA,Massachusetts
+572,Data Modeler - Data Solutions Engineer,3.3,Liberty Mutual Insurance,"Indianapolis, IN",10000+ employees,Insurance,51.5,1,0,0,0,1,lowSalary,More than 5000,IN,Indiana
+573,Data Scientist in Translational Medicine,3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,114.5,0,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+574,Data Scientist,4.3,USEReady,"New York, NY",201 to 500 employees,Business Services,115.0,1,0,1,1,0,middleSalary,Under 500,NY,New York
+575,Product Manager/Data Evangelist,3.2,"Numeric, LLC","Phila, PA",1 to 50 employees,Business Services,74.0,1,0,0,1,0,lowSalary,Under 500,PA,Pennsylvania
+576,Associate Environmental Scientist - Wildlife Biologist,4.7,QK,"Clovis, CA",51 to 200 employees,Business Services,51.0,0,0,0,0,1,lowSalary,Under 500,CA,California
+577,Sr Data Engineer (Sr BI Developer),3.4,Tivity Health,"Chandler, AZ",501 to 1000 employees,Health Care,100.0,0,0,0,0,0,middleSalary,500 to 1000,AZ,Arizona
+578,"Senior Data Scientist – Visualization, Novartis AI Innovation Lab",3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,121.0,0,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+579,Senior Data Analyst/Scientist,4.5,Demandbase,"San Francisco, CA",201 to 500 employees,Information Technology,121.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+580,"Associate, Data Science, Internal Audit",3.1,Santander,"Boston, MA",10000+ employees,Finance,62.5,1,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+582,Senior LiDAR Data Scientist,3.9,Luminar Technologies,"Orlando, FL",201 to 500 employees,Information Technology,122.0,1,0,0,1,0,middleSalary,Under 500,FL,Florida
+583,Data Engineer,4.4,BRMi,"Chantilly, VA",51 to 200 employees,Information Technology,85.0,1,0,1,1,0,lowSalary,Under 500,VA,Virginia
+584,Data Engineer,3.4,IntraEdge,"Scottsdale, AZ",501 to 1000 employees,Information Technology,60.5,1,0,1,1,0,lowSalary,500 to 1000,AZ,Arizona
+585,Lead Data Scientist,3.9,Zest AI,"Burbank, CA",51 to 200 employees,Finance,180.0,1,0,0,0,1,highSalary,Under 500,CA,California
+586,"Technology-Minded, Data Professional Opportunities",4.7,Veterans United Home Loans,"Columbia, MO",1001 to 5000 employees,Finance,70.5,0,0,1,0,1,lowSalary,1000 to 5000,MO,Missouri
+587,Big Data Engineer,3.3,Peraton,"Chantilly, VA",1001 to 5000 employees,Aerospace & Defense,118.5,1,0,1,0,0,middleSalary,1000 to 5000,VA,Virginia
+588,Salesforce Analytics Consultant,3.9,"Emtec, Inc.","Chicago, IL",501 to 1000 employees,Information Technology,66.5,1,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+589,Managing Data Scientist/ML Engineer,3.4,PA Consulting,"Boston, MA",1001 to 5000 employees,Business Services,107.5,0,0,1,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+590,Senior Data Engineer,4.7,Praetorian,"Austin, TX",51 to 200 employees,Business Services,138.5,1,0,1,0,0,middleSalary,Under 500,TX,Texas
+591,Staff Scientist- Upstream PD,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,0,lowSalary,Under 500,MD,Maryland
+592,Data Engineering Analyst,3.8,COUNTRY Financial,"Bloomington, IL",1001 to 5000 employees,Insurance,58.5,1,0,1,0,1,lowSalary,1000 to 5000,IL,Illinois
+593,Sr. Data Engineer,3.4,Echo Global Logistics,"Chicago, IL",1001 to 5000 employees,Transportation & Logistics,107.5,0,0,0,0,0,middleSalary,1000 to 5000,IL,Illinois
+594,"Scientist, Pharmacometrics",3.8,Agios Pharmaceuticals,"Cambridge, MA",501 to 1000 employees,Biotech & Pharmaceuticals,120.5,0,0,0,0,0,middleSalary,500 to 1000,MA,Massachusetts
+595,Manager of Data Science,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,63.5,1,0,1,0,0,lowSalary,Under 500,CA,California
+596,Scientist Manufacturing Pharma - Kentucky BioProcessing,3.1,Reynolds American,"Owensboro, KY",5001 to 10000 employees,Manufacturing,103.5,0,0,0,0,0,middleSalary,More than 5000,KY,Kentucky
+597,Software Engineer (Data Scientist/Software Engineer) - SISW - MG,4.1,Mentor Graphics,"Fremont, CA",5001 to 10000 employees,Information Technology,107.0,1,0,0,0,1,middleSalary,More than 5000,CA,California
+598,Data Engineer,3.7,Maxar Technologies,"Springfield, VA",5001 to 10000 employees,Aerospace & Defense,105.5,1,0,1,0,0,middleSalary,More than 5000,VA,Virginia
+599,Data Engineer,2.8,ICW Group,"San Diego, CA",501 to 1000 employees,Insurance,83.0,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+600,Lead Big Data Engineer,4.0,Glassdoor,"San Francisco, CA",1001 to 5000 employees,Information Technology,162.0,1,0,1,1,1,highSalary,1000 to 5000,CA,California
+601,Product Engineer – Spatial Data Science and Statistical Analysis,3.5,Esri,"Redlands, CA",1001 to 5000 employees,Information Technology,68.5,1,0,1,0,1,lowSalary,1000 to 5000,CA,California
+602,Sr Software Engineer (Data Scientist),3.4,Assurant,"Westlake, OH",10000+ employees,Insurance,110.5,0,0,0,0,1,middleSalary,More than 5000,OH,Ohio
+603,Sr. Data Engineer (ETL Developer),3.7,F&G,"Des Moines, IA",201 to 500 employees,Insurance,115.5,1,0,0,0,1,middleSalary,Under 500,IA,Iowa
+604,Associate Research Scientist I (Protein Expression and Production),3.0,Exelixis,"Alameda, CA",501 to 1000 employees,Biotech & Pharmaceuticals,87.5,0,0,0,0,1,lowSalary,500 to 1000,CA,California
+605,Senior Data Scientist Artificial Intelligence,3.8,PNNL,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",80.5,0,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+606,Analytics - Business Assurance Data Analyst,4.6,GreatAmerica Financial Services,"Cedar Rapids, IA",501 to 1000 employees,Finance,43.0,0,0,0,0,1,lowestSalary,500 to 1000,IA,Iowa
+607,"Associate Director/Director, Safety Scientist",4.4,Acceleron Pharma,"Cambridge, MA",201 to 500 employees,Biotech & Pharmaceuticals,140.0,0,0,0,0,1,middleSalary,Under 500,MA,Massachusetts
+608,"Director, Precision Medicine Clinical Biomarker Scientist",4.0,Pfizer,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,172.0,0,0,0,1,0,highSalary,More than 5000,MA,Massachusetts
+610,Data Analyst Senior,3.0,AmeriHealth Caritas,"Philadelphia, PA",5001 to 10000 employees,Insurance,66.5,0,0,0,0,1,lowSalary,More than 5000,PA,Pennsylvania
+611,Senior Formulations Scientist II,3.0,Exelixis,"Alameda, CA",501 to 1000 employees,Biotech & Pharmaceuticals,100.0,0,0,0,0,1,middleSalary,500 to 1000,CA,California
+612,Lead Data Engineer (Python),4.7,Strategic Employment Partners,"San Francisco, CA",51 to 200 employees,Business Services,94.5,1,0,0,1,0,middleSalary,Under 500,CA,California
+613,Data Science Manager,4.2,Grand Rounds,"San Francisco, CA",501 to 1000 employees,Health Care,221.5,1,0,0,0,1,highSalary,500 to 1000,CA,California
+614,Senior Data Scientist 4 Artificial Intelligence,3.8,PNNL,"Seattle, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",119.0,0,0,0,0,0,middleSalary,1000 to 5000,WA,Washington
+615,Data Engineer,3.5,"SPINS, LLC","Chicago, IL",201 to 500 employees,Business Services,95.5,1,0,0,0,0,middleSalary,Under 500,IL,Illinois
+616,"Director II, Data Science - GRS Predictive Analytics",3.3,Liberty Mutual Insurance,"Chicago, IL",10000+ employees,Insurance,194.5,1,0,0,0,0,highSalary,More than 5000,IL,Illinois
+617,Medical Lab Scientist - MLT,3.2,Catholic Health Initiatives,"Omaha, NE",10000+ employees,Health Care,25.0,0,0,0,0,0,lowestSalary,More than 5000,NE,Nebraska
+618,"Senior Operations Data Analyst, Call Center Operations",2.7,FLEETCOR,"Nashville, TN",5001 to 10000 employees,Finance,13.5,0,0,0,0,1,lowestSalary,More than 5000,TN,Tennessee
+619,Senior Quantitative Analyst,3.3,DTCC,"Jersey City, NJ",1001 to 5000 employees,Finance,173.0,1,0,0,0,1,highSalary,1000 to 5000,NJ,New Jersey
+620,Geospatial Software Developer and Data Scientist,3.7,Applied Research Laboratories,"Austin, TX",501 to 1000 employees,Education,105.5,1,0,0,1,0,middleSalary,500 to 1000,TX,Texas
+621,RESEARCH COMPUTER SCIENTIST - RESEARCH ENGINEER - SR. COMPUTER SCIENTIST - SOFTWARE DEVELOPMENT,3.9,Southwest Research Institute,"San Antonio, TX",1001 to 5000 employees,Business Services,71.5,1,0,0,1,1,lowSalary,1000 to 5000,TX,Texas
+622,Senior Scientist - Toxicologist - Product Integrity (Stewardship),3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,74.0,0,0,0,0,1,lowSalary,More than 5000,NC,North Carolina
+623,Systems Engineer II - Data Analyst,3.7,Raytheon,"Huntsville, AL",10000+ employees,Aerospace & Defense,62.5,0,0,0,0,1,lowSalary,More than 5000,AL,Alabama
+624,Senior Research Analytical Scientist-Non-Targeted Analysis,4.3,RTI International,"Durham, NC",1001 to 5000 employees,Business Services,65.5,0,0,0,0,0,lowSalary,1000 to 5000,NC,North Carolina
+625,Data Scientist,3.8,DICK'S Sporting Goods - Corporate,"Coraopolis, PA",10000+ employees,Retail,85.0,1,0,0,0,0,lowSalary,More than 5000,PA,Pennsylvania
+626,Principal Data Scientist,3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,147.5,1,0,0,0,1,middleSalary,More than 5000,MD,Maryland
+627,Director Data Science,3.6,TRANZACT,"Fort Lee, NJ",1001 to 5000 employees,Business Services,161.5,1,0,0,1,1,highSalary,1000 to 5000,NJ,New Jersey
+628,Data Engineer,3.7,Carilion Clinic,"Roanoke, VA",10000+ employees,Health Care,81.0,0,0,0,0,1,lowSalary,More than 5000,VA,Virginia
+629,Sr Data Analyst - IT,2.1,United BioSource,"Blue Bell, PA",1001 to 5000 employees,Biotech & Pharmaceuticals,72.5,0,0,0,0,1,lowSalary,1000 to 5000,PA,Pennsylvania
+630,Senior Data Engineer,3.9,Figure Eight,"San Francisco, CA",51 to 200 employees,Information Technology,139.0,1,0,0,1,1,middleSalary,Under 500,CA,California
+631,Senior Data Engineer,3.9,Tapjoy,"San Francisco, CA",201 to 500 employees,Information Technology,136.5,0,0,0,0,0,middleSalary,Under 500,CA,California
+632,Sr. Data Analyst,3.2,DoubleVerify,"New York, NY",201 to 500 employees,Information Technology,83.0,1,0,1,0,1,lowSalary,Under 500,NY,New York
+633,Research Scientist or Senior Research Scientist - Computer Vision,4.6,Mitsubishi Electric Research Labs,"Cambridge, MA",51 to 200 employees,Business Services,121.0,0,0,0,1,1,middleSalary,Under 500,MA,Massachusetts
+634,Associate Machine Learning Engineer / Data Scientist May 2020 Undergrad,3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,74.5,1,0,1,0,0,lowSalary,1000 to 5000,NY,New York
+635,Data Analyst Chemist - Quality System Contractor,2.2,"Rodan and Fields, LLC","San Francisco, CA",501 to 1000 employees,Retail,85.5,0,0,0,0,1,lowSalary,500 to 1000,CA,California
+636,Senior Scientist - Biostatistician,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,80.5,0,0,0,0,1,lowSalary,More than 5000,NC,North Carolina
+637,Research Scientist / Principal Research Scientist - Multiphysical Systems,4.6,Mitsubishi Electric Research Labs,"Cambridge, MA",51 to 200 employees,Business Services,167.5,0,0,0,0,0,highSalary,Under 500,MA,Massachusetts
+638,"Research Scientist, Machine Learning Department",2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,107.5,1,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+639,Foundational Community Supports Data Analyst,3.4,DESC,"Seattle, WA",501 to 1000 employees,Non-Profit,44.5,0,0,0,1,1,lowestSalary,500 to 1000,WA,Washington
+640,"Senior Health Data Analyst, Star Ratings",3.3,Johns Hopkins Health Care,"Glen Burnie, MD",1001 to 5000 employees,Health Care,107.5,0,0,0,0,0,middleSalary,1000 to 5000,MD,Maryland
+642,Sr. Data Analyst,3.7,Community Behavioral Health,"Philadelphia, PA",201 to 500 employees,Health Care,69.5,0,0,0,0,1,lowSalary,Under 500,PA,Pennsylvania
+643,"Senior Engineer, Data Management Engineering",3.5,Western Digital,"Milpitas, CA",10000+ employees,Information Technology,98.5,1,0,1,1,0,middleSalary,More than 5000,CA,California
+644,Quality Control Scientist III- Analytical Development,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,80.5,0,0,0,0,1,lowSalary,Under 500,MD,Maryland
+645,"Clinical Scientist, Clinical Development",3.8,FORMA THERAPEUTICS,"Watertown, MA",51 to 200 employees,Biotech & Pharmaceuticals,37.0,0,0,0,0,1,lowestSalary,Under 500,MA,Massachusetts
+646,Software Engineer Staff Scientist: Human Language Technologies,3.7,Raytheon,"Cambridge, MD",10000+ employees,Aerospace & Defense,99.0,1,0,0,0,0,middleSalary,More than 5000,MD,Maryland
+647,"Manager, Safety Scientist, Medical Safety & Risk Management",3.8,Agios Pharmaceuticals,"Cambridge, MA",501 to 1000 employees,Biotech & Pharmaceuticals,96.5,0,0,0,0,1,middleSalary,500 to 1000,MA,Massachusetts
+648,"Assistant Director/Director, Office of Data Science",3.3,Liberty Mutual Insurance,"Boston, MA",10000+ employees,Insurance,53.0,0,0,0,0,0,lowSalary,More than 5000,MA,Massachusetts
+649,Sr. Data Engineer | Big Data SaaS Pipeline,2.7,Bridg,"Los Angeles, CA",1 to 50 employees,Information Technology,103.0,0,0,1,1,0,middleSalary,Under 500,CA,California
+650,Senior Risk Data Scientist,3.8,Bill.com,"Palo Alto, CA",501 to 1000 employees,Finance,139.5,0,0,0,0,0,middleSalary,500 to 1000,CA,California
+651,Data Scientist in Artificial Intelligence Early Career,3.8,Pacific Northwest National Laboratory,"Richland, WA",1001 to 5000 employees,"Oil, Gas, Energy & Utilities",67.0,0,0,0,0,0,lowSalary,1000 to 5000,WA,Washington
+652,Consultant - Analytics Consulting,3.0,Infosys,"Hartford, CT",10000+ employees,Information Technology,62.5,0,0,0,0,1,lowSalary,More than 5000,CT,Connecticut
+653,Scientist - CVRM Metabolism - in vivo pharmacology,3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,92.0,0,0,0,0,0,middleSalary,More than 5000,MD,Maryland
+654,Data Analyst,3.6,AXION Healthcare Solutions,"New York, NY",1 to 50 employees,Health Care,66.0,0,0,0,0,1,lowSalary,Under 500,NY,New York
+655,Data Engineer,3.5,Alignment Healthcare,"Orange, CA",501 to 1000 employees,Health Care,94.5,1,0,1,1,1,middleSalary,500 to 1000,CA,California
+656,Data Scientist,3.6,TRANZACT,"Fort Lee, NJ",1001 to 5000 employees,Business Services,114.0,1,0,0,1,1,middleSalary,1000 to 5000,NJ,New Jersey
+657,Data Scientist,4.2,ExecOnline,"New York, NY",51 to 200 employees,Education,75.5,1,0,0,1,0,lowSalary,Under 500,NY,New York
+658,Data Scientist,3.5,Charter Spectrum,"Maryland Heights, MO",1 to 50 employees,Education,96.0,0,0,0,0,1,middleSalary,Under 500,MO,Missouri
+659,Machine Learning Engineer,4.0,Mteq,"Fort Belvoir, VA",501 to 1000 employees,Aerospace & Defense,87.0,1,0,0,0,0,lowSalary,500 to 1000,VA,Virginia
+660,Data Scientist,3.7,Brillient,"Silver Spring, MD",201 to 500 employees,Information Technology,86.0,1,0,0,0,1,lowSalary,Under 500,MD,Maryland
+661,Senior Data Scientist,4.4,Entefy,"Palo Alto, CA",1 to 50 employees,Information Technology,116.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+662,Senior Scientist (Neuroscience),3.5,Sunovion,"Marlborough, MA",1001 to 5000 employees,Biotech & Pharmaceuticals,154.5,1,0,0,0,1,highSalary,1000 to 5000,MA,Massachusetts
+663,Marketing Data Analyst,3.6,San Manuel Casino,"Highland, CA",1001 to 5000 employees,"Arts, Entertainment & Recreation",48.5,0,0,0,0,1,lowestSalary,1000 to 5000,CA,California
+664,Machine Learning Engineer - Regulatory,3.7,Cboe Global Markets,"Lenexa, KS",501 to 1000 employees,Finance,87.0,1,0,0,0,1,lowSalary,500 to 1000,KS,Kansas
+665,Data Engineer,3.4,Trace3,"Houston, TX",501 to 1000 employees,Information Technology,80.0,1,0,1,0,1,lowSalary,500 to 1000,TX,Texas
+666,Medical Laboratory Scientist,4.0,Texas Health Huguley Hospital,"Burleson, TX",1001 to 5000 employees,Health Care,21.5,0,0,0,1,0,lowestSalary,1000 to 5000,TX,Texas
+667,Principal Data Scientist,3.7,Northrop Grumman,"San Jose, CA",10000+ employees,Aerospace & Defense,173.0,1,0,0,0,0,highSalary,More than 5000,CA,California
+668,R&D Specialist/ Food Scientist,2.4,Teasdale Latin Foods,"Hoopeston, IL",501 to 1000 employees,Manufacturing,52.5,0,0,0,0,0,lowSalary,500 to 1000,IL,Illinois
+669,Data Engineer,3.5,Saama Technologies Inc,"Phoenix, AZ",501 to 1000 employees,Biotech & Pharmaceuticals,68.5,1,0,1,0,0,lowSalary,500 to 1000,AZ,Arizona
+670,"Associate Principal Scientist, Pharmacogenomics",3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,95.0,0,0,0,0,0,middleSalary,More than 5000,MD,Maryland
+671,Data Scientist - Systems Engineering,3.2,MITRE,"Bedford, MA",5001 to 10000 employees,Government,69.5,1,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+672,Senior Data Scientist,4.4,The David J. Joseph Company,"Cincinnati, OH",201 to 500 employees,Mining & Metals,107.0,1,0,0,1,0,middleSalary,Under 500,OH,Ohio
+673,Data Scientist SR,3.9,The Buffalo Group,"Charlottesville, VA",501 to 1000 employees,Information Technology,112.0,1,0,1,0,0,middleSalary,500 to 1000,VA,Virginia
+674,Data Scientist,3.4,CompQsoft,"Washington, DC",51 to 200 employees,Business Services,96.5,1,0,0,0,0,middleSalary,Under 500,DC,DC
+675,"Scientist, Bacteriology",2.1,Cerus Corporation,"Concord, CA",201 to 500 employees,Biotech & Pharmaceuticals,111.5,0,0,0,0,1,middleSalary,Under 500,CA,California
+676,"Associate Director, Platform and DevOps- Data Engineering and Aritifical Intelligence",3.7,Takeda Pharmaceuticals,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,154.5,0,0,1,1,1,highSalary,More than 5000,MA,Massachusetts
+677,Data Scientist,3.4,"Remedy BPCI Partners, LLC.","New York, NY",201 to 500 employees,Health Care,95.0,1,0,1,1,0,middleSalary,Under 500,NY,New York
+678,Data Scientist,4.0,Strategic Financial Solutions,"New York, NY",501 to 1000 employees,Consumer Services,97.5,1,0,0,0,1,middleSalary,500 to 1000,NY,New York
+679,Senior Data Scientist,4.4,Maven Wave Partners,"Chicago, IL",201 to 500 employees,Business Services,128.5,1,0,0,1,1,middleSalary,Under 500,IL,Illinois
+680,Senior Research Scientist-Machine Learning,2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,124.0,0,0,0,0,0,middleSalary,500 to 1000,PA,Pennsylvania
+681,Principal Data Scientist,3.2,The Climate Corporation,"San Francisco, CA",501 to 1000 employees,Information Technology,194.0,0,0,0,1,1,highSalary,500 to 1000,CA,California
+682,Clinical Laboratory Scientist,3.7,Vail Health,"Vail, CO",501 to 1000 employees,Health Care,31.5,0,0,0,0,0,lowestSalary,500 to 1000,CO,Colorado
+683,"Data Analyst 1, full-time contract worker for up to 12 months",4.2,The Church of Jesus Christ of Latter-day Saints,"Salt Lake City, UT",10000+ employees,Non-Profit,50.0,0,0,0,1,1,lowSalary,More than 5000,UT,Utah
+684,Data Scientist,3.5,Crossix Solutions,"New York, NY",201 to 500 employees,Business Services,104.5,1,0,1,1,1,middleSalary,Under 500,NY,New York
+685,Data Scientist,4.3,Solugenix Corporation,"Phoenix, AZ",201 to 500 employees,Information Technology,69.5,1,0,0,0,1,lowSalary,Under 500,AZ,Arizona
+686,Data Scientist,2.6,West Coast University,"Irvine, CA",10000+ employees,Education,121.0,1,0,0,0,0,middleSalary,More than 5000,CA,California
+687,Data Engineer - Consultant (Charlotte Based),4.2,Clarity Insights,"Charlotte, NC",201 to 500 employees,Information Technology,85.5,1,0,0,0,1,lowSalary,Under 500,NC,North Carolina
+688,Data Engineer,3.1,NCSOFT,"Aliso Viejo, CA",1001 to 5000 employees,Media,113.0,1,0,1,1,1,middleSalary,1000 to 5000,CA,California
+689,Data Scientist (Warehouse Automation),3.8,SoftBank Robotics,"San Francisco, CA",201 to 500 employees,Manufacturing,103.0,1,0,0,1,0,middleSalary,Under 500,CA,California
+690,"Scientist, Immuno-Oncology",3.9,GSK,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,90.5,0,0,0,1,0,middleSalary,More than 5000,MA,Massachusetts
+691,Senior Data Scientist,4.3,Factual,"Los Angeles, CA",51 to 200 employees,Information Technology,153.0,1,0,1,0,1,highSalary,Under 500,CA,California
+692,Jr. Data Scientist,3.2,MITRE,"McLean, VA",5001 to 10000 employees,Government,106.5,1,0,1,0,1,middleSalary,More than 5000,VA,Virginia
+693,Senior Data Scientist,5.0,SkySync,"Ann Arbor, MI",51 to 200 employees,Information Technology,130.0,0,0,0,0,1,middleSalary,Under 500,MI,Michigan
+694,Products Data Analyst II,3.3,TriNet,"Dublin, CA",1001 to 5000 employees,Business Services,123.5,0,0,0,0,1,middleSalary,1000 to 5000,CA,California
+695,Data Architect / Data Modeler,4.3,Medidata Solutions,"New York, NY",1001 to 5000 employees,Information Technology,86.5,0,0,0,1,1,lowSalary,1000 to 5000,NY,New York
+696,Analytics Manager - Data Mart,3.5,Central California Alliance for Health,"Scotts Valley, CA",501 to 1000 employees,Health Care,64.0,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+697,Lead Data Analyst,3.9,Signpost,"New York, NY",201 to 500 employees,Information Technology,47.0,0,0,1,0,0,lowestSalary,Under 500,NY,New York
+698,Data Science Engineer - Mobile,4.0,Adobe,"San Jose, CA",10000+ employees,Information Technology,162.0,1,0,0,0,1,highSalary,More than 5000,CA,California
+699,Senior Data Scientist Oncology,3.9,AstraZeneca,"Gaithersburg, MD",10000+ employees,Biotech & Pharmaceuticals,140.0,1,0,0,0,1,middleSalary,More than 5000,MD,Maryland
+700,Data Scientist,3.4,"DatamanUSA, LLC","Olympia, WA",51 to 200 employees,Information Technology,89.0,0,0,0,0,0,lowSalary,Under 500,WA,Washington
+701,Sr. Data Engineer - Contract-to-Hire (Java),3.0,Pilot Flying J Travel Centers LLC,"Knoxville, TN",10000+ employees,Retail,98.0,1,0,0,0,0,middleSalary,More than 5000,TN,Tennessee
+702,Senior Data Scientist - R&D Oncology,3.9,AstraZeneca,"New York, NY",10000+ employees,Biotech & Pharmaceuticals,137.0,1,0,0,0,0,middleSalary,More than 5000,NY,New York
+703,Data Engineer,4.0,Pinnacol Assurance,"Denver, CO",501 to 1000 employees,Insurance,99.0,1,0,0,1,0,middleSalary,500 to 1000,CO,Colorado
+704,Food Scientist - Developer,3.3,Palermo's Pizza,"Milwaukee, WI",501 to 1000 employees,Manufacturing,54.0,0,0,0,0,0,lowSalary,500 to 1000,WI,Wisconsin
+705,Senior Data Engineer,3.2,Equian LLC,"Franklin, TN",1001 to 5000 employees,Health Care,109.0,0,0,0,1,1,middleSalary,1000 to 5000,TN,Tennessee
+706,Data Engineer,3.4,MetroStar Systems,"Rockville, MD",201 to 500 employees,Information Technology,109.0,0,0,0,1,0,middleSalary,Under 500,MD,Maryland
+707,Senior Data Scientist,4.4,MathWorks,"Natick, MA",1001 to 5000 employees,Information Technology,139.5,1,0,0,0,0,middleSalary,1000 to 5000,MA,Massachusetts
+708,"Director II, Data Science - GRM Actuarial",3.3,Liberty Mutual Insurance,"Chicago, IL",10000+ employees,Insurance,254.0,1,0,0,0,0,highestSalary,More than 5000,IL,Illinois
+709,Machine Learning Engineer,3.2,Information Builders,"New York, NY",1001 to 5000 employees,Information Technology,125.0,1,0,0,1,1,middleSalary,1000 to 5000,NY,New York
+710,"Sr Expert Data Science, Advanced Visual Analytics (Associate level)",3.8,Novartis,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,106.5,1,0,0,0,0,middleSalary,More than 5000,MA,Massachusetts
+711,MED TECH/LAB SCIENTIST- SOUTH COASTAL LAB,3.6,Beebe Healthcare,"Millville, DE",1001 to 5000 employees,Health Care,27.5,0,0,0,0,0,lowestSalary,1000 to 5000,DE,Delaware
+712,"Scientist, Molecular/Cellular Biologist",2.9,Audentes Therapeutics,"South San Francisco, CA",201 to 500 employees,Biotech & Pharmaceuticals,73.0,0,0,0,0,0,lowSalary,Under 500,CA,California
+713,Staff Scientist-Downstream Process Development,2.7,Advanced BioScience Laboratories,"Rockville, MD",201 to 500 employees,Biotech & Pharmaceuticals,81.0,0,0,0,0,1,lowSalary,Under 500,MD,Maryland
+714,Data Scientist,3.2,"Numeric, LLC","Philadelphia, PA",1 to 50 employees,Business Services,128.5,1,0,1,1,0,middleSalary,Under 500,PA,Pennsylvania
+715,Scientist - Analytical Services,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,99.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+716,"Associate Scientist / Sr. Associate Scientist, Antibody Discovery",4.0,23andMe,"South San Francisco, CA",501 to 1000 employees,Biotech & Pharmaceuticals,92.0,0,0,0,1,1,middleSalary,500 to 1000,CA,California
+717,Associate Data Analyst- Graduate Development Program,3.3,National Interstate,"Richfield, OH",501 to 1000 employees,Insurance,45.5,0,0,0,0,0,lowestSalary,500 to 1000,OH,Ohio
+718,Sr. Data Engineer,4.5,Moser Consulting,"Indianapolis, IN",51 to 200 employees,Business Services,122.5,1,0,1,1,0,middleSalary,Under 500,IN,Indiana
+719,Clinical Data Analyst,3.0,Greenway Health,"Tampa, FL",1001 to 5000 employees,Information Technology,37.5,0,0,0,0,1,lowestSalary,1000 to 5000,FL,Florida
+720,IT Associate Data Analyst,3.7,The Hanover Insurance Group,"Worcester, MA",5001 to 10000 employees,Insurance,54.0,0,0,0,0,0,lowSalary,More than 5000,MA,Massachusetts
+721,Business Data Analyst,3.8,Fareportal,"New York, NY",1001 to 5000 employees,Travel & Tourism,53.5,1,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+722,Senior Insurance Data Scientist,3.9,TransUnion,"Chicago, IL",5001 to 10000 employees,Finance,140.0,1,0,0,0,1,middleSalary,More than 5000,IL,Illinois
+723,Senior Data Science Systems Engineer,3.2,MITRE,"Hampton, VA",5001 to 10000 employees,Government,77.5,0,0,0,0,0,lowSalary,More than 5000,VA,Virginia
+724,ENVIRONMENTAL ENGINEER/SCIENTIST,3.3,Mcphail Associates,"Cambridge, MA",1 to 50 employees,"Construction, Repair & Maintenance",26.5,0,0,0,0,1,lowestSalary,Under 500,MA,Massachusetts
+725,Senior Scientist - Regulatory Submissions,3.1,Reynolds American,"Winston-Salem, NC",5001 to 10000 employees,Manufacturing,117.5,0,0,0,0,1,middleSalary,More than 5000,NC,North Carolina
+726,Scientist - Biomarker and Flow Cytometry,2.4,Crown Bioscience,"San Diego, CA",501 to 1000 employees,Biotech & Pharmaceuticals,70.5,0,0,0,0,0,lowSalary,500 to 1000,CA,California
+727,Revenue Analytics Manager,4.8,HOVER,"San Francisco, CA",51 to 200 employees,Information Technology,61.5,0,0,0,0,1,lowSalary,Under 500,CA,California
+728,Sr. Scientist Method Development,2.9,Q2 Solutions,"Marietta, GA",1001 to 5000 employees,Biotech & Pharmaceuticals,80.0,0,0,0,0,1,lowSalary,1000 to 5000,GA,Georgia
+729,"Associate Scientist, LC/MS Biologics",2.9,Q2 Solutions,"Ithaca, NY",1001 to 5000 employees,Biotech & Pharmaceuticals,70.0,0,0,0,0,1,lowSalary,1000 to 5000,NY,New York
+731,IT - Data Engineer II,3.4,Arbella Insurance,"Quincy, MA",1001 to 5000 employees,Insurance,90.0,0,0,1,0,1,middleSalary,1000 to 5000,MA,Massachusetts
+732,Machine Learning Engineer (NLP),4.1,CK-12 Foundation,"Palo Alto, CA",1 to 50 employees,Education,111.0,1,0,0,1,1,middleSalary,Under 500,CA,California
+733,Senior Data Analyst,3.9,Life360,"San Francisco, CA",51 to 200 employees,Information Technology,138.5,1,0,0,0,0,middleSalary,Under 500,CA,California
+734,Data Science Project Manager,3.6,MassMutual,"Boston, MA",5001 to 10000 employees,Insurance,68.5,0,0,0,0,1,lowSalary,More than 5000,MA,Massachusetts
+735,Data Engineer,3.9,Fivestars,"San Francisco, CA",201 to 500 employees,Information Technology,87.5,1,0,0,1,1,lowSalary,Under 500,CA,California
+736,"Principal, Data Science - Advanced Analytics",3.6,IQVIA,"Plymouth Meeting, PA",10000+ employees,Biotech & Pharmaceuticals,111.5,0,0,0,0,0,middleSalary,More than 5000,PA,Pennsylvania
+737,"Sr Scientist, Immuno-Oncology - Oncology",3.9,GSK,"Cambridge, MA",10000+ employees,Biotech & Pharmaceuticals,84.5,0,0,0,1,0,lowSalary,More than 5000,MA,Massachusetts
+738,Senior Data Engineer,4.4,Eventbrite,"Nashville, TN",1001 to 5000 employees,Information Technology,102.5,1,0,1,1,0,middleSalary,1000 to 5000,TN,Tennessee
+739,"Project Scientist - Auton Lab, Robotics Institute",2.6,Software Engineering Institute,"Pittsburgh, PA",501 to 1000 employees,Education,73.5,0,0,0,0,1,lowSalary,500 to 1000,PA,Pennsylvania
+740,Data Science Manager,3.2,"Numeric, LLC","Allentown, PA",1 to 50 employees,Business Services,127.5,0,0,0,0,1,middleSalary,Under 500,PA,Pennsylvania
+741,Research Scientist – Security and Privacy,3.6,Riverside Research Institute,"Beavercreek, OH",501 to 1000 employees,Government,93.5,1,0,0,0,0,middleSalary,500 to 1000,OH,Ohio

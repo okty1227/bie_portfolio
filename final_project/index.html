@@ -1,0 +1,792 @@
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>INFO 5100 - Project 3</title>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src='https://d3js.org/topojson.v3.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .state {
+            fill: white;
+            stroke: none;
+        }
+
+        .state-outline {
+            stroke: #444;
+            fill: none;
+            stroke-width: 1px;
+        }
+
+        .gridlines .domain {
+            display: none;
+        }
+        
+        .gridlines line {
+            stroke: #aaa;
+        }
+
+        .button {
+            fill: white;
+            stroke-width: 1;
+        }
+
+        .title-num {
+            font-family: Impact;
+            font-size: 18px; /* Add unit (e.g., px) for font size */
+            letter-spacing: 0.5px; /* Add unit (e.g., px) for letter spacing */
+            alignment-baseline: middle; /* Remove single quotes and use camelCase */
+            text-anchor: left; /* Remove single quotes and use camelCase */
+            fill: #444;
+        }
+
+        g {
+            font-size: 12;
+        }
+
+        span, h3, text, p, div {
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            color: #444;
+        }
+
+        text, p {
+            font-size: 12;
+            color: #444;
+            fill: #444;
+            cursor: default;
+        }
+
+        div {
+            font-size: 16;
+        }
+
+        .q1 {
+            grid-area: q1;
+        }
+
+        .q2 {
+            grid-area: q2;
+        }
+
+        .q3 {
+            grid-area: q3;
+        }
+
+        .q4 {
+            grid-area: q4;
+        }
+
+        .q5 {
+            grid-area: q5;
+        }
+
+        svg {
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1 style='font-family: Impact; letter-spacing: 0.5; margin-left: 50px; color: #444'><span style='font-family: Impact; color: #4285F4'>Data Science</span> Job Market Compass</h1>
+    </p>
+    <p style='font-family: Helvetica; font-size: 16px; font-weight: lighter; margin-left: 50px; color: #444;'>
+        We offer an overview of data science job market growth, and recommend specific job postings for individuals. <br>
+        First, we plot company headquarters across US. <b>Move the slider</b> to see how companies emerged in the past half century.<br>
+        We then explore job market growth by industry. <b>Click on a button</b> to check out some popular insustries for data scientists.<br>
+    </p>
+
+    <p style='margin-top: 30;'>
+        <svg id='map' width='750' height='550'>
+            <text x='50' y='10' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                I.
+            </text>
+            <text x='70' y='10' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                Which state has more data science company headquarters?
+            </text>
+        </svg>
+        <svg id='bar' width='450' height='550'>
+            <text x='10' y='10' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                II.
+            </text>
+            <text x='40' y='10' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                Which industry needs data scientist?
+            </text>
+        </svg>
+    </p>
+
+    <p style='margin-left: 50; margin-top: 30; font-size: 16;'>
+        Now with more information about the market, let's find out whether we are a good fit as a data scientist!<br>
+        Fill out the questionnaire to get matched to real job postings. <br>
+        After submitting your preferences, <b>hover over a dot</b> from the coordinates to learn more about the recommendation.<br>
+        You can modify your answers to get new recommendations.
+    </p>
+
+    <p style='margin-top: 30;'>
+        <div id='jobSelect'>
+            <div id='filter'>
+                <span style='font-family:Impact; font-size:18; letter-spacing:0.5;'>III.&nbsp;</span>
+                <span style='font-family: Helvetica; font-size: 20; font-weight: lighter;'>Looking to start a career in data science?</span>
+                <p style='font-size: 16'>
+                    Please fill out this form to find jobs that suit you the best. (5 questions in total)
+                </p>
+    
+                <form>    
+                    <div class='grid'>
+                        <div style='font-size: 16' class='q1'>
+                            <span style='font-weight: normal;'>1. Your skills</span><br>
+                            <input type='checkbox' name='skills' id='python' value='python' checked>
+                            <label for='python'>Python</label>
+                            <br>
+                            <input type='checkbox' name='skills' id='r' value='r'>
+                            <label for='r'>R</label>
+                            <br>
+                            <input type='checkbox' name='skills' id='spark' value='spark'>
+                            <label for='spark'>Spark</label>
+                            <br>
+                            <input type='checkbox' name='skills' id='aws' value='aws'>
+                            <label for='aws'>AWS</label>
+                            <br>
+                            <input type='checkbox' name='skills' id='excel' value='excel' checked>
+                            <label for='excel'>Excel</label>
+                        </div>
+    
+                        <div class='q2'>
+                            <br><span style='font-weight: normal;'>2.Your Preferred Location</span><br>
+
+                            <label for='states'>Select a state:</label>
+                            <select id='states' name='states'>
+                                <option value='Alabama'>Alabama</option>
+                                <option value='Alaska'>Alaska</option>
+                                <option value='Arizona'>Arizona</option>
+                                <option value='Arkansas'>Arkansas</option>
+                                <option value='California' selected>California</option>
+                                <option value='Colorado'>Colorado</option>
+                                <option value='Connecticut'>Connecticut</option>
+                                <option value='Delaware'>Delaware</option>
+                                <option value='Florida'>Florida</option>
+                                <option value='Georgia'>Georgia</option>
+                                <option value='Hawaii'>Hawaii</option>
+                                <option value='Idaho'>Idaho</option>
+                                <option value='Illinois'>Illinois</option>
+                                <option value='Indiana'>Indiana</option>
+                                <option value='Iowa'>Iowa</option>
+                                <option value='Kansas'>Kansas</option>
+                                <option value='Kentucky'>Kentucky</option>
+                                <option value='Louisiana'>Louisiana</option>
+                                <option value='Maine'>Maine</option>
+                                <option value='Maryland'>Maryland</option>
+                                <option value='Massachusetts'>Massachusetts</option>
+                                <option value='Michigan'>Michigan</option>
+                                <option value='Minnesota'>Minnesota</option>
+                                <option value='Mississippi'>Mississippi</option>
+                                <option value='Missouri'>Missouri</option>
+                                <option value='Montana'>Montana</option>
+                                <option value='Nebraska'>Nebraska</option>
+                                <option value='Nevada'>Nevada</option>
+                                <option value='New Hampshire'>New Hampshire</option>
+                                <option value='New Jersey'>New Jersey</option>
+                                <option value='New Mexico'>New Mexico</option>
+                                <option value='New York'>New York</option>
+                                <option value='North Carolina'>North Carolina</option>
+                                <option value='North Dakota'>North Dakota</option>
+                                <option value='Ohio'>Ohio</option>
+                                <option value='Oklahoma'>Oklahoma</option>
+                                <option value='Oregon'>Oregon</option>
+                                <option value='Pennsylvania'>Pennsylvania</option>
+                                <option value='Rhode Island'>Rhode Island</option>
+                                <option value='South Carolina'>South Carolina</option>
+                                <option value='South Dakota'>South Dakota</option>
+                                <option value='Tennessee'>Tennessee</option>
+                                <option value='Texas'>Texas</option>
+                                <option value='Utah'>Utah</option>
+                                <option value='Vermont'>Vermont</option>
+                                <option value='Virginia'>Virginia</option>
+                                <option value='Washington'>Washington</option>
+                                <option value='West Virginia'>West Virginia</option>
+                                <option value='Wisconsin'>Wisconsin</option>
+                                <option value='Wyoming'>Wyoming</option>
+                            </select>
+    
+                        </div>
+    
+                        <div class='q3'>
+                            <br><span style='font-weight: normal;'>3.Your Target Salary</span><br>
+
+                            <input type='radio' name='salary' id='lowestSalary' value='lowestSalary'>
+                            <label for='lowestSalary'> Under 50k</label><br>
+    
+                            <input type='radio' name='salary' id='lowSalary' value='lowSalary'>
+                            <label for='lowSalary'> 50k to 90k</label><br>
+    
+                            <input type='radio' name='salary' id='middleSalary' value='middleSalary' checked>
+                            <label for='middleSalary'> 90k to 150k</label><br>
+    
+                            <input type='radio' name='salary' id='highSalary' value='highSalary'>
+                            <label for='highSalary'>150k to 250k</label><br>
+    
+                            <input type='radio' name='salary' id='highestSalary' value='highestSalary'>
+                            <label for='highestSalary'> More than 250k</label><br>
+                        </div>
+    
+                        <div class='q4'>
+                            <span style='font-weight: normal;'>4.Your Preferred Company Size</span><br>
+                            <label>
+                                <input type='radio' name='companySize' value='Under 500' checked>
+                                Under 500
+                                <img src='data/people.svg' alt='People SVG'>
+                            </label><br>
+    
+                            <label>
+                                <input type='radio' name='companySize' value='500 to 1000'>
+                                500 to 1000
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                            </label><br>
+    
+                            <label>
+                                <input type='radio' name='companySize' value='1000 to 5000'>
+                                1000 to 5000
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                            </label><br>
+    
+                            <label>
+                                <input type='radio' name='companySize' value='More than 5000'>
+                                More than 5000
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                                <img src='data/people.svg' alt='People SVG'>
+                            </label><br>
+                        </div>
+
+                        <div class='q5'>
+                            <br><span style='font-weight: normal;'>5.Your Preferred Industry</span><br>
+                            <label for='industry1'>
+                                <input type='checkbox' id='industry1' name='industries' value='Information Technology' checked>
+                                Information Technology
+                            </label><br>
+        
+                            <label for='industry2'>
+                                <input type='checkbox' id='industry2' name='industries' value='Biotech & Pharmaceuticals' checked>
+                                Biotech & Pharmaceuticals
+                            </label><br>
+        
+                            <label for='industry3'>
+                                <input type='checkbox' id='industry3' name='industries' value='Healthcare'>
+                                Healthcare
+                            </label><br>
+        
+                            <label for='industry4'>
+                                <input type='checkbox' id='industry4' name='industries' value='Business Services'>
+                                Business Services
+                            </label><br>
+        
+                            <label for='industry5'>
+                                <input type='checkbox' id='industry5' name='industries' value='Finance'>
+                                Finance
+                            </label><br>
+        
+                            <label for='industry6'>
+                                <input type='checkbox' id='industry6' name='industries' value='Other'>
+                                Other
+                            </label><br>
+                        </div>
+                    </div>
+    
+                    <div style='margin-left: 150px; margin-top: 40px; margin-bottom: 20px;'>
+                        <button type='button' class='submit' onclick='handleSubmit()' style='background-color: #4285F4;'>Get Recommendations</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div id='pointsScale'>
+                <svg width='540' height='500' id='quadrant'>
+                    <text x='20' y='12' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                        IV.
+                    </text>
+                    <text x='50' y='12' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                        Opportunities for you
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </p>
+
+    <script id='kaylen'>
+        /* US state map */
+        const map = d3.select('svg#map');
+        const mapWidth = 650;
+        const mapHeight = 450;
+        const stateColorWidth = 50;
+        const stateColorHeight = 15;
+        const mapColors = ['#d6e5fd', '#b1cdfa', '#8cb5f8', '#679df6', '#4285f4'];
+        const years = [1970, 1980, 1990, 2000, 2010, 2020];
+        const sliderWidth = 300;
+        const sliderHeight = 15;
+        const sliderYearWidth = (sliderWidth-57.5) / 5;
+
+        // map components
+        let mapArea = map.append('g').attr('transform', 'translate(50, 30)');
+        let mapLegend = map.append('g').attr('transform', 'translate(450, 500)');
+        let sliderArea = map.append('g').attr('transform', 'translate(50, 500)');
+        let tooltip = map.append('g').attr('transform', 'translate(325, 30)').attr('visibility', 'hidden');
+        let tooltipState = tooltip.append('text').text('Test State').attr('x', 10).attr('y', 20).attr('text-anchor', 'left').attr('alignment-baseline','top').style('font-size', 14);
+
+        // default year is 2010
+        let selectedYear = 2010;
+
+        async function drawMap() {
+            const hqData = await d3.csv('data/map_data.csv', d3.autoType);
+            const topoData = await d3.json('data/us-smaller.json');
+
+            //states
+            let state = topojson.feature(topoData, topoData.objects.states); 
+            //outline
+            let stateMesh = topojson.mesh(topoData, topoData.objects.states);
+            let projection = d3.geoAlbersUsa().fitSize([mapWidth, mapHeight], state);
+            let projectPath = d3.geoPath().projection(projection);
+
+            // map color scale
+            const hqExtent = d3.extent(hqData, d => d['2020']);
+            const mapScale = d3.scaleQuantile().domain(hqExtent).range(mapColors);
+            quantileEdge = mapScale.quantiles().map(d => parseInt(d));
+            quantileRange = [hqExtent[0],...quantileEdge,hqExtent[1]];
+
+            // color legend text
+            mapLegend.append('text').text('# of Headquarters Established')
+                                    .attr('x', 0).attr('y', -10)
+                                    .attr('alignment-baseline','top');
+            mapLegend.selectAll('text.number').data(quantileRange)
+                                .join('text')
+                                .attr('class', 'number')
+                                .attr('x', (d, i) => i*(stateColorWidth))
+                                .attr('y', stateColorHeight+15)
+                                .attr('text-anchor', 'middle')
+                                .attr('alignment-baseline','top')
+                                .attr('color', 'black')
+                                .text((d, i) => (i === 0) ? 0 : d);
+            // color legend rectangles
+            mapColors.forEach((color, i) => {
+                mapLegend.append('rect')
+                        .attr('x', i*(stateColorWidth))
+                        .attr('y', 0)
+                        .attr('width', stateColorWidth)
+                        .attr('height', stateColorHeight)
+                        .attr('fill', color);
+            });
+            
+            // draw map
+            mapArea.selectAll('path.state').data(state.features)
+                    .join('path')
+                    .attr('class','state')
+                    .attr('d', projectPath)
+                    .on('mouseover',  mouseEntersState)
+                    .on('mouseout', mouseLeavesState);
+            mapArea.append('path').datum(stateMesh)
+                    .join('path')
+                    .attr('class', 'state-outline')
+                    .attr('d', projectPath);
+
+            // show tooltip on hover
+            function mouseEntersState() {
+                let stateDatum = d3.select(this).datum();
+                let info = stateDatum['name'] + ': ' + stateDatum[selectedYear];
+                tooltipState.text(info);
+                tooltip.attr('visibility', '');
+            }
+
+            // hide tooltip on leave
+            function mouseLeavesState() {
+                tooltipState.text('');
+                tooltip.attr('visibility', 'hidden');
+            }
+
+            function drawStates() {
+                mapArea.selectAll('path.state').data(hqData)
+                    .join('path')
+                    .attr('class', 'state')
+                    .style('fill', (d, i) => d[selectedYear] == 0 ? 'white' : mapScale(d[selectedYear])); 
+            }
+
+            // year range slider
+            const sliderBack = sliderArea.append('rect')
+                            .attr('width', sliderWidth)
+                            .attr('height', sliderHeight)
+                            .attr('rx', sliderHeight/2)
+                            .attr('fill', 'lightgray')
+            const sliderBar = sliderArea.append('rect')
+                            .attr('height', sliderHeight)
+                            .attr('rx', sliderHeight/2)
+                            .attr('fill', mapColors[2]);
+
+            // slider selection dot
+            let yearDot = sliderArea.append('circle')
+                                    .attr('r', 8.5)
+                                    .attr('cy', sliderHeight/2)
+                                    .attr('fill', mapColors[3]);
+
+            // text and dots
+            sliderArea.append('text').text('Click on a dot or a year to move the slider')
+                                    .attr('x', 0).attr('y', -10)
+                                    .attr('alignment-baseline','top');
+            years.forEach((year, i) => {
+                let x = 50 + i*sliderYearWidth;
+                sliderArea.append('circle').attr('id', 'slider'+i).attr('class', 'slider')
+                        .attr('r', 5)
+                        .attr('cx', x)
+                        .attr('cy', sliderHeight/2)
+                        .attr('fill', mapColors[0])
+                        .style('opacity', 0.8)
+                        .on('click', e => sliderClicked(i));
+                sliderArea.append('text').text(years[i])
+                        .attr('x', x)
+                        .attr('y', sliderHeight+15)
+                        .style('font-size', 12)
+                        .attr('text-anchor', 'middle')
+                        .attr('alignment-baseline', 'top')
+                        .on('click', e => sliderClicked(i));
+            })
+
+            function sliderClicked(i) {
+                // update slider style
+                let x = 50 + i*sliderYearWidth;
+                yearDot.attr('cx', x);
+                sliderBar.attr('width', x);
+                // update map
+                let year = years[0] + i*10;
+                selectedYear = year;
+                drawStates();
+            }
+            sliderClicked(4);
+        }
+        drawMap();
+
+        /* bar chart */
+        const barChart = d3.select('svg#bar');
+        const chartMargin = {left: 50, right: 10, top: 50, bottom: 50};
+        const chartWidth = 360;
+        const chartHeight = 340;
+        const barWidth = 20;
+        const industries = ['Information Technology', 'Healthcare', 'Biotech & Pharmaceuticals', 'Business Services', 'Insurance', 'Finance', 'Manufacturing', 'Other'];
+        const industryColors = {'Information Technology': '#3a86ff', 'Biotech & Pharmaceuticals': '#06d6a0', 'Business Services': '#9b5de5',
+                                'Insurance': '#ff006e', 'Healthcare': '#ffbc42', 'Finance': '#8f2d56', 'Manufacturing':'#dddf00', 'Other': '#444'};
+        const buttonWidth = {'Information Technology': 180, 'Biotech & Pharmaceuticals': 200, 'Healthcare': 100, 'Business Services': 150, 'Insurance': 90, 'Finance': 80, 'Manufacturing': 120, 'Other': 60};
+        const buttonX = {'Information Technology': 0, 'Biotech & Pharmaceuticals': 190, 'Healthcare': 0, 'Business Services': 110, 'Insurance': 270, 'Finance': 0, 'Manufacturing': 90, 'Other': 220};
+        const buttonY = {'Information Technology': 0, 'Biotech & Pharmaceuticals': 0, 'Healthcare': 35, 'Business Services': 35, 'Insurance': 35, 'Finance': 70, 'Manufacturing': 70, 'Other': 70};
+        const buttonHeight = 20;
+
+        // bar chart components
+        let chartArea = barChart.append('g').attr('transform', `translate(${chartMargin.left}, ${chartMargin.top})`);
+        let barArea = chartArea.append('g').attr('transform', `translate(0, ${chartHeight})`);
+        let buttonArea = barChart.append('g').attr('transform', `translate(20, ${chartMargin.top+chartHeight+chartMargin.bottom-10})`);
+        chartArea.append('text').text('# of Companies').attr('x', -chartMargin.left + 10).attr('y', -10);
+
+        let industryData = {};
+        // let selectedIndustry = 'All';
+        let selectedIndustryData = [0, 0, 0, 0, 0, 0, 0];
+
+        async function drawBarChart() {
+            // store data by industry
+            const chartData = await d3.csv('data/bar_chart_data.csv', d3.autoType);
+            chartData.forEach(d => {
+                industryData[d['industry']] = d;
+            })
+
+            // scales
+            const barExtent = [0, d3.max(chartData, d => d['2020'])];
+            const chartScale = d3.scaleLinear().domain(barExtent).range([chartHeight, 0]);
+            const yearScale = d3.scalePoint().domain(years).range([0, chartWidth]).padding(0.5);
+            const percentScale = d3.scaleLinear().domain([0, 1]).range([chartHeight, 0]);
+
+            // count axis and gridlines
+            let leftAxis = d3.axisLeft(chartScale);
+            let leftGridlines = d3.axisLeft(chartScale).tickSize(-chartWidth-10).tickFormat('');
+            chartArea.append('g')
+                    .style('font-size', '8px')
+                    .attr('class', 'y axis')
+                    .attr('transform', 'translate(-10,0)')
+                    .call(leftAxis);
+            chartArea.append('g')
+                    .attr('class', 'y gridlines')
+                    .attr('transform', 'translate(-10,0)')
+                    .style('stroke-dasharray', ('2, 2'))
+                    .call(leftGridlines);
+
+            // year axis
+            let bottomAxis = d3.axisBottom(yearScale).ticks(yearScale.length);
+            chartArea.append('g')
+                    .attr('class', 'x axis')
+                    .attr('transform',`translate(0,${chartHeight})`)
+                    .call(bottomAxis);
+
+            // bars
+            years.forEach((year, i) => {
+                // all industry
+                chartArea.append('rect').attr('class', 'all')
+                        .attr('x', yearScale(year) - barWidth/2)
+                        .attr('y', chartScale(industryData['All'][year]))
+                        .attr('rx', 3)
+                        .attr('width', barWidth)
+                        .attr('height', chartScale(0) - chartScale(industryData['All'][year]))
+                        .attr('fill', 'lightgray')
+                        .style('opacity', 0.8);
+                chartArea.append('text').attr('class', 'all').text(industryData['All'][year])
+                        .attr('x', yearScale(year))
+                        .attr('y', chartScale(industryData['All'][year])-10)
+                        .attr('text-anchor', 'middle')
+                        .attr('alignment-baseline', 'middle');
+            });
+
+            // selected industry
+            chartArea.selectAll('rect.industry').data(years).join('rect')
+                        .attr('class', 'industry')
+                        .attr('x', year => yearScale(year) - barWidth/2)
+                        .attr('rx', 3)
+                        .attr('width', barWidth)
+                        .attr('fill', 'black')
+                        .style('opacity', 0.8);
+            chartArea.selectAll('text.industry').data(years).join('text')
+                        .attr('class', 'industry')
+                        .attr('x', year => yearScale(year))
+                        .attr('text-anchor', 'middle')
+                        .attr('alignment-baseline', 'middle');
+
+            // bars for selected industry
+            function drawIndustry(selectedIndustry) {
+                let industryBars = d3.selectAll('rect.industry');
+                let industryValues = d3.selectAll('text.industry');
+                let industryDatum = industryData[selectedIndustry];
+                // show industry bar and text
+                industryBars.transition()
+                            .attr('y', (year, i) => chartScale(industryDatum[year]))
+                            .attr('height', year => chartScale(0) - chartScale(industryDatum[year]))
+                            .attr('fill', industryColors[selectedIndustry])
+                            .attr('visibility', '');
+                industryValues.text((year, i) => industryDatum[year])
+                            .attr('class', 'industry')
+                            .attr('y', (year, i) => chartScale(industryDatum[year])-10)
+                            .attr('visibility', '');
+            }
+
+            // buttons
+            industries.forEach(i => {
+                let button = buttonArea.append('g').on('click', e => buttonClicked(i));
+                button.append('rect').attr('class', 'button').attr('id', i.substring(0, 3))
+                        .attr('x', buttonX[i]).attr('y', buttonY[i]).attr('rx', 10)
+                        .attr('width', buttonWidth[i]).attr('height', buttonHeight)
+                        .attr('stroke', industryColors[i]);
+                button.append('text').text(i).attr('x', buttonX[i] + buttonWidth[i]/2).attr('y', buttonY[i] + buttonHeight/2)
+                        .attr('text-anchor', 'middle').attr('alignment-baseline', 'central').style('font-size', 14);
+            });
+
+            function buttonClicked(i) {
+                drawIndustry(i);
+                buttonArea.selectAll('rect.button').style('stroke-width', 1);
+                buttonArea.select(`rect.button#${i.substring(0, 3)}`).style('stroke-width', 2);
+            }
+            buttonClicked('Information Technology');
+        }
+        drawBarChart();
+    </script>
+
+    <script id='amber-and-tingmin'>
+        // quadrant plot
+        let qPlot = d3.select('svg#quadrant');
+        const qMargin = {top:40, left:20, right:40, bottom:10};
+        const cardHeight = qPlot.attr('height');
+        const innerHeight = qPlot.attr('height') - qMargin.top - qMargin.bottom;
+        const innerWidth = qPlot.attr('width') - qMargin.right - qMargin.left;
+        const skills = ['python','r','spark','aws','excel'];
+        const jitterScale = 16;
+        let salaryScaler;
+        let rateScaler;
+        let positionTable;
+
+        // tooltip for selected job posting
+        let tooltipQplot = qPlot.append('g')
+                                .attr('transform', `translate(${qMargin.left}, ${qMargin.top+innerHeight/2+qMargin.top*2})`)
+                                .attr('visibility', 'hidden');
+        let tooltipRect = tooltipQplot.append('rect').attr('rx', 5)
+                                    .attr('x',0).attr('y',0)
+                                    .attr('width', 200)
+                                    .attr('height', 90).attr('fill', mapColors[1]).style('opacity', 0.7);
+        let tooltipTitle = tooltipQplot.append('text').text('Data Scientist')
+                                    .attr('x', 10).attr('y', 20)
+                                    .attr('text-anchor', 'left').attr('alignment-baseline','top')
+                                    .style('font-size', 14).style('font-weight', 'bold');
+        let tooltipCompany = tooltipQplot.append('text').text('Company')
+                                        .attr('x', 10).attr('y', 40)
+                                        .attr('text-anchor', 'left').attr('alignment-baseline','top').style('font-size', 14);
+        let tooltipIndustry = tooltipQplot.append('text').text('Industry')
+                                        .attr('x', 10).attr('y', 60)
+                                        .attr('text-anchor', 'left').attr('alignment-baseline','top').style('font-size', 14);
+        let tooltipSalary = tooltipQplot.append('text').text('Avg Salary')
+                                        .attr('x', 10).attr('y', 80)
+                                        .attr('text-anchor', 'left').attr('alignment-baseline','top').style('font-size', 14);
+
+        let drawQuadrant = async function() {
+            positionTable = await d3.csv('data/search_back.csv',d3.autoType);
+            const salaryExt = d3.extent(positionTable, d => d.avg_salary);
+            const rateExt = d3.extent(positionTable, d => d.Rating);
+            axis = qPlot.append('g').attr('transform',`translate(${qMargin.left},${qMargin.top})`).lower();
+
+            // rating on x axis
+            rateScaler = d3.scaleLinear().domain([1,5]).range([0, innerWidth]);
+            let xAxis = d3.axisBottom(rateScaler);
+            let xGridlines = d3.axisBottom(rateScaler).tickSize(-innerHeight).tickFormat('');
+            axis.append('g')
+                    .style('font-size', '8px')
+                    .attr('class', 'x axis')
+                    .attr('transform', `translate(0,${innerHeight/2})`)
+                    .call(xAxis);
+            axis.append('g')
+                    .attr('class', 'x gridlines')
+                    .attr('transform', `translate(0,${innerHeight})`)
+                    .style('stroke-dasharray', ('2, 2'))
+                    .call(xGridlines);
+
+            // salary on yaxis
+            salaryScaler = d3.scaleLinear().domain([15, 255]).range([innerHeight, 0]);
+            let yAxis = d3.axisLeft(salaryScaler).ticks(10).tickValues(d3.range(15, 256, 24)).tickFormat(v => v + 'K');
+            let yGridlines = d3.axisLeft(salaryScaler).ticks(10).tickValues(d3.range(15, 256, 24)).tickSize(-innerWidth).tickFormat('');
+            axis.append('g')
+                    .style('font-size', '8px')
+                    .attr('class', 'x axis')
+                    .attr('transform', `translate(${innerWidth/2},0)`)
+                    .call(yAxis);
+            axis.append('g')
+                    .attr('class', 'x gridlines')
+                    .style('stroke-dasharray', ('2, 2'))
+                    .call(yGridlines);
+
+            // axis legend
+            axis.append('text')
+                .attr('x', innerWidth + 5)
+                .attr('y', innerHeight / 2)
+                .attr('text-anchor', 'left')
+                .text('Rating');
+            axis.append('text')
+                .attr('x', innerWidth / 2 )
+                .attr('y', -10)
+                .attr('text-anchor', 'middle')
+                .text('Avg Salary');
+        }
+        drawQuadrant();
+
+        // matched job postings
+        let jobs = qPlot.append('g')
+                    .attr('transform',`translate(${qMargin.left},${qMargin.top})`);
+        let noMatch = jobs.append('text').text('No Position Matched Your Search!')
+                    .attr('x', innerWidth / 2).attr('y', innerHeight / 2)
+                    .attr('text-anchor', 'middle').attr('alignment-baseline', 'middle')
+                    .attr('visibility', 'hidden')
+                    .style('fill', mapColors[4])
+                    .style('font-family', 'Impact')
+                    .style('font-size', 18)
+                    .style('letter-spacing', 0.5);
+
+        function handleSubmit(location) {   
+            let prefSkills = [];
+            let prefState = '';
+            let prefSalary = '';
+            let prefCompanySize = '';
+            let prefIndustries = []; 
+            // get skills     
+            const skillCheckboxes = document.querySelectorAll('input[name="skills"]:checked');
+            skillCheckboxes.forEach(checkbox => {
+                prefSkills.push(checkbox.value);
+            });
+            // get preferred location (dropdown)
+            prefState = document.getElementById('states').value;
+            // get preferred salary
+            const salaryRadios = document.querySelectorAll('input[name="salary"]:checked');
+            if (salaryRadios.length > 0) {
+                prefSalary = salaryRadios[0].value;
+            }
+            // get preferred company size
+            const companySizeRadios = document.querySelectorAll('input[name="companySize"]:checked');
+            if (companySizeRadios.length > 0) {
+                prefCompanySize = companySizeRadios[0].value;
+            }
+            // get preferred indistries
+            const industryCheckboxes = document.querySelectorAll('input[name="industries"]:checked');
+            industryCheckboxes.forEach(checkbox => {
+                prefIndustries.push(checkbox.value);
+            });
+
+            // filter by location, company size, industry, salary, and required skills
+            let filtered = positionTable.filter(job => job.State_Acro === prefState)
+                                        .filter(job => job.Size_category === prefCompanySize)
+                                        .filter(job => prefIndustries.includes(job.Sector))
+                                        .filter(job => job.Salary_category === prefSalary)
+                                        .filter(job => {
+                                            let matched = true;
+                                            skills.forEach(skill => {
+                                                if (job[skill] === 1 && !prefSkills.includes(skill)) {
+                                                    matched = false;
+                                                }
+                                            })
+                                            return matched;
+                                        });
+            noMatch.attr('visibility', filtered.length === 0 ? '' : 'hidden');
+            axis.attr('opacity', filtered.length === 0 ? 0.5 : 1);
+
+            // draw one point for each matched job posting
+            let points = jobs.selectAll('circle.job').data(filtered).join('circle')
+                            .attr('class', 'job')
+                            .attr('cx', d => rateScaler(d.Rating))
+                            .attr('cy', d => salaryScaler(d.avg_salary))
+                            .attr('r', 6)
+                            .attr('fill', mapColors[4])
+                            .on('mouseover', mouseEntersJob)
+                            .on('mouseout', mouseLeavesJob);
+            
+            function mouseEntersJob() {
+                // highlight selected job
+                d3.select(this).transition().attr('r', 10);
+
+                // show tooltip
+                let jobDatum = d3.select(this).datum();
+                let jobTitle = jobDatum['Job Title'];
+                // only use prefix if job title is too long
+                if (jobTitle.length > 40) {
+                    const commaIndex = jobTitle.indexOf(',');
+                    if (commaIndex !== -1) {
+                        jobTitle = jobTitle.substring(0, commaIndex);
+                    }
+                    else {
+                        const secondSpaceIndex = jobTitle.indexOf(' ', jobTitle.indexOf(' ') + 1);
+                        if (secondSpaceIndex !== -1)
+                            jobTitle = jobTitle.substring(0, secondSpaceIndex); 
+                    }
+                }
+                tooltipTitle.text(jobTitle);
+                tooltipCompany.text('Company: ' + jobDatum['Company Name']);
+                tooltipIndustry.text(jobDatum['Sector']);
+                tooltipSalary.text('Avg Salary: $' + jobDatum['avg_salary'] + 'K');
+
+                let w = d3.max([tooltipTitle.node().getBBox().width, tooltipCompany.node().getBBox().width, tooltipIndustry.node().getBBox().width, tooltipSalary.node().getBBox().width]);
+                tooltipRect.attr('width', w + 30);
+                tooltipQplot.attr('visibility', '');
+            }
+
+            function mouseLeavesJob() {
+                // remove highlight
+                d3.select(this).transition().attr('r', 6);
+
+                // hide tooltip
+                tooltipTitle.text('');
+                tooltipCompany.text('');
+                tooltipRect.attr('width', 0);
+                tooltipQplot.attr('visibility', 'hidden');
+            }
+        }
+
+        function generateRandom() {
+            return Math.random()*jitterScale - jitterScale/2;
+        }
+     </script>
+</body>
+</html>

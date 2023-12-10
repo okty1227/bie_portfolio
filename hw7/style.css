@@ -13,3 +13,11 @@
 #tag {
     color: black;
 }
+
+.belltower_locate{
+    background-color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+
+}
