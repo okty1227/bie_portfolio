@@ -1,89 +1,11 @@
 <html>
 <head>
     <meta charset='UTF-8'>
-    <title>INFO 5100 - Project 3</title>
+    <title>Data Scientist Job Recomendation Dashboard</title>
     <script src='https://d3js.org/d3.v7.min.js'></script>
     <script src='https://d3js.org/topojson.v3.min.js'></script>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .state {
-            fill: white;
-            stroke: none;
-        }
 
-        .state-outline {
-            stroke: #444;
-            fill: none;
-            stroke-width: 1px;
-        }
-
-        .gridlines .domain {
-            display: none;
-        }
-        
-        .gridlines line {
-            stroke: #aaa;
-        }
-
-        .button {
-            fill: white;
-            stroke-width: 1;
-        }
-
-        .title-num {
-            font-family: Impact;
-            font-size: 18px; /* Add unit (e.g., px) for font size */
-            letter-spacing: 0.5px; /* Add unit (e.g., px) for letter spacing */
-            alignment-baseline: middle; /* Remove single quotes and use camelCase */
-            text-anchor: left; /* Remove single quotes and use camelCase */
-            fill: #444;
-        }
-
-        g {
-            font-size: 12;
-        }
-
-        span, h3, text, p, div {
-            font-family: Helvetica, sans-serif;
-            font-weight: lighter;
-            color: #444;
-        }
-
-        text, p {
-            font-size: 12;
-            color: #444;
-            fill: #444;
-            cursor: default;
-        }
-
-        div {
-            font-size: 16;
-        }
-
-        .q1 {
-            grid-area: q1;
-        }
-
-        .q2 {
-            grid-area: q2;
-        }
-
-        .q3 {
-            grid-area: q3;
-        }
-
-        .q4 {
-            grid-area: q4;
-        }
-
-        .q5 {
-            grid-area: q5;
-        }
-
-        svg {
-            /* border: 1px solid black; */
-        }
-    </style>
 </head>
 <body>
     <p>
@@ -97,18 +19,18 @@
 
     <p style='margin-top: 30;'>
         <svg id='map' width='750' height='550'>
-            <text x='50' y='10' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+            <text x='50' y='10'  class="headernum"  alignment-baseline='middle' text-anchor='left' fill='#444'>
                 I.
             </text>
-            <text x='70' y='10' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+            <text x='70' y='10' alignment-baseline='middle' class="headername">
                 Which state has more data science company headquarters?
             </text>
         </svg>
         <svg id='bar' width='450' height='550'>
-            <text x='10' y='10' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+            <text x='10' y='10' class="headernum" alignment-baseline='middle' text-anchor='left' fill='#444'>
                 II.
             </text>
-            <text x='40' y='10' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+            <text x='40' y='10' class="headername" alignment-baseline='middle' >
                 Which industry needs data scientist?
             </text>
         </svg>
@@ -124,8 +46,11 @@
     <p style='margin-top: 30;'>
         <div id='jobSelect'>
             <div id='filter'>
-                <span style='font-family:Impact; font-size:18; letter-spacing:0.5;'>III.&nbsp;</span>
-                <span style='font-family: Helvetica; font-size: 20; font-weight: lighter;'>Looking to start a career in data science?</span>
+                <span class="headernum" >III.&nbsp;</span>
+                <text x='10' y='12'   alignment-baseline='middle' class="headername">
+                    Looking to start a career in data science?
+                </text>
+ 
                 <p style='font-size: 16'>
                     Please fill out this form to find jobs that suit you the best. (5 questions in total)
                 </p>
@@ -303,10 +228,11 @@
     
             <div id='pointsScale'>
                 <svg width='540' height='500' id='quadrant'>
-                    <text x='20' y='12' style='font-family:Impact; font-size:18; letter-spacing:0.5;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+                    <text x='20' y='12' class="headernum" alignment-baseline='middle' text-anchor='left' fill='#444'>
                         IV.
                     </text>
-                    <text x='50' y='12' style='font-size:20;' alignment-baseline='middle' text-anchor='left' fill='#444'>
+        alignment-baseline: middle;  
+                    <text x='50' y='12' class="headername" alignment-baseline='middle' >
                         Opportunities for you
                     </text>
                 </svg>
@@ -578,6 +504,7 @@
                         .attr('width', buttonWidth[i]).attr('height', buttonHeight)
                         .attr('stroke', industryColors[i]);
                 button.append('text').text(i).attr('x', buttonX[i] + buttonWidth[i]/2).attr('y', buttonY[i] + buttonHeight/2)
+                        .attr('class','btnname')
                         .attr('text-anchor', 'middle').attr('alignment-baseline', 'central').style('font-size', 14);
             });
 

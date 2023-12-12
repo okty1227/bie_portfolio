@@ -29,6 +29,15 @@
          This repository contains course project done when taking the course
           <a style="color: #0366d6;" href="https://classes.cornell.edu/browse/roster/FA23/class/CS/3300">Data Driven Web App</a> in Cornell University. <br><br> Explore the different subfolders below:</p>
 
+        <div class="subfolder" id="projects">
+            <h2>Data Scientist Position Opportunity Overview</h2>
+            <p>Want to find a Data Scientist jon in the U.S job market? Here's the dashboard for you to look for the desired Position/ <br>
+            I collect and clean the data position opportunity from Glassdoor and visualize these position based on the location, salary and company! </p>
+            
+            <a href="./final_project/" class="btn">Take a look</a>
+        </div>
+
+
     <div class="subfolder" id="projects">
         <h2>Global Youtuber Income Analysis</h2>
         <p>Is youtuber an ideal career? I analyze the dataset containing top 1000 youtuber's income and GDP from the country they are from, to understand is being a top youtuber can let them live a good life.</p>
@@ -46,13 +55,10 @@
     <div class="subproject">
         <h2>Some Interesting Plots...</h2>
         
-        <!-- <button class="btn" onclick="showVisualization(1)">New York State Median Income</button> -->
         <button class="btn" onclick="showVisualization(2)">Game of Throne Character Network</button>
         <div class="horizontal-container"></div>
     </div>
-    <!-- <p>If you want to explore more project please visit <a href="https://github.com/okty1227">My Github</a>.</p>
 
-    <p>I hope you enjoy!</p> -->
 </div>
 </body>
 
@@ -66,21 +72,16 @@
 <script>
 
     function showVisualization(projectNumber) {
-          // Replace the following line with code to display the visualization for the selected project
-        //   var visualizationHtml = `<div class="visualization">Visualization for Project ${projectNumber}</div>`;
-        // let divPosition = document.getElementById('visualization-container').getBoundingClientRect();
+
         
         if (projectNumber===1){
-            // console.log(divPosition.left,divPosition.top)
-            // show_map_plot()
 
         };
         if (projectNumber===2){
             show_network_plot()
 
         };
-          // Append the visualization to the container
-        //   document.getElementById('visualization-container').innerHTML = plt;
+
     
         }
     
