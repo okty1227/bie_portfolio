@@ -60,13 +60,11 @@ async function draw_map(ph) {
         .attr('cy',locate[1])
         .attr('r',6)
 
-        plot.append('text')
+    plot.append('text')
         .attr('class', 'belltower_locate')
-        .attr('x', locate[0])
+        .attr('x', locate[0]+10)
         .attr('y', locate[1])
-        .style('fill', 'black')
-        .style('font-weight', 'bold')  
-        .text('Cornell University, Ithaca');
+        .text('Ithaca');
 
     plot.style('visibility', 'hidden');
     // let svgElement = plot.node()

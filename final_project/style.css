@@ -1,0 +1,127 @@
+#jobSelect {
+    display: flex; 
+    justify-content: left;
+}
+.headernum{
+
+        font-family: Impact;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+
+}
+
+.headername{
+
+        font-size: 20px;
+        text-anchor: left;  
+        fill: #444;
+}
+
+.grid {
+    display: grid;
+    grid-template: 
+        'q1 q4'
+        'q2 q5'
+        'q3 q5';
+}
+
+#pointsScale {
+    width: 500px;
+    margin-left: 10px;
+}
+
+#filter {
+    width: 600px;
+    margin-left: 50px;
+}
+
+.submit {
+    padding: 10px 20px; 
+    color: white; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-size: 16px;
+    border: none;
+}
+
+input, label {
+    margin-top: 5;
+}
+.state {
+    fill: white;
+    stroke: none;
+}
+
+.state-outline {
+    stroke: #444;
+    fill: none;
+    stroke-width: 1px;
+}
+
+.gridlines .domain {
+    display: none;
+}
+
+.gridlines line {
+    stroke: #aaa;
+}
+
+.button {
+    fill: white;
+    stroke-width: 1.5;
+    
+}
+
+.btnname{
+    transition: font-weight 0.3s ease;
+}
+.btnname:hover {
+    font-weight: bold;
+}
+
+
+
+g {
+    font-size: 12;
+}
+
+span, h3, text, p, div {
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #444;
+}
+
+text, p {
+    font-size: 12;
+    color: #444;
+    fill: #444;
+    cursor: default;
+}
+
+div {
+    font-size: 16;
+}
+
+.q1 {
+    grid-area: q1;
+}
+
+.q2 {
+    grid-area: q2;
+}
+
+.q3 {
+    grid-area: q3;
+}
+
+.q4 {
+    grid-area: q4;
+}
+
+.q5 {
+    grid-area: q5;
+}
+
+svg {
+    /* border: 1px solid black; */
+}

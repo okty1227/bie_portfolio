@@ -1,0 +1,52 @@
+state,name,1970,1980,1990,2000,2010,2020
+AL,Alabama,0,0,0,1,2,3
+AK,Alaska,0,0,0,0,0,0
+AZ,Arizona,0,0,0,0,2,2
+AR,Arkansas,2,2,2,2,2,2
+CA,California,20,30,46,64,121,156
+CO,Colorado,7,7,7,10,11,12
+CT,Connecticut,0,0,0,0,0,3
+DE,Delaware,6,6,6,6,6,6
+DC,District of Columbia,3,3,3,3,8,9
+FL,Florida,0,2,4,8,15,18
+GA,Georgia,2,2,3,5,7,7
+HI,Hawaii,0,0,0,0,0,0
+ID,Idaho,0,0,0,2,3,3
+IL,Illinois,10,13,13,19,32,34
+IN,Indiana,1,1,1,4,7,7
+IA,Iowa,1,1,1,3,3,3
+KS,Kansas,0,0,0,0,0,0
+KY,Kentucky,0,0,0,0,0,0
+LA,Louisiana,0,0,0,1,1,1
+ME,Maine,0,0,0,0,0,0
+MD,Maryland,9,9,13,15,21,21
+MA,Massachusetts,41,46,55,60,77,83
+MI,Michigan,2,2,2,5,5,6
+MN,Minnesota,0,0,0,1,1,1
+MS,Mississippi,0,0,0,0,0,0
+MO,Missouri,2,2,2,2,4,7
+MT,Montana,0,0,0,0,0,0
+NE,Nebraska,2,3,4,4,4,4
+NV,Nevada,0,0,0,0,0,0
+NH,New Hampshire,0,0,0,0,0,0
+NJ,New Jersey,3,3,6,8,8,12
+NM,New Mexico,0,0,0,0,0,0
+NY,New York,11,19,20,26,49,63
+NC,North Carolina,17,17,17,17,17,27
+ND,North Dakota,0,0,0,0,0,0
+OH,Ohio,3,3,9,10,10,10
+OK,Oklahoma,0,0,0,0,0,0
+OR,Oregon,0,0,1,1,1,1
+PA,Pennsylvania,4,4,17,19,21,23
+RI,Rhode Island,1,1,1,1,1,1
+SC,South Carolina,0,0,0,1,1,1
+SD,South Dakota,0,0,0,0,0,0
+TN,Tennessee,5,5,7,7,8,8
+TX,Texas,4,8,8,12,15,15
+UT,Utah,0,1,1,1,1,4
+VT,Vermont,0,0,0,0,0,0
+VA,Virginia,15,15,18,31,40,51
+WA,Washington,13,14,14,15,17,19
+WV,West Virginia,0,0,0,0,0,0
+WI,Wisconsin,9,9,9,9,9,9
+WY,Wyoming,0,0,0,0,0,0
