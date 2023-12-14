@@ -7,7 +7,7 @@ html{
 }
 body {margin: 0;}
 h1{
-    font-size: 72px;
+    font-size: clamp(2rem, 3vw, 4rem);
     margin-top: 5%;
     margin-left: 3%;
 }
@@ -21,7 +21,7 @@ h1{
     margin-left: 2%;
 }
 h2{
-    font-size: 48px;
+    font-size: clamp(2rem, 2vw, 3rem);
     margin-top: 3%;
 }
 a {
@@ -42,7 +42,7 @@ a:hover {
     font-size: 30px;
     line-height: 45px;
 
-    margin-top: min(3%,20px);
+    margin-top: 1%;
     margin-left: min(5%,20px); 
 
     display: grid;
@@ -56,13 +56,14 @@ a:hover {
 
   #left-top {
     grid-area: top-left;
-    padding-top: 10%;
+    /* padding-top: 5%; */
     line-height: 150%;
+    margin-top: 0;
   }
 
   #left-bottom {
     grid-area: bottom-left;
-    margin-top: max(50px,5%);
+    margin-top: 3%;
     margin-inline: 20%;
     padding: 3%;
   }
@@ -70,9 +71,25 @@ a:hover {
   #right {
     grid-area: top-right;
     margin-left: 5%;
-    margin-bottom: 3%;
   }
 
+  @media screen and (max-width: 1300px) {
+    .subfolder {
+        grid-template-columns: 1fr; /* 单列布局 */
+        grid-template-rows: 1fr; /* 自适应行高 */
+        grid-template-areas:
+            "top-left"
+            "top-right"
+            "bottom-left";
+
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #left-bottom {
+        margin-inline: 0; /* 移除水平边距 */
+    }
+}
 
 .content1,.content2{
     font-size: 30px;
@@ -81,6 +98,12 @@ a:hover {
     margin-top: min(3%,20px);
     margin-left: min(5%,20px);
 }
+@media screen and (max-width: 1200px) {
+    .content1,.content2 {
+      flex-direction: column; /* 在小屏幕上切换为纵向布局 */
+      align-items: center; /* 在纵向布局中居中对齐 */
+    }
+  }
 .project-pic{
     width: 80%;
     height: auto;
@@ -93,11 +116,11 @@ a:hover {
 .campus-ill{
     
     border-radius: 50%;
-    overflow: hidden; 
+    overflow: visible; 
 }
 .intro-ill{
     margin-left: 8%;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-top: 5%;
 
 }
