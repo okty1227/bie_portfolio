@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+
+    <script src="./hw8-fa23/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./hw7/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+
+
+    <title>Project Repo</title>
+
+</head>
+
+<body>
+
+    <div id="header-selection"></div>
+
+    <h1>Business Intelligence Project</h1>
+<div class="content-project">
+
+    <p class="content-caption">Welcome to the repository for the Cornell Data Driven Web Application Course!<br>
+         This repository contains course project done when taking the course
+          <a style="color: #0366d6;" href="https://classes.cornell.edu/browse/roster/FA23/class/CS/3300">
+            Data Driven Web App</a> in Cornell University. </p>
+          <h2>Data Scientist Position Opportunity Overview</h2>
+
+        <div class="subfolder" >
+            <p id="left-top">Want to find a Data Scientist job in the U.S?<br> Here's the dashboard for you<br>
+            I collect and clean the data position opportunity from Glassdoor and visualize them based on location, salary and company! </p>
+            
+            <a href="./final_project/" id="left-bottom" class="btn">Take a look</a>
+            <img src="src/dsjob-project.png" class="project-pic" id="right" alt="" width="50%">
+        </div>
+
+
+
+        <h2>Global Youtuber Income Analysis</h2>
+    <div class="subfolder" id="projects">
+        
+        <p id="left-top">Is youtuber an ideal career? I analyze the dataset containing top 1000 youtuber's income and GDP from the country they are from, to understand is being a top youtuber can let them live a good life.</p>
+        
+        <a href="./assignment1/" id="left-bottom" class="btn">Take a look</a>
+        <img src="src/globalytbincome.png" id="right" class="project-pic" alt="" width="50%">
+    </div>
+
+
+
+
+
+    <h2>USA Car Accidents Analysis </h2>
+
+    <div class="subfolder">
+        <p id="left-top">Do you remember the Covid-19 life? The plot shows the car accidents happened in the USA between 2019 to 2020, which is the two consecutive year to compare the life before Covid and the year undergoing covid.</p>
+        <a href="./assignment2/" id="left-bottom" class="btn">Take a look</a>
+        <img src="src/car-accident.png" id="right" class="project-pic" alt="" width="50%">
+    </div>
+
+
+    <div class="subproject">
+        <h2>Some Interesting Plots...</h2>
+        
+        <button class="other-btn" onclick="showVisualization(2)">Game of Throne Character Network</button>
+        <div class="horizontal-container"></div>
+    </div>
+
+</div>
+<footer id="footer-selection"></footer>
+</body>
+
+
+<script>
+
+    $(function(){
+        $('#header-selection').load('./src/head.html');
+    })
+    $(function(){
+        $('#footer-selection').load('./src/footer.html');
+    })
+
+
+
+    function showVisualization(projectNumber) {
+
+        
+        if (projectNumber===1){
+
+        };
+        if (projectNumber===2){
+            show_network_plot()
+
+        };
+
+    
+        }
+    
+        
+    </script>
+</html>

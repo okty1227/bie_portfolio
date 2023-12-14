@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./src/style.css" />
+
+  <base target="_top">
+
+  <body> 
+  <div class="footers">
+  <div class="about-me-section">
+    <h2><span>About Me</span></h2>
+    <p>Hello, I'm Ting, a current Information Science master's student at 
+        Cornell University. Originally from Taiwan, my passion for applying 
+        data to the insurance and finance industries began in my undergraduate years. 
+        Since then, I've delved into a broad spectrum ranging from insurance to 
+        statistics, and currently, I'm immersed in the field of data science at 
+        Cornell. If you find my projects intriguing, feel free to reach out!</p>
+  </div>
+<div class="links-section">
+    <div class="sect-links">
+    <h2><span>Links</span></h2>
+    
+      <p><a href="/aboutMe.html">About Me</a></p>
+      <p><a href="/projects.html">Projects</a></p>
+      <p><a href="https://reurl.cc/V4KlKZ">Resume</a></p>
+    </div>
+    <div class="sect-contacts">
+      <h2 id="idlocate"><span>Contact</span></h2>
+    
+      <p>
+        <img src="./src/linkedin.png"/>
+        <a href="https://www.linkedin.com/in/ting-lai/">LinkedIn</a></p>
+      <p>
+        <img src="./src/github-sign.png"/>
+
+      <a href="https://github.com/okty1227">GitHub</a></p>
+      <p>
+        <img src="./src/email.png"/>
+      <a href="#idlocate" id="clicktoboard" onclick=copyToClipboard()>tl853@cornell.edu</a></p>
+
+        
+    </div>
+  </div>
+</div>
+
+  
+</body>
+<script>
+
+const copyToClipboard = ()=>{
+
+  var element = document.getElementById('clicktoboard');
+
+var range = document.createRange();
+range.selectNode(element);
+
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(range);
+document.execCommand('copy');
+ 
+alert('Email is Copied to Clipboard')
+window.getSelection().removeAllRanges();
+}
+
+
+
+</script>
+</html>
