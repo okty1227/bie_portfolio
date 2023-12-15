@@ -1,76 +1,34 @@
 <html>
 <head>
     <meta charset='UTF-8'>
-    <title>INFO 5100 - Project 2</title>
+    <title>Car Accident Analysis</title>
     <script src='https://d3js.org/d3.v7.min.js'></script>
     <script src='https://d3js.org/topojson.v3.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js'></script>
-    <style>
-        .state {
-            fill: white;
-            stroke: none;
-        }
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="../src/style.css">
 
-        .state-outline {
-            stroke: white;
-            fill: none;
-            stroke-width: 1px;
-        }
-
-        .county {
-            stroke: none;
-        }
-
-        .county-outline {
-            stroke: white;
-            stroke-width: 3px;
-            fill: none;
-        }
-
-        .gridlines line {
-            color: #aaa;
-        }
-
-        .gridlines .domain {
-            stroke: none;
-        }
-
-        text {
-            font-family: garamond;
-            font-size: 14;
-        }
-
-        g {
-            font-family: garamond;
-            font-size: 14;
-        }
-
-        .txt-box{
-            text-anchor: left;
-            fill:black
-        }
-
-        .button-bar {
-            width: 100px;
-            height: 30px;
-            stroke-width: 2px;
-            stroke: #ffb703;
-            top: -100px;
-            left: 850px;
-            font-family: garamond;
-            font-size: 20;
-        }
-    </style>
 </head>
 <body>
+    
+    <nav class="selection-header">
+        <ul>
+          <li><a href="../index.html">About Me</a></li>
+          <li><a href="../projects.html">Project Experience</a></li>
+          <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
+        </ul>
+      </nav>
+    <div class="contents-caraccident">
+        <h1>US Car Accidents Analysis</h1>
     <p>
-        <h1 style='margin-left: 50px;'>US Car Accidents Analysis</h1>
+        Country overview for car accidents during precovid & covid time is provided in the following dashboard. 
+        <br>Hover over a state to check out its 
+        total accidents in a selected year. 
+        The bottom map is a zoomed-in, county-level view for the selected state. 
+        <br>Hover over a county to learn more about accidents severity trends.
+
     </p>
-    <p style='font-family: garamont; font-size: 18px; margin-left: 50px;'>
-        We explored car accidents reports in the US from 2019 to 2020. <br>
-        First, we offer a country overview. <b>Hover over a state</b> to check out its total accidents in a <b>selected year</b>. <br>
-        The bottom map is a zoomed-in, county-level view for the selected state. <b>Hover over a county</b> to learn more about accidents severity trends.
-    </p>
+   
     <p>
         <svg id='state_case' width='800' height='600'></svg>
         <svg id='ranking_state_case' width='400' height='600'></svg>
@@ -79,6 +37,35 @@
         <svg id='county' width='800' height='600'></svg>
         <svg id='severity' width='400' height='600'></svg>
     </p>
+
+<h2>Dashboard Insight</h2>
+<div class="insight">
+    <ul>
+        <li>
+          <strong>Post-Lockdown Travel Surge:</strong>
+          <ul>
+            <li>A noticeable increase in outbound travel is observed in the later stages of the lockdown following the outbreak of the pandemic.</li>
+            <li>The fourth quarter of 2020 shows a distinct rise in the number of car accidents, indicating a surge in mobility accidents.</li>
+          </ul>
+        </li>
+      
+        <li>
+          <strong>Regional Concentration of Post-Pandemic Accidents:</strong>
+          <ul>
+            <li>After the pandemic, car accidents become more concentrated particularly in Florida, with nearly 100% growth in the number of car accidents</li>
+          </ul>
+        </li>
+      
+        <li>
+          <strong>Complementary Relationship Between Travel and Remote Work:</strong>
+          <ul>
+            <li>Insights suggest a complementary relationship between increased travel post-lockdown and the rise of remote work practices.</li>
+            <li>The dashboard highlights challenges in identifying whether the pandemic has contributed to a significant rural influx, as it is difficult to distinguish the factors influencing this trend.</li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    </div>
     <script id='plot1'>
         // state level accidents data
         var dataIsLoaded1 = false;
@@ -359,7 +346,8 @@
                                     }
                                     d3.selectAll('rect.button-bar').style('fill', 'white');
                                     d3.select(this).select('rect').style('fill', '#ffb703');
-                                });;
+                                });
+                                
                 yearButton.append('rect')
                         .attr('class','button-bar')
                         .attr('x', 0)

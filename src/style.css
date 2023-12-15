@@ -9,7 +9,10 @@ body {margin: 0;}
 h1{
     font-size: clamp(2rem, 3vw, 4rem);
     margin-top: 5%;
+}
+.headtitle {
     margin-left: 3%;
+
 }
 .content-project{
     margin-left: 3%;
@@ -63,10 +66,11 @@ a:hover {
 
   #left-bottom {
     grid-area: bottom-left;
-    margin-top: 3%;
-    margin-inline: 20%;
-    padding: 3%;
-  }
+    margin-inline: 25%;
+    align-self: center;
+    padding-block: 1%;
+
+}
 
   #right {
     grid-area: top-right;
@@ -87,7 +91,9 @@ a:hover {
     }
 
     #left-bottom {
-        margin-inline: 0; /* 移除水平边距 */
+        margin-inline: 25%  ;
+    align-self: center;
+
     }
 }
 
@@ -132,7 +138,7 @@ a:hover {
     text-decoration: none;
     background-color: #808080;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 25px;
     border: none;
     transition: opacity 0.3s ease;
 }
@@ -142,11 +148,12 @@ a:hover {
     text-decoration: none;
     background-color: #808080;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 25px;
     border: none;
     transition: opacity 0.3s ease;
     padding-inline: 5%;
-    padding-block: 2%;
+    padding-block: 1%;
+    align-self: center;
 }
 .btn:hover, .other-btn:hover{
     opacity: 70%;
@@ -170,7 +177,11 @@ a:hover {
     margin-top: 10px;
     padding-top: 2%;
 }
-
+@media screen and (max-width: 1200px) {
+.footers{
+    display: none;
+}
+  }
 
   .about-me-section {
     flex: 1; 

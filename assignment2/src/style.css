@@ -1,0 +1,56 @@
+.contents-caraccident{
+    margin-left: 3%;
+}
+.state {
+    fill: white;
+    stroke: none;
+}
+
+.state-outline {
+    stroke: white;
+    fill: none;
+    stroke-width: 1px;
+}
+
+.county {
+    stroke: none;
+}
+
+.county-outline {
+    stroke: white;
+    stroke-width: 3px;
+    fill: none;
+}
+
+.gridlines line {
+    color: #aaa;
+}
+
+.gridlines .domain {
+    stroke: none;
+}
+
+text {
+    font-size: 14;
+}
+
+g {
+    font-size: 14;
+}
+
+.txt-box{
+    text-anchor: left;
+    fill:black
+}
+
+.button-bar {
+    width: 100px;
+    height: 30px;
+    stroke-width: 2px;
+    stroke: #ffb703;
+    top: -100px;
+    left: 850px;
+    font-size: 20;
+}
+.insight{margin-right: 8%;
+line-height: 40px;}

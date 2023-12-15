@@ -4,10 +4,22 @@
     <title>Data Scientist Job Recomendation Dashboard</title>
     <script src='https://d3js.org/d3.v7.min.js'></script>
     <script src='https://d3js.org/topojson.v3.min.js'></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../src/style.css">
 
 </head>
 <body>
+    <nav class="selection-header">
+        <ul>
+          <li><a href="../index.html">About Me</a></li>
+          <li><a href="../projects.html">Project Experience</a></li>
+          <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
+        </ul>
+      </nav>
+
     <p>
         <h1 style='font-family: Impact; letter-spacing: 0.5; margin-left: 50px; color: #444'><span style='font-family: Impact; color: #4285F4'>Data Science</span> Job Market Compass</h1>
     </p>
@@ -239,7 +251,7 @@
             </div>
         </div>
     </p>
-
+    <footer id="footer-selection"></footer>
     <script id='kaylen'>
         /* US state map */
         const map = d3.select('svg#map');
@@ -711,9 +723,14 @@
             }
         }
 
-        function generateRandom() {
-            return Math.random()*jitterScale - jitterScale/2;
-        }
+
+        $(function(){
+        $('#header-selection').load('../src/head.html');
+    })
+
+
      </script>
+
+
 </body>
 </html>

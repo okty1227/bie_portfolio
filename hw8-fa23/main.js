@@ -62,9 +62,9 @@ async function draw_network(path_game_throne){
 
     let circles = network_layer.selectAll('circle.node').data(nodes)
                                 .join( enter => enter.append('circle')
-                                                    .attr("r", 5)
+                                                    .attr("r", 8)
                                                     .attr("cx", 0)
-                                                    .attr("cy", -10)
+                                                    .attr("cy", 0)
                                                     .attr('class','node')
                                                     .attr("stroke-width", 1)
                                                     .attr("stroke", "black") //black
@@ -100,7 +100,7 @@ async function draw_network(path_game_throne){
     d.fx = event.x;
     d.fy = event.y;
     label.attr("x",event.x -30 ).attr("y",event.y-5);
-    character.attr("x",event.x -30).attr("y",event.y-25);
+    character.attr("x",event.x -30).attr("y",event.y-35);
     }
     function dragend(event, d) {
     // End dragging a circle, make sure the simulation has enough alpha left to fix things afterwards
