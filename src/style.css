@@ -11,17 +11,16 @@ h1{
     margin-top: 5%;
 }
 .headtitle {
-    margin-left: 3%;
+    margin-left: 10%;
 
 }
 .content-project{
-    margin-left: 3%;
+    margin-left: 13%;
 }
 .content-caption{
 
     font-size: 30px;
     line-height: 40px;
-    margin-left: 2%;
 }
 h2{
     font-size: clamp(2rem, 2vw, 3rem);
@@ -42,7 +41,8 @@ a:hover {
 .subfolder {
     overflow:visible;
     margin-bottom: 10%;
-    font-size: 30px;
+    font-size: 24px;
+    white-space: nowrap;
     line-height: 45px;
 
     margin-top: 1%;
@@ -225,14 +225,14 @@ height: 800px; /* Expanded width on hover, adjust as needed */
 }
 
 nav ul{
-
+    
     list-style-type: none; 
     text-align: center;
     display: flex;
     background-color: #ffffff;
 }
 nav li{
-    margin-left: 10%;
+    padding-left: 7%;
     color: #0b0b0b;
     font-size: larger;
     padding-right: max(10,5%);

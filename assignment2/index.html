@@ -18,25 +18,23 @@
           <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
         </ul>
       </nav>
-    <div class="contents-caraccident">
-        <h1>US Car Accidents Analysis</h1>
-    <p>
-        Country overview for car accidents during precovid & covid time is provided in the following dashboard. 
-        <br>Hover over a state to check out its 
-        total accidents in a selected year. 
-        The bottom map is a zoomed-in, county-level view for the selected state. 
-        <br>Hover over a county to learn more about accidents severity trends.
+        <h1 class="headtitle">US Car Accidents Analysis</h1>
+        <div class="contents-caraccident">
 
-    </p>
+        <h2>User Guide</h2>
+        <ul>
+            <li>Hover over a state to check out its total accidents in a selected year. 
+                <li>Click on states and the bottom map will appear, with county-level 
+                    view for the selected state.</li>
+                <li>Hover over a county to learn more about accidents severity trends.</li>
+        </ul>
    
-    <p>
         <svg id='state_case' width='800' height='600'></svg>
         <svg id='ranking_state_case' width='400' height='600'></svg>
-    </p>
-    <p>
+
         <svg id='county' width='800' height='600'></svg>
         <svg id='severity' width='400' height='600'></svg>
-    </p>
+
 
 <h2>Dashboard Insight</h2>
 <div class="insight">
@@ -66,6 +64,8 @@
       </ul>
       </div>
     </div>
+
+
     <script id='plot1'>
         // state level accidents data
         var dataIsLoaded1 = false;

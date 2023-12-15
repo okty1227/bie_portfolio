@@ -5,7 +5,6 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
     
     <link rel="stylesheet" href="style.css">
@@ -13,23 +12,34 @@
 
 </head>
 <body>
-
-
-    <h1>Is Being a top YouTuber in WHICH country an ideal career?</h1>
+    <nav class="selection-header">
+        <ul>
+          <li><a href="../index.html">About Me</a></li>
+          <li><a href="../projects.html">Project Experience</a></li>
+          <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
+        </ul>
+      </nav>
+    <h1 class="headtitle">Is Being a top YouTuber in WHICH country an ideal career?</h1>
+    <div class="contents-income">
     <p>
-        Becoming Youtuber is one of the most popular dream jobs in these days. However, is it a financially ideal carreer?<br>
-        We take country's economic development into consideration, to see whether the average income made by youtubers can beat the living standard in their country.<br>
+        Becoming Youtuber is one of the most popular dream jobs in these days. 
+        However, is it a financially ideal carreer?<br>
+        Taking country's economic development into consideration to compare the income made
+         by youtubers with the living standard.<br>
         The higher the number is, the more ideal being youtuber in their country.</p>
     <svg id="map" style="background: #ffffff;"></svg>
-
-    <h1> YouTube channel type is the most profitable in the U.S?</h1>
+</div>
+    <h1 class="headtitle"> YouTube channel type is the most profitable in the U.S?</h1>
+    <div class="contents-income">
     <p>
         Focusing on top US YouTubers, we dive deeper into earnings by channel type.<br>
         We take the average lowest yearly earning as the baseline for each channel type, and plot the average highest earning and the maximum highest earning.<br>
         The larger the circle is, the more profit a channel type could earn. The more saturated the color is, the more common to achieve the earning.
-    
+    <br><br>
     <svg id="plot" width="1200" height="600"></svg>
+</div>
 </p>
+
 <script>
     let svg = d3.select('svg#map')
             .attr('width',1200)
@@ -37,22 +47,22 @@
   
     const width = svg.attr('width');
     const height = svg.attr('height');
-    const margin = {top:20, right:80, bottom:30, left:20};
-    
-    const map_inside_width = width-margin.right-margin.left;
-    const map_inside_height = height-margin.top-margin.bottom;
+    const chartMargins = {top: 10, right: 10, bottom: 10, left: 10};
+    const map_inside_width = width-chartMargins.right-chartMargins.left;
+    const map_inside_height = height-chartMargins.top-chartMargins.bottom;
     const title_coord = (map_inside_height)/8;
   
     const title_name = "Top YouTubers' Income compared to Country GDP";
   
     const map = svg.append('g')
-                    .attr("transformation",`translate(${margin.left},${margin.top})`);
+                    .attr("transformation",`translate(${chartMargins.left},${chartMargins.top})`);
   
     let title =  svg.append('text')
-                    .text(title_name)
+                    .text(title_name)                
                     .attr('x', map_inside_width/2) //set x coord
-                    .attr('y', title_coord) //set x coord
+                    .attr('y', title_coord-24) //set x coord
                     .attr('text-anchor','middle')
+                .style('font-weight','bold')                    
                     .style('font-size', 24);
 
     const requestData = async function(){        
@@ -71,14 +81,14 @@
   
       var legend = d3.legendColor()
                     .labelFormat(d3.format(".2f"))
-                    .title("Color Legend")
+                    .title("Standard Num")
                     .scale(colorScaler);
        
       map.append('g')
           .call(legend);
   
       d3.select('.legendCells')
-        .attr('transform',`translate(${map_inside_width-80},${margin.top+10})`)
+        .attr('transform',`translate(${map_inside_width-80},${chartMargins.top+10})`)
         .style('font-family','georgia')
         .style('font-size', 14);
   
@@ -86,7 +96,7 @@
                     .style('font-size','0.8em')          
                     .text(function(element,i){
                       if (i==0) {
-                        return ''
+                        return 'No Value'
                       } else {
                         return element}
                     });
@@ -98,7 +108,7 @@
                                           }
                                         })      
       d3.selectAll('.legendTitle')              
-      .attr('transform',`translate(${map_inside_width-80},${margin.top})`)
+      .attr('transform',`translate(${map_inside_width-80},${chartMargins.top})`)
       .style('font-size',14)
       .style('font-family','georgia');
   
@@ -146,7 +156,6 @@
                     mid: 'Average highest yearly earning w.r.t. Average lowest yearly earning',
                     outer: 'Max highest yearly earning w.r.t. Average lowest yearly earning'};
     // the chart area: axis labels + plot + color annotations
-    const chartMargins = {top: 10, right: 10, bottom: 10, left: 10};
     const chartWidth = width2;
     const chartHeight = height2 - titleHeight - markHeight - chartMargins.top - chartMargins.bottom;
     const viewsLabelText = 'Total Views';
@@ -178,7 +187,6 @@
     let plot = chart.append('g').attr('transform',`translate(${plotMargins.left},${plotMargins.top})`);
     let colorAnnotation = chart.append('g').attr('transform',`translate(${chartWidth-colorWidth},${plotMargins.top})`);
     d3.csv('data/youtube_us_type.csv', d3.autoType).then((data) => {
-        console.log(data);
 
         // scales
         // subscribers -> x position
@@ -217,7 +225,8 @@
             .attr('y', titleHeight / 2)
             .style('font-size', 24)
             .attr('text-anchor', 'middle')
-            .attr('alignment-baseline', 'middle');
+            .attr('alignment-baseline', 'middle')
+            .style('font-weight','bold');
     }
 
     function drawLabels(chart) {
@@ -369,6 +378,12 @@
             .attr('font-size', 12)
             .attr('alignment-baseline', 'middle');
     }
+    $(function(){
+        $('#header-selection').load('../src/head.html');
+    })
+    $(function(){
+        $('#footer-selection').load('../src/footer.html');
+    })
 </script>
 </body>
 </html>

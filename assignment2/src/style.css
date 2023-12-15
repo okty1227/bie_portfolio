@@ -1,5 +1,5 @@
 .contents-caraccident{
-    margin-left: 3%;
+    margin-left: 13%;
 }
 .state {
     fill: white;
@@ -53,4 +53,10 @@ g {
     font-size: 20;
 }
 .insight{margin-right: 8%;
-line-height: 40px;}
+    width: 1200px;
+}
+
+ul{
+    font-size: 100%;
+    line-height: 40px;
+}
