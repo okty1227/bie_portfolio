@@ -1,6 +1,5 @@
 *{
     font-family: 'League Spartan';
-    font-size: 110%;
 }
 html{
     scroll-behavior: smooth;
@@ -14,13 +13,18 @@ h1{
     margin-left: 10%;
 
 }
-.content-project{
+.content-project, .content-job, .contents-caraccident{
     margin-left: 13%;
 }
+
 .content-caption{
 
     font-size: 30px;
     line-height: 40px;
+}
+.insight{
+    margin-right: 8%;
+    line-height: 120%;
 }
 h2{
     font-size: clamp(2rem, 2vw, 3rem);
@@ -238,3 +242,4 @@ nav li{
     padding-right: max(10,5%);
     font-weight: bolder;
 }
+

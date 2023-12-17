@@ -18,136 +18,96 @@
           <li><a href="../projects.html">Project Experience</a></li>
           <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
         </ul>
-      </nav>
+    </nav>
 
-    <p>
-        <h1 style='font-family: Impact; letter-spacing: 0.5; margin-left: 50px; color: #444'><span style='font-family: Impact; color: #4285F4'>Data Science</span> Job Market Compass</h1>
-    </p>
-    <p style='font-family: Helvetica; font-size: 16px; font-weight: lighter; margin-left: 50px; color: #444;'>
-        We offer an overview of data science job market growth, and recommend specific job postings for individuals. <br>
-        First, we plot company headquarters across US. <b>Move the slider</b> to see how companies emerged in the past half century.<br>
-        We then explore job market growth by industry. <b>Click on a button</b> to check out some popular insustries for data scientists.<br>
-    </p>
+
+        <h1 class="headtitle" >Data Science Job Market Compass</h1>
+        <div class="content-job">
+           
+            <h2> User Guide </h2>
+
+                <ul>
+                    <li>
+                        Move the slider to see how companies emerged in the past half century.
+                    </li>
+                    <li>Click on a button</b> to check out some popular insustries for data scientists.</li>
+                </ul>
 
     <p style='margin-top: 30;'>
         <svg id='map' width='750' height='550'>
-            <text x='50' y='10'  class="headernum"  alignment-baseline='middle' text-anchor='left' fill='#444'>
-                I.
+            <text x='50' y='14'  class="headernum"  >
+                I. 
             </text>
-            <text x='70' y='10' alignment-baseline='middle' class="headername">
+            <text x='70' y='14' class="headername">
                 Which state has more data science company headquarters?
             </text>
         </svg>
         <svg id='bar' width='450' height='550'>
-            <text x='10' y='10' class="headernum" alignment-baseline='middle' text-anchor='left' fill='#444'>
+            <text x='10' y='14'  class="headernum" >
                 II.
             </text>
-            <text x='40' y='10' class="headername" alignment-baseline='middle' >
+            <text x='40' y='14' class="headername" >
                 Which industry needs data scientist?
             </text>
         </svg>
+        <div id="barButton"></div>
     </p>
 
+<div class="job-illustration">
     <p style='margin-left: 50; margin-top: 30; font-size: 16;'>
         Now with more information about the market, let's find out whether we are a good fit as a data scientist!<br>
         Fill out the questionnaire to get matched to real job postings. <br>
         After submitting your preferences, <b>hover over a dot</b> from the coordinates to learn more about the recommendation.<br>
         You can modify your answers to get new recommendations.
     </p>
+</div>
 
-    <p style='margin-top: 30;'>
+    <p>
         <div id='jobSelect'>
             <div id='filter'>
-                <span class="headernum" >III.&nbsp;</span>
-                <text x='10' y='12'   alignment-baseline='middle' class="headername">
+                <span class="headernum" >III. </span>
+                <text x='10' y='12' class="headername">
                     Looking to start a career in data science?
                 </text>
  
-                <p style='font-size: 16'>
+                <p >
                     Please fill out this form to find jobs that suit you the best. (5 questions in total)
                 </p>
+                <div class='grid'>
     
                 <form>    
-                    <div class='grid'>
-                        <div style='font-size: 16' class='q1'>
-                            <span style='font-weight: normal;'>1. Your skills</span><br>
+                        <div class='q1'>
+                            <span>1. Skills you have</span> 
+                            <br>
                             <input type='checkbox' name='skills' id='python' value='python' checked>
                             <label for='python'>Python</label>
                             <br>
                             <input type='checkbox' name='skills' id='r' value='r'>
                             <label for='r'>R</label>
                             <br>
+ 
                             <input type='checkbox' name='skills' id='spark' value='spark'>
                             <label for='spark'>Spark</label>
                             <br>
+
                             <input type='checkbox' name='skills' id='aws' value='aws'>
                             <label for='aws'>AWS</label>
                             <br>
-                            <input type='checkbox' name='skills' id='excel' value='excel' checked>
-                            <label for='excel'>Excel</label>
-                        </div>
-    
-                        <div class='q2'>
-                            <br><span style='font-weight: normal;'>2.Your Preferred Location</span><br>
 
+                            <input type='checkbox' name='skills' id='excel' value='excel'>
+                            <label for='excel'>Excel</label>
+                        </div> </form>
+                    <form>
+                        <div class='q2'>
+                            
+                            <span>2. Preferred Location</span> 
                             <label for='states'>Select a state:</label>
-                            <select id='states' name='states'>
-                                <option value='Alabama'>Alabama</option>
-                                <option value='Alaska'>Alaska</option>
-                                <option value='Arizona'>Arizona</option>
-                                <option value='Arkansas'>Arkansas</option>
-                                <option value='California' selected>California</option>
-                                <option value='Colorado'>Colorado</option>
-                                <option value='Connecticut'>Connecticut</option>
-                                <option value='Delaware'>Delaware</option>
-                                <option value='Florida'>Florida</option>
-                                <option value='Georgia'>Georgia</option>
-                                <option value='Hawaii'>Hawaii</option>
-                                <option value='Idaho'>Idaho</option>
-                                <option value='Illinois'>Illinois</option>
-                                <option value='Indiana'>Indiana</option>
-                                <option value='Iowa'>Iowa</option>
-                                <option value='Kansas'>Kansas</option>
-                                <option value='Kentucky'>Kentucky</option>
-                                <option value='Louisiana'>Louisiana</option>
-                                <option value='Maine'>Maine</option>
-                                <option value='Maryland'>Maryland</option>
-                                <option value='Massachusetts'>Massachusetts</option>
-                                <option value='Michigan'>Michigan</option>
-                                <option value='Minnesota'>Minnesota</option>
-                                <option value='Mississippi'>Mississippi</option>
-                                <option value='Missouri'>Missouri</option>
-                                <option value='Montana'>Montana</option>
-                                <option value='Nebraska'>Nebraska</option>
-                                <option value='Nevada'>Nevada</option>
-                                <option value='New Hampshire'>New Hampshire</option>
-                                <option value='New Jersey'>New Jersey</option>
-                                <option value='New Mexico'>New Mexico</option>
-                                <option value='New York'>New York</option>
-                                <option value='North Carolina'>North Carolina</option>
-                                <option value='North Dakota'>North Dakota</option>
-                                <option value='Ohio'>Ohio</option>
-                                <option value='Oklahoma'>Oklahoma</option>
-                                <option value='Oregon'>Oregon</option>
-                                <option value='Pennsylvania'>Pennsylvania</option>
-                                <option value='Rhode Island'>Rhode Island</option>
-                                <option value='South Carolina'>South Carolina</option>
-                                <option value='South Dakota'>South Dakota</option>
-                                <option value='Tennessee'>Tennessee</option>
-                                <option value='Texas'>Texas</option>
-                                <option value='Utah'>Utah</option>
-                                <option value='Vermont'>Vermont</option>
-                                <option value='Virginia'>Virginia</option>
-                                <option value='Washington'>Washington</option>
-                                <option value='West Virginia'>West Virginia</option>
-                                <option value='Wisconsin'>Wisconsin</option>
-                                <option value='Wyoming'>Wyoming</option>
-                            </select>
+                            <select id='states' name='states'></select>
     
-                        </div>
+                        </div></form>
     
-                        <div class='q3'>
-                            <br><span style='font-weight: normal;'>3.Your Target Salary</span><br>
+                        <form> <div class='q3'>
+                            3. Target Salary 
 
                             <input type='radio' name='salary' id='lowestSalary' value='lowestSalary'>
                             <label for='lowestSalary'> Under 50k</label><br>
@@ -163,96 +123,123 @@
     
                             <input type='radio' name='salary' id='highestSalary' value='highestSalary'>
                             <label for='highestSalary'> More than 250k</label><br>
-                        </div>
+                        </div> </form>
     
-                        <div class='q4'>
-                            <span style='font-weight: normal;'>4.Your Preferred Company Size</span><br>
-                            <label>
-                                <input type='radio' name='companySize' value='Under 500' checked>
-                                Under 500
-                                <img src='data/people.svg' alt='People SVG'>
-                            </label><br>
-    
-                            <label>
-                                <input type='radio' name='companySize' value='500 to 1000'>
-                                500 to 1000
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                            </label><br>
-    
-                            <label>
-                                <input type='radio' name='companySize' value='1000 to 5000'>
-                                1000 to 5000
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                            </label><br>
-    
-                            <label>
-                                <input type='radio' name='companySize' value='More than 5000'>
-                                More than 5000
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                                <img src='data/people.svg' alt='People SVG'>
-                            </label><br>
-                        </div>
-
-                        <div class='q5'>
-                            <br><span style='font-weight: normal;'>5.Your Preferred Industry</span><br>
-                            <label for='industry1'>
-                                <input type='checkbox' id='industry1' name='industries' value='Information Technology' checked>
-                                Information Technology
-                            </label><br>
-        
-                            <label for='industry2'>
-                                <input type='checkbox' id='industry2' name='industries' value='Biotech & Pharmaceuticals' checked>
-                                Biotech & Pharmaceuticals
-                            </label><br>
-        
-                            <label for='industry3'>
-                                <input type='checkbox' id='industry3' name='industries' value='Healthcare'>
-                                Healthcare
-                            </label><br>
-        
-                            <label for='industry4'>
-                                <input type='checkbox' id='industry4' name='industries' value='Business Services'>
-                                Business Services
-                            </label><br>
-        
-                            <label for='industry5'>
-                                <input type='checkbox' id='industry5' name='industries' value='Finance'>
-                                Finance
-                            </label><br>
-        
-                            <label for='industry6'>
-                                <input type='checkbox' id='industry6' name='industries' value='Other'>
-                                Other
-                            </label><br>
-                        </div>
-                    </div>
-    
-                    <div style='margin-left: 150px; margin-top: 40px; margin-bottom: 20px;'>
-                        <button type='button' class='submit' onclick='handleSubmit()' style='background-color: #4285F4;'>Get Recommendations</button>
+                        <form>         <div class='q4'>
+                             4.Your Preferred Company Size
+                             <ul id="compSize" class="surveyList"></ul> </div>
+                            </form><form> 
+                        <div class='q5'> 5.Your Preferred Industry 
+                            <ul id="industryList" class="surveyList"></ul>
+                       
                     </div>
                 </form>
             </div>
-    
+                        <button type='button' class='submit' onclick='handleSubmit()' style='background-color: #4285F4;'>Get Recommendations</button>
+
+           
+        </div>
             <div id='pointsScale'>
-                <svg width='540' height='500' id='quadrant'>
-                    <text x='20' y='12' class="headernum" alignment-baseline='middle' text-anchor='left' fill='#444'>
-                        IV.
+                
+                    <text x='20' y='12' class="headernum">
+                        IV. 
                     </text>
-        alignment-baseline: middle;  
-                    <text x='50' y='12' class="headername" alignment-baseline='middle' >
-                        Opportunities for you
+                    <text x='50' y='12' class="headername">
+                         Opportunities for you
                     </text>
-                </svg>
+                    <svg width='540' height='500' id='quadrant'> </svg>
             </div>
         </div>
     </p>
+
     <footer id="footer-selection"></footer>
-    <script id='kaylen'>
+ 
+    <script id='overview'>
+
+        const statesSelection = document.getElementById('states');
+        const states = [
+            'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+            'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+            'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
+            'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina',
+            'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+            'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ];
+        states.forEach(state => {
+            const option = document.createElement('option');
+            if (state==='California'){
+                option.selected = true
+            }
+            option.value = state;
+            option.textContent = state;
+            statesSelection.appendChild(option);
+        })
+
+        const industriesSelectors = [
+            { id: 'industry1', value: 'Information Technology', checked: true },
+            { id: 'industry2', value: 'Biotech & Pharmaceuticals', checked: true },
+            { id: 'industry3', value: 'Health Care', checked: false },
+            { id: 'industry4', value: 'Business Services', checked: false },
+            { id: 'industry5', value: 'Finance', checked: false },
+            { id: 'industry6', value: 'Other', checked: false },
+        ];
+
+        const industries = industriesSelectors.map(d=>d['value'])
+
+        const industrySelection = document.getElementById('industryList') 
+        industriesSelectors.forEach(industry=>{
+            const li = document.createElement('li')
+            const label = document.createElement('label')
+            label.htmlFor = industry.id
+            const input = document.createElement('input')
+
+            input.type = 'checkbox'
+            input.id = industry.id
+            input.name = 'industries'
+            input.value = industry.value
+            input.checked = industry.checked
+
+            label.appendChild(input)
+            label.appendChild(document.createTextNode(industry.value));
+            
+            li.appendChild(label);
+            industrySelection.append(li)
+
+        })
+
+
+        const createCompanySizeOption = function(value, nametag, imgCount){
+            const li = document.createElement('li')
+            const lable = document.createElement('lable')
+            const input = document.createElement('input')
+
+            input.name = 'companySize'
+            input.value = value
+            input.type = 'radio'
+            input.checked = (value === '500 to 1000') ? true : false;
+
+            for(let i = 1; i<=imgCount;i++){
+                
+                const pplImg = document.createElement('img')
+                pplImg.src = 'data/people.svg'
+                pplImg.alt = 'pplSvg'
+
+            }
+            
+            lable.appendChild(input);
+            lable.appendChild(document.createTextNode(nametag));
+            li.appendChild(lable)
+            return li
+        }
+
+
+        question4Container = document.getElementById('compSize')
+        question4Container.append(createCompanySizeOption('Under 500', 'Under 500', 1));
+        question4Container.append(createCompanySizeOption('500 to 1000', '500 to 1000', 2));
+        question4Container.append(createCompanySizeOption('1000 to 5000', '1000 to 5000', 3));
+        question4Container.append(createCompanySizeOption('More than 5000', 'More than 5000', 4));
+
+
         /* US state map */
         const map = d3.select('svg#map');
         const mapWidth = 650;
@@ -407,12 +394,11 @@
         const chartWidth = 360;
         const chartHeight = 340;
         const barWidth = 20;
-        const industries = ['Information Technology', 'Healthcare', 'Biotech & Pharmaceuticals', 'Business Services', 'Insurance', 'Finance', 'Manufacturing', 'Other'];
         const industryColors = {'Information Technology': '#3a86ff', 'Biotech & Pharmaceuticals': '#06d6a0', 'Business Services': '#9b5de5',
-                                'Insurance': '#ff006e', 'Healthcare': '#ffbc42', 'Finance': '#8f2d56', 'Manufacturing':'#dddf00', 'Other': '#444'};
-        const buttonWidth = {'Information Technology': 180, 'Biotech & Pharmaceuticals': 200, 'Healthcare': 100, 'Business Services': 150, 'Insurance': 90, 'Finance': 80, 'Manufacturing': 120, 'Other': 60};
-        const buttonX = {'Information Technology': 0, 'Biotech & Pharmaceuticals': 190, 'Healthcare': 0, 'Business Services': 110, 'Insurance': 270, 'Finance': 0, 'Manufacturing': 90, 'Other': 220};
-        const buttonY = {'Information Technology': 0, 'Biotech & Pharmaceuticals': 0, 'Healthcare': 35, 'Business Services': 35, 'Insurance': 35, 'Finance': 70, 'Manufacturing': 70, 'Other': 70};
+                                'Insurance': '#ff006e', 'Health Care': '#ffbc42', 'Finance': '#8f2d56', 'Manufacturing':'#dddf00', 'Other': '#444'};
+        const buttonWidth = {'Information Technology': 180, 'Biotech & Pharmaceuticals': 200, 'Health Care': 100, 'Business Services': 150, 'Insurance': 90, 'Finance': 80, 'Manufacturing': 120, 'Other': 60};
+        const buttonX = {'Information Technology': 0, 'Biotech & Pharmaceuticals': 200, 'Health Care': 0, 'Business Services': 200, 'Insurance': 270, 'Finance': 0, 'Manufacturing': 90, 'Other': 220};
+        const buttonY = {'Information Technology': 40, 'Biotech & Pharmaceuticals': 0, 'Health Care': 0, 'Business Services': 40, 'Insurance': 35, 'Finance': 80, 'Manufacturing': 80, 'Other': 80};
         const buttonHeight = 20;
 
         // bar chart components
@@ -671,7 +657,11 @@
                                         });
             noMatch.attr('visibility', filtered.length === 0 ? '' : 'hidden');
             axis.attr('opacity', filtered.length === 0 ? 0.5 : 1);
-
+            console.log(prefState)
+            console.log(prefCompanySize)
+            console.log(prefIndustries )
+            console.log(prefSalary)
+            console.log(prefSkills)
             // draw one point for each matched job posting
             let points = jobs.selectAll('circle.job').data(filtered).join('circle')
                             .attr('class', 'job')

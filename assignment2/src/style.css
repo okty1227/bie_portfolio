@@ -1,9 +1,8 @@
-.contents-caraccident{
-    margin-left: 13%;
-}
+
 .state {
     fill: white;
     stroke: none;
+    cursor: pointer;
 }
 
 .state-outline {
@@ -14,6 +13,7 @@
 
 .county {
     stroke: none;
+
 }
 
 .county-outline {
@@ -51,12 +51,17 @@ g {
     top: -100px;
     left: 850px;
     font-size: 20;
-}
-.insight{margin-right: 8%;
-    width: 1200px;
+    cursor: pointer;
 }
 
-ul{
-    font-size: 100%;
-    line-height: 40px;
+.selector-content{
+    text-anchor:middle;
+}
+
+.year-btn{
+    text-anchor:middle;
+    alignment-baseline:middle;
+    font-size:18px;
+    cursor: pointer;
+
 }

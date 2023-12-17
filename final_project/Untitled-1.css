@@ -1,0 +1,51 @@
+// 創建一個函式來動態生成單個選項的 HTML
+function createCompanySizeOption(value, label, imgCount) {
+    const labelElement = document.createElement('label');
+
+    const inputElement = document.createElement('input');
+    inputElement.type = 'radio';
+    inputElement.name = 'companySize';
+    inputElement.value = value;
+    if (value === 'Under 500') {
+        inputElement.checked = true;
+    }
+
+    labelElement.appendChild(inputElement);
+    labelElement.appendChild(document.createTextNode(` ${label}`));
+
+    // 動態添加指定數量的圖片
+    for (let i = 0; i < imgCount; i++) {
+        const imgElement = document.createElement('img');
+        imgElement.src = 'data/people.svg';
+        imgElement.alt = 'People SVG';
+        labelElement.appendChild(imgElement);
+    }
+
+    // 返回創建的 label 元素
+    return labelElement;
+}
+
+// 獲取包含所有問題的容器元素
+const container = document.getElementById('container');
+
+// 創建問題 4 的容器元素
+const question4Container = document.createElement('div');
+question4Container.className = 'q4';
+
+// 問題 4 的標題
+const question4Title = document.createElement('p');
+question4Title.textContent = '4. Company Size';
+question4Container.appendChild(question4Title);
+
+// 問題 4 中的選項
+question4Container.appendChild(createCompanySizeOption('Under 500', 'Under 500', 1));
+question4Container.appendChild(createCompanySizeOption('500 to 1000', '500 to 1000', 2));
+question4Container.appendChild(createCompanySizeOption('1000 to 5000', '1000 to 5000', 3));
+question4Container.appendChild(createCompanySizeOption('More than 5000', 'More than 5000', 4));
+
+// 將問題 4 容器元素添加到包含所有問題的容器中
+container.appendChild(question4Container);
+</script>
+
+<!-- 在這裡添加一個容器元素，以包含問題 4 -->
+<div id="container"></div>

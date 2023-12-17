@@ -22,7 +22,7 @@
         <div class="contents-caraccident">
 
         <h2>User Guide</h2>
-        <ul>
+        <ul >
             <li>Hover over a state to check out its total accidents in a selected year. 
                 <li>Click on states and the bottom map will appear, with county-level 
                     view for the selected state.</li>
@@ -354,8 +354,8 @@
                         .attr('y', 0)
                         .attr('rx', 15)
                         .style('fill', i === 0 ? '#ffb703' : 'white');        
-                yearButton.append('text').text(d).attr('x', 50).attr('y', 18).attr('text-anchor', 'middle')
-                            .attr('alignment-baseline', 'middle').style('font-size', 18);
+                yearButton.append('text').text(d).attr('x', 50).attr('y', 18).attr('class','year-btn')
+
             })
         };
         drawBarButton();
@@ -417,8 +417,7 @@
             countyLegends.push(countyColorLegend.append('text')
                             .attr('x', countyColorWidth + i*countyColorWidth)
                             .attr('y', 30)
-                            .attr('text-anchor', 'middle')
-                            .attr('alignment-baseline', 'middle')
+                            .attr('class','selector-content')
                             .style('font-size', 12));
         }
         countyColorLegend.append('text').text('County annual accidents')
@@ -474,10 +473,11 @@
         let stateText = severity.append('text').text('')
                                 .attr('x', severityWidth / 2)
                                 .attr('y', textHeight / 2)
-                                .attr('text-anchor', 'middle')
-                                .attr('alignment-baseline', 'middle')
+                                .attr('class','selector-content')
+
                                 .style('font-size', 24);
         let severityChart = severity.append('g').attr('transform', `translate(0, ${textHeight})`);
+
         const quarters = ['1st Quarter', '2nd Quarter', '3rd Quarter', '4th Quarter'];
         let quarterScale = d3.scalePoint().domain(quarters)
                                         .range([0, sevChartWidth])
@@ -485,7 +485,7 @@
         let bottomAxis = d3.axisBottom(quarterScale);
         severityChart.append('g')
                 .attr('class', 'x axis')
-                .attr('transform', `translate(${sevMargins.left}, ${sevChartHeight+sevMargins.top})`)
+                .attr('transform', `translate(${sevMargins.left}, ${sevChartHeight + sevMargins.top})`)
                 .call(bottomAxis);
         var leftAxisLabels = severityChart.append('g')
                                         .attr('class', 'y axis')
