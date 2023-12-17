@@ -4,6 +4,17 @@
 html{
     scroll-behavior: smooth;
 }
+button{
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    font-size: 90%;
+    cursor: pointer;
+
+}
 body {margin: 0;}
 h1{
     font-size: clamp(2rem, 3vw, 4rem);
@@ -37,7 +48,6 @@ a {
 }
 
 a:hover {
-    font-size: 110%; 
     text-decoration: underline;
 }
 
@@ -70,9 +80,10 @@ a:hover {
 
   #left-bottom {
     grid-area: bottom-left;
-    margin-inline: 25%;
+    margin-inline: 30%;
     align-self: center;
     padding-block: 1%;
+    font-size: 100%s;
 
 }
 
@@ -83,8 +94,8 @@ a:hover {
 
   @media screen and (max-width: 1300px) {
     .subfolder {
-        grid-template-columns: 1fr; /* 单列布局 */
-        grid-template-rows: 1fr; /* 自适应行高 */
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr;  
         grid-template-areas:
             "top-left"
             "top-right"
@@ -108,10 +119,11 @@ a:hover {
     margin-top: min(3%,20px);
     margin-left: min(5%,20px);
 }
+
 @media screen and (max-width: 1200px) {
     .content1,.content2 {
-      flex-direction: column; /* 在小屏幕上切换为纵向布局 */
-      align-items: center; /* 在纵向布局中居中对齐 */
+      flex-direction: column;  
+      align-items: center;  
     }
   }
 .project-pic{
@@ -122,9 +134,9 @@ a:hover {
 .img-ill {  
     flex: 1;
     margin-left: 10%;
+    
 }
 .campus-ill{
-    
     border-radius: 50%;
     overflow: visible; 
 }
@@ -135,19 +147,11 @@ a:hover {
 
 }
 .btn {
-    display: inline-block;
-    
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #808080;
-    color: #ffffff;
-    border-radius: 25px;
-    border: none;
+    padding-inline: 10%;
+    /* font-size: 90%; */
     transition: opacity 0.3s ease;
 }
 .other-btn{
-    font-size: 30px;
     text-align: center;
     text-decoration: none;
     background-color: #808080;
@@ -155,7 +159,8 @@ a:hover {
     border-radius: 25px;
     border: none;
     transition: opacity 0.3s ease;
-    padding-inline: 5%;
+    padding-inline: 10%;
+    font-size: 1.5rem;
     padding-block: 1%;
     align-self: center;
 }
@@ -164,7 +169,23 @@ a:hover {
     text-decoration: none;
 
 }
+.intronbtn{
+    display: grid;
+    place-items: center; 
+    
+}
 
+#btn-idx{
+padding-inline: 7rem;
+padding-block: 1rem;
+transition: opacity 0.3s ease;
+
+}
+#btn-idx:hover{
+    opacity: 70%;
+    text-decoration: none;
+
+}
 .links-section img{
     height: 20px;
     margin: auto;
