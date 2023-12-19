@@ -15,7 +15,9 @@ button{
     cursor: pointer;
 
 }
-body {margin: 0;}
+body {
+    margin: 0;
+}
 h1{
     font-size: clamp(2rem, 3vw, 4rem);
     margin-top: 5%;
@@ -24,12 +26,12 @@ h1{
     margin-left: 10%;
 
 }
-.content-project, .content-job, .contents-caraccident{
+.pj-header,.subproject, .content-project, .content-job, .contents-caraccident{
     margin-left: 13%;
 }
 
 .content-caption{
-
+    margin-left: 13%;
     font-size: 30px;
     line-height: 40px;
 }
@@ -39,7 +41,7 @@ h1{
 }
 h2{
     font-size: clamp(2rem, 2vw, 3rem);
-    margin-top: 3%;
+    /* margin-top: 3%;   */
 }
 a {
     color: inherit;  
@@ -51,64 +53,94 @@ a:hover {
     text-decoration: underline;
 }
 
+.content-project{
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 1fr;
+    line-height: 20px;
+    grid-template-areas:
+      "left middle right";
+    white-space: nowrap;
+    overflow:visible;
+    column-gap: 3%;
+    font-size: 120%;
 
+}
+#dsjob{
+    grid-area: left;
+}
+#global_ytb_income{
+    grid-area: middle;
+}
+#caraccident{
+    grid-area: right;
+}
 .subfolder {
     overflow:visible;
     margin-bottom: 10%;
-    font-size: 24px;
     white-space: nowrap;
-    line-height: 45px;
-
-    margin-top: 1%;
-    margin-left: min(5%,20px); 
-
+    overflow-wrap: break-word; 
+   
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 0.8fr 0.2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.4fr 0.5fr 0.3fr;
     grid-template-areas:
-      "top-left top-right"
-      "bottom-left top-right";
+      "top-head"
+      "top-content"
+      "bottom-pic"
+      "bottom-btn";
 }
 
 
-  #left-top {
-    grid-area: top-left;
-    /* padding-top: 5%; */
-    line-height: 150%;
-    margin-top: 0;
+  #top-head {
+    grid-area: top-head;
+    font-size: 100%;
   }
 
-  #left-bottom {
-    grid-area: bottom-left;
-    margin-inline: 30%;
-    align-self: center;
-    padding-block: 1%;
-    font-size: 100%s;
+  #top-content {
+    grid-area: top-content;
+    margin-inline: 2;
+    margin-top: 0;
+    white-space: pre-line;
+    font-size: 100%;
 
 }
 
-  #right {
-    grid-area: top-right;
+  #bottom-btn {
+    grid-area: bottom-btn;
+    margin-inline: 5%;
+    margin-top: 10%;
+  }
+
+  #bottom-pic {
+    grid-area: bottom-pic;
     margin-left: 5%;
+    transition: transform 0.3s ease-in-out
+  }
+  #bottom-pic:hover{
+    transform: scale(1.5); 
   }
 
   @media screen and (max-width: 1300px) {
-    .subfolder {
-        grid-template-columns: 1fr; 
-        grid-template-rows: 1fr;  
+    .content-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr;
+        line-height: 20px;
         grid-template-areas:
-            "top-left"
-            "top-right"
-            "bottom-left";
-
-        margin-left: 2%;
-        margin-right: 2%;
+          "top"
+          "middle"
+          "bottom";
     }
 
-    #left-bottom {
-        margin-inline: 25%  ;
-    align-self: center;
-
+    #dsjob{
+        grid-area:top;
+    }
+    #global_ytb_income{
+        grid-area: middle;
+    }
+    #caraccident{
+        grid-area: bottom;
     }
 }
 
@@ -148,7 +180,8 @@ a:hover {
 }
 .btn {
     padding-inline: 10%;
-    /* font-size: 90%; */
+    padding-block: 2%;
+
     transition: opacity 0.3s ease;
 }
 .other-btn{
