@@ -1,14 +1,11 @@
-
+# Data Visualization 
 
 ## Directory
 
-- Homework
-  - Homework4
-  - Homework5
-- Assignment
-    - Assignment1
-      
-      Dataset: [Youtube Data Visualization](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
-      
-- Final Project
-- Course Note
+- Project
+  - USA Traffic Data between 2019 and 2020. (statics graph)
+  - Top 100 worldwild YouTuber Income with Comparison of national life level. (Dynamics dashboard)
+  - Data Scientist Job prospective views. (Dynamics dashboard)
+
+- Link
+  - [https://okty1227.github.io/bie_portfolio/](https://okty1227.github.io/bie_portfolio/)https://okty1227.github.io/bie_portfolio/
