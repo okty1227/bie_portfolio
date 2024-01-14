@@ -1,0 +1,215 @@
+<html>
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    
+</head>
+<style>
+    .gridlines line{
+        stroke: #bbb;
+
+    }
+    .gridlines .domain {
+          stroke: none;
+        }
+</style>
+<body>
+    <h1>Quantifying Art Topic in Visualization</h1>
+
+    <svg height="700" width="600" id="lollipop">
+        <defs>
+        <marker id="start" markerWidth="1" markerHeight="6" refX="-2" refY="3" orient="auto">
+        <path d="M 0 0 V 6 H 1 V 0 Z" />
+        </marker>
+        <marker id="end" markerWidth="6" markerHeight="4" refX="7" refY="2" orient="auto">
+        <path d="M 0 0 V 4 L 6 2 Z" />
+        </marker>
+        </defs>
+        </svg>
+</body>
+<script>
+
+    let plt = d3.select('svg#lollipop');
+    let width = plt.attr('width');
+    let height = plt.attr('height');
+
+    let margins = { "top": 10, "right": 10, "bottom": 45, "left": 45};
+    let inner_plot_width = width - margins.right - margins.left;
+    let inner_plot_height = height - margins.bottom - margins.top;
+
+    requestData = async() => {
+
+        const art_data = await d3.json('artists.json')
+
+        let categories = art_data.map(d=>d.category);
+
+        console.log(categories);
+
+        let line_scale = d3.scaleLinear()
+                        .domain([0,1])
+                        .range([inner_plot_height,0])
+
+        let point_scale = d3.scalePoint()
+                            .domain(categories)
+                            .range([0,inner_plot_width])
+                            .padding(0.2);
+
+        const yAxis = d3.axisLeft(line_scale);
+        const xAxis = d3.axisBottom(point_scale).ticks(categories.length);
+
+        let gridyaxis = d3.axisLeft(line_scale)
+                              .tickFormat("")
+                              .tickSize(-inner_plot_width)
+
+        let gridxaxis = d3.axisBottom(point_scale)
+                              .tickFormat("")
+                              .tickSize(inner_plot_height);
+
+        plt.append('g')
+            .attr('class','y-axis')
+            .attr('transform',`translate(${margins.left-10},${margins.top})`)
+            .call(yAxis);
+
+        plt.append('g')
+              .attr('class','x-axis')
+              .attr('transform',`translate(${margins.left-10},${margins.top+inner_plot_height})`)
+              .call(xAxis);        
+
+        plt.append('g')
+                  .attr('class','gridlines')
+                  .attr('transform',`translate(${margins.left-10},${margins.top})`)
+                  .call(gridyaxis)
+
+        plt.append('g')
+                  .attr('class','gridlines')
+                  .attr('transform',`translate(${margins.left-10},${margins.top})`)
+                  .call(gridxaxis)   
+
+        let chart_area = plt.append('g')
+                            .attr('transform',`translate(${margins.left},${margins.top})`)
+        
+        lollipops = chart_area.selectAll('circle.lollipop')
+                   .data(art_data)
+                   .join('circle')
+                   .attr('class','lollipop')
+
+                   
+        let txt_box = plt.append("g")
+                     .attr("class","tooltip")
+                     .attr("visibility","hidden");
+
+        let txt = txt_box.append("text")
+                     .attr("text-anchor","middle")
+                     .attr("alignment-baseline","hanging")
+
+
+        let txt2 = txt_box.append("text")
+                     .attr("text-anchor","middle")
+                     .attr("alignment-baseline","hanging")
+
+
+        lollipops.each( function(d) {
+            
+            if (Math.abs(line_scale(d['2020'])-line_scale(d['1970']))>30){
+
+            d3.select(this.parentNode).append('line')
+                .attr('x1',point_scale(d.category)-10)
+                .attr('y1',line_scale(d['1970']))
+                .attr('x2',point_scale(d.category)-10)
+                .attr('y2', line_scale(d['2020']))
+                .attr('stroke-width', 4)
+                .attr('stroke','black')
+                .attr("marker-start", "url(#start)")
+                .attr("marker-end", "url(#end)")
+
+            d3.select(this)
+              .attr('cx',point_scale(d.category)-10)
+              .attr('cy',line_scale(d['1970']))
+              .attr('r',8)
+              .attr('fill','#8B0000')
+              .attr('stroke', 'black')
+              .attr('stroke-width', 1)
+              .on('mouseover',  mouseEntersState)
+              .on('mouseout',  mouseLeavesState);
+
+            d3.select(this.parentNode).append('circle')
+                .attr('cx',point_scale(d.category)-10)
+                .attr('cy',line_scale(d['2020']))
+                .attr('r',8)
+                .attr('fill','blue')
+                .attr('stroke', 'black')
+                .attr('stroke-width', 1)
+                .on('mouseover',  mouseEntersState)
+                .on('mouseout',  mouseLeavesState);
+
+        }
+        else{
+
+          d3.select(this)
+              .attr('cx',point_scale(d.category)-10)
+              .attr('cy',line_scale(d['1970']))
+              .attr('r',8)
+              .attr('fill','#8B0000')
+              .attr('stroke', 'black')
+              .attr('stroke-width', 1)
+              .on('mouseover',  mouseEntersStateclose)
+              .on('mouseout',  mouseLeavesState);
+
+            d3.select(this.parentNode).append('circle')
+            .attr('cx',point_scale(d.category)-10)
+            .attr('cy',line_scale(d['2020']))
+            .attr('r',8)
+            .attr('fill','blue')
+            .attr('stroke', 'black')
+            .attr('stroke-width', 1)
+            .on('mouseover', mouseEntersStateclose )
+            .on('mouseout', mouseLeavesState );
+        }
+
+         function mouseLeavesState(){
+            txt_box.style("visibility","hidden")
+         }
+
+         function mouseEntersState(){
+
+            let artpt = d3.select(this)
+            
+            let txt_2020 = parseInt(d['2020']*100) + '%'
+            let txt_1970 = parseInt(d['1970']*100) + '%'
+
+            txt_box.style("visibility","visible")
+
+            txt.attr('x',point_scale(d.category)+70)
+                .attr('y',line_scale(d['2020'])+10)
+                .text(txt_2020)
+
+            txt2.attr('x',point_scale(d.category)+70)
+                .attr('y',line_scale(d['1970']))
+                .text(txt_1970)
+
+         }
+         function mouseEntersStateclose(){
+
+            let artpt = d3.select(this)
+
+            let txt_2020 = parseInt(d['2020']*100) + '%'
+            let txt_1970 = parseInt(d['1970']*100) + '%'
+
+            txt_box.style("visibility","visible")
+
+            txt.attr('x',point_scale(d.category)+60)
+                .attr('y',line_scale(d['2020']))
+                .text(txt_2020)
+
+            txt2.attr('x',point_scale(d.category)+0)
+                .attr('y',line_scale(d['1970']))
+                .text(txt_1970)
+                }   
+    })
+}
+
+
+
+    requestData()
+</script>
+</html>

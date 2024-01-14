@@ -1,0 +1,33 @@
+,age,sex,size,index
+0,Adult,Female,Extra Large,41
+1,Adult,Female,Large,741
+2,Adult,Female,Medium,1421
+3,Adult,Female,Small,506
+4,Adult,Male,Extra Large,81
+5,Adult,Male,Large,1112
+6,Adult,Male,Medium,1117
+7,Adult,Male,Small,551
+8,Baby,Female,Extra Large,8
+9,Baby,Female,Large,192
+10,Baby,Female,Medium,669
+11,Baby,Female,Small,168
+12,Baby,Male,Extra Large,6
+13,Baby,Male,Large,226
+14,Baby,Male,Medium,625
+15,Baby,Male,Small,199
+16,Senior,Female,Extra Large,6
+17,Senior,Female,Large,98
+18,Senior,Female,Medium,166
+19,Senior,Female,Small,180
+20,Senior,Male,Extra Large,7
+21,Senior,Male,Large,155
+22,Senior,Male,Medium,130
+23,Senior,Male,Small,171
+24,Young,Female,Extra Large,13
+25,Young,Female,Large,256
+26,Young,Female,Medium,997
+27,Young,Female,Small,238
+28,Young,Male,Extra Large,25
+29,Young,Male,Large,468
+30,Young,Male,Medium,1014
+31,Young,Male,Small,286
