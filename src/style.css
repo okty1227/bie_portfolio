@@ -27,7 +27,12 @@ h1{
 
 }
 .pj-header,.subproject, .content-project, .content-job, .contents-caraccident{
-    margin-left: 13%;
+    margin-inline: 13%;
+}
+.subproject p{
+    margin-right: 20%;
+    font-size: 120%;
+    line-height: 110%;
 }
 
 .content-caption{

@@ -88,7 +88,7 @@ async function draw_network(path_game_throne){
     }
 
     character.text(d.Name)
-    label.text(d.index);
+    // label.text(d.index);
 
     d.fx = event.x;
     d.fy = event.y;
@@ -99,7 +99,7 @@ async function draw_network(path_game_throne){
     
     d.fx = event.x;
     d.fy = event.y;
-    label.attr("x",event.x -30 ).attr("y",event.y-5);
+    // label.attr("x",event.x -30 ).attr("y",event.y-5);
     character.attr("x",event.x -30).attr("y",event.y-35);
     }
     function dragend(event, d) {
