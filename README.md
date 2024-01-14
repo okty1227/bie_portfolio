@@ -8,4 +8,4 @@
   - Data Scientist Job prospective views. (Dynamics dashboard)
 
 - Link
-  - [USA Traffic Data between 2019 and 2020. (statics graph)](https://okty1227.github.io/bie_portfolio/)
+  - [BIE Visualization](https://okty1227.github.io/bie_portfolio/)
