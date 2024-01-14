@@ -30,13 +30,13 @@ h1{
     margin-inline: 13%;
 }
 .subproject p{
-    margin-right: 20%;
+    /* margin-right: 20%; */
     font-size: 120%;
     line-height: 110%;
 }
 
 .content-caption{
-    margin-left: 13%;
+    margin-inline: 13%;
     font-size: 30px;
     line-height: 40px;
 }
