@@ -8,4 +8,7 @@
   - Data Scientist Job prospective views. (Dynamics dashboard)
 
 - Link
-  - [https://okty1227.github.io/bie_portfolio/](https://okty1227.github.io/bie_portfolio/)https://okty1227.github.io/bie_portfolio/
+  - [Homepage](https://okty1227.github.io/bie_portfolio/)
+  - [USA Traffic Data Analysis](https://okty1227.github.io/bie_portfolio/assignment2/)
+  - [Top 100 worldwild YouTuber Income](https://okty1227.github.io/bie_portfolio/assignment1/)
+  - [ Data Scientist Job prospective views](https://okty1227.github.io/bie_portfolio/final_project/)
