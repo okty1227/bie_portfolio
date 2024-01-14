@@ -1,0 +1,33 @@
+.country{
+    fill: rgb(219, 171, 149);
+}
+.outline{
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+.gridlines line {
+    color: #bbb;
+}
+.gridlines .domain {
+    stroke: none;
+}
+.text {
+    font-size: 12;
+    font-family: georgia;
+}
+g {
+    font-size: 12;
+    font-family: georgia;
+}
+p{
+    margin-left: 3%;
+}
+svg{
+    margin-left: 2%;
+}
+.contents-income{
+    margin-left: 13%;
+    line-height: 40px;
+
+}

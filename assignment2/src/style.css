@@ -1,0 +1,67 @@
+
+.state {
+    fill: white;
+    stroke: none;
+    cursor: pointer;
+}
+
+.state-outline {
+    stroke: white;
+    fill: none;
+    stroke-width: 1px;
+}
+
+.county {
+    stroke: none;
+
+}
+
+.county-outline {
+    stroke: white;
+    stroke-width: 3px;
+    fill: none;
+}
+
+.gridlines line {
+    color: #aaa;
+}
+
+.gridlines .domain {
+    stroke: none;
+}
+
+text {
+    font-size: 14;
+}
+
+g {
+    font-size: 14;
+}
+
+.txt-box{
+    text-anchor: left;
+    fill:black
+}
+
+.button-bar {
+    width: 100px;
+    height: 30px;
+    stroke-width: 2px;
+    stroke: #ffb703;
+    top: -100px;
+    left: 850px;
+    font-size: 20;
+    cursor: pointer;
+}
+
+.selector-content{
+    text-anchor:middle;
+}
+
+.year-btn{
+    text-anchor:middle;
+    alignment-baseline:middle;
+    font-size:18px;
+    cursor: pointer;
+
+}

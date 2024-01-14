@@ -1,13 +1,25 @@
 #jobSelect {
     display: flex; 
     justify-content: left;
+    grid-template-areas:
+    "left right";
+
+}
+
+#filter{
+    grid-area: left;
+    margin-right: 3%;
+}
+#pointScale{
+    grid-area: right;
 }
 .headernum{
 
         font-family: Impact;
         font-size: 18px;
         letter-spacing: 0.5px;
-
+        text-anchor:left;
+        fill:#444;
 }
 
 .headername{
@@ -19,11 +31,10 @@
 
 .grid {
     display: grid;
-    grid-template: 
-        'q1 q4'
-        'q2 q5'
-        'q3 q5';
+    grid-template-columns: 1fr 1fr;
+
 }
+ 
 
 #pointsScale {
     width: 500px;
@@ -34,7 +45,12 @@
     width: 600px;
     margin-left: 50px;
 }
-
+.q2, .q4{
+    margin-top: 30%;
+}
+.q1, .q3, .q5{
+    margin-top: 5%;
+}
 .submit {
     padding: 10px 20px; 
     color: white; 
@@ -42,10 +58,11 @@
     cursor: pointer; 
     font-size: 16px;
     border: none;
+    margin-left: 50%;
 }
 
 input, label {
-    margin-top: 5;
+    margin-top: 5px;
 }
 .state {
     fill: white;
@@ -74,54 +91,26 @@ input, label {
 
 .btnname{
     transition: font-weight 0.3s ease;
+    cursor: pointer;
 }
 .btnname:hover {
     font-weight: bold;
 }
 
 
-
 g {
     font-size: 12;
 }
 
-span, h3, text, p, div {
-    font-family: Helvetica, sans-serif;
-    font-weight: lighter;
-    color: #444;
-}
 
-text, p {
-    font-size: 12;
-    color: #444;
-    fill: #444;
-    cursor: default;
-}
+
 
 div {
     font-size: 16;
 }
 
-.q1 {
-    grid-area: q1;
-}
-
-.q2 {
-    grid-area: q2;
-}
-
-.q3 {
-    grid-area: q3;
-}
-
-.q4 {
-    grid-area: q4;
-}
-
-.q5 {
-    grid-area: q5;
-}
-
-svg {
-    /* border: 1px solid black; */
+.surveyList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

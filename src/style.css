@@ -1,15 +1,47 @@
 *{
-    font-family: 'Arial', sans-serif;
+    font-family: 'League Spartan';
 }
 html{
     scroll-behavior: smooth;
 }
-body {
-    margin-left: 0;
-    padding-top: max(30px,6%);
+button{
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    font-size: 90%;
+    cursor: pointer;
+
 }
-p{
-    font-size: 20px;    
+body {
+    margin: 0;
+}
+h1{
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin-top: 5%;
+}
+.headtitle {
+    margin-left: 10%;
+
+}
+.pj-header,.subproject, .content-project, .content-job, .contents-caraccident{
+    margin-left: 13%;
+}
+
+.content-caption{
+    margin-left: 13%;
+    font-size: 30px;
+    line-height: 40px;
+}
+.insight{
+    margin-right: 8%;
+    line-height: 120%;
+}
+h2{
+    font-size: clamp(2rem, 2vw, 3rem);
+    /* margin-top: 3%;   */
 }
 a {
     color: inherit;  
@@ -18,51 +50,225 @@ a {
 }
 
 a:hover {
-    font-size: 105%; 
     text-decoration: underline;
 }
 
-h1, h2 {
-    color: #0366d6;
-}
+.content-project{
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 1fr;
+    line-height: 20px;
+    grid-template-areas:
+      "left middle right";
+    white-space: nowrap;
+    overflow:visible;
+    column-gap: 3%;
+    font-size: 120%;
 
+}
+#dsjob{
+    grid-area: left;
+}
+#global_ytb_income{
+    grid-area: middle;
+}
+#caraccident{
+    grid-area: right;
+}
 .subfolder {
-    margin-bottom: 20px;
+    overflow:visible;
+    margin-bottom: 10%;
+    white-space: nowrap;
+    overflow-wrap: break-word; 
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.4fr 0.5fr 0.3fr;
+    grid-template-areas:
+      "top-head"
+      "top-content"
+      "bottom-pic"
+      "bottom-btn";
 }
 
+
+  #top-head {
+    grid-area: top-head;
+    font-size: 100%;
+  }
+
+  #top-content {
+    grid-area: top-content;
+    margin-inline: 2;
+    margin-top: 0;
+    white-space: pre-line;
+    font-size: 100%;
+
+}
+
+  #bottom-btn {
+    grid-area: bottom-btn;
+    margin-inline: 5%;
+    margin-top: 10%;
+  }
+
+  #bottom-pic {
+    grid-area: bottom-pic;
+    margin-left: 5%;
+    transition: transform 0.3s ease-in-out
+  }
+  #bottom-pic:hover{
+    transform: scale(1.5); 
+  }
+
+  @media screen and (max-width: 1300px) {
+    .content-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr;
+        line-height: 20px;
+        grid-template-areas:
+          "top"
+          "middle"
+          "bottom";
+    }
+
+    #dsjob{
+        grid-area:top;
+    }
+    #global_ytb_income{
+        grid-area: middle;
+    }
+    #caraccident{
+        grid-area: bottom;
+    }
+}
+
+.content1,.content2{
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    margin-top: min(3%,20px);
+    margin-left: min(5%,20px);
+}
+
+@media screen and (max-width: 1200px) {
+    .content1,.content2 {
+      flex-direction: column;  
+      align-items: center;  
+    }
+  }
+.project-pic{
+    width: 80%;
+    height: auto;
+}
+
+.img-ill {  
+    flex: 1;
+    margin-left: 10%;
+    
+}
+.campus-ill{
+    border-radius: 50%;
+    overflow: visible; 
+}
+.intro-ill{
+    margin-left: 8%;
+    margin-right: 5%;
+    margin-top: 5%;
+
+}
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #28a745;
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
+    padding-inline: 10%;
+    padding-block: 2%;
+
     transition: opacity 0.3s ease;
 }
-.btn:hover{
+.other-btn{
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    transition: opacity 0.3s ease;
+    padding-inline: 10%;
+    font-size: 1.5rem;
+    padding-block: 1%;
+    align-self: center;
+}
+.btn:hover, .other-btn:hover{
     opacity: 70%;
-    text-decoration: underline;
+    text-decoration: none;
+
+}
+.intronbtn{
+    display: grid;
+    place-items: center; 
     
 }
 
-.footer {
-    background-color: #333;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    transition: opacity 0.3s ease;;
+#btn-idx{
+padding-inline: 7rem;
+padding-block: 1rem;
+transition: opacity 0.3s ease;
+
 }
+#btn-idx:hover{
+    opacity: 70%;
+    text-decoration: none;
+
+}
+.links-section img{
+    height: 20px;
+    margin: auto;
+}
+
+.footers {
+    background-color: #333;
+    color: #b5b3b3;
+    text-align: left;
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 3%;
+    font-size: medium;
+    margin-top: 10px;
+    padding-top: 2%;
+}
+@media screen and (max-width: 1200px) {
+.footers{
+    display: none;
+}
+  }
+
+  .about-me-section {
+    flex: 1; 
+    margin-right: 10%; 
+    line-height: 25px;
+}
+
+  .links-section {
+    flex: 1;  
+    display: flex;
+    align-items:baseline;
+
+
+  }
+  .links-section .sect-links,.links-section .sect-contacts{
+    flex: 1;
+  }
+
+  .links-section .sect-contacts img{
+    vertical-align:top;
+    margin-right: 2%;
+
+  }
 
 .urls{
 color: #0366d6;
 font-weight: bold;
 }
+
 .horizontal-container  {
 display: flex;
 width: 1000px;
@@ -71,26 +277,23 @@ height: 400px
 .horizontal-container:hover {
 height: 800px; /* Expanded width on hover, adjust as needed */
 }
+.selection-header{
+    padding-top: min(1%,40px);
+    font-size:max(20px,50%);
+}
 
-.header{
-    position: fixed;
-    top: 0;
-    background-color: #0366d6;
+nav ul{
+    
+    list-style-type: none; 
+    text-align: center;
     display: flex;
-    width: 100%;
+    background-color: #ffffff;
+}
+nav li{
+    padding-left: 7%;
+    color: #0b0b0b;
+    font-size: larger;
+    padding-right: max(10,5%);
     font-weight: bolder;
 }
 
-.header .selection{
-    color: #fff;
-    stroke-width: 5px;
-    padding: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 100%;
-    text-align: center;
-}
-
-.content{
-    margin-left:5% ;
-}
