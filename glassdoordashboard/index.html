@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Data Scientist Job Recomendation Dashboard</title>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src='https://d3js.org/topojson.v3.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../src/style.css">
+
+</head>
+
+<body>
+    <nav class="selection-header">
+        <ul>
+            <li><a href="../index.html">About Me</a></li>
+            <li><a href="../projects.html">Project Experience</a></li>
+            <li><a href="https://reurl.cc/V4KlKZ">Resume</a></li>
+        </ul>
+    </nav>
+
+
+    <h1 class="headtitle">Data Science Job Market Compass</h1>
+    <div class="content-job">
+
+        <h2> User Guide </h2>
+
+        <ul>
+            <li>
+                Move the slider to see how companies emerged in the past half century.
+            </li>
+            <li>Click on a button</b> to check out some popular insustries for data scientists.</li>
+        </ul>
+
+        <p style='margin-top: 30;'>
+            <svg id='map' width='750' height='550'>
+                <text x='50' y='14' class="headernum">
+                    I.
+                </text>
+                <text x='70' y='14' class="headername">
+                    Which state has more data science company headquarters?
+                </text>
+            </svg>
+            <svg id='bar' width='450' height='550'>
+                <text x='10' y='14' class="headernum">
+                    II.
+                </text>
+                <text x='40' y='14' class="headername">
+                    Which industry needs data scientist?
+                </text>
+            </svg>
+        <div id="barButton"></div>
+        </p>
+
+        <div class="job-illustration">
+            <p style='margin-left: 50; margin-top: 30; font-size: 16;'>
+                Now with more information about the market, let's find out whether we are a good fit as a data
+                scientist!<br>
+                Fill out the questionnaire to get matched to real job postings. <br>
+                After submitting your preferences, <b>hover over a dot</b> from the coordinates to learn more about the
+                recommendation.<br>
+                You can modify your answers to get new recommendations.
+            </p>
+        </div>
+
+        <p>
+        <div id='jobSelect'>
+            <div id='filter'>
+                <span class="headernum">III. </span>
+                <text x='10' y='12' class="headername">
+                    Looking to start a career in data science?
+                </text>
+
+                <p>
+                    Please fill out this form to find jobs that suit you the best. (5 questions in total)
+                </p>
+                <div class='grid'>
+
+                    <form>
+                        <div class='q1'>
+                            <span>1. Skills you have</span>
+                            <br>
+                            <ul id="Skills" class="surveyList"></ul>
+
+                        </div>
+                    </form>
+                    <form>
+                        <div class='q2'>
+
+                            <span>2. Preferred Location</span>
+                            <label for='states'>Select a state:</label>
+                            <select id='states' name='states'></select>
+
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class='q3'>
+                            3. Target Salary
+                            <ul id="SalarySize" class="surveyList"></ul>
+
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class='q4'>
+                            4.Your Preferred Company Size
+                            <ul id="compSize" class="surveyList"></ul>
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class='q5'> 5.Your Preferred Industry
+                            <ul id="industryList" class="surveyList"></ul>
+
+                        </div>
+                    </form>
+                </div>
+                <button type='button' class='submit' onclick='handleSubmit()'>Get Recommendations</button>
+
+
+            </div>
+            <div id='pointsScale'>
+
+                <text x='20' y='12' class="headernum">
+                    IV.
+                </text>
+                <text x='50' y='12' class="headername">
+                    Opportunities for you
+                </text>
+                <svg width='540' height='500' id='quadrant'> </svg>
+            </div>
+        </div>
+        </p>
+
+        
+        <script src="./draw/draw_state_ct.js"></script>
+        <script src="./draw/draw_sec_bar.js"></script>
+        <script src="./draw/draw_quadrant.js"> </script>
+        <script src="./draw/draw_survey.js"></script>
+
+</body>
+
+</html>

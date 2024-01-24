@@ -1,0 +1,121 @@
+"industry","yearfloor","position_amt"
+Finance and Insurance,1800.0,7
+Other,1800.0,3
+all,1800.0,10
+Biotech & Pharmaceuticals,1820.0,1
+Other,1820.0,2
+all,1820.0,3
+Biotech & Pharmaceuticals,1840.0,2
+Finance and Insurance,1840.0,9
+Health Care,1840.0,1
+Manufacturing,1840.0,2
+all,1840.0,14
+Biotech & Pharmaceuticals,1860.0,2
+Business Services,1860.0,1
+Finance and Insurance,1860.0,3
+Health Care,1860.0,7
+Manufacturing,1860.0,3
+Other,1860.0,7
+all,1860.0,23
+Finance and Insurance,1880.0,2
+Health Care,1880.0,4
+Information Technology,1880.0,1
+Manufacturing,1880.0,3
+Other,1880.0,6
+Retail & Wholesale,1880.0,1
+all,1880.0,17
+Business Services,1900.0,4
+Finance and Insurance,1900.0,5
+Health Care,1900.0,5
+Manufacturing,1900.0,11
+Other,1900.0,6
+Retail & Wholesale,1900.0,1
+all,1900.0,32
+Aerospace & Defense,1920.0,24
+Finance and Insurance,1920.0,17
+Health Care,1920.0,2
+Information Technology,1920.0,3
+Manufacturing,1920.0,11
+Other,1920.0,10
+Retail & Wholesale,1920.0,2
+all,1920.0,69
+Aerospace & Defense,1940.0,7
+Biotech & Pharmaceuticals,1940.0,1
+Business Services,1940.0,3
+Finance and Insurance,1940.0,5
+Health Care,1940.0,6
+Information Technology,1940.0,2
+Manufacturing,1940.0,13
+Other,1940.0,15
+Retail & Wholesale,1940.0,9
+all,1940.0,61
+Aerospace & Defense,1960.0,5
+Business Services,1960.0,13
+Finance and Insurance,1960.0,8
+Health Care,1960.0,6
+Information Technology,1960.0,3
+Manufacturing,1960.0,16
+Other,1960.0,28
+Retail & Wholesale,1960.0,8
+all,1960.0,87
+Aerospace & Defense,1980.0,3
+Biotech & Pharmaceuticals,1980.0,10
+Business Services,1980.0,34
+Finance and Insurance,1980.0,12
+Health Care,1980.0,9
+Information Technology,1980.0,51
+Manufacturing,1980.0,18
+Other,1980.0,25
+Retail & Wholesale,1980.0,16
+all,1980.0,178
+Aerospace & Defense,2000.0,5
+Biotech & Pharmaceuticals,2000.0,8
+Business Services,2000.0,31
+Finance and Insurance,2000.0,8
+Health Care,2000.0,30
+Information Technology,2000.0,68
+Manufacturing,2000.0,11
+Other,2000.0,30
+Retail & Wholesale,2000.0,5
+all,2000.0,196
+Aerospace & Defense,2020.0,1
+Health Care,2020.0,4
+Manufacturing,2020.0,2
+Other,2020.0,2
+Retail & Wholesale,2020.0,2
+all,2020.0,11
+Retail & Wholesale,1840.0,0
+Biotech & Pharmaceuticals,1900.0,0
+Information Technology,1800.0,0
+Health Care,1820.0,0
+Retail & Wholesale,1820.0,0
+Information Technology,1860.0,0
+Business Services,1880.0,0
+Information Technology,1840.0,0
+Biotech & Pharmaceuticals,1800.0,0
+Information Technology,1900.0,0
+Aerospace & Defense,1880.0,0
+Health Care,1800.0,0
+Retail & Wholesale,1800.0,0
+Business Services,2020.0,0
+Finance and Insurance,2020.0,0
+Business Services,1920.0,0
+Biotech & Pharmaceuticals,1960.0,0
+Information Technology,1820.0,0
+Retail & Wholesale,1860.0,0
+Biotech & Pharmaceuticals,1880.0,0
+Business Services,1820.0,0
+Manufacturing,1820.0,0
+Finance and Insurance,1820.0,0
+Aerospace & Defense,1800.0,0
+Business Services,1840.0,0
+Aerospace & Defense,1860.0,0
+Information Technology,2020.0,0
+Aerospace & Defense,1840.0,0
+Aerospace & Defense,1900.0,0
+Other,1840.0,0
+Biotech & Pharmaceuticals,1920.0,0
+Biotech & Pharmaceuticals,2020.0,0
+Aerospace & Defense,1820.0,0
+Business Services,1800.0,0
+Manufacturing,1800.0,0

@@ -1,0 +1,673 @@
+"abbrev","yearfloor","state","job_count"
+AL,1960.0,Alabama,3
+AL,1880.0,Alabama,0
+AL,1860.0,Alabama,0
+AL,1920.0,Alabama,0
+AL,1980.0,Alabama,0
+AL,2020.0,Alabama,0
+AL,1800.0,Alabama,0
+AL,2000.0,Alabama,5
+AL,1940.0,Alabama,1
+AL,1820.0,Alabama,0
+AL,1900.0,Alabama,0
+AL,1840.0,Alabama,0
+AK,1960.0,Alaska,0
+AK,1880.0,Alaska,0
+AK,1860.0,Alaska,0
+AK,1920.0,Alaska,0
+AK,1980.0,Alaska,0
+AK,2020.0,Alaska,0
+AK,1800.0,Alaska,0
+AK,2000.0,Alaska,0
+AK,1940.0,Alaska,0
+AK,1820.0,Alaska,0
+AK,1900.0,Alaska,0
+AK,1840.0,Alaska,0
+AZ,1960.0,Arizona,2
+AZ,1880.0,Arizona,0
+AZ,1860.0,Arizona,1
+AZ,1920.0,Arizona,2
+AZ,1980.0,Arizona,1
+AZ,2020.0,Arizona,0
+AZ,1800.0,Arizona,0
+AZ,2000.0,Arizona,7
+AZ,1940.0,Arizona,0
+AZ,1820.0,Arizona,0
+AZ,1900.0,Arizona,3
+AZ,1840.0,Arizona,0
+AR,1960.0,Arkansas,0
+AR,1880.0,Arkansas,0
+AR,1860.0,Arkansas,0
+AR,1920.0,Arkansas,0
+AR,1980.0,Arkansas,0
+AR,2020.0,Arkansas,0
+AR,1800.0,Arkansas,0
+AR,2000.0,Arkansas,0
+AR,1940.0,Arkansas,0
+AR,1820.0,Arkansas,0
+AR,1900.0,Arkansas,0
+AR,1840.0,Arkansas,0
+CA,1960.0,California,9
+CA,1880.0,California,1
+CA,1860.0,California,2
+CA,1920.0,California,16
+CA,1980.0,California,22
+CA,2020.0,California,1
+CA,1800.0,California,0
+CA,2000.0,California,24
+CA,1940.0,California,8
+CA,1820.0,California,0
+CA,1900.0,California,4
+CA,1840.0,California,0
+CO,1960.0,Colorado,0
+CO,1880.0,Colorado,0
+CO,1860.0,Colorado,2
+CO,1920.0,Colorado,0
+CO,1980.0,Colorado,1
+CO,2020.0,Colorado,0
+CO,1800.0,Colorado,0
+CO,2000.0,Colorado,2
+CO,1940.0,Colorado,0
+CO,1820.0,Colorado,0
+CO,1900.0,Colorado,1
+CO,1840.0,Colorado,0
+CT,1960.0,Connecticut,0
+CT,1880.0,Connecticut,1
+CT,1860.0,Connecticut,0
+CT,1920.0,Connecticut,0
+CT,1980.0,Connecticut,7
+CT,2020.0,Connecticut,0
+CT,1800.0,Connecticut,0
+CT,2000.0,Connecticut,2
+CT,1940.0,Connecticut,0
+CT,1820.0,Connecticut,0
+CT,1900.0,Connecticut,0
+CT,1840.0,Connecticut,2
+DE,1960.0,Delaware,5
+DE,1880.0,Delaware,0
+DE,1860.0,Delaware,0
+DE,1920.0,Delaware,0
+DE,1980.0,Delaware,0
+DE,2020.0,Delaware,0
+DE,1800.0,Delaware,0
+DE,2000.0,Delaware,0
+DE,1940.0,Delaware,0
+DE,1820.0,Delaware,0
+DE,1900.0,Delaware,0
+DE,1840.0,Delaware,0
+DC,1960.0,District of Columbia,0
+DC,1880.0,District of Columbia,0
+DC,1860.0,District of Columbia,1
+DC,1920.0,District of Columbia,0
+DC,1980.0,District of Columbia,5
+DC,2020.0,District of Columbia,0
+DC,1800.0,District of Columbia,0
+DC,2000.0,District of Columbia,8
+DC,1940.0,District of Columbia,0
+DC,1820.0,District of Columbia,0
+DC,1900.0,District of Columbia,0
+DC,1840.0,District of Columbia,0
+FL,1960.0,Florida,7
+FL,1880.0,Florida,0
+FL,1860.0,Florida,1
+FL,1920.0,Florida,5
+FL,1980.0,Florida,12
+FL,2020.0,Florida,0
+FL,1800.0,Florida,0
+FL,2000.0,Florida,9
+FL,1940.0,Florida,0
+FL,1820.0,Florida,0
+FL,1900.0,Florida,0
+FL,1840.0,Florida,0
+GA,1960.0,Georgia,4
+GA,1880.0,Georgia,1
+GA,1860.0,Georgia,0
+GA,1920.0,Georgia,0
+GA,1980.0,Georgia,4
+GA,2020.0,Georgia,2
+GA,1800.0,Georgia,0
+GA,2000.0,Georgia,6
+GA,1940.0,Georgia,1
+GA,1820.0,Georgia,0
+GA,1900.0,Georgia,0
+GA,1840.0,Georgia,0
+HI,1960.0,Hawaii,0
+HI,1880.0,Hawaii,0
+HI,1860.0,Hawaii,0
+HI,1920.0,Hawaii,0
+HI,1980.0,Hawaii,2
+HI,2020.0,Hawaii,0
+HI,1800.0,Hawaii,0
+HI,2000.0,Hawaii,2
+HI,1940.0,Hawaii,0
+HI,1820.0,Hawaii,0
+HI,1900.0,Hawaii,0
+HI,1840.0,Hawaii,0
+ID,1960.0,Idaho,0
+ID,1880.0,Idaho,0
+ID,1860.0,Idaho,1
+ID,1920.0,Idaho,0
+ID,1980.0,Idaho,1
+ID,2020.0,Idaho,0
+ID,1800.0,Idaho,0
+ID,2000.0,Idaho,0
+ID,1940.0,Idaho,0
+ID,1820.0,Idaho,0
+ID,1900.0,Idaho,0
+ID,1840.0,Idaho,0
+IL,1960.0,Illinois,5
+IL,1880.0,Illinois,5
+IL,1860.0,Illinois,0
+IL,1920.0,Illinois,3
+IL,1980.0,Illinois,10
+IL,2020.0,Illinois,1
+IL,1800.0,Illinois,0
+IL,2000.0,Illinois,7
+IL,1940.0,Illinois,2
+IL,1820.0,Illinois,0
+IL,1900.0,Illinois,1
+IL,1840.0,Illinois,0
+IN,1960.0,Indiana,1
+IN,1880.0,Indiana,0
+IN,1860.0,Indiana,0
+IN,1920.0,Indiana,0
+IN,1980.0,Indiana,1
+IN,2020.0,Indiana,0
+IN,1800.0,Indiana,0
+IN,2000.0,Indiana,3
+IN,1940.0,Indiana,3
+IN,1820.0,Indiana,0
+IN,1900.0,Indiana,0
+IN,1840.0,Indiana,1
+IA,1960.0,Iowa,3
+IA,1880.0,Iowa,0
+IA,1860.0,Iowa,0
+IA,1920.0,Iowa,0
+IA,1980.0,Iowa,0
+IA,2020.0,Iowa,0
+IA,1800.0,Iowa,0
+IA,2000.0,Iowa,1
+IA,1940.0,Iowa,2
+IA,1820.0,Iowa,0
+IA,1900.0,Iowa,0
+IA,1840.0,Iowa,0
+KS,1960.0,Kansas,0
+KS,1880.0,Kansas,0
+KS,1860.0,Kansas,0
+KS,1920.0,Kansas,0
+KS,1980.0,Kansas,0
+KS,2020.0,Kansas,0
+KS,1800.0,Kansas,0
+KS,2000.0,Kansas,0
+KS,1940.0,Kansas,1
+KS,1820.0,Kansas,0
+KS,1900.0,Kansas,0
+KS,1840.0,Kansas,0
+KY,1960.0,Kentucky,0
+KY,1880.0,Kentucky,0
+KY,1860.0,Kentucky,0
+KY,1920.0,Kentucky,0
+KY,1980.0,Kentucky,4
+KY,2020.0,Kentucky,0
+KY,1800.0,Kentucky,0
+KY,2000.0,Kentucky,0
+KY,1940.0,Kentucky,0
+KY,1820.0,Kentucky,0
+KY,1900.0,Kentucky,0
+KY,1840.0,Kentucky,0
+LA,1960.0,Louisiana,1
+LA,1880.0,Louisiana,0
+LA,1860.0,Louisiana,0
+LA,1920.0,Louisiana,0
+LA,1980.0,Louisiana,0
+LA,2020.0,Louisiana,0
+LA,1800.0,Louisiana,0
+LA,2000.0,Louisiana,0
+LA,1940.0,Louisiana,0
+LA,1820.0,Louisiana,0
+LA,1900.0,Louisiana,0
+LA,1840.0,Louisiana,0
+ME,1960.0,Maine,0
+ME,1880.0,Maine,0
+ME,1860.0,Maine,0
+ME,1920.0,Maine,1
+ME,1980.0,Maine,0
+ME,2020.0,Maine,0
+ME,1800.0,Maine,0
+ME,2000.0,Maine,0
+ME,1940.0,Maine,0
+ME,1820.0,Maine,0
+ME,1900.0,Maine,0
+ME,1840.0,Maine,0
+MD,1960.0,Maryland,2
+MD,1880.0,Maryland,0
+MD,1860.0,Maryland,0
+MD,1920.0,Maryland,6
+MD,1980.0,Maryland,3
+MD,2020.0,Maryland,1
+MD,1800.0,Maryland,0
+MD,2000.0,Maryland,7
+MD,1940.0,Maryland,3
+MD,1820.0,Maryland,0
+MD,1900.0,Maryland,1
+MD,1840.0,Maryland,0
+MA,1960.0,Massachusetts,4
+MA,1880.0,Massachusetts,0
+MA,1860.0,Massachusetts,0
+MA,1920.0,Massachusetts,0
+MA,1980.0,Massachusetts,9
+MA,2020.0,Massachusetts,0
+MA,1800.0,Massachusetts,1
+MA,2000.0,Massachusetts,12
+MA,1940.0,Massachusetts,3
+MA,1820.0,Massachusetts,0
+MA,1900.0,Massachusetts,2
+MA,1840.0,Massachusetts,4
+MI,1960.0,Michigan,2
+MI,1880.0,Michigan,0
+MI,1860.0,Michigan,0
+MI,1920.0,Michigan,0
+MI,1980.0,Michigan,2
+MI,2020.0,Michigan,2
+MI,1800.0,Michigan,0
+MI,2000.0,Michigan,1
+MI,1940.0,Michigan,0
+MI,1820.0,Michigan,0
+MI,1900.0,Michigan,1
+MI,1840.0,Michigan,1
+MN,1960.0,Minnesota,4
+MN,1880.0,Minnesota,1
+MN,1860.0,Minnesota,0
+MN,1920.0,Minnesota,0
+MN,1980.0,Minnesota,5
+MN,2020.0,Minnesota,2
+MN,1800.0,Minnesota,0
+MN,2000.0,Minnesota,3
+MN,1940.0,Minnesota,1
+MN,1820.0,Minnesota,0
+MN,1900.0,Minnesota,1
+MN,1840.0,Minnesota,1
+MS,1960.0,Mississippi,0
+MS,1880.0,Mississippi,0
+MS,1860.0,Mississippi,0
+MS,1920.0,Mississippi,0
+MS,1980.0,Mississippi,0
+MS,2020.0,Mississippi,0
+MS,1800.0,Mississippi,0
+MS,2000.0,Mississippi,0
+MS,1940.0,Mississippi,0
+MS,1820.0,Mississippi,0
+MS,1900.0,Mississippi,0
+MS,1840.0,Mississippi,0
+MO,1960.0,Missouri,0
+MO,1880.0,Missouri,1
+MO,1860.0,Missouri,2
+MO,1920.0,Missouri,2
+MO,1980.0,Missouri,1
+MO,2020.0,Missouri,0
+MO,1800.0,Missouri,0
+MO,2000.0,Missouri,7
+MO,1940.0,Missouri,3
+MO,1820.0,Missouri,0
+MO,1900.0,Missouri,1
+MO,1840.0,Missouri,0
+MT,1960.0,Montana,0
+MT,1880.0,Montana,0
+MT,1860.0,Montana,0
+MT,1920.0,Montana,0
+MT,1980.0,Montana,0
+MT,2020.0,Montana,0
+MT,1800.0,Montana,0
+MT,2000.0,Montana,0
+MT,1940.0,Montana,0
+MT,1820.0,Montana,0
+MT,1900.0,Montana,0
+MT,1840.0,Montana,0
+NE,1960.0,Nebraska,1
+NE,1880.0,Nebraska,0
+NE,1860.0,Nebraska,0
+NE,1920.0,Nebraska,0
+NE,1980.0,Nebraska,1
+NE,2020.0,Nebraska,0
+NE,1800.0,Nebraska,0
+NE,2000.0,Nebraska,1
+NE,1940.0,Nebraska,0
+NE,1820.0,Nebraska,0
+NE,1900.0,Nebraska,0
+NE,1840.0,Nebraska,0
+NV,1960.0,Nevada,0
+NV,1880.0,Nevada,0
+NV,1860.0,Nevada,0
+NV,1920.0,Nevada,0
+NV,1980.0,Nevada,2
+NV,2020.0,Nevada,0
+NV,1800.0,Nevada,0
+NV,2000.0,Nevada,2
+NV,1940.0,Nevada,0
+NV,1820.0,Nevada,0
+NV,1900.0,Nevada,0
+NV,1840.0,Nevada,0
+NH,1960.0,New Hampshire,0
+NH,1880.0,New Hampshire,0
+NH,1860.0,New Hampshire,1
+NH,1920.0,New Hampshire,0
+NH,1980.0,New Hampshire,4
+NH,2020.0,New Hampshire,0
+NH,1800.0,New Hampshire,0
+NH,2000.0,New Hampshire,2
+NH,1940.0,New Hampshire,1
+NH,1820.0,New Hampshire,0
+NH,1900.0,New Hampshire,1
+NH,1840.0,New Hampshire,0
+NJ,1960.0,New Jersey,1
+NJ,1880.0,New Jersey,0
+NJ,1860.0,New Jersey,1
+NJ,1920.0,New Jersey,0
+NJ,1980.0,New Jersey,6
+NJ,2020.0,New Jersey,0
+NJ,1800.0,New Jersey,0
+NJ,2000.0,New Jersey,5
+NJ,1940.0,New Jersey,2
+NJ,1820.0,New Jersey,0
+NJ,1900.0,New Jersey,1
+NJ,1840.0,New Jersey,0
+NM,1960.0,New Mexico,0
+NM,1880.0,New Mexico,0
+NM,1860.0,New Mexico,0
+NM,1920.0,New Mexico,0
+NM,1980.0,New Mexico,0
+NM,2020.0,New Mexico,0
+NM,1800.0,New Mexico,0
+NM,2000.0,New Mexico,0
+NM,1940.0,New Mexico,0
+NM,1820.0,New Mexico,0
+NM,1900.0,New Mexico,0
+NM,1840.0,New Mexico,0
+NY,1960.0,New York,2
+NY,1880.0,New York,0
+NY,1860.0,New York,6
+NY,1920.0,New York,8
+NY,1980.0,New York,12
+NY,2020.0,New York,1
+NY,1800.0,New York,1
+NY,2000.0,New York,7
+NY,1940.0,New York,4
+NY,1820.0,New York,0
+NY,1900.0,New York,1
+NY,1840.0,New York,0
+NC,1960.0,North Carolina,3
+NC,1880.0,North Carolina,0
+NC,1860.0,North Carolina,0
+NC,1920.0,North Carolina,0
+NC,1980.0,North Carolina,4
+NC,2020.0,North Carolina,0
+NC,1800.0,North Carolina,0
+NC,2000.0,North Carolina,4
+NC,1940.0,North Carolina,3
+NC,1820.0,North Carolina,0
+NC,1900.0,North Carolina,0
+NC,1840.0,North Carolina,0
+ND,1960.0,North Dakota,0
+ND,1880.0,North Dakota,0
+ND,1860.0,North Dakota,0
+ND,1920.0,North Dakota,0
+ND,1980.0,North Dakota,0
+ND,2020.0,North Dakota,0
+ND,1800.0,North Dakota,0
+ND,2000.0,North Dakota,0
+ND,1940.0,North Dakota,0
+ND,1820.0,North Dakota,0
+ND,1900.0,North Dakota,0
+ND,1840.0,North Dakota,0
+OH,1960.0,Ohio,1
+OH,1880.0,Ohio,0
+OH,1860.0,Ohio,3
+OH,1920.0,Ohio,2
+OH,1980.0,Ohio,3
+OH,2020.0,Ohio,0
+OH,1800.0,Ohio,6
+OH,2000.0,Ohio,6
+OH,1940.0,Ohio,3
+OH,1820.0,Ohio,0
+OH,1900.0,Ohio,3
+OH,1840.0,Ohio,0
+OK,1960.0,Oklahoma,0
+OK,1880.0,Oklahoma,0
+OK,1860.0,Oklahoma,0
+OK,1920.0,Oklahoma,0
+OK,1980.0,Oklahoma,3
+OK,2020.0,Oklahoma,0
+OK,1800.0,Oklahoma,0
+OK,2000.0,Oklahoma,2
+OK,1940.0,Oklahoma,0
+OK,1820.0,Oklahoma,0
+OK,1900.0,Oklahoma,0
+OK,1840.0,Oklahoma,0
+OR,1960.0,Oregon,1
+OR,1880.0,Oregon,0
+OR,1860.0,Oregon,0
+OR,1920.0,Oregon,0
+OR,1980.0,Oregon,2
+OR,2020.0,Oregon,0
+OR,1800.0,Oregon,0
+OR,2000.0,Oregon,0
+OR,1940.0,Oregon,0
+OR,1820.0,Oregon,0
+OR,1900.0,Oregon,1
+OR,1840.0,Oregon,0
+PA,1960.0,Pennsylvania,8
+PA,1880.0,Pennsylvania,2
+PA,1860.0,Pennsylvania,0
+PA,1920.0,Pennsylvania,3
+PA,1980.0,Pennsylvania,11
+PA,2020.0,Pennsylvania,0
+PA,1800.0,Pennsylvania,0
+PA,2000.0,Pennsylvania,7
+PA,1940.0,Pennsylvania,1
+PA,1820.0,Pennsylvania,0
+PA,1900.0,Pennsylvania,3
+PA,1840.0,Pennsylvania,0
+RI,1960.0,Rhode Island,1
+RI,1880.0,Rhode Island,1
+RI,1860.0,Rhode Island,0
+RI,1920.0,Rhode Island,1
+RI,1980.0,Rhode Island,0
+RI,2020.0,Rhode Island,0
+RI,1800.0,Rhode Island,0
+RI,2000.0,Rhode Island,0
+RI,1940.0,Rhode Island,0
+RI,1820.0,Rhode Island,0
+RI,1900.0,Rhode Island,0
+RI,1840.0,Rhode Island,0
+SC,1960.0,South Carolina,0
+SC,1880.0,South Carolina,0
+SC,1860.0,South Carolina,0
+SC,1920.0,South Carolina,0
+SC,1980.0,South Carolina,0
+SC,2020.0,South Carolina,0
+SC,1800.0,South Carolina,0
+SC,2000.0,South Carolina,1
+SC,1940.0,South Carolina,1
+SC,1820.0,South Carolina,0
+SC,1900.0,South Carolina,0
+SC,1840.0,South Carolina,0
+SD,1960.0,South Dakota,0
+SD,1880.0,South Dakota,0
+SD,1860.0,South Dakota,0
+SD,1920.0,South Dakota,0
+SD,1980.0,South Dakota,0
+SD,2020.0,South Dakota,0
+SD,1800.0,South Dakota,0
+SD,2000.0,South Dakota,1
+SD,1940.0,South Dakota,0
+SD,1820.0,South Dakota,0
+SD,1900.0,South Dakota,0
+SD,1840.0,South Dakota,0
+TN,1960.0,Tennessee,4
+TN,1880.0,Tennessee,2
+TN,1860.0,Tennessee,0
+TN,1920.0,Tennessee,0
+TN,1980.0,Tennessee,3
+TN,2020.0,Tennessee,0
+TN,1800.0,Tennessee,0
+TN,2000.0,Tennessee,6
+TN,1940.0,Tennessee,0
+TN,1820.0,Tennessee,0
+TN,1900.0,Tennessee,1
+TN,1840.0,Tennessee,1
+TX,1960.0,Texas,3
+TX,1880.0,Texas,0
+TX,1860.0,Texas,1
+TX,1920.0,Texas,4
+TX,1980.0,Texas,13
+TX,2020.0,Texas,0
+TX,1800.0,Texas,1
+TX,2000.0,Texas,17
+TX,1940.0,Texas,4
+TX,1820.0,Texas,2
+TX,1900.0,Texas,0
+TX,1840.0,Texas,0
+UT,1960.0,Utah,1
+UT,1880.0,Utah,0
+UT,1860.0,Utah,0
+UT,1920.0,Utah,4
+UT,1980.0,Utah,0
+UT,2020.0,Utah,0
+UT,1800.0,Utah,0
+UT,2000.0,Utah,3
+UT,1940.0,Utah,1
+UT,1820.0,Utah,0
+UT,1900.0,Utah,0
+UT,1840.0,Utah,0
+VT,1960.0,Vermont,0
+VT,1880.0,Vermont,0
+VT,1860.0,Vermont,0
+VT,1920.0,Vermont,0
+VT,1980.0,Vermont,1
+VT,2020.0,Vermont,0
+VT,1800.0,Vermont,1
+VT,2000.0,Vermont,0
+VT,1940.0,Vermont,0
+VT,1820.0,Vermont,0
+VT,1900.0,Vermont,0
+VT,1840.0,Vermont,0
+VA,1960.0,Virginia,4
+VA,1880.0,Virginia,0
+VA,1860.0,Virginia,0
+VA,1920.0,Virginia,8
+VA,1980.0,Virginia,9
+VA,2020.0,Virginia,1
+VA,1800.0,Virginia,0
+VA,2000.0,Virginia,12
+VA,1940.0,Virginia,6
+VA,1820.0,Virginia,0
+VA,1900.0,Virginia,5
+VA,1840.0,Virginia,3
+WA,1960.0,Washington,4
+WA,1880.0,Washington,1
+WA,1860.0,Washington,0
+WA,1920.0,Washington,1
+WA,1980.0,Washington,5
+WA,2020.0,Washington,0
+WA,1800.0,Washington,0
+WA,2000.0,Washington,10
+WA,1940.0,Washington,2
+WA,1820.0,Washington,1
+WA,1900.0,Washington,0
+WA,1840.0,Washington,0
+WV,1960.0,West Virginia,0
+WV,1880.0,West Virginia,0
+WV,1860.0,West Virginia,0
+WV,1920.0,West Virginia,0
+WV,1980.0,West Virginia,0
+WV,2020.0,West Virginia,0
+WV,1800.0,West Virginia,0
+WV,2000.0,West Virginia,0
+WV,1940.0,West Virginia,0
+WV,1820.0,West Virginia,0
+WV,1900.0,West Virginia,0
+WV,1840.0,West Virginia,0
+WI,1960.0,Wisconsin,1
+WI,1880.0,Wisconsin,1
+WI,1860.0,Wisconsin,1
+WI,1920.0,Wisconsin,3
+WI,1980.0,Wisconsin,9
+WI,2020.0,Wisconsin,0
+WI,1800.0,Wisconsin,0
+WI,2000.0,Wisconsin,4
+WI,1940.0,Wisconsin,5
+WI,1820.0,Wisconsin,0
+WI,1900.0,Wisconsin,1
+WI,1840.0,Wisconsin,1
+WY,1960.0,Wyoming,0
+WY,1880.0,Wyoming,0
+WY,1860.0,Wyoming,0
+WY,1920.0,Wyoming,0
+WY,1980.0,Wyoming,0
+WY,2020.0,Wyoming,0
+WY,1800.0,Wyoming,0
+WY,2000.0,Wyoming,0
+WY,1940.0,Wyoming,0
+WY,1820.0,Wyoming,0
+WY,1900.0,Wyoming,0
+WY,1840.0,Wyoming,0
+AS,1960.0,American Samoa,0
+AS,1880.0,American Samoa,0
+AS,1860.0,American Samoa,0
+AS,1920.0,American Samoa,0
+AS,1980.0,American Samoa,0
+AS,2020.0,American Samoa,0
+AS,1800.0,American Samoa,0
+AS,2000.0,American Samoa,0
+AS,1940.0,American Samoa,0
+AS,1820.0,American Samoa,0
+AS,1900.0,American Samoa,0
+AS,1840.0,American Samoa,0
+GU,1960.0,Guam,0
+GU,1880.0,Guam,0
+GU,1860.0,Guam,0
+GU,1920.0,Guam,0
+GU,1980.0,Guam,0
+GU,2020.0,Guam,0
+GU,1800.0,Guam,0
+GU,2000.0,Guam,0
+GU,1940.0,Guam,0
+GU,1820.0,Guam,0
+GU,1900.0,Guam,0
+GU,1840.0,Guam,0
+MP,1960.0,Northern Mariana Islands,0
+MP,1880.0,Northern Mariana Islands,0
+MP,1860.0,Northern Mariana Islands,0
+MP,1920.0,Northern Mariana Islands,0
+MP,1980.0,Northern Mariana Islands,0
+MP,2020.0,Northern Mariana Islands,0
+MP,1800.0,Northern Mariana Islands,0
+MP,2000.0,Northern Mariana Islands,0
+MP,1940.0,Northern Mariana Islands,0
+MP,1820.0,Northern Mariana Islands,0
+MP,1900.0,Northern Mariana Islands,0
+MP,1840.0,Northern Mariana Islands,0
+PR,1960.0,Puerto Rico,0
+PR,1880.0,Puerto Rico,0
+PR,1860.0,Puerto Rico,0
+PR,1920.0,Puerto Rico,0
+PR,1980.0,Puerto Rico,0
+PR,2020.0,Puerto Rico,0
+PR,1800.0,Puerto Rico,0
+PR,2000.0,Puerto Rico,0
+PR,1940.0,Puerto Rico,0
+PR,1820.0,Puerto Rico,0
+PR,1900.0,Puerto Rico,0
+PR,1840.0,Puerto Rico,0
+VI,1960.0,U.S. Virgin Islands,0
+VI,1880.0,U.S. Virgin Islands,0
+VI,1860.0,U.S. Virgin Islands,0
+VI,1920.0,U.S. Virgin Islands,0
+VI,1980.0,U.S. Virgin Islands,0
+VI,2020.0,U.S. Virgin Islands,0
+VI,1800.0,U.S. Virgin Islands,0
+VI,2000.0,U.S. Virgin Islands,0
+VI,1940.0,U.S. Virgin Islands,0
+VI,1820.0,U.S. Virgin Islands,0
+VI,1900.0,U.S. Virgin Islands,0
+VI,1840.0,U.S. Virgin Islands,0
