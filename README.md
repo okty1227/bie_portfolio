@@ -9,6 +9,6 @@
 
 - Link
   - [Homepage](https://okty1227.github.io/bie_portfolio/)
-  - [USA Traffic Data Analysis](https://okty1227.github.io/bie_portfolio/assignment2/)
-  - [Top 100 worldwild YouTuber Income](https://okty1227.github.io/bie_portfolio/assignment1/)
-  - [ Data Scientist Job prospective views](https://okty1227.github.io/bie_portfolio/final_project/)
+  - [USA Traffic Data Analysis](https://okty1227.github.io/bie_portfolio/glassdoordashboard/)
+  - [Top 100 worldwild YouTuber Income](https://okty1227.github.io/bie_portfolio/YoutubertoGDP/)
+  - [ Data Scientist Job prospective views](https://okty1227.github.io/bie_portfolio/USAtraffic/)
